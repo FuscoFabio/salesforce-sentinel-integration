@@ -623,6 +623,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica Soluzioni
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -639,6 +657,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#soluzioni-disponibili" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soluzioni Disponibili
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confronto-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confronto Rapido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#come-scegliere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Come Scegliere
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1218,6 +1288,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#soluzioni-disponibili" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soluzioni Disponibili
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confronto-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confronto Rapido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#come-scegliere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Come Scegliere
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1238,7 +1349,73 @@
 
 <h1 id="panoramica-soluzioni">Panoramica Soluzioni<a class="headerlink" href="#panoramica-soluzioni" title="Permanent link">&para;</a></h1>
 <p>Questa pagina fornisce un confronto completo di tutte le soluzioni disponibili per integrare Salesforce con Azure Sentinel.</p>
-<p>Vedi <a href="../../README.md">README principale</a> per dettagli completi.</p>
+<h2 id="soluzioni-disponibili">Soluzioni Disponibili<a class="headerlink" href="#soluzioni-disponibili" title="Permanent link">&para;</a></h2>
+<p>Il progetto offre <strong>5 soluzioni</strong> diverse per soddisfare ogni esigenza:</p>
+<ol>
+<li><strong><a href="../ccf/">CodeLess Connector Framework (CCF)</a></strong> - Setup rapido, zero manutenzione</li>
+<li><strong><a href="../azure-function/">Azure Function</a></strong> - Massima personalizzazione</li>
+<li><strong><a href="../logic-app/">Azure Logic App</a></strong> - Low-code visuale</li>
+<li><strong><a href="../other/">Syslog + Azure Monitor Agent</a></strong> - Per infrastrutture esistenti</li>
+<li><strong><a href="../other/">Third-party SIEM Connector</a></strong> - Per soluzioni enterprise</li>
+</ol>
+<h2 id="confronto-rapido">Confronto Rapido<a class="headerlink" href="#confronto-rapido" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Soluzione</th>
+<th>Complessità</th>
+<th>Costo</th>
+<th>Personalizzazione</th>
+<th>Setup Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CCF</td>
+<td>Bassa</td>
+<td>Basso</td>
+<td>Limitata</td>
+<td>15-30 min</td>
+</tr>
+<tr>
+<td>Azure Function</td>
+<td>Media</td>
+<td>Medio</td>
+<td>Alta</td>
+<td>1-2 ore</td>
+</tr>
+<tr>
+<td>Logic App</td>
+<td>Bassa</td>
+<td>Medio</td>
+<td>Media</td>
+<td>30-60 min</td>
+</tr>
+<tr>
+<td>Syslog</td>
+<td>Media</td>
+<td>Basso</td>
+<td>Media</td>
+<td>1-2 ore</td>
+</tr>
+<tr>
+<td>Third-party</td>
+<td>Variabile</td>
+<td>Alto</td>
+<td>Variabile</td>
+<td>Variabile</td>
+</tr>
+</tbody>
+</table>
+<h2 id="come-scegliere">Come Scegliere<a class="headerlink" href="#come-scegliere" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Scegli CCF</strong> se: Vuoi setup rapido senza codice, zero manutenzione</li>
+<li><strong>Scegli Azure Function</strong> se: Hai bisogno di personalizzazione avanzata e controllo completo</li>
+<li><strong>Scegli Logic App</strong> se: Preferisci un approccio visuale low-code</li>
+<li><strong>Scegli Syslog</strong> se: Hai già un'infrastruttura Syslog esistente</li>
+<li><strong>Scegli Third-party</strong> se: Hai bisogno di supporto enterprise e funzionalità avanzate</li>
+</ul>
+<p>Per maggiori dettagli, consulta le pagine specifiche di ogni soluzione o il <a href="https://github.com/FuscoFabio/salesforce-sentinel-integration">repository GitHub</a>.</p>
 
 
 
