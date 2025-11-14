@@ -1025,6 +1025,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Query KQL
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1041,6 +1059,347 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#query-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Base
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualizzare-tutti-gli-eventi-recenti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualizzare Tutti gli Eventi Recenti
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contare-eventi-per-tipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contare Eventi per Tipo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventi-per-utente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eventi per Utente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-di-sicurezza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query di Sicurezza
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query di Sicurezza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login-falliti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Login Falliti
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessi-da-ip-sospetti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessi da IP Sospetti
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessi-multipli-da-ip-diversi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessi Multipli da IP Diversi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessi-fuori-orario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessi Fuori Orario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessi-da-browserdevice-non-usuali" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessi da Browser/Device Non Usuali
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-di-analisi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query di Analisi
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query di Analisi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attivita-per-ora-del-giorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attività per Ora del Giorno
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-10-utenti-per-attivita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Top 10 Utenti per Attività
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribuzione-geografica-se-disponibile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distribuzione Geografica (se disponibile)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-di-accesso-giornaliero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern di Accesso Giornaliero
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-per-alerting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query per Alerting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query per Alerting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alert-troppi-login-falliti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert: Troppi Login Falliti
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-nuovo-ip-per-utente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert: Nuovo IP per Utente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-accesso-da-paese-non-usuale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert: Accesso da Paese Non Usuale
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-di-correlazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query di Correlazione
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query di Correlazione">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correlazione-con-altri-log-esempio-con-signinlogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Correlazione con Altri Log (esempio con SigninLogs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-di-compliance-e-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query di Compliance e Audit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query di Compliance e Audit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#report-accessi-per-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Report Accessi per Audit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attivita-api-per-utente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attività API per Utente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Note
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link-utili" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Link Utili
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1218,6 +1577,336 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#query-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Base
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualizzare-tutti-gli-eventi-recenti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualizzare Tutti gli Eventi Recenti
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contare-eventi-per-tipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contare Eventi per Tipo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventi-per-utente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eventi per Utente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-di-sicurezza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query di Sicurezza
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query di Sicurezza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login-falliti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Login Falliti
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessi-da-ip-sospetti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessi da IP Sospetti
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessi-multipli-da-ip-diversi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessi Multipli da IP Diversi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessi-fuori-orario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessi Fuori Orario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessi-da-browserdevice-non-usuali" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessi da Browser/Device Non Usuali
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-di-analisi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query di Analisi
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query di Analisi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attivita-per-ora-del-giorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attività per Ora del Giorno
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-10-utenti-per-attivita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Top 10 Utenti per Attività
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribuzione-geografica-se-disponibile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distribuzione Geografica (se disponibile)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-di-accesso-giornaliero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern di Accesso Giornaliero
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-per-alerting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query per Alerting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query per Alerting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alert-troppi-login-falliti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert: Troppi Login Falliti
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-nuovo-ip-per-utente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert: Nuovo IP per Utente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-accesso-da-paese-non-usuale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert: Accesso da Paese Non Usuale
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-di-correlazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query di Correlazione
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query di Correlazione">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correlazione-con-altri-log-esempio-con-signinlogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Correlazione con Altri Log (esempio con SigninLogs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-di-compliance-e-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query di Compliance e Audit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query di Compliance e Audit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#report-accessi-per-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Report Accessi per Audit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attivita-api-per-utente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attività API per Utente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Note
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link-utili" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Link Utili
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1237,7 +1926,188 @@
 
 
 <h1 id="query-kql-per-azure-sentinel">Query KQL per Azure Sentinel<a class="headerlink" href="#query-kql-per-azure-sentinel" title="Permanent link">&para;</a></h1>
-<p>Vedi <a href="../../azure-sentinel/kql-queries.md">kql-queries.md</a> per query complete.</p>
+<p>Raccolta di query KQL (Kusto Query Language) per analizzare gli eventi Salesforce in Azure Sentinel.</p>
+<h2 id="query-base">Query Base<a class="headerlink" href="#query-base" title="Permanent link">&para;</a></h2>
+<h3 id="visualizzare-tutti-gli-eventi-recenti">Visualizzare Tutti gli Eventi Recenti<a class="headerlink" href="#visualizzare-tutti-gli-eventi-recenti" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">Salesforce_CL</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">24</span><span class="n">h</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="n">UserName_s</span><span class="p">,</span><span class="w"> </span><span class="n">EventType_s</span><span class="p">,</span><span class="w"> </span><span class="n">SourceIP_s</span><span class="p">,</span><span class="w"> </span><span class="n">Browser_s</span><span class="p">,</span><span class="w"> </span><span class="n">Platform_s</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">|</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="n">desc</span>
+</code></pre></div>
+<h3 id="contare-eventi-per-tipo">Contare Eventi per Tipo<a class="headerlink" href="#contare-eventi-per-tipo" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">Salesforce_CL</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">7</span><span class="n">d</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span><span class="k">count</span><span class="p">()</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">EventType_s</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">|</span><span class="w"> </span><span class="k">render</span><span class="w"> </span><span class="n">columnchart</span>
+</code></pre></div>
+<h3 id="eventi-per-utente">Eventi per Utente<a class="headerlink" href="#eventi-per-utente" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Salesforce_CL</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">7</span><span class="n">d</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span><span class="n">EventCount</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">count</span><span class="p">()</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">UserName_s</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">|</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">EventCount</span><span class="w"> </span><span class="n">desc</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">|</span><span class="w"> </span><span class="k">take</span><span class="w"> </span><span class="mi">20</span>
+</code></pre></div>
+<h2 id="query-di-sicurezza">Query di Sicurezza<a class="headerlink" href="#query-di-sicurezza" title="Permanent link">&para;</a></h2>
+<h3 id="login-falliti">Login Falliti<a class="headerlink" href="#login-falliti" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">Salesforce_CL</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;LoginEvent&quot;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">Success_b</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="n">false</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="n">UserName_s</span><span class="p">,</span><span class="w"> </span><span class="n">SourceIP_s</span><span class="p">,</span><span class="w"> </span><span class="n">FailureReason_s</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">|</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="n">desc</span>
+</code></pre></div>
+<h3 id="accessi-da-ip-sospetti">Accessi da IP Sospetti<a class="headerlink" href="#accessi-da-ip-sospetti" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">Salesforce_CL</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;LoginEvent&quot;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">SourceIP_s</span><span class="w"> </span><span class="k">!startswith</span><span class="w"> </span><span class="s">&quot;10.&quot;</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">SourceIP_s</span><span class="w"> </span><span class="k">!startswith</span><span class="w"> </span><span class="s">&quot;192.168.&quot;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span><span class="k">count</span><span class="p">()</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">SourceIP_s</span><span class="p">,</span><span class="w"> </span><span class="n">UserName_s</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">|</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">count_</span><span class="w"> </span><span class="n">desc</span>
+</code></pre></div>
+<h3 id="accessi-multipli-da-ip-diversi">Accessi Multipli da IP Diversi<a class="headerlink" href="#accessi-multipli-da-ip-diversi" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">Salesforce_CL</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;LoginEvent&quot;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">1</span><span class="n">h</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span><span class="n">IPCount</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">dcount</span><span class="p">(</span><span class="n">SourceIP_s</span><span class="p">),</span><span class="w"> </span><span class="n">IPs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">make_set</span><span class="p">(</span><span class="n">SourceIP_s</span><span class="p">)</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">UserName_s</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">IPCount</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="mi">3</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">UserName_s</span><span class="p">,</span><span class="w"> </span><span class="n">IPCount</span><span class="p">,</span><span class="w"> </span><span class="n">IPs</span>
+</code></pre></div>
+<h3 id="accessi-fuori-orario">Accessi Fuori Orario<a class="headerlink" href="#accessi-fuori-orario" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">Salesforce_CL</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;LoginEvent&quot;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">7</span><span class="n">d</span><span class="p">)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">|</span><span class="w"> </span><span class="k">extend</span><span class="w"> </span><span class="n">Hour</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">datetime_part</span><span class="p">(</span><span class="s">&quot;hour&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">Hour</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">Hour</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="mi">22</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span><span class="k">count</span><span class="p">()</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">UserName_s</span><span class="p">,</span><span class="w"> </span><span class="n">Hour</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="p">|</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">count_</span><span class="w"> </span><span class="n">desc</span>
+</code></pre></div>
+<h3 id="accessi-da-browserdevice-non-usuali">Accessi da Browser/Device Non Usuali<a class="headerlink" href="#accessi-da-browserdevice-non-usuali" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">Salesforce_CL</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;LoginEvent&quot;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">30</span><span class="n">d</span><span class="p">)</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="n">CommonBrowsers</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">make_set</span><span class="p">(</span><span class="n">Browser_s</span><span class="p">)</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">UserName_s</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">|</span><span class="w"> </span><span class="k">extend</span><span class="w"> </span><span class="n">BrowserCount</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">array_length</span><span class="p">(</span><span class="n">CommonBrowsers</span><span class="p">)</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">BrowserCount</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="mi">3</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">UserName_s</span><span class="p">,</span><span class="w"> </span><span class="n">BrowserCount</span><span class="p">,</span><span class="w"> </span><span class="n">CommonBrowsers</span>
+</code></pre></div>
+<h2 id="query-di-analisi">Query di Analisi<a class="headerlink" href="#query-di-analisi" title="Permanent link">&para;</a></h2>
+<h3 id="attivita-per-ora-del-giorno">Attività per Ora del Giorno<a class="headerlink" href="#attivita-per-ora-del-giorno" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">Salesforce_CL</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">7</span><span class="n">d</span><span class="p">)</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">|</span><span class="w"> </span><span class="k">extend</span><span class="w"> </span><span class="n">Hour</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">datetime_part</span><span class="p">(</span><span class="s">&quot;hour&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">)</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span><span class="n">EventCount</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">count</span><span class="p">()</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">Hour</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="p">|</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">Hour</span><span class="w"> </span><span class="n">asc</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">|</span><span class="w"> </span><span class="k">render</span><span class="w"> </span><span class="n">timechart</span>
+</code></pre></div>
+<h3 id="top-10-utenti-per-attivita">Top 10 Utenti per Attività<a class="headerlink" href="#top-10-utenti-per-attivita" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">Salesforce_CL</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">7</span><span class="n">d</span><span class="p">)</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="n">LoginCount</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">countif</span><span class="p">(</span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;LoginEvent&quot;</span><span class="p">),</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="n">ApiCallCount</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">countif</span><span class="p">(</span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;ApiEvent&quot;</span><span class="p">),</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="n">TotalEvents</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">count</span><span class="p">()</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="k">by</span><span class="w"> </span><span class="n">UserName_s</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="p">|</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">TotalEvents</span><span class="w"> </span><span class="n">desc</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="p">|</span><span class="w"> </span><span class="k">take</span><span class="w"> </span><span class="mi">10</span>
+</code></pre></div>
+<h3 id="distribuzione-geografica-se-disponibile">Distribuzione Geografica (se disponibile)<a class="headerlink" href="#distribuzione-geografica-se-disponibile" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">Salesforce_CL</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">7</span><span class="n">d</span><span class="p">)</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">isnotempty</span><span class="p">(</span><span class="n">Country_s</span><span class="p">)</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span><span class="k">count</span><span class="p">()</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">Country_s</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="p">|</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">count_</span><span class="w"> </span><span class="n">desc</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">|</span><span class="w"> </span><span class="k">render</span><span class="w"> </span><span class="n">piechart</span>
+</code></pre></div>
+<h3 id="pattern-di-accesso-giornaliero">Pattern di Accesso Giornaliero<a class="headerlink" href="#pattern-di-accesso-giornaliero" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">Salesforce_CL</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">30</span><span class="n">d</span><span class="p">)</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;LoginEvent&quot;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span><span class="n">DailyLogins</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">count</span><span class="p">()</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">bin</span><span class="p">(</span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="n">d</span><span class="p">),</span><span class="w"> </span><span class="n">UserName_s</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="p">|</span><span class="w"> </span><span class="k">render</span><span class="w"> </span><span class="n">timechart</span>
+</code></pre></div>
+<h2 id="query-per-alerting">Query per Alerting<a class="headerlink" href="#query-per-alerting" title="Permanent link">&para;</a></h2>
+<h3 id="alert-troppi-login-falliti">Alert: Troppi Login Falliti<a class="headerlink" href="#alert-troppi-login-falliti" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">Salesforce_CL</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;LoginEvent&quot;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">Success_b</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="n">false</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">1</span><span class="n">h</span><span class="p">)</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span><span class="n">FailedAttempts</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">count</span><span class="p">()</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">UserName_s</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">FailedAttempts</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="mi">5</span>
+</code></pre></div>
+<h3 id="alert-nuovo-ip-per-utente">Alert: Nuovo IP per Utente<a class="headerlink" href="#alert-nuovo-ip-per-utente" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">let</span><span class="w"> </span><span class="n">KnownIPs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Salesforce_CL</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="p">(</span><span class="n">ago</span><span class="p">(</span><span class="mi">30</span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="err">..</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">1</span><span class="n">h</span><span class="p">))</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;LoginEvent&quot;</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span><span class="n">KnownIPSet</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">make_set</span><span class="p">(</span><span class="n">SourceIP_s</span><span class="p">)</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">UserName_s</span><span class="p">;</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="n">Salesforce_CL</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">1</span><span class="n">h</span><span class="p">)</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;LoginEvent&quot;</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="p">|</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">kind</span><span class="p">=</span><span class="n">inner</span><span class="w"> </span><span class="p">(</span><span class="n">KnownIPs</span><span class="p">)</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">UserName_s</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">SourceIP_s</span><span class="w"> </span><span class="err">!</span><span class="n">in</span><span class="w"> </span><span class="p">(</span><span class="n">KnownIPSet</span><span class="p">)</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="n">UserName_s</span><span class="p">,</span><span class="w"> </span><span class="n">SourceIP_s</span><span class="p">,</span><span class="w"> </span><span class="n">KnownIPSet</span>
+</code></pre></div>
+<h3 id="alert-accesso-da-paese-non-usuale">Alert: Accesso da Paese Non Usuale<a class="headerlink" href="#alert-accesso-da-paese-non-usuale" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">let</span><span class="w"> </span><span class="n">UsualCountries</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Salesforce_CL</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="p">(</span><span class="n">ago</span><span class="p">(</span><span class="mi">30</span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="err">..</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">1</span><span class="n">h</span><span class="p">))</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;LoginEvent&quot;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span><span class="n">CountrySet</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">make_set</span><span class="p">(</span><span class="n">Country_s</span><span class="p">)</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">UserName_s</span><span class="p">;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="n">Salesforce_CL</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">1</span><span class="n">h</span><span class="p">)</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;LoginEvent&quot;</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">isnotempty</span><span class="p">(</span><span class="n">Country_s</span><span class="p">)</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="p">|</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">kind</span><span class="p">=</span><span class="n">inner</span><span class="w"> </span><span class="p">(</span><span class="n">UsualCountries</span><span class="p">)</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">UserName_s</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">Country_s</span><span class="w"> </span><span class="err">!</span><span class="n">in</span><span class="w"> </span><span class="p">(</span><span class="n">CountrySet</span><span class="p">)</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="n">UserName_s</span><span class="p">,</span><span class="w"> </span><span class="n">Country_s</span><span class="p">,</span><span class="w"> </span><span class="n">CountrySet</span>
+</code></pre></div>
+<h2 id="query-di-correlazione">Query di Correlazione<a class="headerlink" href="#query-di-correlazione" title="Permanent link">&para;</a></h2>
+<h3 id="correlazione-con-altri-log-esempio-con-signinlogs">Correlazione con Altri Log (esempio con SigninLogs)<a class="headerlink" href="#correlazione-con-altri-log-esempio-con-signinlogs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">let</span><span class="w"> </span><span class="n">SalesforceLogins</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Salesforce_CL</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;LoginEvent&quot;</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">1</span><span class="n">h</span><span class="p">)</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="n">UserName_s</span><span class="p">,</span><span class="w"> </span><span class="n">SourceIP_s</span><span class="p">,</span><span class="w"> </span><span class="n">EventType_s</span><span class="p">;</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="n">SigninLogs</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">1</span><span class="n">h</span><span class="p">)</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="n">UserPrincipalName</span><span class="p">,</span><span class="w"> </span><span class="n">IPAddress</span><span class="p">,</span><span class="w"> </span><span class="n">AppDisplayName</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="p">|</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">kind</span><span class="p">=</span><span class="n">inner</span><span class="w"> </span><span class="p">(</span><span class="n">SalesforceLogins</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">    </span><span class="k">on</span><span class="w"> </span><span class="err">$</span><span class="n">left</span><span class="err">.</span><span class="n">IPAddress</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="err">$</span><span class="n">right</span><span class="err">.</span><span class="n">SourceIP_s</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="n">UserPrincipalName</span><span class="p">,</span><span class="w"> </span><span class="n">IPAddress</span><span class="p">,</span><span class="w"> </span><span class="n">UserName_s</span>
+</code></pre></div>
+<h2 id="query-di-compliance-e-audit">Query di Compliance e Audit<a class="headerlink" href="#query-di-compliance-e-audit" title="Permanent link">&para;</a></h2>
+<h3 id="report-accessi-per-audit">Report Accessi per Audit<a class="headerlink" href="#report-accessi-per-audit" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">Salesforce_CL</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="p">(</span><span class="n">startofday</span><span class="p">(</span><span class="n">ago</span><span class="p">(</span><span class="mi">30</span><span class="n">d</span><span class="p">))</span><span class="w"> </span><span class="err">..</span><span class="w"> </span><span class="n">endofday</span><span class="p">(</span><span class="n">now</span><span class="p">()))</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;LoginEvent&quot;</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span><span class="n">FirstLogin</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">TimeGenerated</span><span class="p">),</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">    </span><span class="n">LastLogin</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">TimeGenerated</span><span class="p">),</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">    </span><span class="n">LoginCount</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">count</span><span class="p">(),</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">    </span><span class="n">UniqueIPs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">dcount</span><span class="p">(</span><span class="n">SourceIP_s</span><span class="p">),</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">    </span><span class="n">Platforms</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">make_set</span><span class="p">(</span><span class="n">Platform_s</span><span class="p">)</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">    </span><span class="k">by</span><span class="w"> </span><span class="n">UserName_s</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="p">|</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">LoginCount</span><span class="w"> </span><span class="n">desc</span>
+</code></pre></div>
+<h3 id="attivita-api-per-utente">Attività API per Utente<a class="headerlink" href="#attivita-api-per-utente" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">Salesforce_CL</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;ApiEvent&quot;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">7</span><span class="n">d</span><span class="p">)</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">    </span><span class="n">ApiCallCount</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">count</span><span class="p">(),</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">    </span><span class="n">UniqueEndpoints</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">dcount</span><span class="p">(</span><span class="n">Endpoint_s</span><span class="p">)</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">    </span><span class="k">by</span><span class="w"> </span><span class="n">UserName_s</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="p">|</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">ApiCallCount</span><span class="w"> </span><span class="n">desc</span>
+</code></pre></div>
+<h2 id="note">Note<a class="headerlink" href="#note" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Sostituisci <code>Salesforce_CL</code> con il nome della tua tabella custom se diverso</li>
+<li>I nomi dei campi (es. <code>UserName_s</code>, <code>EventType_s</code>) potrebbero variare in base alla tua implementazione</li>
+<li>Aggiusta i filtri temporali (<code>ago(7d)</code>) in base alle tue esigenze</li>
+<li>Testa le query prima di usarle per alerting in produzione</li>
+</ul>
+<h2 id="link-utili">Link Utili<a class="headerlink" href="#link-utili" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://learn.microsoft.com/azure/data-explorer/kusto/query/">Documentazione KQL</a></li>
+<li><a href="https://learn.microsoft.com/azure/data-explorer/kql-quick-reference">KQL Quick Reference</a></li>
+<li><a href="https://learn.microsoft.com/azure/sentinel/hunting">Azure Sentinel Query Examples</a></li>
+</ul>
 
 
 
