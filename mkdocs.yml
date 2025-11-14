@@ -1,0 +1,103 @@
+site_name: Integrazione Salesforce - Azure Sentinel
+site_description: Guida completa per integrare i log di accesso Salesforce con Azure Sentinel
+site_author: Documentazione Tecnica
+site_url: https://FuscoFabio.github.io/salesforce-sentinel-integration/
+
+# Repository
+repo_name: salesforce-sentinel-integration
+repo_url: https://github.com/FuscoFabio/salesforce-sentinel-integration
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2024
+
+# Theme
+theme:
+  name: material
+  palette:
+    # Light mode
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+# Extensions
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+# Plugins
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+
+# Navigation
+nav:
+  - Home: index.md
+  - Introduzione:
+    - Panoramica: introduction/overview.md
+    - Architettura: introduction/architecture.md
+  - Soluzioni:
+    - Panoramica Soluzioni: solutions/overview.md
+    - CodeLess Connector Framework (CCF): solutions/ccf.md
+    - Azure Function: solutions/azure-function.md
+    - Azure Logic App: solutions/logic-app.md
+    - Altre Soluzioni: solutions/other.md
+  - Setup:
+    - Configurazione Salesforce: setup/salesforce.md
+    - Configurazione Azure Sentinel: setup/azure-sentinel.md
+    - Quick Start: setup/quick-start.md
+  - Implementazione:
+    - Azure Function: implementation/azure-function.md
+    - Gestione Range IP Azure: implementation/azure-ip-ranges.md
+    - Query KQL: implementation/kql-queries.md
+  - Troubleshooting: troubleshooting.md
+  - Riferimenti:
+    - API Reference: references/api.md
+    - Link Utili: references/links.md
+
+# Extra
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/FuscoFabio
+    - icon: fontawesome/brands/microsoft
+      link: https://azure.microsoft.com
+
