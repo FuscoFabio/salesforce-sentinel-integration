@@ -1121,10 +1121,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#14-configurare-permessi" class="md-nav__link">
+  <a href="#14-configurare-network-access-se-necessario" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.4 Configurare Permessi
+        1.4 Configurare Network Access (Se Necessario)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-configurare-permessi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Configurare Permessi
       
     </span>
   </a>
@@ -2074,10 +2085,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#14-configurare-permessi" class="md-nav__link">
+  <a href="#14-configurare-network-access-se-necessario" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.4 Configurare Permessi
+        1.4 Configurare Network Access (Se Necessario)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-configurare-permessi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Configurare Permessi
       
     </span>
   </a>
@@ -2740,14 +2762,31 @@
 <li>Clicca su <strong>Manage</strong> → <strong>Edit Policies</strong></li>
 <li>Configura:</li>
 <li><strong>Permitted Users</strong>: "All users may self-authorize"</li>
-<li><strong>IP Relaxation</strong>: "Relax IP restrictions" (se necessario)</li>
+<li><strong>IP Relaxation</strong>: <ul>
+<li>Se usi <strong>Private Endpoints</strong>: "Relax IP restrictions" (non necessario)</li>
+<li>Se usi <strong>Range IP pubblici</strong>: "Enforce IP restrictions" e configura Trusted IP Ranges</li>
+</ul>
+</li>
 <li>Vai a <strong>API (Enable OAuth Settings)</strong> → <strong>View</strong></li>
 <li><strong>Salva immediatamente</strong>:</li>
 <li><strong>Consumer Key</strong> (Client ID): <code>3MVG9...</code> (esempio)</li>
 <li><strong>Consumer Secret</strong> (Client Secret): <code>ABC123...</code> (esempio)</li>
 </ol>
 <p>⚠️ <strong>IMPORTANTE</strong>: Il Consumer Secret viene mostrato solo una volta!</p>
-<h4 id="14-configurare-permessi">1.4 Configurare Permessi<a class="headerlink" href="#14-configurare-permessi" title="Permanent link">&para;</a></h4>
+<h4 id="14-configurare-network-access-se-necessario">1.4 Configurare Network Access (Se Necessario)<a class="headerlink" href="#14-configurare-network-access-se-necessario" title="Permanent link">&para;</a></h4>
+<p><strong>⭐ Raccomandazione</strong>: Se possibile, usa <strong>Azure Private Link</strong> per Log Analytics invece di configurare range IP pubblici.</p>
+<p><strong>Opzione A: Usa Private Link (Consigliato)</strong>
+1. Configura Azure Private Link per il Log Analytics Workspace
+2. Il CCF invierà dati tramite Private Link
+3. In Salesforce, imposta <strong>IP Relaxation</strong>: "Relax IP restrictions"
+4. Nessuna configurazione di range IP necessaria</p>
+<p><strong>Opzione B: Configura Range IP Pubblici</strong>
+1. Vai a <strong>Setup</strong> → <strong>Network Access</strong>
+2. Clicca su <strong>New</strong> per aggiungere range IP
+3. Aggiungi i range IP di Azure Cloud per la tua regione
+   - Vedi <a href="../azure-ip-ranges/">Gestione Range IP Azure</a> per dettagli
+4. <strong>Nota</strong>: I range IP cambiano settimanalmente, richiede manutenzione periodica</p>
+<h4 id="15-configurare-permessi">1.5 Configurare Permessi<a class="headerlink" href="#15-configurare-permessi" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Vai a <strong>Setup</strong> → <strong>Users</strong> → <strong>Permission Sets</strong></li>
 <li>Crea un nuovo Permission Set chiamato "Azure Sentinel Integration"</li>
@@ -3129,7 +3168,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 15, 2025 01:07:43 UTC">November 15, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 15, 2025 01:17:36 UTC">November 15, 2025</span>
   </span>
 
     
@@ -3139,7 +3178,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 15, 2025 01:07:43 UTC">November 15, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 15, 2025 01:17:36 UTC">November 15, 2025</span>
   </span>
 
     

@@ -1089,6 +1089,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Passo 1: Creare Azure Function App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurazione-network-consigliato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⭐ Configurazione Network (Consigliato)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1502,6 +1519,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Passo 1: Creare Azure Function App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurazione-network-consigliato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⭐ Configurazione Network (Consigliato)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1673,6 +1707,7 @@
 <li>Log Analytics Workspace con Azure Sentinel</li>
 <li>Credenziali Salesforce (Consumer Key/Secret)</li>
 <li>Workspace ID e Primary Key di Log Analytics</li>
+<li>⭐ <strong>Raccomandato</strong>: Virtual Network per Private Endpoints (vedi <a href="../azure-ip-ranges/">Gestione Network</a>)</li>
 </ul>
 <h2 id="passo-1-creare-azure-function-app">Passo 1: Creare Azure Function App<a class="headerlink" href="#passo-1-creare-azure-function-app" title="Permanent link">&para;</a></h2>
 <ol>
@@ -1686,8 +1721,48 @@
 <li><strong>Runtime stack</strong>: .NET, Node.js, Python o PowerShell</li>
 <li><strong>Version</strong>: Versione più recente</li>
 <li><strong>Region</strong>: Seleziona una regione</li>
+<li><strong>Plan Type</strong>: <ul>
+<li>Consumption (per iniziare)</li>
+<li>Premium (per Private Endpoints e VNet Integration)</li>
+</ul>
+</li>
 <li>Clicca su <strong>Review + Create</strong> → <strong>Create</strong></li>
 </ol>
+<h3 id="configurazione-network-consigliato">⭐ Configurazione Network (Consigliato)<a class="headerlink" href="#configurazione-network-consigliato" title="Permanent link">&para;</a></h3>
+<p><strong>Per massima sicurezza, configura Private Endpoints:</strong></p>
+<ol>
+<li><strong>Crea Virtual Network</strong> (se non esiste):</li>
+<li>Azure Portal → Virtual Networks → Create</li>
+<li>Name: <code>vnet-salesforce-integration</code></li>
+<li>Address Space: <code>10.0.0.0/16</code></li>
+<li>
+<p>Subnet: <code>subnet-functions</code> (10.0.1.0/24)</p>
+</li>
+<li>
+<p><strong>Configura VNet Integration</strong>:</p>
+</li>
+<li>Function App → Networking → VNet integration</li>
+<li>Seleziona la VNet e subnet create</li>
+<li>
+<p>Abilita "Route All" se necessario</p>
+</li>
+<li>
+<p><strong>Crea Private Endpoint</strong>:</p>
+</li>
+<li>Function App → Networking → Private endpoints → Add</li>
+<li>Connetti alla VNet</li>
+<li>
+<p>Configura Azure Private DNS Zone</p>
+</li>
+<li>
+<p><strong>Configura Salesforce</strong>:</p>
+</li>
+<li>Usa l'IP privato del Private Endpoint</li>
+<li>In Salesforce, imposta <strong>IP Relaxation</strong>: "Relax IP restrictions" (non necessario con Private Endpoint)</li>
+</ol>
+<p><strong>Alternativa - Range IP Pubblici:</strong>
+- Vedi <a href="../azure-ip-ranges/">Gestione Range IP Azure</a> per configurare range IP pubblici
+- Richiede manutenzione periodica (range IP cambiano settimanalmente)</p>
 <h2 id="passo-2-configurare-application-settings">Passo 2: Configurare Application Settings<a class="headerlink" href="#passo-2-configurare-application-settings" title="Permanent link">&para;</a></h2>
 <p>Nella Function App, vai a <strong>Configuration</strong> → <strong>Application settings</strong> e aggiungi:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Salesforce__ConsumerKey=&lt;your-consumer-key&gt;

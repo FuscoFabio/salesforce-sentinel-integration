@@ -791,6 +791,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#network-e-sicurezza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network e Sicurezza
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network e Sicurezza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#approccio-consigliato-integration-service-environment-ise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⭐ Approccio Consigliato: Integration Service Environment (ISE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#deployment" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1378,6 +1406,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#network-e-sicurezza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network e Sicurezza
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network e Sicurezza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#approccio-consigliato-integration-service-environment-ise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⭐ Approccio Consigliato: Integration Service Environment (ISE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#deployment" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1436,7 +1492,37 @@
 <li>Azure Logic App</li>
 <li>Azure Sentinel Workspace</li>
 <li>Configurazione Salesforce completata</li>
+<li>⭐ <strong>Raccomandato</strong>: Integration Service Environment (ISE) per connettività privata</li>
 </ul>
+<h2 id="network-e-sicurezza">Network e Sicurezza<a class="headerlink" href="#network-e-sicurezza" title="Permanent link">&para;</a></h2>
+<h3 id="approccio-consigliato-integration-service-environment-ise">⭐ Approccio Consigliato: Integration Service Environment (ISE)<a class="headerlink" href="#approccio-consigliato-integration-service-environment-ise" title="Permanent link">&para;</a></h3>
+<p>Per massima sicurezza e connettività privata:</p>
+<ol>
+<li><strong>Crea Integration Service Environment</strong>:</li>
+<li>Azure Portal → Logic Apps → Integration Service Environments → Create</li>
+<li>Name: <code>ise-salesforce-integration</code></li>
+<li>Location: Seleziona regione</li>
+<li>
+<p>Network: Crea nuova VNet o usa esistente</p>
+</li>
+<li>
+<p><strong>Vantaggi ISE</strong>:</p>
+</li>
+<li>IP privati dedicati e statici</li>
+<li>Connettività privata nativa</li>
+<li>Nessuna manutenzione di range IP</li>
+<li>
+<p>Maggiore sicurezza e compliance</p>
+</li>
+<li>
+<p><strong>Configura Salesforce</strong>:</p>
+</li>
+<li>Usa gli IP privati dell'ISE</li>
+<li>In Salesforce, imposta <strong>IP Relaxation</strong>: "Relax IP restrictions" (non necessario con ISE)</li>
+</ol>
+<p><strong>Alternativa - Range IP Pubblici:</strong>
+- Vedi <a href="../../implementation/azure-ip-ranges/">Gestione Range IP Azure</a> per configurare range IP pubblici
+- Richiede manutenzione periodica</p>
 <h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
 <p>Il progetto include template ARM per il deployment rapido della Logic App.</p>
 <h2 id="link-utili">Link Utili<a class="headerlink" href="#link-utili" title="Permanent link">&para;</a></h2>
