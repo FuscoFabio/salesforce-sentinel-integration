@@ -1214,6 +1214,78 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#limitazioni-e-polling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitazioni e Polling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitazioni e Polling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timer-trigger-azure-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timer Trigger (Azure Function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategia-di-polling-per-salesforce" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategia di Polling per Salesforce
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calcolo-dellintervallo-ottimale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calcolo dell'Intervallo Ottimale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limiti-salesforce-da-considerare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limiti Salesforce da Considerare
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suggerimenti-operativi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suggerimenti Operativi
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1644,6 +1716,78 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#limitazioni-e-polling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitazioni e Polling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitazioni e Polling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timer-trigger-azure-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timer Trigger (Azure Function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategia-di-polling-per-salesforce" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategia di Polling per Salesforce
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calcolo-dellintervallo-ottimale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calcolo dell'Intervallo Ottimale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limiti-salesforce-da-considerare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limiti Salesforce da Considerare
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suggerimenti-operativi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suggerimenti Operativi
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1834,6 +1978,49 @@
 <li><strong>Caching</strong>: Cache token OAuth per ridurre chiamate</li>
 <li><strong>Cost Optimization</strong>: Usa Consumption Plan per costi ottimali</li>
 </ul>
+<h2 id="limitazioni-e-polling">Limitazioni e Polling<a class="headerlink" href="#limitazioni-e-polling" title="Permanent link">&para;</a></h2>
+<h3 id="timer-trigger-azure-function">Timer Trigger (Azure Function)<a class="headerlink" href="#timer-trigger-azure-function" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Intervallo minimo supportato</strong>: 1 minuto (<code>0 */1 * * * *</code>) su Consumption e Premium Plan  </li>
+<li><strong>Intervalli inferiori al minuto</strong>: Richiedono App Service Plan dedicato con <code>TimerTrigger</code> in modalità Continuous (sconsigliato per Salesforce)  </li>
+<li><strong>Intervallo massimo consigliato</strong>: 60 minuti (per evitare ingestione massiva di backlog)  </li>
+<li><strong>Accuratezza</strong>: Il timer non garantisce esecuzione al millisecondo; può avere ritardi di 1-2 minuti</li>
+</ul>
+<h3 id="strategia-di-polling-per-salesforce">Strategia di Polling per Salesforce<a class="headerlink" href="#strategia-di-polling-per-salesforce" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Intervallo consigliato</strong>: 5-15 minuti (allinea latenza e consumo API)  </li>
+<li><strong>Intervallo minimo raccomandato</strong>: 5 minuti per evitare rate limiting  </li>
+<li><strong>Intervallo massimo raccomandato</strong>: 30 minuti se il volume di eventi è moderato</li>
+</ul>
+<h3 id="calcolo-dellintervallo-ottimale">Calcolo dell'Intervallo Ottimale<a class="headerlink" href="#calcolo-dellintervallo-ottimale" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Intervallo (min) = (Eventi_giornalieri / Eventi_per_poll) × (1440 / Richieste_API_disponibili)
+</code></pre></div>
+<p><strong>Esempio</strong>:
+- Eventi giornalieri: 40.000<br />
+- Eventi elaborati per poll: 8.000<br />
+- Limite API disponibile: 15.000 richieste/24h</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Intervallo = (40.000 / 8.000) × (1440 / 15.000) = 0,48 minuti
+</code></pre></div>
+<p>In questo scenario:
+- Usa l'intervallo minimo di <strong>5 minuti</strong> (limite pratico consigliato)<br />
+- Abilita filtri sugli eventi non necessari<br />
+- Valuta l'uso di una Function dedicata in Premium Plan</p>
+<h3 id="limiti-salesforce-da-considerare">Limiti Salesforce da Considerare<a class="headerlink" href="#limiti-salesforce-da-considerare" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>API Requests</strong> (24h rolling):  </li>
+<li>Enterprise: ~15.000  </li>
+<li>Unlimited: ~100.000  </li>
+<li>Performance: ~50.000  </li>
+<li><strong>Request simultanee</strong>: 25  </li>
+<li><strong>Disponibilità Event Log Files</strong>: 24-48 ore dopo l'evento</li>
+</ul>
+<h3 id="suggerimenti-operativi">Suggerimenti Operativi<a class="headerlink" href="#suggerimenti-operativi" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Logica di checkpoint</strong>: salva l'ultimo <code>LogDate</code> processato per evitare duplicati  </li>
+<li><strong>Backoff esponenziale</strong>: in caso di <code>HTTP 429</code> o <code>REQUEST_LIMIT_EXCEEDED</code> aumenta temporaneamente l'intervallo  </li>
+<li><strong>Monitoraggio</strong>: usa Application Insights per verificare la durata effettiva del timer  </li>
+<li><strong>Alert</strong>: crea alert se la Function non gira entro l'intervallo previsto (heart-beat)</li>
+</ol>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Errori di autenticazione</strong>: Verifica credenziali e token</li>
