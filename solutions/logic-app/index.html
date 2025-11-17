@@ -18,7 +18,7 @@
         <link rel="prev" href="../azure-function/">
       
       
-        <link rel="next" href="../other/">
+        <link rel="next" href="../platform-events/">
       
       
         
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#azure-logic-app" class="md-skip">
+        <a href="#azure-logic-app-event-log-files" class="md-skip">
           Skip to content
         </a>
       
@@ -639,6 +639,63 @@
                 
   
   
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event Log Files API (24-48h)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Event Log Files API (24-48h)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
@@ -769,6 +826,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#approccio-event-log-files-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ Approccio: Event Log Files API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#caratteristiche" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -843,6 +911,107 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platform Events (Near Real-Time)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Platform Events (Near Real-Time)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../platform-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Function + Event Hub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1412,6 +1581,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#approccio-event-log-files-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ Approccio: Event Log Files API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#caratteristiche" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1503,10 +1683,19 @@
   
 
 
-<h1 id="azure-logic-app">Azure Logic App<a class="headerlink" href="#azure-logic-app" title="Permanent link">&para;</a></h1>
-<p>Soluzione low-code basata su Azure Logic App per l'integrazione Salesforce-Azure Sentinel.</p>
+<h1 id="azure-logic-app-event-log-files">Azure Logic App (Event Log Files)<a class="headerlink" href="#azure-logic-app-event-log-files" title="Permanent link">&para;</a></h1>
+<p>Soluzione low-code basata su Azure Logic App per l'integrazione Salesforce-Azure Sentinel usando <strong>Event Log Files API</strong>.</p>
 <h2 id="panoramica">Panoramica<a class="headerlink" href="#panoramica" title="Permanent link">&para;</a></h2>
 <p>Azure Logic App offre un approccio visuale e low-code per integrare Salesforce con Azure Sentinel, ideale per team che preferiscono configurazione grafica rispetto alla scrittura di codice.</p>
+<h2 id="approccio-event-log-files-api">⚠️ Approccio: Event Log Files API<a class="headerlink" href="#approccio-event-log-files-api" title="Permanent link">&para;</a></h2>
+<p><strong>Questa soluzione usa Event Log Files API</strong>, che ha le seguenti caratteristiche:</p>
+<ul>
+<li>✅ <strong>Copertura Completa</strong>: Tutti gli eventi disponibili (LoginEvent, LogoutEvent, ApiEvent, Audit Trail)</li>
+<li>✅ <strong>Formato Strutturato</strong>: Dati ottimizzati e validati</li>
+<li>❌ <strong>Latenza</strong>: 24-48 ore (limite strutturale Salesforce)</li>
+<li>✅ <strong>Setup Semplice</strong>: Approccio low-code visuale</li>
+</ul>
+<p><strong>Se hai bisogno di near real-time (&lt; 24 ore)</strong>, considera <a href="../platform-events.md">Platform Events</a> invece.</p>
 <h2 id="caratteristiche">Caratteristiche<a class="headerlink" href="#caratteristiche" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Low-Code</strong>: Configurazione visuale tramite designer</li>

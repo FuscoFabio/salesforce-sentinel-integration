@@ -12,13 +12,13 @@
         <meta name="author" content="Documentazione Tecnica">
       
       
-        <link rel="canonical" href="https://FuscoFabio.github.io/salesforce-sentinel-integration/introduction/architecture/">
+        <link rel="canonical" href="https://FuscoFabio.github.io/salesforce-sentinel-integration/solutions/platform-events/">
       
       
-        <link rel="prev" href="../overview/">
+        <link rel="prev" href="../logic-app/">
       
       
-        <link rel="next" href="../../solutions/overview/">
+        <link rel="next" href="../other/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Architettura - Integrazione Salesforce - Azure Sentinel</title>
+        <title>Azure Function + Event Hub - Integrazione Salesforce - Azure Sentinel</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#architettura" class="md-skip">
+        <a href="#platform-events-near-real-time" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Architettura
+              Azure Function + Event Hub
             
           </span>
         </div>
@@ -244,13 +244,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../overview/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../introduction/overview/" class="md-tabs__link">
           
   
   
@@ -266,11 +264,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../solutions/overview/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
           
   
   
@@ -437,31 +437,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -479,7 +476,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -497,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+      <a href="../../introduction/overview/" class="md-nav__link">
         
   
   
@@ -522,37 +519,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Architettura
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../introduction/architecture/" class="md-nav__link">
         
   
   
@@ -568,181 +538,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#architettura-generale" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architettura Generale
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#componenti-principali" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Componenti Principali
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Componenti Principali">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#salesforce" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Salesforce
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#layer-di-integrazione" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Layer di Integrazione
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#azure-sentinel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Azure Sentinel
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#flusso-dei-dati" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Flusso dei Dati
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pattern-di-integrazione" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pattern di Integrazione
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Pattern di Integrazione">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pattern-push-real-time-platform-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pattern Push Real-Time (Platform Events)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pattern-push-ccf-function-logic-app" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pattern Push (CCF, Function, Logic App)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pattern-pull-function-logic-app" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pattern Pull (Function, Logic App)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pattern-syslog" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pattern Syslog
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#considerazioni-di-sicurezza" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Considerazioni di Sicurezza
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scalabilita" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scalabilità
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -759,28 +554,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -798,7 +596,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -816,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../solutions/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
@@ -850,10 +648,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -862,7 +663,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
             
   
   
@@ -898,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../solutions/ccf/" class="md-nav__link">
+      <a href="../ccf/" class="md-nav__link">
         
   
   
@@ -926,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../solutions/azure-function/" class="md-nav__link">
+      <a href="../azure-function/" class="md-nav__link">
         
   
   
@@ -954,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../solutions/logic-app/" class="md-nav__link">
+      <a href="../logic-app/" class="md-nav__link">
         
   
   
@@ -987,28 +788,31 @@
                 
   
   
+    
   
   
+  
     
     
     
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
         
           
+          
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
             
   
   
@@ -1026,7 +830,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1041,10 +845,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../solutions/platform-events/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Function + Event Hub
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1060,6 +891,253 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#panoramica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panoramica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differenza-chiave-event-bus-vs-event-log-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ Differenza Chiave: Event Bus vs Event Log Files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ Differenza Chiave: Event Bus vs Event Log Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#platform-events-event-bus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Platform Events (Event Bus)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-log-files-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Event Log Files API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quando-usare-platform-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando Usare Platform Events
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architettura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architettura
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#approcci-disponibili" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Approcci Disponibili
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Approcci Disponibili">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-webhook-http-piu-semplice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Webhook HTTP (Più Semplice)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-azure-event-hub-consigliato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Azure Event Hub (⭐ Consigliato)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-cometd-streaming-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. CometD Streaming API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitazioni" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitazioni
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitazioni">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copertura-eventi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copertura Eventi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requisiti-tecnici" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requisiti Tecnici
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rate-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rate Limits
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementazione
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#costi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Costi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confronto-con-event-log-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confronto con Event Log Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#approccio-ibrido-consigliato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Approccio Ibrido (Consigliato)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link-utili" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Link Utili
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1080,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../solutions/other/" class="md-nav__link">
+      <a href="../other/" class="md-nav__link">
         
   
   
@@ -1625,10 +1703,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#architettura-generale" class="md-nav__link">
+  <a href="#panoramica" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Architettura Generale
+        Panoramica
       
     </span>
   </a>
@@ -1636,22 +1714,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#componenti-principali" class="md-nav__link">
+  <a href="#differenza-chiave-event-bus-vs-event-log-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Componenti Principali
+        ⚠️ Differenza Chiave: Event Bus vs Event Log Files
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Componenti Principali">
+    <nav class="md-nav" aria-label="⚠️ Differenza Chiave: Event Bus vs Event Log Files">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#salesforce" class="md-nav__link">
+  <a href="#platform-events-event-bus" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Salesforce
+        Platform Events (Event Bus)
       
     </span>
   </a>
@@ -1659,21 +1737,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#layer-di-integrazione" class="md-nav__link">
+  <a href="#event-log-files-api" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Layer di Integrazione
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#azure-sentinel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Azure Sentinel
+        Event Log Files API
       
     </span>
   </a>
@@ -1686,10 +1753,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#flusso-dei-dati" class="md-nav__link">
+  <a href="#quando-usare-platform-events" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Flusso dei Dati
+        Quando Usare Platform Events
       
     </span>
   </a>
@@ -1697,22 +1764,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pattern-di-integrazione" class="md-nav__link">
+  <a href="#architettura" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pattern di Integrazione
+        Architettura
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Pattern di Integrazione">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#approcci-disponibili" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Approcci Disponibili
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Approcci Disponibili">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pattern-push-real-time-platform-events" class="md-nav__link">
+  <a href="#1-webhook-http-piu-semplice" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pattern Push Real-Time (Platform Events)
+        1. Webhook HTTP (Più Semplice)
       
     </span>
   </a>
@@ -1720,10 +1798,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pattern-push-ccf-function-logic-app" class="md-nav__link">
+  <a href="#2-azure-event-hub-consigliato" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pattern Push (CCF, Function, Logic App)
+        2. Azure Event Hub (⭐ Consigliato)
       
     </span>
   </a>
@@ -1731,21 +1809,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pattern-pull-function-logic-app" class="md-nav__link">
+  <a href="#3-cometd-streaming-api" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pattern Pull (Function, Logic App)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pattern-syslog" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pattern Syslog
+        3. CometD Streaming API
       
     </span>
   </a>
@@ -1758,10 +1825,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#considerazioni-di-sicurezza" class="md-nav__link">
+  <a href="#limitazioni" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Considerazioni di Sicurezza
+        Limitazioni
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitazioni">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copertura-eventi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copertura Eventi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requisiti-tecnici" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requisiti Tecnici
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rate-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rate Limits
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementazione
       
     </span>
   </a>
@@ -1769,10 +1886,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scalabilita" class="md-nav__link">
+  <a href="#costi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scalabilità
+        Costi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confronto-con-event-log-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confronto con Event Log Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#approccio-ibrido-consigliato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Approccio Ibrido (Consigliato)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link-utili" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Link Utili
       
     </span>
   </a>
@@ -1799,81 +1949,173 @@
   
 
 
-<h1 id="architettura">Architettura<a class="headerlink" href="#architettura" title="Permanent link">&para;</a></h1>
-<p>Panoramica dell'architettura dell'integrazione Salesforce-Azure Sentinel.</p>
-<h2 id="architettura-generale">Architettura Generale<a class="headerlink" href="#architettura-generale" title="Permanent link">&para;</a></h2>
-<p>L'integrazione segue un pattern di raccolta eventi da Salesforce e invio a Azure Sentinel per l'analisi e il monitoraggio della sicurezza.</p>
-<h2 id="componenti-principali">Componenti Principali<a class="headerlink" href="#componenti-principali" title="Permanent link">&para;</a></h2>
-<h3 id="salesforce">Salesforce<a class="headerlink" href="#salesforce" title="Permanent link">&para;</a></h3>
+<h1 id="platform-events-near-real-time">Platform Events (Near Real-Time)<a class="headerlink" href="#platform-events-near-real-time" title="Permanent link">&para;</a></h1>
+<p>Soluzione per integrazione near real-time tra Salesforce e Azure Sentinel usando Platform Events (Event Bus).</p>
+<h2 id="panoramica">Panoramica<a class="headerlink" href="#panoramica" title="Permanent link">&para;</a></h2>
+<p>Questa soluzione utilizza <strong>Platform Events</strong> (Event Bus) di Salesforce per ottenere eventi in <strong>tempo reale</strong> (&lt; 1 minuto di latenza) invece dei 24-48 ore degli Event Log Files API.</p>
+<h2 id="differenza-chiave-event-bus-vs-event-log-files">⚠️ Differenza Chiave: Event Bus vs Event Log Files<a class="headerlink" href="#differenza-chiave-event-bus-vs-event-log-files" title="Permanent link">&para;</a></h2>
+<h3 id="platform-events-event-bus">Platform Events (Event Bus)<a class="headerlink" href="#platform-events-event-bus" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Event Monitoring</strong>: Genera eventi di accesso (LoginEvent, LogoutEvent, ApiEvent)</li>
-<li><strong>Connected App</strong>: Autenticazione OAuth per l'accesso alle API</li>
-<li><strong>Event Log Files API</strong>: API per recuperare i log degli eventi</li>
+<li>✅ <strong>Latenza</strong>: &lt; 1 minuto (near real-time)</li>
+<li>✅ <strong>Tempo Reale</strong>: Eventi disponibili immediatamente</li>
+<li>❌ <strong>Copertura Limitata</strong>: Non tutti gli eventi disponibili</li>
+<li>❌ <strong>Complessità</strong>: Richiede sviluppo custom</li>
 </ul>
-<h3 id="layer-di-integrazione">Layer di Integrazione<a class="headerlink" href="#layer-di-integrazione" title="Permanent link">&para;</a></h3>
-<p>Il layer di integrazione varia in base alla soluzione scelta:</p>
+<h3 id="event-log-files-api">Event Log Files API<a class="headerlink" href="#event-log-files-api" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>CCF</strong>: Connector nativo Azure Sentinel</li>
-<li><strong>Azure Function</strong>: Funzione serverless per trasformazione e invio</li>
-<li><strong>Logic App</strong>: Workflow orchestrato per la gestione degli eventi</li>
-<li><strong>Syslog</strong>: Server Syslog per la raccolta centralizzata</li>
+<li>❌ <strong>Latenza</strong>: 24-48 ore (limite strutturale)</li>
+<li>✅ <strong>Copertura Completa</strong>: Tutti gli eventi disponibili</li>
+<li>✅ <strong>Setup Semplice</strong>: Soluzioni code-less disponibili</li>
 </ul>
-<h3 id="azure-sentinel">Azure Sentinel<a class="headerlink" href="#azure-sentinel" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Log Analytics Workspace</strong>: Storage dei log</li>
-<li><strong>KQL Queries</strong>: Analisi e query sui dati</li>
-<li><strong>Workbooks</strong>: Dashboard e visualizzazioni</li>
-<li><strong>Alerting</strong>: Regole di allerta per eventi sospetti</li>
-</ul>
-<h2 id="flusso-dei-dati">Flusso dei Dati<a class="headerlink" href="#flusso-dei-dati" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Salesforce Event Monitoring
+<h2 id="quando-usare-platform-events">Quando Usare Platform Events<a class="headerlink" href="#quando-usare-platform-events" title="Permanent link">&para;</a></h2>
+<p><strong>Scegli Platform Events se</strong>:
+- ✅ Hai bisogno di monitoraggio near real-time (&lt; 24 ore)
+- ✅ Eventi critici richiedono alerting immediato
+- ✅ Hai competenze di sviluppo (Apex + Azure Function)
+- ✅ Budget per sviluppo e manutenzione</p>
+<p><strong>Non scegliere Platform Events se</strong>:
+- ❌ Hai bisogno di Audit Trail (non disponibile)
+- ❌ Vuoi setup semplice senza codice
+- ❌ Budget limitato
+- ❌ Non hai competenze di sviluppo</p>
+<h2 id="architettura">Architettura<a class="headerlink" href="#architettura" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Salesforce Platform Events (Event Bus)
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    ↓
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Event Log Files API
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Apex Trigger / Process Builder
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    ↓
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Layer di Integrazione (CCF/Function/Logic App)
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>HTTP Callout / Event Hub / CometD
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    ↓
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Azure Sentinel / Log Analytics
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Azure Function
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    ↓
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Analisi e Monitoraggio
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Log Analytics / Azure Sentinel
 </code></pre></div>
-<h2 id="pattern-di-integrazione">Pattern di Integrazione<a class="headerlink" href="#pattern-di-integrazione" title="Permanent link">&para;</a></h2>
-<h3 id="pattern-push-real-time-platform-events">Pattern Push Real-Time (Platform Events)<a class="headerlink" href="#pattern-push-real-time-platform-events" title="Permanent link">&para;</a></h3>
-<p>Salesforce Platform Events → Streaming API/Webhook → Azure Function/Event Hub → Azure Sentinel</p>
-<p><strong>Caratteristiche</strong>:
-- Latenza: &lt; 1 minuto (near real-time)
-- Copertura: Limitata (non tutti gli eventi disponibili)
-- Complessità: Alta (richiede sviluppo)</p>
-<h3 id="pattern-push-ccf-function-logic-app">Pattern Push (CCF, Function, Logic App)<a class="headerlink" href="#pattern-push-ccf-function-logic-app" title="Permanent link">&para;</a></h3>
-<p>Salesforce → API Call → Integrazione → Azure Sentinel</p>
-<p><strong>Caratteristiche</strong>:
-- Latenza: 24-72 ore (limite strutturale Event Log Files)
-- Copertura: Completa
-- Complessità: Bassa (CCF) o Media (Function)</p>
-<h3 id="pattern-pull-function-logic-app">Pattern Pull (Function, Logic App)<a class="headerlink" href="#pattern-pull-function-logic-app" title="Permanent link">&para;</a></h3>
-<p>Integrazione → Polling API Salesforce → Trasformazione → Azure Sentinel</p>
-<p><strong>Caratteristiche</strong>:
-- Latenza: 24-72 ore + intervallo polling
-- Copertura: Completa
-- Complessità: Media</p>
-<h3 id="pattern-syslog">Pattern Syslog<a class="headerlink" href="#pattern-syslog" title="Permanent link">&para;</a></h3>
-<p>Salesforce → Syslog Server → Azure Monitor Agent → Azure Sentinel</p>
-<p><strong>Caratteristiche</strong>:
-- Latenza: Dipende da configurazione
-- Copertura: Dipende da configurazione Salesforce
-- Complessità: Media</p>
-<h2 id="considerazioni-di-sicurezza">Considerazioni di Sicurezza<a class="headerlink" href="#considerazioni-di-sicurezza" title="Permanent link">&para;</a></h2>
+<h2 id="approcci-disponibili">Approcci Disponibili<a class="headerlink" href="#approcci-disponibili" title="Permanent link">&para;</a></h2>
+<h3 id="1-webhook-http-piu-semplice">1. Webhook HTTP (Più Semplice)<a class="headerlink" href="#1-webhook-http-piu-semplice" title="Permanent link">&para;</a></h3>
+<p><strong>Architettura</strong>:
+- Salesforce → Apex Trigger → HTTP Callout → Azure Function (HTTP Trigger) → Sentinel</p>
+<p><strong>Vantaggi</strong>:
+- Implementazione relativamente semplice
+- Nessun componente intermedio
+- Controllo diretto</p>
+<p><strong>Svantaggi</strong>:
+- Gestione timeout e retry
+- Limitato da callout limits Salesforce</p>
+<h3 id="2-azure-event-hub-consigliato">2. Azure Event Hub (⭐ Consigliato)<a class="headerlink" href="#2-azure-event-hub-consigliato" title="Permanent link">&para;</a></h3>
+<p><strong>Architettura</strong>:
+- Salesforce → Apex Trigger → HTTP → Event Hub → Azure Function (Event Hub Trigger) → Sentinel</p>
+<p><strong>Vantaggi</strong>:
+- Scalabilità automatica
+- Affidabilità (persistenza eventi)
+- Decoupling tra Salesforce e Function
+- Gestione picchi automatica</p>
+<p><strong>Svantaggi</strong>:
+- Componente aggiuntivo (Event Hub)
+- Costi aggiuntivi</p>
+<h3 id="3-cometd-streaming-api">3. CometD Streaming API<a class="headerlink" href="#3-cometd-streaming-api" title="Permanent link">&para;</a></h3>
+<p><strong>Architettura</strong>:
+- Salesforce → Platform Events → CometD WebSocket → Azure Function → Sentinel</p>
+<p><strong>Vantaggi</strong>:
+- Connessione persistente
+- Push real-time</p>
+<p><strong>Svantaggi</strong>:
+- Complessità gestione WebSocket
+- Richiede processo long-running</p>
+<h2 id="limitazioni">Limitazioni<a class="headerlink" href="#limitazioni" title="Permanent link">&para;</a></h2>
+<h3 id="copertura-eventi">Copertura Eventi<a class="headerlink" href="#copertura-eventi" title="Permanent link">&para;</a></h3>
+<p><strong>Eventi Disponibili</strong>:
+- ✅ LoginEvent (se configurato)
+- ✅ LogoutEvent (se configurato)
+- ✅ ApiEvent (se configurato)
+- ✅ Eventi custom</p>
+<p><strong>Eventi NON Disponibili</strong>:
+- ❌ Audit Trail (solo su Event Log Files)
+- ❌ Field History Tracking (solo su Event Log Files)
+- ❌ Alcuni eventi di sicurezza avanzati</p>
+<h3 id="requisiti-tecnici">Requisiti Tecnici<a class="headerlink" href="#requisiti-tecnici" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Autenticazione OAuth</strong>: Sicurezza delle credenziali</li>
-<li><strong>HTTPS</strong>: Comunicazione criptata</li>
-<li><strong>Network Security</strong>: Restrizioni IP e firewall</li>
-<li><strong>Secrets Management</strong>: Gestione sicura delle credenziali (Key Vault)</li>
+<li><strong>Sviluppo Apex</strong>: Richiesto per trigger e callout</li>
+<li><strong>Sviluppo Azure Function</strong>: Richiesto per processing</li>
+<li><strong>Manutenzione</strong>: Gestione continua codice e configurazioni</li>
+<li><strong>Competenze</strong>: Sviluppatori Apex e Azure Function</li>
 </ul>
-<h2 id="scalabilita">Scalabilità<a class="headerlink" href="#scalabilita" title="Permanent link">&para;</a></h2>
+<h3 id="rate-limits">Rate Limits<a class="headerlink" href="#rate-limits" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Eventi Volume</strong>: Gestione di picchi di eventi</li>
-<li><strong>Retry Logic</strong>: Gestione errori e retry</li>
-<li><strong>Rate Limiting</strong>: Rispetto dei limiti API Salesforce</li>
-<li><strong>Cost Optimization</strong>: Ottimizzazione dei costi Azure</li>
+<li><strong>Platform Events pubblicati</strong>: 2.000.000/giorno (Enterprise)</li>
+<li><strong>API Callouts</strong>: 100.000/giorno (Enterprise)</li>
+<li><strong>Concurrent Callouts</strong>: 10 simultanee</li>
+</ul>
+<h2 id="implementazione">Implementazione<a class="headerlink" href="#implementazione" title="Permanent link">&para;</a></h2>
+<p>Vedi la guida completa: <a href="../../implementation/platform-events/">Implementazione Platform Events</a></p>
+<p>La guida include:
+- Configurazione Platform Events in Salesforce
+- Sviluppo Apex Trigger
+- Implementazione Azure Function
+- Configurazione Event Hub (se usato)
+- Gestione errori e retry
+- Best practices</p>
+<h2 id="costi">Costi<a class="headerlink" href="#costi" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Sviluppo iniziale</strong>: 2-3 giorni di sviluppo</li>
+<li><strong>Azure Function</strong>: Costi esecuzione (Consumption o Premium Plan)</li>
+<li><strong>Event Hub</strong> (se usato): ~$10-20/mese base + throughput</li>
+<li><strong>Log Analytics</strong>: Costi ingestione dati</li>
+<li><strong>Manutenzione</strong>: Costi continui per aggiornamenti</li>
+</ul>
+<p><strong>Totale stimato</strong>: $50-200/mese + costi sviluppo iniziale</p>
+<h2 id="confronto-con-event-log-files">Confronto con Event Log Files<a class="headerlink" href="#confronto-con-event-log-files" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspetto</th>
+<th>Platform Events</th>
+<th>Event Log Files (CCF)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Latenza</strong></td>
+<td>&lt; 1 minuto</td>
+<td>24-48 ore</td>
+</tr>
+<tr>
+<td><strong>Copertura</strong></td>
+<td>Limitata</td>
+<td>Completa</td>
+</tr>
+<tr>
+<td><strong>Setup</strong></td>
+<td>2-3 giorni</td>
+<td>30-60 minuti</td>
+</tr>
+<tr>
+<td><strong>Manutenzione</strong></td>
+<td>Alta</td>
+<td>Zero</td>
+</tr>
+<tr>
+<td><strong>Costi</strong></td>
+<td>Medio-Alto</td>
+<td>Basso</td>
+</tr>
+<tr>
+<td><strong>Audit Trail</strong></td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h2 id="approccio-ibrido-consigliato">Approccio Ibrido (Consigliato)<a class="headerlink" href="#approccio-ibrido-consigliato" title="Permanent link">&para;</a></h2>
+<p>Per massimizzare copertura e latenza, combina entrambi:</p>
+<ul>
+<li><strong>Platform Events</strong>: Eventi critici in tempo reale</li>
+<li><strong>Event Log Files (CCF)</strong>: Copertura completa e compliance</li>
+</ul>
+<h2 id="link-utili">Link Utili<a class="headerlink" href="#link-utili" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../implementation/platform-events/">Implementazione Platform Events</a></li>
+<li><a href="../../implementation/azure-function/">Implementazione Azure Function</a></li>
+<li><a href="../../implementation/network-sicurezza/">Network e Sicurezza</a></li>
+<li><a href="https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/">Salesforce Platform Events Documentation</a></li>
 </ul>
 
 
@@ -1897,7 +2139,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 14, 2025 14:36:43 UTC">November 14, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 17, 2025 21:58:32 UTC">November 17, 2025</span>
   </span>
 
     
@@ -1907,7 +2149,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 14, 2025 14:36:43 UTC">November 14, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 17, 2025 21:58:32 UTC">November 17, 2025</span>
   </span>
 
     

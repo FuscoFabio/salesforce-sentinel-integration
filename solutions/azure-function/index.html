@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#azure-function" class="md-skip">
+        <a href="#azure-function-event-log-files" class="md-skip">
           Skip to content
         </a>
       
@@ -639,6 +639,63 @@
                 
   
   
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event Log Files API (24-48h)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Event Log Files API (24-48h)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
@@ -741,6 +798,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#approccio-event-log-files-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ Approccio: Event Log Files API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#caratteristiche" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -752,10 +820,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisiti" class="md-nav__link">
+  <a href="#quando-usare-azure-function-event-log-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisiti
+        Quando Usare Azure Function (Event Log Files)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differenza-con-platform-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Differenza con Platform Events
       
     </span>
   </a>
@@ -816,6 +895,107 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platform Events (Near Real-Time)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Platform Events (Near Real-Time)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../platform-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Function + Event Hub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1384,6 +1564,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#approccio-event-log-files-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ Approccio: Event Log Files API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#caratteristiche" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1395,10 +1586,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisiti" class="md-nav__link">
+  <a href="#quando-usare-azure-function-event-log-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisiti
+        Quando Usare Azure Function (Event Log Files)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differenza-con-platform-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Differenza con Platform Events
       
     </span>
   </a>
@@ -1447,28 +1649,79 @@
   
 
 
-<h1 id="azure-function">Azure Function<a class="headerlink" href="#azure-function" title="Permanent link">&para;</a></h1>
-<p>Soluzione basata su Azure Function per l'integrazione Salesforce-Azure Sentinel con massima personalizzazione.</p>
+<h1 id="azure-function-event-log-files">Azure Function (Event Log Files)<a class="headerlink" href="#azure-function-event-log-files" title="Permanent link">&para;</a></h1>
+<p>Soluzione basata su Azure Function per l'integrazione Salesforce-Azure Sentinel usando <strong>Event Log Files API</strong> con massima personalizzazione.</p>
 <h2 id="panoramica">Panoramica<a class="headerlink" href="#panoramica" title="Permanent link">&para;</a></h2>
 <p>Azure Function è la soluzione consigliata quando hai bisogno di controllo completo sul processo di integrazione e personalizzazione avanzata della logica di trasformazione dei dati.</p>
+<h2 id="approccio-event-log-files-api">⚠️ Approccio: Event Log Files API<a class="headerlink" href="#approccio-event-log-files-api" title="Permanent link">&para;</a></h2>
+<p><strong>Questa soluzione usa Event Log Files API</strong>, che ha le seguenti caratteristiche:</p>
+<ul>
+<li>✅ <strong>Copertura Completa</strong>: Tutti gli eventi disponibili (LoginEvent, LogoutEvent, ApiEvent, Audit Trail)</li>
+<li>✅ <strong>Formato Strutturato</strong>: Dati ottimizzati e validati</li>
+<li>❌ <strong>Latenza</strong>: 24-48 ore (limite strutturale Salesforce)</li>
+<li>✅ <strong>Personalizzazione</strong>: Controllo completo sulla logica</li>
+</ul>
+<p><strong>Se hai bisogno di near real-time (&lt; 24 ore)</strong>, considera <a href="../platform-events.md">Platform Events</a> invece.</p>
 <h2 id="caratteristiche">Caratteristiche<a class="headerlink" href="#caratteristiche" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Massima Personalizzazione</strong>: Controllo completo sulla logica di trasformazione</li>
 <li><strong>Scalabilità</strong>: Gestione automatica del carico di lavoro</li>
 <li><strong>Costi Ottimizzati</strong>: Paghi solo per l'esecuzione</li>
 <li><strong>Monitoraggio Integrato</strong>: Log e metriche in Azure Monitor</li>
+<li><strong>Polling Configurabile</strong>: 5-15 minuti (consigliato)</li>
 </ul>
-<h2 id="prerequisiti">Prerequisiti<a class="headerlink" href="#prerequisiti" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Azure Subscription</li>
-<li>Azure Function App</li>
-<li>Azure Sentinel Workspace</li>
-<li>Configurazione Salesforce completata</li>
-</ul>
+<h2 id="quando-usare-azure-function-event-log-files">Quando Usare Azure Function (Event Log Files)<a class="headerlink" href="#quando-usare-azure-function-event-log-files" title="Permanent link">&para;</a></h2>
+<p><strong>Scegli Azure Function se</strong>:
+- ✅ Hai bisogno di personalizzazioni avanzate che il CCF non supporta
+- ✅ Vuoi controllo completo sulla logica di trasformazione
+- ✅ Hai competenze di sviluppo
+- ✅ La latenza di 24-72 ore è accettabile</p>
+<p><strong>Non scegliere questa soluzione se</strong>:
+- ❌ Hai bisogno di near real-time (&lt; 24 ore) → Usa <a href="../platform-events.md">Platform Events</a>
+- ❌ Vuoi setup semplice senza codice → Usa <a href="../ccf/">CCF</a></p>
+<h2 id="differenza-con-platform-events">Differenza con Platform Events<a class="headerlink" href="#differenza-con-platform-events" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspetto</th>
+<th>Azure Function (Event Log Files)</th>
+<th>Azure Function (Platform Events)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>API Usata</strong></td>
+<td>Event Log Files API</td>
+<td>Platform Events (Event Bus)</td>
+</tr>
+<tr>
+<td><strong>Latenza</strong></td>
+<td>24-48 ore</td>
+<td>&lt; 1 minuto</td>
+</tr>
+<tr>
+<td><strong>Copertura</strong></td>
+<td>Completa</td>
+<td>Limitata</td>
+</tr>
+<tr>
+<td><strong>Sviluppo Salesforce</strong></td>
+<td>Non richiesto</td>
+<td>Richiesto (Apex)</td>
+</tr>
+<tr>
+<td><strong>Complessità</strong></td>
+<td>Media</td>
+<td>Alta</td>
+</tr>
+</tbody>
+</table>
 <h2 id="implementazione">Implementazione<a class="headerlink" href="#implementazione" title="Permanent link">&para;</a></h2>
-<p>Vedi la sezione <a href="../../implementation/azure-function/">Implementazione Azure Function</a> per i dettagli tecnici.</p>
+<p>Vedi la guida completa: <a href="../../implementation/azure-function/">Implementazione Azure Function</a></p>
 <h2 id="link-utili">Link Utili<a class="headerlink" href="#link-utili" title="Permanent link">&para;</a></h2>
 <ul>
+<li><a href="../../implementation/azure-function/">Implementazione Azure Function</a></li>
+<li><a href="../platform-events.md">Platform Events (Near Real-Time)</a></li>
 <li><a href="https://learn.microsoft.com/azure/azure-functions/">Documentazione Azure Functions</a></li>
 <li><a href="https://azure.microsoft.com/pricing/details/functions/">Azure Function Pricing</a></li>
 </ul>

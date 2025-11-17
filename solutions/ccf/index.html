@@ -643,6 +643,63 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event Log Files API (24-48h)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Event Log Files API (24-48h)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -713,10 +770,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configurazione" class="md-nav__link">
+  <a href="#approccio-event-log-files-api" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configurazione
+        ⚠️ Approccio: Event Log Files API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caratteristiche" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caratteristiche
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quando-usare-ccf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando Usare CCF
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementazione
       
     </span>
   </a>
@@ -794,6 +884,107 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platform Events (Near Real-Time)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Platform Events (Near Real-Time)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../platform-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Function + Event Hub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1362,10 +1553,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configurazione" class="md-nav__link">
+  <a href="#approccio-event-log-files-api" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configurazione
+        ⚠️ Approccio: Event Log Files API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caratteristiche" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caratteristiche
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quando-usare-ccf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando Usare CCF
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementazione
       
     </span>
   </a>
@@ -1404,14 +1628,43 @@
 
 
 <h1 id="codeless-connector-framework-ccf">CodeLess Connector Framework (CCF)<a class="headerlink" href="#codeless-connector-framework-ccf" title="Permanent link">&para;</a></h1>
-<p>Documentazione completa del CodeLess Connector Framework per l'integrazione Salesforce-Azure Sentinel.</p>
+<p>Soluzione code-less per integrazione Salesforce-Azure Sentinel usando <strong>Event Log Files API</strong>.</p>
 <h2 id="panoramica">Panoramica<a class="headerlink" href="#panoramica" title="Permanent link">&para;</a></h2>
-<p>Il CodeLess Connector Framework (CCF) è la soluzione raccomandata per setup rapido senza codice.</p>
-<h2 id="configurazione">Configurazione<a class="headerlink" href="#configurazione" title="Permanent link">&para;</a></h2>
-<p>Vedi la documentazione completa nel repository per i dettagli di configurazione.</p>
+<p>Il CodeLess Connector Framework (CCF) è la soluzione raccomandata per setup rapido senza codice. Utilizza <strong>Event Log Files API</strong> per recuperare eventi da Salesforce.</p>
+<h2 id="approccio-event-log-files-api">⚠️ Approccio: Event Log Files API<a class="headerlink" href="#approccio-event-log-files-api" title="Permanent link">&para;</a></h2>
+<p><strong>Questa soluzione usa Event Log Files API</strong>, che ha le seguenti caratteristiche:</p>
+<ul>
+<li>✅ <strong>Copertura Completa</strong>: Tutti gli eventi disponibili (LoginEvent, LogoutEvent, ApiEvent, Audit Trail)</li>
+<li>✅ <strong>Formato Strutturato</strong>: Dati ottimizzati e validati</li>
+<li>❌ <strong>Latenza</strong>: 24-48 ore (limite strutturale Salesforce)</li>
+<li>✅ <strong>Setup Semplice</strong>: Configurazione grafica, zero codice</li>
+</ul>
+<p><strong>Se hai bisogno di near real-time (&lt; 24 ore)</strong>, considera <a href="../platform-events.md">Platform Events</a> invece.</p>
+<h2 id="caratteristiche">Caratteristiche<a class="headerlink" href="#caratteristiche" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Setup Rapido</strong>: 30-60 minuti (configurazione grafica)</li>
+<li><strong>Zero Manutenzione</strong>: Gestito completamente da Microsoft</li>
+<li><strong>Costi Contenuti</strong>: Solo costi ingestione dati</li>
+<li><strong>Affidabilità</strong>: Gestione automatica errori e retry</li>
+<li><strong>Polling Ottimizzato</strong>: 15-30 minuti (configurabile)</li>
+</ul>
+<h2 id="quando-usare-ccf">Quando Usare CCF<a class="headerlink" href="#quando-usare-ccf" title="Permanent link">&para;</a></h2>
+<p><strong>Scegli CCF se</strong>:
+- ✅ La latenza di 24-72 ore è accettabile
+- ✅ Hai bisogno di copertura completa (incluso Audit Trail)
+- ✅ Vuoi setup semplice senza codice
+- ✅ Budget limitato
+- ✅ Zero manutenzione desiderata</p>
+<p><strong>Non scegliere CCF se</strong>:
+- ❌ Hai bisogno di monitoraggio near real-time (&lt; 24 ore)
+- ❌ Hai requisiti di personalizzazione avanzata che CCF non supporta</p>
+<h2 id="implementazione">Implementazione<a class="headerlink" href="#implementazione" title="Permanent link">&para;</a></h2>
+<p>Vedi la guida completa: <a href="../../implementation/ccf/">Implementazione CCF</a></p>
 <h2 id="link-utili">Link Utili<a class="headerlink" href="#link-utili" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://learn.microsoft.com/azure/sentinel/create-codeless-connector">Documentazione Microsoft</a></li>
+<li><a href="../../implementation/ccf/">Implementazione CCF</a></li>
+<li><a href="https://learn.microsoft.com/azure/sentinel/create-codeless-connector">Documentazione Microsoft CCF</a></li>
+<li><a href="../platform-events.md">Platform Events (Near Real-Time)</a> - Alternativa per real-time</li>
 </ul>
 
 
