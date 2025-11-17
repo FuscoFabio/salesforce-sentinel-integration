@@ -669,6 +669,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#pattern-push-real-time-platform-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern Push Real-Time (Platform Events)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pattern-push-ccf-function-logic-app" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1207,6 +1218,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../implementation/platform-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platform Events (Near Real-Time)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../implementation/network-sicurezza/" class="md-nav__link">
         
   
@@ -1518,6 +1557,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#pattern-push-real-time-platform-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern Push Real-Time (Platform Events)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pattern-push-ccf-function-logic-app" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1635,12 +1685,30 @@
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Analisi e Monitoraggio
 </code></pre></div>
 <h2 id="pattern-di-integrazione">Pattern di Integrazione<a class="headerlink" href="#pattern-di-integrazione" title="Permanent link">&para;</a></h2>
+<h3 id="pattern-push-real-time-platform-events">Pattern Push Real-Time (Platform Events)<a class="headerlink" href="#pattern-push-real-time-platform-events" title="Permanent link">&para;</a></h3>
+<p>Salesforce Platform Events → Streaming API/Webhook → Azure Function/Event Hub → Azure Sentinel</p>
+<p><strong>Caratteristiche</strong>:
+- Latenza: &lt; 1 minuto (near real-time)
+- Copertura: Limitata (non tutti gli eventi disponibili)
+- Complessità: Alta (richiede sviluppo)</p>
 <h3 id="pattern-push-ccf-function-logic-app">Pattern Push (CCF, Function, Logic App)<a class="headerlink" href="#pattern-push-ccf-function-logic-app" title="Permanent link">&para;</a></h3>
 <p>Salesforce → API Call → Integrazione → Azure Sentinel</p>
+<p><strong>Caratteristiche</strong>:
+- Latenza: 24-72 ore (limite strutturale Event Log Files)
+- Copertura: Completa
+- Complessità: Bassa (CCF) o Media (Function)</p>
 <h3 id="pattern-pull-function-logic-app">Pattern Pull (Function, Logic App)<a class="headerlink" href="#pattern-pull-function-logic-app" title="Permanent link">&para;</a></h3>
 <p>Integrazione → Polling API Salesforce → Trasformazione → Azure Sentinel</p>
+<p><strong>Caratteristiche</strong>:
+- Latenza: 24-72 ore + intervallo polling
+- Copertura: Completa
+- Complessità: Media</p>
 <h3 id="pattern-syslog">Pattern Syslog<a class="headerlink" href="#pattern-syslog" title="Permanent link">&para;</a></h3>
 <p>Salesforce → Syslog Server → Azure Monitor Agent → Azure Sentinel</p>
+<p><strong>Caratteristiche</strong>:
+- Latenza: Dipende da configurazione
+- Copertura: Dipende da configurazione Salesforce
+- Complessità: Media</p>
 <h2 id="considerazioni-di-sicurezza">Considerazioni di Sicurezza<a class="headerlink" href="#considerazioni-di-sicurezza" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Autenticazione OAuth</strong>: Sicurezza delle credenziali</li>
