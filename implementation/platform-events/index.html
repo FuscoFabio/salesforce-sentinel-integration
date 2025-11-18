@@ -15,10 +15,6 @@
         <link rel="canonical" href="https://FuscoFabio.github.io/salesforce-sentinel-integration/implementation/platform-events/">
       
       
-        <link rel="prev" href="../azure-function/">
-      
-      
-        <link rel="next" href="../network-sicurezza/">
       
       
         
@@ -29,7 +25,7 @@
     
     
       
-        <title>Platform Events (Near Real-Time) - Integrazione Salesforce - Azure Sentinel</title>
+        <title>Implementazione Platform Events (Event Bus) - Near Real-Time - Integrazione Salesforce - Azure Sentinel</title>
       
     
     
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Platform Events (Near Real-Time)
+              Implementazione Platform Events (Event Bus) - Near Real-Time
             
           </span>
         </div>
@@ -268,11 +264,31 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../solutions/overview/" class="md-tabs__link">
+        <a href="../../event-log-files/overview/" class="md-tabs__link">
           
   
   
-  Soluzioni
+  Event Log Files API (24-48h)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../platform-events/overview/" class="md-tabs__link">
+          
+  
+  
+  Platform Events / Event Bus (Near Real-Time)
 
         </a>
       </li>
@@ -304,17 +320,15 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../ccf/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../network-sicurezza/" class="md-tabs__link">
           
   
   
-  Implementazione
+  Configurazione Avanzata
 
         </a>
       </li>
@@ -543,6 +557,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/approaches-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Confronto Approcci
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -582,7 +624,7 @@
   <span class="md-ellipsis">
     
   
-    Soluzioni
+    Event Log Files API (24-48h)
   
 
     
@@ -598,7 +640,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Soluzioni
+    Event Log Files API (24-48h)
   
 
           </label>
@@ -611,14 +653,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../solutions/overview/" class="md-nav__link">
+      <a href="../../event-log-files/overview/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Confronto
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../event-log-files/solutions-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Confronto Soluzioni
   
 
     
@@ -654,17 +724,17 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Event Log Files API (24-48h)
+    Configurazioni
   
 
     
@@ -675,12 +745,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Event Log Files API (24-48h)
+    Configurazioni
   
 
           </label>
@@ -693,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../solutions/ccf/" class="md-nav__link">
+      <a href="../../event-log-files/configurations/ccf/" class="md-nav__link">
         
   
   
@@ -721,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../solutions/azure-function/" class="md-nav__link">
+      <a href="../../event-log-files/configurations/azure-function/" class="md-nav__link">
         
   
   
@@ -749,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../solutions/logic-app/" class="md-nav__link">
+      <a href="../../event-log-files/configurations/logic-app/" class="md-nav__link">
         
   
   
@@ -800,17 +870,17 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Platform Events (Near Real-Time)
+    Implementazione
   
 
     
@@ -821,12 +891,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Platform Events (Near Real-Time)
+    Implementazione
   
 
           </label>
@@ -839,14 +909,70 @@
   
   
     <li class="md-nav__item">
-      <a href="../../solutions/platform-events/" class="md-nav__link">
+      <a href="../../event-log-files/implementation/ccf/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Azure Function + Event Hub
+    CCF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../event-log-files/implementation/azure-function/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Function
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../event-log-files/implementation/logic-app/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logic App
   
 
     
@@ -874,15 +1000,69 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casi d'Esempio
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Casi d'Esempio
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../solutions/other/" class="md-nav__link">
+      <a href="../../event-log-files/examples/ccf-example/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Altre
+    CCF
   
 
     
@@ -891,6 +1071,70 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../event-log-files/examples/azure-function-example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Function
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../event-log-files/examples/logic-app-example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logic App
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -935,7 +1179,7 @@
   <span class="md-ellipsis">
     
   
-    Setup
+    Platform Events / Event Bus (Near Real-Time)
   
 
     
@@ -948,6 +1192,561 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Platform Events / Event Bus (Near Real-Time)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-events/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-events/configurations-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Confronto Configurazioni
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurazioni
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configurazioni
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-events/configurations/webhook-http/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Webhook HTTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-events/configurations/event-hub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Event Hub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-events/configurations/cometd-streaming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CometD Streaming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementazione
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Implementazione
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-events/implementation/webhook-http/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Webhook HTTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-events/implementation/event-hub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Event Hub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-events/implementation/cometd-streaming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CometD Streaming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casi d'Esempio
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Casi d'Esempio
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-events/examples/webhook-example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Webhook HTTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-events/examples/event-hub-example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event Hub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-events/examples/cometd-example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CometD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1052,38 +1851,35 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Implementazione
+    Configurazione Avanzata
   
 
     
@@ -1094,742 +1890,16 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Implementazione
+    Configurazione Avanzata
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ccf/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CCF
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../azure-function/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Azure Function
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Platform Events (Near Real-Time)
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Platform Events (Near Real-Time)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#panoramica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Panoramica
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitazioni-importanti" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⚠️ Limitazioni Importanti
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚠️ Limitazioni Importanti">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#copertura-eventi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Copertura Eventi
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#requisiti-tecnici" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Requisiti Tecnici
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#architettura" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architettura
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#componenti-dellarchitettura" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Componenti dell'Architettura
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Componenti dell&#39;Architettura">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-salesforce-platform-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Salesforce Platform Events
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-streaming-api-cometd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Streaming API (CometD)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-azure-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Azure Function
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementazione-approccio-1-webhook-da-salesforce" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Implementazione: Approccio 1 - Webhook da Salesforce
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementazione: Approccio 1 - Webhook da Salesforce">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#architettura_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architettura
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-1-configurare-platform-events-in-salesforce" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 1: Configurare Platform Events in Salesforce
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Passo 1: Configurare Platform Events in Salesforce">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-abilitare-platform-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1 Abilitare Platform Events
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-creare-platform-event-custom-se-necessario" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2 Creare Platform Event Custom (se necessario)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-2-creare-apex-trigger-per-pubblicare-eventi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 2: Creare Apex Trigger per Pubblicare Eventi
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Passo 2: Creare Apex Trigger per Pubblicare Eventi">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-trigger-per-loginevent" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1 Trigger per LoginEvent
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-apex-class-per-callout-http" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2 Apex Class per Callout HTTP
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-trigger-per-invio-a-azure-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3 Trigger per Invio a Azure Function
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-3-configurare-azure-function-http-trigger" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 3: Configurare Azure Function (HTTP Trigger)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Passo 3: Configurare Azure Function (HTTP Trigger)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-creare-function-app" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1 Creare Function App
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-implementare-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2 Implementare Function
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementazione-approccio-2-cometd-streaming-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Implementazione: Approccio 2 - CometD Streaming API
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementazione: Approccio 2 - CometD Streaming API">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#architettura_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architettura
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-1-configurare-azure-function-per-cometd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 1: Configurare Azure Function per CometD
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Passo 1: Configurare Azure Function per CometD">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-function-con-timer-trigger-polling-cometd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1 Function con Timer Trigger (Polling CometD)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-libreria-cometd-per-net" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2 Libreria CometD per .NET
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-2-autenticazione-salesforce-per-streaming-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 2: Autenticazione Salesforce per Streaming API
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementazione-approccio-3-azure-event-hub-consigliato" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Implementazione: Approccio 3 - Azure Event Hub (Consigliato)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementazione: Approccio 3 - Azure Event Hub (Consigliato)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#architettura_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architettura
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vantaggi-event-hub" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vantaggi Event Hub
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-1-creare-azure-event-hub" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 1: Creare Azure Event Hub
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-2-modificare-apex-per-event-hub" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 2: Modificare Apex per Event Hub
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-3-azure-function-con-event-hub-trigger" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 3: Azure Function con Event Hub Trigger
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurazione-network-e-sicurezza" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configurazione Network e Sicurezza
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configurazione Network e Sicurezza">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#opzione-1-webhook-http-approccio-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Opzione 1: Webhook HTTP (Approccio 1)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#opzione-2-event-hub-approccio-3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Opzione 2: Event Hub (Approccio 3)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitazioni-e-considerazioni" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Limitazioni e Considerazioni
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Limitazioni e Considerazioni">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#limitazioni-platform-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Limitazioni Platform Events
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#considerazioni-operative" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Considerazioni Operative
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#confronto-platform-events-vs-event-log-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Confronto: Platform Events vs Event Log Files
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#raccomandazione-approccio-ibrido" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Raccomandazione: Approccio Ibrido
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Raccomandazione: Approccio Ibrido">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#architettura-ibrida" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architettura Ibrida
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Best Practices
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Troubleshooting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#problema-eventi-non-ricevuti" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Problema: Eventi Non Ricevuti
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#problema-latenza-elevata" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Problema: Latenza Elevata
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#link-utili" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Link Utili
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
             
               
                 
@@ -1943,10 +2013,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
   
@@ -1964,8 +2034,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3185,7 +3255,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 17, 2025 22:00:38 UTC">November 17, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 18, 2025 00:49:03 UTC">November 18, 2025</span>
   </span>
 
     
@@ -3195,7 +3265,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 17, 2025 22:00:38 UTC">November 17, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 18, 2025 00:49:03 UTC">November 18, 2025</span>
   </span>
 
     

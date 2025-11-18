@@ -2,86 +2,178 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
     </url>
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/CCF_CODELESS_CONNECTOR/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
     </url>
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/troubleshooting/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/event-log-files/overview/</loc>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/event-log-files/solutions-comparison/</loc>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/event-log-files/configurations/azure-function/</loc>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/event-log-files/configurations/ccf/</loc>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/event-log-files/configurations/logic-app/</loc>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/event-log-files/examples/azure-function-example/</loc>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/event-log-files/examples/ccf-example/</loc>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/event-log-files/examples/logic-app-example/</loc>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/event-log-files/implementation/azure-function/</loc>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/event-log-files/implementation/ccf/</loc>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/event-log-files/implementation/logic-app/</loc>
+         <lastmod>2025-11-18</lastmod>
     </url>
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/implementation/azure-function/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
     </url>
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/implementation/ccf/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
     </url>
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/implementation/kql-queries/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
     </url>
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/implementation/network-sicurezza/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
     </url>
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/implementation/platform-events/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/introduction/approaches-comparison/</loc>
+         <lastmod>2025-11-18</lastmod>
     </url>
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/introduction/architecture/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
     </url>
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/introduction/overview/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/platform-events/configurations-comparison/</loc>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/platform-events/overview/</loc>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/platform-events/configurations/cometd-streaming/</loc>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/platform-events/configurations/event-hub/</loc>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/platform-events/configurations/webhook-http/</loc>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/platform-events/examples/cometd-example/</loc>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/platform-events/examples/event-hub-example/</loc>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/platform-events/examples/webhook-example/</loc>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/platform-events/implementation/cometd-streaming/</loc>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/platform-events/implementation/event-hub/</loc>
+         <lastmod>2025-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/platform-events/implementation/webhook-http/</loc>
+         <lastmod>2025-11-18</lastmod>
     </url>
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/references/api/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
     </url>
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/references/links/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
     </url>
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/setup/azure-sentinel/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
     </url>
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/setup/quick-start/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
     </url>
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/setup/salesforce/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
     </url>
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/solutions/azure-function/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
     </url>
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/solutions/ccf/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
     </url>
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/solutions/logic-app/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
     </url>
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/solutions/other/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
     </url>
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/solutions/overview/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
     </url>
     <url>
          <loc>https://FuscoFabio.github.io/salesforce-sentinel-integration/solutions/platform-events/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-18</lastmod>
     </url>
 </urlset>
