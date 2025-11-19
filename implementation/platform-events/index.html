@@ -25,7 +25,7 @@
     
     
       
-        <title>Implementazione Platform Events (Event Bus) - Near Real-Time - Integrazione Salesforce - Azure Sentinel</title>
+        <title>Platform events - Integrazione Salesforce - Azure Sentinel</title>
       
     
     
@@ -50,6 +50,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../css/timeago.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Implementazione Platform Events (Event Bus) - Near Real-Time
+              Platform events
             
           </span>
         </div>
@@ -415,7 +417,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Integrazione Salesforce - Azure Sentinel" class="md-nav__button md-logo" aria-label="Integrazione Salesforce - Azure Sentinel" data-md-component="logo">
       
@@ -2224,627 +2228,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#panoramica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Panoramica
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitazioni-importanti" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⚠️ Limitazioni Importanti
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚠️ Limitazioni Importanti">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#copertura-eventi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Copertura Eventi
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#requisiti-tecnici" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Requisiti Tecnici
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#architettura" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architettura
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#componenti-dellarchitettura" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Componenti dell'Architettura
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Componenti dell&#39;Architettura">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-salesforce-platform-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Salesforce Platform Events
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-streaming-api-cometd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Streaming API (CometD)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-azure-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Azure Function
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementazione-approccio-1-webhook-da-salesforce" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Implementazione: Approccio 1 - Webhook da Salesforce
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementazione: Approccio 1 - Webhook da Salesforce">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#architettura_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architettura
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-1-configurare-platform-events-in-salesforce" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 1: Configurare Platform Events in Salesforce
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Passo 1: Configurare Platform Events in Salesforce">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-abilitare-platform-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1 Abilitare Platform Events
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-creare-platform-event-custom-se-necessario" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2 Creare Platform Event Custom (se necessario)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-2-creare-apex-trigger-per-pubblicare-eventi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 2: Creare Apex Trigger per Pubblicare Eventi
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Passo 2: Creare Apex Trigger per Pubblicare Eventi">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-trigger-per-loginevent" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1 Trigger per LoginEvent
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-apex-class-per-callout-http" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2 Apex Class per Callout HTTP
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-trigger-per-invio-a-azure-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3 Trigger per Invio a Azure Function
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-3-configurare-azure-function-http-trigger" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 3: Configurare Azure Function (HTTP Trigger)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Passo 3: Configurare Azure Function (HTTP Trigger)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-creare-function-app" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1 Creare Function App
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-implementare-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2 Implementare Function
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementazione-approccio-2-cometd-streaming-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Implementazione: Approccio 2 - CometD Streaming API
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementazione: Approccio 2 - CometD Streaming API">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#architettura_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architettura
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-1-configurare-azure-function-per-cometd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 1: Configurare Azure Function per CometD
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Passo 1: Configurare Azure Function per CometD">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-function-con-timer-trigger-polling-cometd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1 Function con Timer Trigger (Polling CometD)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-libreria-cometd-per-net" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2 Libreria CometD per .NET
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-2-autenticazione-salesforce-per-streaming-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 2: Autenticazione Salesforce per Streaming API
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementazione-approccio-3-azure-event-hub-consigliato" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Implementazione: Approccio 3 - Azure Event Hub (Consigliato)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementazione: Approccio 3 - Azure Event Hub (Consigliato)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#architettura_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architettura
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vantaggi-event-hub" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vantaggi Event Hub
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-1-creare-azure-event-hub" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 1: Creare Azure Event Hub
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-2-modificare-apex-per-event-hub" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 2: Modificare Apex per Event Hub
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-3-azure-function-con-event-hub-trigger" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 3: Azure Function con Event Hub Trigger
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurazione-network-e-sicurezza" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configurazione Network e Sicurezza
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configurazione Network e Sicurezza">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#opzione-1-webhook-http-approccio-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Opzione 1: Webhook HTTP (Approccio 1)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#opzione-2-event-hub-approccio-3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Opzione 2: Event Hub (Approccio 3)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitazioni-e-considerazioni" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Limitazioni e Considerazioni
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Limitazioni e Considerazioni">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#limitazioni-platform-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Limitazioni Platform Events
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#considerazioni-operative" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Considerazioni Operative
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#confronto-platform-events-vs-event-log-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Confronto: Platform Events vs Event Log Files
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#raccomandazione-approccio-ibrido" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Raccomandazione: Approccio Ibrido
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Raccomandazione: Approccio Ibrido">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#architettura-ibrida" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architettura Ibrida
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Best Practices
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Troubleshooting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#problema-eventi-non-ricevuti" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Problema: Eventi Non Ricevuti
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#problema-latenza-elevata" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Problema: Latenza Elevata
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#link-utili" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Link Utili
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -2858,13 +2241,15 @@
   
 
 
-<h1 id="implementazione-platform-events-event-bus-near-real-time">Implementazione Platform Events (Event Bus) - Near Real-Time<a class="headerlink" href="#implementazione-platform-events-event-bus-near-real-time" title="Permanent link">&para;</a></h1>
+  <h1>Platform events</h1>
+
+<h2 id="implementazione-platform-events-event-bus-near-real-time"><a class="toclink" href="#implementazione-platform-events-event-bus-near-real-time">Implementazione Platform Events (Event Bus) - Near Real-Time</a><a class="headerlink" href="#implementazione-platform-events-event-bus-near-real-time" title="Permanent link">&para;</a></h2>
 <p>Guida completa per implementare l'integrazione Salesforce-Azure Sentinel usando Platform Events (Event Bus) per ottenere monitoraggio near real-time.</p>
-<h2 id="panoramica">Panoramica<a class="headerlink" href="#panoramica" title="Permanent link">&para;</a></h2>
+<h3 id="panoramica"><a class="toclink" href="#panoramica">Panoramica</a><a class="headerlink" href="#panoramica" title="Permanent link">&para;</a></h3>
 <p>I <strong>Platform Events</strong> (Event Bus) di Salesforce permettono di ottenere eventi in <strong>tempo reale</strong> (&lt; 1 minuto di latenza) invece dei 24-48 ore degli Event Log Files. Questa soluzione è ideale quando è necessario monitoraggio near real-time.</p>
-<h2 id="limitazioni-importanti">⚠️ Limitazioni Importanti<a class="headerlink" href="#limitazioni-importanti" title="Permanent link">&para;</a></h2>
+<h3 id="limitazioni-importanti"><a class="toclink" href="#limitazioni-importanti">⚠️ Limitazioni Importanti</a><a class="headerlink" href="#limitazioni-importanti" title="Permanent link">&para;</a></h3>
 <p>Prima di procedere, è fondamentale comprendere le limitazioni:</p>
-<h3 id="copertura-eventi">Copertura Eventi<a class="headerlink" href="#copertura-eventi" title="Permanent link">&para;</a></h3>
+<h4 id="copertura-eventi"><a class="toclink" href="#copertura-eventi">Copertura Eventi</a><a class="headerlink" href="#copertura-eventi" title="Permanent link">&para;</a></h4>
 <p><strong>Eventi Disponibili su Platform Events</strong>:
 - ✅ <strong>LoginEvent</strong>: Accessi utente (se configurato)
 - ✅ <strong>LogoutEvent</strong>: Disconnessioni (se configurato)
@@ -2875,14 +2260,14 @@
 - ❌ <strong>Field History Tracking</strong>: Modifiche ai campi (solo su Event Log Files)
 - ❌ Alcuni eventi di sicurezza avanzati</p>
 <p><strong>Implicazione</strong>: Se hai bisogno di <strong>tutti</strong> gli eventi, potrebbe essere necessario un approccio <strong>ibrido</strong> (Platform Events + Event Log Files).</p>
-<h3 id="requisiti-tecnici">Requisiti Tecnici<a class="headerlink" href="#requisiti-tecnici" title="Permanent link">&para;</a></h3>
+<h4 id="requisiti-tecnici"><a class="toclink" href="#requisiti-tecnici">Requisiti Tecnici</a><a class="headerlink" href="#requisiti-tecnici" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Sviluppo Custom</strong>: Richiede sviluppo di codice (Apex, Azure Function)</li>
 <li><strong>Manutenzione</strong>: Gestione continua del codice e delle configurazioni</li>
 <li><strong>Complessità</strong>: Maggiore complessità rispetto a Event Log Files API</li>
 <li><strong>Costi</strong>: Costi di sviluppo e manutenzione</li>
 </ul>
-<h2 id="architettura">Architettura<a class="headerlink" href="#architettura" title="Permanent link">&para;</a></h2>
+<h3 id="architettura"><a class="toclink" href="#architettura">Architettura</a><a class="headerlink" href="#architettura" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Salesforce Platform Events (Event Bus)
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    ↓
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Apex Trigger / Process Builder
@@ -2897,26 +2282,26 @@
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    ↓
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Azure Sentinel
 </code></pre></div>
-<h2 id="componenti-dellarchitettura">Componenti dell'Architettura<a class="headerlink" href="#componenti-dellarchitettura" title="Permanent link">&para;</a></h2>
-<h3 id="1-salesforce-platform-events">1. Salesforce Platform Events<a class="headerlink" href="#1-salesforce-platform-events" title="Permanent link">&para;</a></h3>
+<h3 id="componenti-dellarchitettura"><a class="toclink" href="#componenti-dellarchitettura">Componenti dell'Architettura</a><a class="headerlink" href="#componenti-dellarchitettura" title="Permanent link">&para;</a></h3>
+<h4 id="1-salesforce-platform-events"><a class="toclink" href="#1-salesforce-platform-events">1. Salesforce Platform Events</a><a class="headerlink" href="#1-salesforce-platform-events" title="Permanent link">&para;</a></h4>
 <p><strong>Cosa sono</strong>: Eventi pubblicati in tempo reale su un bus eventi interno di Salesforce.</p>
 <p><strong>Caratteristiche</strong>:
 - Eventi disponibili in tempo reale (&lt; 1 secondo)
 - Accessibili tramite Streaming API (CometD)
 - Supporto per eventi standard e custom</p>
-<h3 id="2-streaming-api-cometd">2. Streaming API (CometD)<a class="headerlink" href="#2-streaming-api-cometd" title="Permanent link">&para;</a></h3>
+<h4 id="2-streaming-api-cometd"><a class="toclink" href="#2-streaming-api-cometd">2. Streaming API (CometD)</a><a class="headerlink" href="#2-streaming-api-cometd" title="Permanent link">&para;</a></h4>
 <p><strong>Protocollo</strong>: CometD (Bayeux Protocol) su WebSocket</p>
 <p><strong>Funzionamento</strong>:
 - Connessione persistente WebSocket
 - Push di eventi in tempo reale
 - Sottoscrizione a canali specifici (channels)</p>
-<h3 id="3-azure-function">3. Azure Function<a class="headerlink" href="#3-azure-function" title="Permanent link">&para;</a></h3>
+<h4 id="3-azure-function"><a class="toclink" href="#3-azure-function">3. Azure Function</a><a class="headerlink" href="#3-azure-function" title="Permanent link">&para;</a></h4>
 <p><strong>Trigger Options</strong>:
 - <strong>HTTP Trigger</strong>: Salesforce chiama Function via webhook
 - <strong>Event Hub Trigger</strong>: Eventi via Azure Event Hub
 - <strong>Timer Trigger</strong>: Polling CometD (meno efficiente)</p>
-<h2 id="implementazione-approccio-1-webhook-da-salesforce">Implementazione: Approccio 1 - Webhook da Salesforce<a class="headerlink" href="#implementazione-approccio-1-webhook-da-salesforce" title="Permanent link">&para;</a></h2>
-<h3 id="architettura_1">Architettura<a class="headerlink" href="#architettura_1" title="Permanent link">&para;</a></h3>
+<h3 id="implementazione-approccio-1-webhook-da-salesforce"><a class="toclink" href="#implementazione-approccio-1-webhook-da-salesforce">Implementazione: Approccio 1 - Webhook da Salesforce</a><a class="headerlink" href="#implementazione-approccio-1-webhook-da-salesforce" title="Permanent link">&para;</a></h3>
+<h4 id="architettura_1"><a class="toclink" href="#architettura_1">Architettura</a><a class="headerlink" href="#architettura_1" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Salesforce Platform Event
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    ↓
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Apex Trigger
@@ -2927,14 +2312,14 @@
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    ↓
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Azure Sentinel
 </code></pre></div>
-<h3 id="passo-1-configurare-platform-events-in-salesforce">Passo 1: Configurare Platform Events in Salesforce<a class="headerlink" href="#passo-1-configurare-platform-events-in-salesforce" title="Permanent link">&para;</a></h3>
-<h4 id="11-abilitare-platform-events">1.1 Abilitare Platform Events<a class="headerlink" href="#11-abilitare-platform-events" title="Permanent link">&para;</a></h4>
+<h4 id="passo-1-configurare-platform-events-in-salesforce"><a class="toclink" href="#passo-1-configurare-platform-events-in-salesforce">Passo 1: Configurare Platform Events in Salesforce</a><a class="headerlink" href="#passo-1-configurare-platform-events-in-salesforce" title="Permanent link">&para;</a></h4>
+<h5 id="11-abilitare-platform-events"><a class="toclink" href="#11-abilitare-platform-events">1.1 Abilitare Platform Events</a><a class="headerlink" href="#11-abilitare-platform-events" title="Permanent link">&para;</a></h5>
 <ol>
 <li>Vai a <strong>Setup</strong> → <strong>Platform Events</strong></li>
 <li>Verifica che Platform Events sia abilitato</li>
 <li>Se necessario, abilita "Enable Platform Events"</li>
 </ol>
-<h4 id="12-creare-platform-event-custom-se-necessario">1.2 Creare Platform Event Custom (se necessario)<a class="headerlink" href="#12-creare-platform-event-custom-se-necessario" title="Permanent link">&para;</a></h4>
+<h5 id="12-creare-platform-event-custom-se-necessario"><a class="toclink" href="#12-creare-platform-event-custom-se-necessario">1.2 Creare Platform Event Custom (se necessario)</a><a class="headerlink" href="#12-creare-platform-event-custom-se-necessario" title="Permanent link">&para;</a></h5>
 <ol>
 <li>Vai a <strong>Setup</strong> → <strong>Platform Events</strong> → <strong>New Platform Event</strong></li>
 <li>Crea un Platform Event per gli eventi di sicurezza:
@@ -2948,8 +2333,8 @@
 <li><code>Timestamp__c</code> (DateTime)</li>
 <li><code>EventData__c</code> (Long Text Area) - JSON</li>
 </ol>
-<h3 id="passo-2-creare-apex-trigger-per-pubblicare-eventi">Passo 2: Creare Apex Trigger per Pubblicare Eventi<a class="headerlink" href="#passo-2-creare-apex-trigger-per-pubblicare-eventi" title="Permanent link">&para;</a></h3>
-<h4 id="21-trigger-per-loginevent">2.1 Trigger per LoginEvent<a class="headerlink" href="#21-trigger-per-loginevent" title="Permanent link">&para;</a></h4>
+<h4 id="passo-2-creare-apex-trigger-per-pubblicare-eventi"><a class="toclink" href="#passo-2-creare-apex-trigger-per-pubblicare-eventi">Passo 2: Creare Apex Trigger per Pubblicare Eventi</a><a class="headerlink" href="#passo-2-creare-apex-trigger-per-pubblicare-eventi" title="Permanent link">&para;</a></h4>
+<h5 id="21-trigger-per-loginevent"><a class="toclink" href="#21-trigger-per-loginevent">2.1 Trigger per LoginEvent</a><a class="headerlink" href="#21-trigger-per-loginevent" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>trigger LoginEventTrigger on EventBusSubscriber (after insert) {
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    List&lt;Security_Event__e&gt; events = new List&lt;Security_Event__e&gt;();
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
@@ -2970,7 +2355,7 @@
 <a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    }
 <a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>}
 </code></pre></div>
-<h4 id="22-apex-class-per-callout-http">2.2 Apex Class per Callout HTTP<a class="headerlink" href="#22-apex-class-per-callout-http" title="Permanent link">&para;</a></h4>
+<h5 id="22-apex-class-per-callout-http"><a class="toclink" href="#22-apex-class-per-callout-http">2.2 Apex Class per Callout HTTP</a><a class="headerlink" href="#22-apex-class-per-callout-http" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>public class AzureSentinelIntegration {
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    private static final String FUNCTION_URL = &#39;https://your-function.azurewebsites.net/api/SalesforceEvent&#39;;
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
@@ -2993,7 +2378,7 @@
 <a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>    }
 <a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>}
 </code></pre></div>
-<h4 id="23-trigger-per-invio-a-azure-function">2.3 Trigger per Invio a Azure Function<a class="headerlink" href="#23-trigger-per-invio-a-azure-function" title="Permanent link">&para;</a></h4>
+<h5 id="23-trigger-per-invio-a-azure-function"><a class="toclink" href="#23-trigger-per-invio-a-azure-function">2.3 Trigger per Invio a Azure Function</a><a class="headerlink" href="#23-trigger-per-invio-a-azure-function" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>trigger SecurityEventTrigger on Security_Event__e (after insert) {
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    for (Security_Event__e event : Trigger.new) {
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>        String eventJson = JSON.serialize(event);
@@ -3001,13 +2386,13 @@
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    }
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>}
 </code></pre></div>
-<h3 id="passo-3-configurare-azure-function-http-trigger">Passo 3: Configurare Azure Function (HTTP Trigger)<a class="headerlink" href="#passo-3-configurare-azure-function-http-trigger" title="Permanent link">&para;</a></h3>
-<h4 id="31-creare-function-app">3.1 Creare Function App<a class="headerlink" href="#31-creare-function-app" title="Permanent link">&para;</a></h4>
+<h4 id="passo-3-configurare-azure-function-http-trigger"><a class="toclink" href="#passo-3-configurare-azure-function-http-trigger">Passo 3: Configurare Azure Function (HTTP Trigger)</a><a class="headerlink" href="#passo-3-configurare-azure-function-http-trigger" title="Permanent link">&para;</a></h4>
+<h5 id="31-creare-function-app"><a class="toclink" href="#31-creare-function-app">3.1 Creare Function App</a><a class="headerlink" href="#31-creare-function-app" title="Permanent link">&para;</a></h5>
 <ol>
 <li>Crea Azure Function App (vedi <a href="../azure-function/">Implementazione Azure Function</a>)</li>
 <li>Crea una Function con <strong>HTTP Trigger</strong></li>
 </ol>
-<h4 id="32-implementare-function">3.2 Implementare Function<a class="headerlink" href="#32-implementare-function" title="Permanent link">&para;</a></h4>
+<h5 id="32-implementare-function"><a class="toclink" href="#32-implementare-function">3.2 Implementare Function</a><a class="headerlink" href="#32-implementare-function" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="na">[FunctionName(&quot;SalesforceEvent&quot;)]</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="o">&lt;</span><span class="n">IActionResult</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Run</span><span class="p">(</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="na">[HttpTrigger(AuthorizationLevel.Function, &quot;post&quot;, Route = null)]</span><span class="w"> </span><span class="n">HttpRequest</span><span class="w"> </span><span class="n">req</span><span class="p">,</span>
@@ -3038,8 +2423,8 @@
 <a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="p">}</span>
 </code></pre></div>
-<h2 id="implementazione-approccio-2-cometd-streaming-api">Implementazione: Approccio 2 - CometD Streaming API<a class="headerlink" href="#implementazione-approccio-2-cometd-streaming-api" title="Permanent link">&para;</a></h2>
-<h3 id="architettura_2">Architettura<a class="headerlink" href="#architettura_2" title="Permanent link">&para;</a></h3>
+<h3 id="implementazione-approccio-2-cometd-streaming-api"><a class="toclink" href="#implementazione-approccio-2-cometd-streaming-api">Implementazione: Approccio 2 - CometD Streaming API</a><a class="headerlink" href="#implementazione-approccio-2-cometd-streaming-api" title="Permanent link">&para;</a></h3>
+<h4 id="architettura_2"><a class="toclink" href="#architettura_2">Architettura</a><a class="headerlink" href="#architettura_2" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Salesforce Platform Events
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    ↓
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>CometD Streaming API (WebSocket)
@@ -3050,8 +2435,8 @@
 <a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    ↓
 <a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>Azure Sentinel
 </code></pre></div>
-<h3 id="passo-1-configurare-azure-function-per-cometd">Passo 1: Configurare Azure Function per CometD<a class="headerlink" href="#passo-1-configurare-azure-function-per-cometd" title="Permanent link">&para;</a></h3>
-<h4 id="11-function-con-timer-trigger-polling-cometd">1.1 Function con Timer Trigger (Polling CometD)<a class="headerlink" href="#11-function-con-timer-trigger-polling-cometd" title="Permanent link">&para;</a></h4>
+<h4 id="passo-1-configurare-azure-function-per-cometd"><a class="toclink" href="#passo-1-configurare-azure-function-per-cometd">Passo 1: Configurare Azure Function per CometD</a><a class="headerlink" href="#passo-1-configurare-azure-function-per-cometd" title="Permanent link">&para;</a></h4>
+<h5 id="11-function-con-timer-trigger-polling-cometd"><a class="toclink" href="#11-function-con-timer-trigger-polling-cometd">1.1 Function con Timer Trigger (Polling CometD)</a><a class="headerlink" href="#11-function-con-timer-trigger-polling-cometd" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="na">[FunctionName(&quot;SalesforceCometDListener&quot;)]</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="w"> </span><span class="nf">Run</span><span class="p">(</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="na">[TimerTrigger(&quot;0 */1 * * * *&quot;)]</span><span class="w"> </span><span class="n">TimerInfo</span><span class="w"> </span><span class="n">myTimer</span><span class="p">,</span>
@@ -3072,10 +2457,10 @@
 <a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="n">cometDClient</span><span class="p">.</span><span class="n">Disconnect</span><span class="p">();</span>
 <a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="12-libreria-cometd-per-net">1.2 Libreria CometD per .NET<a class="headerlink" href="#12-libreria-cometd-per-net" title="Permanent link">&para;</a></h4>
+<h5 id="12-libreria-cometd-per-net"><a class="toclink" href="#12-libreria-cometd-per-net">1.2 Libreria CometD per .NET</a><a class="headerlink" href="#12-libreria-cometd-per-net" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>dotnet<span class="w"> </span>add<span class="w"> </span>package<span class="w"> </span>CometD.NetCore
 </code></pre></div>
-<h3 id="passo-2-autenticazione-salesforce-per-streaming-api">Passo 2: Autenticazione Salesforce per Streaming API<a class="headerlink" href="#passo-2-autenticazione-salesforce-per-streaming-api" title="Permanent link">&para;</a></h3>
+<h4 id="passo-2-autenticazione-salesforce-per-streaming-api"><a class="toclink" href="#passo-2-autenticazione-salesforce-per-streaming-api">Passo 2: Autenticazione Salesforce per Streaming API</a><a class="headerlink" href="#passo-2-autenticazione-salesforce-per-streaming-api" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SalesforceAuth</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetAccessToken</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HttpClient</span><span class="p">();</span>
@@ -3097,8 +2482,8 @@
 <a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="p">}</span>
 </code></pre></div>
-<h2 id="implementazione-approccio-3-azure-event-hub-consigliato">Implementazione: Approccio 3 - Azure Event Hub (Consigliato)<a class="headerlink" href="#implementazione-approccio-3-azure-event-hub-consigliato" title="Permanent link">&para;</a></h2>
-<h3 id="architettura_3">Architettura<a class="headerlink" href="#architettura_3" title="Permanent link">&para;</a></h3>
+<h3 id="implementazione-approccio-3-azure-event-hub-consigliato"><a class="toclink" href="#implementazione-approccio-3-azure-event-hub-consigliato">Implementazione: Approccio 3 - Azure Event Hub (Consigliato)</a><a class="headerlink" href="#implementazione-approccio-3-azure-event-hub-consigliato" title="Permanent link">&para;</a></h3>
+<h4 id="architettura_3"><a class="toclink" href="#architettura_3">Architettura</a><a class="headerlink" href="#architettura_3" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Salesforce Platform Events
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    ↓
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Apex Trigger → HTTP Callout
@@ -3111,14 +2496,14 @@
 <a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>    ↓
 <a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>Azure Sentinel
 </code></pre></div>
-<h3 id="vantaggi-event-hub">Vantaggi Event Hub<a class="headerlink" href="#vantaggi-event-hub" title="Permanent link">&para;</a></h3>
+<h4 id="vantaggi-event-hub"><a class="toclink" href="#vantaggi-event-hub">Vantaggi Event Hub</a><a class="headerlink" href="#vantaggi-event-hub" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Scalabilità</strong>: Gestione automatica di picchi di eventi</li>
 <li><strong>Affidabilità</strong>: Persistenza eventi, retry automatico</li>
 <li><strong>Performance</strong>: Throughput elevato</li>
 <li><strong>Decoupling</strong>: Disaccoppiamento tra Salesforce e Function</li>
 </ul>
-<h3 id="passo-1-creare-azure-event-hub">Passo 1: Creare Azure Event Hub<a class="headerlink" href="#passo-1-creare-azure-event-hub" title="Permanent link">&para;</a></h3>
+<h4 id="passo-1-creare-azure-event-hub"><a class="toclink" href="#passo-1-creare-azure-event-hub">Passo 1: Creare Azure Event Hub</a><a class="headerlink" href="#passo-1-creare-azure-event-hub" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Azure Portal → <strong>Event Hubs</strong> → <strong>Create</strong></li>
 <li>Configura:</li>
@@ -3127,7 +2512,7 @@
 <li><strong>Partition Count</strong>: 4-8 (per scalabilità)</li>
 <li><strong>Message Retention</strong>: 1-7 giorni</li>
 </ol>
-<h3 id="passo-2-modificare-apex-per-event-hub">Passo 2: Modificare Apex per Event Hub<a class="headerlink" href="#passo-2-modificare-apex-per-event-hub" title="Permanent link">&para;</a></h3>
+<h4 id="passo-2-modificare-apex-per-event-hub"><a class="toclink" href="#passo-2-modificare-apex-per-event-hub">Passo 2: Modificare Apex per Event Hub</a><a class="headerlink" href="#passo-2-modificare-apex-per-event-hub" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>public class AzureEventHubIntegration {
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    private static final String EVENT_HUB_URL = &#39;https://salesforce-events-ns.servicebus.windows.net/salesforce-security-events/messages&#39;;
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    private static final String SAS_TOKEN = &#39;SharedAccessSignature ...&#39;;
@@ -3146,7 +2531,7 @@
 <a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>    }
 <a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>}
 </code></pre></div>
-<h3 id="passo-3-azure-function-con-event-hub-trigger">Passo 3: Azure Function con Event Hub Trigger<a class="headerlink" href="#passo-3-azure-function-con-event-hub-trigger" title="Permanent link">&para;</a></h3>
+<h4 id="passo-3-azure-function-con-event-hub-trigger"><a class="toclink" href="#passo-3-azure-function-con-event-hub-trigger">Passo 3: Azure Function con Event Hub Trigger</a><a class="headerlink" href="#passo-3-azure-function-con-event-hub-trigger" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="na">[FunctionName(&quot;ProcessSalesforceEvents&quot;)]</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="w"> </span><span class="nf">Run</span><span class="p">(</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="na">[EventHubTrigger(&quot;salesforce-security-events&quot;, Connection = &quot;EventHubConnection&quot;)]</span><span class="w"> </span>
@@ -3171,8 +2556,8 @@
 <a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nf">SendToLogAnalytics</span><span class="p">(</span><span class="n">logEntries</span><span class="p">);</span>
 <a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="p">}</span>
 </code></pre></div>
-<h2 id="configurazione-network-e-sicurezza">Configurazione Network e Sicurezza<a class="headerlink" href="#configurazione-network-e-sicurezza" title="Permanent link">&para;</a></h2>
-<h3 id="opzione-1-webhook-http-approccio-1">Opzione 1: Webhook HTTP (Approccio 1)<a class="headerlink" href="#opzione-1-webhook-http-approccio-1" title="Permanent link">&para;</a></h3>
+<h3 id="configurazione-network-e-sicurezza"><a class="toclink" href="#configurazione-network-e-sicurezza">Configurazione Network e Sicurezza</a><a class="headerlink" href="#configurazione-network-e-sicurezza" title="Permanent link">&para;</a></h3>
+<h4 id="opzione-1-webhook-http-approccio-1"><a class="toclink" href="#opzione-1-webhook-http-approccio-1">Opzione 1: Webhook HTTP (Approccio 1)</a><a class="headerlink" href="#opzione-1-webhook-http-approccio-1" title="Permanent link">&para;</a></h4>
 <p><strong>Configurazione Salesforce</strong>:
 - Aggiungi IP/URL Azure Function in <strong>Remote Site Settings</strong>
 - Configura <strong>Callout Limits</strong> se necessario</p>
@@ -3180,13 +2565,13 @@
 - Usa <strong>Private Endpoints</strong> per sicurezza (vedi <a href="../network-sicurezza/">Network e Sicurezza</a>)
 - Configura <strong>IP Restrictions</strong> se necessario
 - Usa <strong>HTTPS</strong> obbligatorio</p>
-<h3 id="opzione-2-event-hub-approccio-3">Opzione 2: Event Hub (Approccio 3)<a class="headerlink" href="#opzione-2-event-hub-approccio-3" title="Permanent link">&para;</a></h3>
+<h4 id="opzione-2-event-hub-approccio-3"><a class="toclink" href="#opzione-2-event-hub-approccio-3">Opzione 2: Event Hub (Approccio 3)</a><a class="headerlink" href="#opzione-2-event-hub-approccio-3" title="Permanent link">&para;</a></h4>
 <p><strong>Configurazione Event Hub</strong>:
 - <strong>Shared Access Policy</strong> con permessi Send
 - <strong>SAS Token</strong> per autenticazione da Salesforce
 - <strong>Private Endpoints</strong> per sicurezza (consigliato)</p>
-<h2 id="limitazioni-e-considerazioni">Limitazioni e Considerazioni<a class="headerlink" href="#limitazioni-e-considerazioni" title="Permanent link">&para;</a></h2>
-<h3 id="limitazioni-platform-events">Limitazioni Platform Events<a class="headerlink" href="#limitazioni-platform-events" title="Permanent link">&para;</a></h3>
+<h3 id="limitazioni-e-considerazioni"><a class="toclink" href="#limitazioni-e-considerazioni">Limitazioni e Considerazioni</a><a class="headerlink" href="#limitazioni-e-considerazioni" title="Permanent link">&para;</a></h3>
+<h4 id="limitazioni-platform-events"><a class="toclink" href="#limitazioni-platform-events">Limitazioni Platform Events</a><a class="headerlink" href="#limitazioni-platform-events" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>Copertura Eventi</strong>:</li>
 <li>Non tutti gli eventi sono disponibili</li>
@@ -3209,7 +2594,7 @@
 <li>Gestione errori e retry</li>
 <li>Monitoraggio connessioni</li>
 </ol>
-<h3 id="considerazioni-operative">Considerazioni Operative<a class="headerlink" href="#considerazioni-operative" title="Permanent link">&para;</a></h3>
+<h4 id="considerazioni-operative"><a class="toclink" href="#considerazioni-operative">Considerazioni Operative</a><a class="headerlink" href="#considerazioni-operative" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>Affidabilità</strong>:</li>
 <li>Gestire timeout e retry</li>
@@ -3232,7 +2617,7 @@
 <li>Gestione credenziali</li>
 <li>Monitoraggio performance</li>
 </ol>
-<h2 id="confronto-platform-events-vs-event-log-files">Confronto: Platform Events vs Event Log Files<a class="headerlink" href="#confronto-platform-events-vs-event-log-files" title="Permanent link">&para;</a></h2>
+<h3 id="confronto-platform-events-vs-event-log-files"><a class="toclink" href="#confronto-platform-events-vs-event-log-files">Confronto: Platform Events vs Event Log Files</a><a class="headerlink" href="#confronto-platform-events-vs-event-log-files" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -3279,7 +2664,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="raccomandazione-approccio-ibrido">Raccomandazione: Approccio Ibrido<a class="headerlink" href="#raccomandazione-approccio-ibrido" title="Permanent link">&para;</a></h2>
+<h3 id="raccomandazione-approccio-ibrido"><a class="toclink" href="#raccomandazione-approccio-ibrido">Raccomandazione: Approccio Ibrido</a><a class="headerlink" href="#raccomandazione-approccio-ibrido" title="Permanent link">&para;</a></h3>
 <p>Per massimizzare copertura e latenza, considera un <strong>approccio ibrido</strong>:</p>
 <ol>
 <li><strong>Platform Events</strong> per eventi critici in tempo reale:</li>
@@ -3295,13 +2680,13 @@
 <li>Eventi storici completi</li>
 <li>Backup e compliance</li>
 </ol>
-<h3 id="architettura-ibrida">Architettura Ibrida<a class="headerlink" href="#architettura-ibrida" title="Permanent link">&para;</a></h3>
+<h4 id="architettura-ibrida"><a class="toclink" href="#architettura-ibrida">Architettura Ibrida</a><a class="headerlink" href="#architettura-ibrida" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Salesforce
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    ↓
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    ├─→ Platform Events → Event Hub → Function → Sentinel (Real-time)
 <a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    └─→ Event Log Files → CCF → Sentinel (24-48h, completo)
 </code></pre></div>
-<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="best-practices"><a class="toclink" href="#best-practices">Best Practices</a><a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Filtraggio Eventi</strong>: Pubblica solo eventi critici su Platform Events</li>
 <li><strong>Batch Processing</strong>: Raggruppa eventi prima di inviare a Log Analytics</li>
@@ -3310,8 +2695,8 @@
 <li><strong>Testing</strong>: Testa in ambiente sandbox prima di produzione</li>
 <li><strong>Documentation</strong>: Documenta trigger Apex e configurazioni</li>
 </ol>
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
-<h3 id="problema-eventi-non-ricevuti">Problema: Eventi Non Ricevuti<a class="headerlink" href="#problema-eventi-non-ricevuti" title="Permanent link">&para;</a></h3>
+<h3 id="troubleshooting"><a class="toclink" href="#troubleshooting">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
+<h4 id="problema-eventi-non-ricevuti"><a class="toclink" href="#problema-eventi-non-ricevuti">Problema: Eventi Non Ricevuti</a><a class="headerlink" href="#problema-eventi-non-ricevuti" title="Permanent link">&para;</a></h4>
 <p><strong>Possibili Cause</strong>:
 - Trigger Apex non attivo
 - Callout limits raggiunti
@@ -3322,7 +2707,7 @@
 2. Controlla Debug Logs in Salesforce
 3. Verifica log Azure Function
 4. Controlla Remote Site Settings</p>
-<h3 id="problema-latenza-elevata">Problema: Latenza Elevata<a class="headerlink" href="#problema-latenza-elevata" title="Permanent link">&para;</a></h3>
+<h4 id="problema-latenza-elevata"><a class="toclink" href="#problema-latenza-elevata">Problema: Latenza Elevata</a><a class="headerlink" href="#problema-latenza-elevata" title="Permanent link">&para;</a></h4>
 <p><strong>Possibili Cause</strong>:
 - Callout timeout
 - Function cold start
@@ -3331,7 +2716,7 @@
 1. Aumenta timeout callout (max 120 secondi)
 2. Usa Premium Plan per Function (no cold start)
 3. Aumenta throughput Event Hub</p>
-<h2 id="link-utili">Link Utili<a class="headerlink" href="#link-utili" title="Permanent link">&para;</a></h2>
+<h3 id="link-utili"><a class="toclink" href="#link-utili">Link Utili</a><a class="headerlink" href="#link-utili" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/">Salesforce Platform Events Documentation</a></li>
 <li><a href="https://developer.salesforce.com/docs/atlas.en-us.api_streaming.meta/api_streaming/">Streaming API Documentation</a></li>
@@ -3364,7 +2749,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 19, 2025 00:36:30 UTC">November 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 19, 2025 00:47:23 UTC"><span class="timeago" datetime="2025-11-19T00:47:23+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 19, 2025 00:47:23 UTC">2025-11-19</span>
   </span>
 
     
@@ -3374,7 +2759,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 19, 2025 00:36:30 UTC">November 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 19, 2025 00:47:23 UTC"><span class="timeago" datetime="2025-11-19T00:47:23+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 19, 2025 00:47:23 UTC">2025-11-19</span>
   </span>
 
     
@@ -3391,6 +2776,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -3460,10 +2847,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.smooth", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link", "toc.integrate", "toc.follow"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
       
     
   </body>

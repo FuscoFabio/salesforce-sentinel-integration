@@ -55,6 +55,8 @@
       
     
     
+      <link rel="stylesheet" href="../css/timeago.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -421,7 +423,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Integrazione Salesforce - Azure Sentinel" class="md-nav__button md-logo" aria-label="Integrazione Salesforce - Azure Sentinel" data-md-component="logo">
       
@@ -2092,8 +2096,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -2132,20 +2134,32 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Indice
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#problemi-comuni" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2216,8 +2230,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#diagnostica" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2255,8 +2269,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#log-e-monitoraggio" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2305,8 +2319,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#supporto" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2316,8 +2330,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#best-practices-per-prevenire-problemi" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2325,6 +2339,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2460,215 +2479,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#problemi-comuni" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Problemi Comuni
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Problemi Comuni">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#nessun-dato-in-azure-sentinel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nessun Dato in Azure Sentinel
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#errori-di-autenticazione" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Errori di Autenticazione
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dati-incompleti-o-mancanti" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dati Incompleti o Mancanti
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#errori-nella-functionlogic-app" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Errori nella Function/Logic App
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#costi-elevati" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Costi Elevati
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#diagnostica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Diagnostica
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Diagnostica">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#verifiche-step-by-step" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verifiche Step-by-Step
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#query-di-diagnostica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Query di Diagnostica
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#log-e-monitoraggio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Log e Monitoraggio
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Log e Monitoraggio">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#application-insights" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Application Insights
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#log-di-salesforce" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Log di Salesforce
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#log-di-azure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Log di Azure
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supporto" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Supporto
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices-per-prevenire-problemi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Best Practices per Prevenire Problemi
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -2682,10 +2492,12 @@
   
 
 
-<h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h1>
+  <h1>Troubleshooting</h1>
+
+<h2 id="troubleshooting"><a class="toclink" href="#troubleshooting">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <p>Guida per risolvere i problemi comuni nell'integrazione Salesforce-Azure Sentinel.</p>
-<h2 id="problemi-comuni">Problemi Comuni<a class="headerlink" href="#problemi-comuni" title="Permanent link">&para;</a></h2>
-<h3 id="nessun-dato-in-azure-sentinel">Nessun Dato in Azure Sentinel<a class="headerlink" href="#nessun-dato-in-azure-sentinel" title="Permanent link">&para;</a></h3>
+<h3 id="problemi-comuni"><a class="toclink" href="#problemi-comuni">Problemi Comuni</a><a class="headerlink" href="#problemi-comuni" title="Permanent link">&para;</a></h3>
+<h4 id="nessun-dato-in-azure-sentinel"><a class="toclink" href="#nessun-dato-in-azure-sentinel">Nessun Dato in Azure Sentinel</a><a class="headerlink" href="#nessun-dato-in-azure-sentinel" title="Permanent link">&para;</a></h4>
 <p><strong>Sintomi</strong>: Non vedi eventi Salesforce in Log Analytics.</p>
 <p><strong>Possibili Cause e Soluzioni</strong>:</p>
 <ol>
@@ -2721,7 +2533,7 @@
 <li>IP bloccati o restrizioni di rete</li>
 <li><strong>Soluzione</strong>: Verifica Network Access in Salesforce e range IP Azure</li>
 </ol>
-<h3 id="errori-di-autenticazione">Errori di Autenticazione<a class="headerlink" href="#errori-di-autenticazione" title="Permanent link">&para;</a></h3>
+<h4 id="errori-di-autenticazione"><a class="toclink" href="#errori-di-autenticazione">Errori di Autenticazione</a><a class="headerlink" href="#errori-di-autenticazione" title="Permanent link">&para;</a></h4>
 <p><strong>Sintomi</strong>: Errori 401 Unauthorized o problemi di login.</p>
 <p><strong>Possibili Cause e Soluzioni</strong>:</p>
 <ol>
@@ -2750,7 +2562,7 @@
 <li>Scopes mancanti nella Connected App</li>
 <li><strong>Soluzione</strong>: Aggiungi gli scopes necessari</li>
 </ol>
-<h3 id="dati-incompleti-o-mancanti">Dati Incompleti o Mancanti<a class="headerlink" href="#dati-incompleti-o-mancanti" title="Permanent link">&para;</a></h3>
+<h4 id="dati-incompleti-o-mancanti"><a class="toclink" href="#dati-incompleti-o-mancanti">Dati Incompleti o Mancanti</a><a class="headerlink" href="#dati-incompleti-o-mancanti" title="Permanent link">&para;</a></h4>
 <p><strong>Sintomi</strong>: Solo alcuni eventi vengono ricevuti, altri mancano.</p>
 <p><strong>Possibili Cause e Soluzioni</strong>:</p>
 <ol>
@@ -2779,7 +2591,7 @@
 <li>Errori silenziosi nella trasformazione</li>
 <li><strong>Soluzione</strong>: Controlla i log della soluzione</li>
 </ol>
-<h3 id="errori-nella-functionlogic-app">Errori nella Function/Logic App<a class="headerlink" href="#errori-nella-functionlogic-app" title="Permanent link">&para;</a></h3>
+<h4 id="errori-nella-functionlogic-app"><a class="toclink" href="#errori-nella-functionlogic-app">Errori nella Function/Logic App</a><a class="headerlink" href="#errori-nella-functionlogic-app" title="Permanent link">&para;</a></h4>
 <p><strong>Sintomi</strong>: Errori nelle esecuzioni della Function o Logic App.</p>
 <p><strong>Possibili Cause e Soluzioni</strong>:</p>
 <ol>
@@ -2808,7 +2620,7 @@
 <li>Problemi di rete temporanei</li>
 <li><strong>Soluzione</strong>: Implementa retry logic robusto</li>
 </ol>
-<h3 id="costi-elevati">Costi Elevati<a class="headerlink" href="#costi-elevati" title="Permanent link">&para;</a></h3>
+<h4 id="costi-elevati"><a class="toclink" href="#costi-elevati">Costi Elevati</a><a class="headerlink" href="#costi-elevati" title="Permanent link">&para;</a></h4>
 <p><strong>Sintomi</strong>: Costi Azure più alti del previsto.</p>
 <p><strong>Possibili Cause e Soluzioni</strong>:</p>
 <ol>
@@ -2830,8 +2642,8 @@
 <li>Dati conservati più a lungo del necessario</li>
 <li><strong>Soluzione</strong>: Riduci il periodo di retention</li>
 </ol>
-<h2 id="diagnostica">Diagnostica<a class="headerlink" href="#diagnostica" title="Permanent link">&para;</a></h2>
-<h3 id="verifiche-step-by-step">Verifiche Step-by-Step<a class="headerlink" href="#verifiche-step-by-step" title="Permanent link">&para;</a></h3>
+<h3 id="diagnostica"><a class="toclink" href="#diagnostica">Diagnostica</a><a class="headerlink" href="#diagnostica" title="Permanent link">&para;</a></h3>
+<h4 id="verifiche-step-by-step"><a class="toclink" href="#verifiche-step-by-step">Verifiche Step-by-Step</a><a class="headerlink" href="#verifiche-step-by-step" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>Verifica Event Monitoring in Salesforce</strong>
    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Setup → Event Monitoring → Event Log Files
@@ -2874,7 +2686,7 @@
 <li>Verifica errori e eccezioni</li>
 <li>Controlla metriche di esecuzione</li>
 </ol>
-<h3 id="query-di-diagnostica">Query di Diagnostica<a class="headerlink" href="#query-di-diagnostica" title="Permanent link">&para;</a></h3>
+<h4 id="query-di-diagnostica"><a class="toclink" href="#query-di-diagnostica">Query di Diagnostica</a><a class="headerlink" href="#query-di-diagnostica" title="Permanent link">&para;</a></h4>
 <p><strong>Verifica ultimi eventi</strong>:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">Salesforce_CL</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">1</span><span class="n">h</span><span class="p">)</span>
@@ -2892,23 +2704,23 @@
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">isnotempty</span><span class="p">(</span><span class="n">Error_s</span><span class="p">)</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="n">Error_s</span><span class="p">,</span><span class="w"> </span><span class="n">UserName_s</span>
 </code></pre></div></p>
-<h2 id="log-e-monitoraggio">Log e Monitoraggio<a class="headerlink" href="#log-e-monitoraggio" title="Permanent link">&para;</a></h2>
-<h3 id="application-insights">Application Insights<a class="headerlink" href="#application-insights" title="Permanent link">&para;</a></h3>
+<h3 id="log-e-monitoraggio"><a class="toclink" href="#log-e-monitoraggio">Log e Monitoraggio</a><a class="headerlink" href="#log-e-monitoraggio" title="Permanent link">&para;</a></h3>
+<h4 id="application-insights"><a class="toclink" href="#application-insights">Application Insights</a><a class="headerlink" href="#application-insights" title="Permanent link">&para;</a></h4>
 <p>Configura Application Insights per:
 - Tracciare esecuzioni
 - Monitorare errori
 - Analizzare performance
 - Configurare alert</p>
-<h3 id="log-di-salesforce">Log di Salesforce<a class="headerlink" href="#log-di-salesforce" title="Permanent link">&para;</a></h3>
+<h4 id="log-di-salesforce"><a class="toclink" href="#log-di-salesforce">Log di Salesforce</a><a class="headerlink" href="#log-di-salesforce" title="Permanent link">&para;</a></h4>
 <p>Controlla i log in Salesforce:
 - Setup → Debug Logs
 - Setup → Event Monitoring → Event Log Files</p>
-<h3 id="log-di-azure">Log di Azure<a class="headerlink" href="#log-di-azure" title="Permanent link">&para;</a></h3>
+<h4 id="log-di-azure"><a class="toclink" href="#log-di-azure">Log di Azure</a><a class="headerlink" href="#log-di-azure" title="Permanent link">&para;</a></h4>
 <p>Controlla i log in Azure:
 - Function App → Log stream
 - Logic App → Run history
 - Log Analytics → Logs</p>
-<h2 id="supporto">Supporto<a class="headerlink" href="#supporto" title="Permanent link">&para;</a></h2>
+<h3 id="supporto"><a class="toclink" href="#supporto">Supporto</a><a class="headerlink" href="#supporto" title="Permanent link">&para;</a></h3>
 <p>Se il problema persiste:</p>
 <ol>
 <li>Raccogli informazioni:</li>
@@ -2932,7 +2744,7 @@
 <li>Changelog e aggiornamenti</li>
 <li>Known issues</li>
 </ol>
-<h2 id="best-practices-per-prevenire-problemi">Best Practices per Prevenire Problemi<a class="headerlink" href="#best-practices-per-prevenire-problemi" title="Permanent link">&para;</a></h2>
+<h3 id="best-practices-per-prevenire-problemi"><a class="toclink" href="#best-practices-per-prevenire-problemi">Best Practices per Prevenire Problemi</a><a class="headerlink" href="#best-practices-per-prevenire-problemi" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Monitoraggio Proattivo</strong>: Configura alert per errori</li>
 <li><strong>Logging Completo</strong>: Logga tutte le operazioni importanti</li>
@@ -2963,7 +2775,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 14, 2025 14:36:26 UTC">November 14, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 14, 2025 14:36:26 UTC"><span class="timeago" datetime="2025-11-14T14:36:26+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 14, 2025 14:36:26 UTC">2025-11-14</span>
   </span>
 
     
@@ -2973,7 +2785,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 14, 2025 14:36:26 UTC">November 14, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 14, 2025 14:36:26 UTC"><span class="timeago" datetime="2025-11-14T14:36:26+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 14, 2025 14:36:26 UTC">2025-11-14</span>
   </span>
 
     
@@ -2990,6 +2802,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -3059,10 +2873,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.smooth", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link", "toc.integrate", "toc.follow"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../js/timeago.min.js"></script>
+      
+        <script src="../js/timeago_mkdocs_material.js"></script>
       
     
   </body>

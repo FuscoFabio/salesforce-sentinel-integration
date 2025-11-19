@@ -55,6 +55,8 @@
       
     
     
+      <link rel="stylesheet" href="../../css/timeago.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -421,7 +423,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Integrazione Salesforce - Azure Sentinel" class="md-nav__button md-logo" aria-label="Integrazione Salesforce - Azure Sentinel" data-md-component="logo">
       
@@ -599,8 +603,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -639,20 +641,32 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Indice
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#confronto-approcci-di-integrazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confronto Approcci di Integrazione
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Confronto Approcci di Integrazione">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#i-due-approcci-principali" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -690,8 +704,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#confronto-dettagliato" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -701,8 +715,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#eventi-disponibili" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -740,8 +754,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#soluzioni-disponibili-per-approccio" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -779,8 +793,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#scelta-dellapproccio" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -818,8 +832,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#approccio-ibrido-consigliato-per-copertura-completa" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -868,8 +882,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#prossimi-passi" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -877,6 +891,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2508,260 +2527,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#i-due-approcci-principali" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        I Due Approcci Principali
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="I Due Approcci Principali">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-event-log-files-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Event Log Files API
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-platform-events-event-bus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Platform Events / Event Bus
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#confronto-dettagliato" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Confronto Dettagliato
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#eventi-disponibili" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Eventi Disponibili
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Eventi Disponibili">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#event-log-files-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Event Log Files API
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#platform-events-event-bus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Platform Events / Event Bus
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#soluzioni-disponibili-per-approccio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Soluzioni Disponibili per Approccio
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Soluzioni Disponibili per Approccio">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#event-log-files-api_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Event Log Files API
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#platform-events-event-bus_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Platform Events / Event Bus
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scelta-dellapproccio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scelta dell'Approccio
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Scelta dell&#39;Approccio">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scegli-event-log-files-api-se" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scegli Event Log Files API se:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scegli-platform-events-se" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scegli Platform Events se:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#approccio-ibrido-consigliato-per-copertura-completa" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Approccio Ibrido (Consigliato per Copertura Completa)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Approccio Ibrido (Consigliato per Copertura Completa)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#architettura-ibrida" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architettura Ibrida
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vantaggi-approccio-ibrido" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vantaggi Approccio Ibrido
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quando-usare-approccio-ibrido" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quando Usare Approccio Ibrido
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prossimi-passi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prossimi Passi
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -2775,10 +2540,12 @@
   
 
 
-<h1 id="confronto-approcci-di-integrazione">Confronto Approcci di Integrazione<a class="headerlink" href="#confronto-approcci-di-integrazione" title="Permanent link">&para;</a></h1>
+  <h1>Confronto Approcci</h1>
+
+<h2 id="confronto-approcci-di-integrazione"><a class="toclink" href="#confronto-approcci-di-integrazione">Confronto Approcci di Integrazione</a><a class="headerlink" href="#confronto-approcci-di-integrazione" title="Permanent link">&para;</a></h2>
 <p>Questa pagina fornisce un confronto completo tra i due approcci principali per integrare Salesforce con Azure Sentinel.</p>
-<h2 id="i-due-approcci-principali">I Due Approcci Principali<a class="headerlink" href="#i-due-approcci-principali" title="Permanent link">&para;</a></h2>
-<h3 id="1-event-log-files-api">1. Event Log Files API<a class="headerlink" href="#1-event-log-files-api" title="Permanent link">&para;</a></h3>
+<h3 id="i-due-approcci-principali"><a class="toclink" href="#i-due-approcci-principali">I Due Approcci Principali</a><a class="headerlink" href="#i-due-approcci-principali" title="Permanent link">&para;</a></h3>
+<h4 id="1-event-log-files-api"><a class="toclink" href="#1-event-log-files-api">1. Event Log Files API</a><a class="headerlink" href="#1-event-log-files-api" title="Permanent link">&para;</a></h4>
 <p><strong>Caratteristiche</strong>:
 - ✅ <strong>Copertura Completa</strong>: Tutti gli eventi disponibili (LoginEvent, LogoutEvent, ApiEvent, Audit Trail, Field History Tracking)
 - ✅ <strong>Formato Strutturato</strong>: Dati ottimizzati e validati da Salesforce
@@ -2792,7 +2559,7 @@
 - Audit trail completo
 - Quando la latenza di 24-72 ore è accettabile
 - Setup rapido senza sviluppo</p>
-<h3 id="2-platform-events-event-bus">2. Platform Events / Event Bus<a class="headerlink" href="#2-platform-events-event-bus" title="Permanent link">&para;</a></h3>
+<h4 id="2-platform-events-event-bus"><a class="toclink" href="#2-platform-events-event-bus">2. Platform Events / Event Bus</a><a class="headerlink" href="#2-platform-events-event-bus" title="Permanent link">&para;</a></h4>
 <p><strong>Caratteristiche</strong>:
 - ✅ <strong>Latenza</strong>: &lt; 1 minuto (near real-time)
 - ✅ <strong>Tempo Reale</strong>: Eventi disponibili immediatamente
@@ -2805,7 +2572,7 @@
 - Eventi critici che richiedono alerting immediato
 - Competenze di sviluppo disponibili (Apex + Azure)
 - Budget per sviluppo e manutenzione</p>
-<h2 id="confronto-dettagliato">Confronto Dettagliato<a class="headerlink" href="#confronto-dettagliato" title="Permanent link">&para;</a></h2>
+<h3 id="confronto-dettagliato"><a class="toclink" href="#confronto-dettagliato">Confronto Dettagliato</a><a class="headerlink" href="#confronto-dettagliato" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -2877,8 +2644,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="eventi-disponibili">Eventi Disponibili<a class="headerlink" href="#eventi-disponibili" title="Permanent link">&para;</a></h2>
-<h3 id="event-log-files-api">Event Log Files API<a class="headerlink" href="#event-log-files-api" title="Permanent link">&para;</a></h3>
+<h3 id="eventi-disponibili"><a class="toclink" href="#eventi-disponibili">Eventi Disponibili</a><a class="headerlink" href="#eventi-disponibili" title="Permanent link">&para;</a></h3>
+<h4 id="event-log-files-api"><a class="toclink" href="#event-log-files-api">Event Log Files API</a><a class="headerlink" href="#event-log-files-api" title="Permanent link">&para;</a></h4>
 <p><strong>Eventi Disponibili</strong>:
 - ✅ LoginEvent
 - ✅ LogoutEvent
@@ -2893,7 +2660,7 @@
 - ✅ Data Export Event
 - ✅ E molti altri...</p>
 <p><strong>Copertura</strong>: ~100% degli eventi Salesforce</p>
-<h3 id="platform-events-event-bus">Platform Events / Event Bus<a class="headerlink" href="#platform-events-event-bus" title="Permanent link">&para;</a></h3>
+<h4 id="platform-events-event-bus"><a class="toclink" href="#platform-events-event-bus">Platform Events / Event Bus</a><a class="headerlink" href="#platform-events-event-bus" title="Permanent link">&para;</a></h4>
 <p><strong>Eventi Disponibili</strong>:
 - ✅ LoginEvent (se configurato)
 - ✅ LogoutEvent (se configurato)
@@ -2904,8 +2671,8 @@
 - ❌ Field History Tracking (non disponibile)
 - ❌ Molti eventi di sistema</p>
 <p><strong>Copertura</strong>: ~30-40% degli eventi Salesforce</p>
-<h2 id="soluzioni-disponibili-per-approccio">Soluzioni Disponibili per Approccio<a class="headerlink" href="#soluzioni-disponibili-per-approccio" title="Permanent link">&para;</a></h2>
-<h3 id="event-log-files-api_1">Event Log Files API<a class="headerlink" href="#event-log-files-api_1" title="Permanent link">&para;</a></h3>
+<h3 id="soluzioni-disponibili-per-approccio"><a class="toclink" href="#soluzioni-disponibili-per-approccio">Soluzioni Disponibili per Approccio</a><a class="headerlink" href="#soluzioni-disponibili-per-approccio" title="Permanent link">&para;</a></h3>
+<h4 id="event-log-files-api_1"><a class="toclink" href="#event-log-files-api_1">Event Log Files API</a><a class="headerlink" href="#event-log-files-api_1" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>CCF (CodeLess Connector Framework)</strong> ⭐ Consigliato</li>
 <li>Setup: 30-60 minuti</li>
@@ -2928,7 +2695,7 @@
 <li>Manutenzione: Bassa</li>
 <li>Costo: Medio</li>
 </ol>
-<h3 id="platform-events-event-bus_1">Platform Events / Event Bus<a class="headerlink" href="#platform-events-event-bus_1" title="Permanent link">&para;</a></h3>
+<h4 id="platform-events-event-bus_1"><a class="toclink" href="#platform-events-event-bus_1">Platform Events / Event Bus</a><a class="headerlink" href="#platform-events-event-bus_1" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>Azure Function + Webhook HTTP</strong></li>
 <li>Setup: 2-3 giorni</li>
@@ -2951,8 +2718,8 @@
 <li>Manutenzione: Alta</li>
 <li>Costo: Medio-Alto</li>
 </ol>
-<h2 id="scelta-dellapproccio">Scelta dell'Approccio<a class="headerlink" href="#scelta-dellapproccio" title="Permanent link">&para;</a></h2>
-<h3 id="scegli-event-log-files-api-se">Scegli Event Log Files API se:<a class="headerlink" href="#scegli-event-log-files-api-se" title="Permanent link">&para;</a></h3>
+<h3 id="scelta-dellapproccio"><a class="toclink" href="#scelta-dellapproccio">Scelta dell'Approccio</a><a class="headerlink" href="#scelta-dellapproccio" title="Permanent link">&para;</a></h3>
+<h4 id="scegli-event-log-files-api-se"><a class="toclink" href="#scegli-event-log-files-api-se">Scegli Event Log Files API se:</a><a class="headerlink" href="#scegli-event-log-files-api-se" title="Permanent link">&para;</a></h4>
 <ul>
 <li>✅ La latenza di 24-72 ore è accettabile</li>
 <li>✅ Hai bisogno di copertura completa (incluso Audit Trail)</li>
@@ -2961,7 +2728,7 @@
 <li>✅ Non hai competenze di sviluppo Apex</li>
 </ul>
 <p><strong>Raccomandazione</strong>: Inizia con <strong>CCF</strong> per il 90% dei casi d'uso.</p>
-<h3 id="scegli-platform-events-se">Scegli Platform Events se:<a class="headerlink" href="#scegli-platform-events-se" title="Permanent link">&para;</a></h3>
+<h4 id="scegli-platform-events-se"><a class="toclink" href="#scegli-platform-events-se">Scegli Platform Events se:</a><a class="headerlink" href="#scegli-platform-events-se" title="Permanent link">&para;</a></h4>
 <ul>
 <li>✅ Hai bisogno di monitoraggio near real-time (&lt; 24 ore)</li>
 <li>✅ Eventi critici richiedono alerting immediato</li>
@@ -2970,9 +2737,9 @@
 <li>✅ Puoi accettare copertura limitata degli eventi</li>
 </ul>
 <p><strong>Raccomandazione</strong>: Usa <strong>Azure Function + Event Hub</strong> per scalabilità e affidabilità.</p>
-<h2 id="approccio-ibrido-consigliato-per-copertura-completa">Approccio Ibrido (Consigliato per Copertura Completa)<a class="headerlink" href="#approccio-ibrido-consigliato-per-copertura-completa" title="Permanent link">&para;</a></h2>
+<h3 id="approccio-ibrido-consigliato-per-copertura-completa"><a class="toclink" href="#approccio-ibrido-consigliato-per-copertura-completa">Approccio Ibrido (Consigliato per Copertura Completa)</a><a class="headerlink" href="#approccio-ibrido-consigliato-per-copertura-completa" title="Permanent link">&para;</a></h3>
 <p>Per massimizzare copertura e latenza, combina entrambi gli approcci:</p>
-<h3 id="architettura-ibrida">Architettura Ibrida<a class="headerlink" href="#architettura-ibrida" title="Permanent link">&para;</a></h3>
+<h4 id="architettura-ibrida"><a class="toclink" href="#architettura-ibrida">Architettura Ibrida</a><a class="headerlink" href="#architettura-ibrida" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌─────────────────────────────────────────────────────────┐
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│                    Salesforce                            │
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├─────────────────────────────────────────────────────────┤
@@ -3002,7 +2769,7 @@
 <a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>│                                                          │
 <a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>└─────────────────────────────────────────────────────────┘
 </code></pre></div>
-<h3 id="vantaggi-approccio-ibrido">Vantaggi Approccio Ibrido<a class="headerlink" href="#vantaggi-approccio-ibrido" title="Permanent link">&para;</a></h3>
+<h4 id="vantaggi-approccio-ibrido"><a class="toclink" href="#vantaggi-approccio-ibrido">Vantaggi Approccio Ibrido</a><a class="headerlink" href="#vantaggi-approccio-ibrido" title="Permanent link">&para;</a></h4>
 <ul>
 <li>✅ <strong>Copertura Completa</strong>: Event Log Files per tutti gli eventi</li>
 <li>✅ <strong>Latenza Bassa</strong>: Platform Events per eventi critici</li>
@@ -3010,14 +2777,14 @@
 <li>✅ <strong>Alerting Real-Time</strong>: Per eventi critici</li>
 <li>✅ <strong>Analisi Storica</strong>: Dati completi per analisi</li>
 </ul>
-<h3 id="quando-usare-approccio-ibrido">Quando Usare Approccio Ibrido<a class="headerlink" href="#quando-usare-approccio-ibrido" title="Permanent link">&para;</a></h3>
+<h4 id="quando-usare-approccio-ibrido"><a class="toclink" href="#quando-usare-approccio-ibrido">Quando Usare Approccio Ibrido</a><a class="headerlink" href="#quando-usare-approccio-ibrido" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Organizzazioni enterprise con requisiti complessi</li>
 <li>Necessità di compliance completa + monitoraggio real-time</li>
 <li>Budget per entrambe le soluzioni</li>
 <li>Team con competenze tecniche</li>
 </ul>
-<h2 id="prossimi-passi">Prossimi Passi<a class="headerlink" href="#prossimi-passi" title="Permanent link">&para;</a></h2>
+<h3 id="prossimi-passi"><a class="toclink" href="#prossimi-passi">Prossimi Passi</a><a class="headerlink" href="#prossimi-passi" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Valuta i requisiti</strong>: Latenza accettabile? Copertura completa necessaria?</li>
 <li><strong>Scegli l'approccio</strong>: Event Log Files o Platform Events (o ibrido)</li>
@@ -3052,7 +2819,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 19, 2025 00:36:29 UTC">November 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 19, 2025 00:47:23 UTC"><span class="timeago" datetime="2025-11-19T00:47:23+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 19, 2025 00:47:23 UTC">2025-11-19</span>
   </span>
 
     
@@ -3062,7 +2829,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 19, 2025 00:36:29 UTC">November 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 19, 2025 00:47:23 UTC"><span class="timeago" datetime="2025-11-19T00:47:23+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 19, 2025 00:47:23 UTC">2025-11-19</span>
   </span>
 
     
@@ -3079,6 +2846,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -3148,10 +2917,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.smooth", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link", "toc.integrate", "toc.follow"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
       
     
   </body>

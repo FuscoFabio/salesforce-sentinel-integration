@@ -25,7 +25,7 @@
     
     
       
-        <title>Implementazione CCF - Integrazione Salesforce - Azure Sentinel</title>
+        <title>Ccf - Integrazione Salesforce - Azure Sentinel</title>
       
     
     
@@ -50,6 +50,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../css/timeago.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Implementazione CCF
+              Ccf
             
           </span>
         </div>
@@ -415,7 +417,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Integrazione Salesforce - Azure Sentinel" class="md-nav__button md-logo" aria-label="Integrazione Salesforce - Azure Sentinel" data-md-component="logo">
       
@@ -2224,726 +2228,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#panoramica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Panoramica
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#architettura" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architettura
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisiti" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisiti
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#caso-desempio-completo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Caso d'Esempio Completo
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Caso d&#39;Esempio Completo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scenario" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scenario
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-1-preparazione-salesforce" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 1: Preparazione Salesforce
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Passo 1: Preparazione Salesforce">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-abilitare-event-monitoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1 Abilitare Event Monitoring
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-creare-connected-app" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2 Creare Connected App
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13-ottenere-credenziali" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.3 Ottenere Credenziali
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14-configurare-network-access-se-necessario" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4 Configurare Network Access (Se Necessario)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15-configurare-permessi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5 Configurare Permessi
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-2-preparazione-azure-sentinel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 2: Preparazione Azure Sentinel
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Passo 2: Preparazione Azure Sentinel">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-verificare-log-analytics-workspace" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1 Verificare Log Analytics Workspace
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-abilitare-azure-sentinel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2 Abilitare Azure Sentinel
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-3-configurare-il-connector-ccf" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 3: Configurare il Connector CCF
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Passo 3: Configurare il Connector CCF">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-accedere-al-connector" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1 Accedere al Connector
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-configurare-autenticazione-oauth" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2 Configurare Autenticazione OAuth
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-configurare-parametri-di-raccolta" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 Configurare Parametri di Raccolta
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34-configurare-mapping-dati" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.4 Configurare Mapping Dati
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#35-abilitare-il-connector" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.5 Abilitare il Connector
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-4-verificare-lintegrazione" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 4: Verificare l'Integrazione
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Passo 4: Verificare l&#39;Integrazione">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-verificare-ricezione-dati" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 Verificare Ricezione Dati
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-verificare-schema-dati" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 Verificare Schema Dati
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-verificare-eventi-recenti" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.3 Verificare Eventi Recenti
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-5-configurare-query-e-alert" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 5: Configurare Query e Alert
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Passo 5: Configurare Query e Alert">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51-query-per-login-falliti" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.1 Query per Login Falliti
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52-alert-per-troppi-login-falliti" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.2 Alert per Troppi Login Falliti
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#53-query-per-accessi-da-ip-non-usuali" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.3 Query per Accessi da IP Non Usuali
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-6-monitoraggio-e-manutenzione" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 6: Monitoraggio e Manutenzione
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Passo 6: Monitoraggio e Manutenzione">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#61-verificare-stato-connector" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.1 Verificare Stato Connector
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#62-monitorare-volume-dati" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.2 Monitorare Volume Dati
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#63-verificare-latenza" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.3 Verificare Latenza
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Troubleshooting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#problema-nessun-dato-ricevuto" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Problema: Nessun Dato Ricevuto
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#problema-errori-di-autenticazione" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Problema: Errori di Autenticazione
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#problema-dati-incompleti" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Problema: Dati Incompleti
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitazioni-e-limiti-di-polling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Limitazioni e Limiti di Polling
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Limitazioni e Limiti di Polling">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#limiti-di-polling-del-ccf" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Limiti di Polling del CCF
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Limiti di Polling del CCF">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#intervallo-di-polling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Intervallo di Polling
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limiti-di-volume-dati" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Limiti di Volume Dati
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limiti-di-rate-limiting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Limiti di Rate Limiting
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#calcolo-intervallo-ottimale" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Calcolo Intervallo Ottimale
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limitazioni-temporali" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Limitazioni Temporali
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limitazioni-di-connettivita" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Limitazioni di Connettività
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gestione-dei-limiti" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Gestione dei Limiti
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Gestione dei Limiti">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#monitoraggio-utilizzo-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Monitoraggio Utilizzo API
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alert-per-limiti-raggiunti" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alert per Limiti Raggiunti
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ottimizzazione-polling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ottimizzazione Polling
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Best Practices
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurazione-avanzata" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configurazione Avanzata
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configurazione Avanzata">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#filtri-personalizzati" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Filtri Personalizzati
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#trasformazione-dati" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Trasformazione Dati
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#integrazione-con-altri-connector" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Integrazione con Altri Connector
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#link-utili" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Link Utili
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#esempio-di-configurazione-completa" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Esempio di Configurazione Completa
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Esempio di Configurazione Completa">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#file-di-configurazione-json" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        File di Configurazione (JSON)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -2957,11 +2241,13 @@
   
 
 
-<h1 id="implementazione-ccf">Implementazione CCF<a class="headerlink" href="#implementazione-ccf" title="Permanent link">&para;</a></h1>
+  <h1>Ccf</h1>
+
+<h2 id="implementazione-ccf"><a class="toclink" href="#implementazione-ccf">Implementazione CCF</a><a class="headerlink" href="#implementazione-ccf" title="Permanent link">&para;</a></h2>
 <p>Guida completa passo-passo per implementare l'integrazione Salesforce-Azure Sentinel usando il CodeLess Connector Framework (CCF).</p>
-<h2 id="panoramica">Panoramica<a class="headerlink" href="#panoramica" title="Permanent link">&para;</a></h2>
+<h3 id="panoramica"><a class="toclink" href="#panoramica">Panoramica</a><a class="headerlink" href="#panoramica" title="Permanent link">&para;</a></h3>
 <p>Il CodeLess Connector Framework (CCF) è la soluzione più semplice per integrare Salesforce con Azure Sentinel. Non richiede codice, solo configurazione tramite interfaccia grafica.</p>
-<h2 id="architettura">Architettura<a class="headerlink" href="#architettura" title="Permanent link">&para;</a></h2>
+<h3 id="architettura"><a class="toclink" href="#architettura">Architettura</a><a class="headerlink" href="#architettura" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Salesforce Event Monitoring
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    ↓
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>CCF Connector (Azure Sentinel)
@@ -2970,7 +2256,7 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    ↓
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Azure Sentinel
 </code></pre></div>
-<h2 id="prerequisiti">Prerequisiti<a class="headerlink" href="#prerequisiti" title="Permanent link">&para;</a></h2>
+<h3 id="prerequisiti"><a class="toclink" href="#prerequisiti">Prerequisiti</a><a class="headerlink" href="#prerequisiti" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Sottoscrizione Azure attiva</li>
 <li>Azure Sentinel Workspace configurato</li>
@@ -2979,15 +2265,15 @@
 <li>Connected App creata in Salesforce con OAuth</li>
 <li>Consumer Key e Consumer Secret di Salesforce</li>
 </ul>
-<h2 id="caso-desempio-completo">Caso d'Esempio Completo<a class="headerlink" href="#caso-desempio-completo" title="Permanent link">&para;</a></h2>
-<h3 id="scenario">Scenario<a class="headerlink" href="#scenario" title="Permanent link">&para;</a></h3>
+<h3 id="caso-desempio-completo"><a class="toclink" href="#caso-desempio-completo">Caso d'Esempio Completo</a><a class="headerlink" href="#caso-desempio-completo" title="Permanent link">&para;</a></h3>
+<h4 id="scenario"><a class="toclink" href="#scenario">Scenario</a><a class="headerlink" href="#scenario" title="Permanent link">&para;</a></h4>
 <p>Un'organizzazione vuole monitorare tutti gli accessi a Salesforce per:
 - Rilevare accessi sospetti
 - Tracciare accessi da IP non usuali
 - Monitorare attività fuori orario
 - Generare alert per tentativi di login falliti</p>
-<h3 id="passo-1-preparazione-salesforce">Passo 1: Preparazione Salesforce<a class="headerlink" href="#passo-1-preparazione-salesforce" title="Permanent link">&para;</a></h3>
-<h4 id="11-abilitare-event-monitoring">1.1 Abilitare Event Monitoring<a class="headerlink" href="#11-abilitare-event-monitoring" title="Permanent link">&para;</a></h4>
+<h4 id="passo-1-preparazione-salesforce"><a class="toclink" href="#passo-1-preparazione-salesforce">Passo 1: Preparazione Salesforce</a><a class="headerlink" href="#passo-1-preparazione-salesforce" title="Permanent link">&para;</a></h4>
+<h5 id="11-abilitare-event-monitoring"><a class="toclink" href="#11-abilitare-event-monitoring">1.1 Abilitare Event Monitoring</a><a class="headerlink" href="#11-abilitare-event-monitoring" title="Permanent link">&para;</a></h5>
 <ol>
 <li>Accedi a Salesforce come amministratore</li>
 <li>Vai a <strong>Setup</strong> → Cerca "Event Monitoring"</li>
@@ -2995,7 +2281,7 @@
 <li>Abilita <strong>Event Monitoring</strong> se non già attivo</li>
 <li>Verifica che <strong>Event Log Files</strong> sia abilitato</li>
 </ol>
-<h4 id="12-creare-connected-app">1.2 Creare Connected App<a class="headerlink" href="#12-creare-connected-app" title="Permanent link">&para;</a></h4>
+<h5 id="12-creare-connected-app"><a class="toclink" href="#12-creare-connected-app">1.2 Creare Connected App</a><a class="headerlink" href="#12-creare-connected-app" title="Permanent link">&para;</a></h5>
 <ol>
 <li>Vai a <strong>Setup</strong> → <strong>App Manager</strong></li>
 <li>Clicca su <strong>New Connected App</strong></li>
@@ -3016,7 +2302,7 @@
 <li>Abilita <strong>Require Secret for Web Server Flow</strong></li>
 <li>Salva e attendi 2-5 minuti per la propagazione</li>
 </ol>
-<h4 id="13-ottenere-credenziali">1.3 Ottenere Credenziali<a class="headerlink" href="#13-ottenere-credenziali" title="Permanent link">&para;</a></h4>
+<h5 id="13-ottenere-credenziali"><a class="toclink" href="#13-ottenere-credenziali">1.3 Ottenere Credenziali</a><a class="headerlink" href="#13-ottenere-credenziali" title="Permanent link">&para;</a></h5>
 <ol>
 <li>Vai alla Connected App appena creata</li>
 <li>Clicca su <strong>Manage</strong> → <strong>Edit Policies</strong></li>
@@ -3033,7 +2319,7 @@
 <li><strong>Consumer Secret</strong> (Client Secret): <code>ABC123...</code> (esempio)</li>
 </ol>
 <p>⚠️ <strong>IMPORTANTE</strong>: Il Consumer Secret viene mostrato solo una volta!</p>
-<h4 id="14-configurare-network-access-se-necessario">1.4 Configurare Network Access (Se Necessario)<a class="headerlink" href="#14-configurare-network-access-se-necessario" title="Permanent link">&para;</a></h4>
+<h5 id="14-configurare-network-access-se-necessario"><a class="toclink" href="#14-configurare-network-access-se-necessario">1.4 Configurare Network Access (Se Necessario)</a><a class="headerlink" href="#14-configurare-network-access-se-necessario" title="Permanent link">&para;</a></h5>
 <p><strong>⭐ Raccomandazione</strong>: Se possibile, usa <strong>Azure Private Link</strong> per Log Analytics invece di configurare range IP pubblici.</p>
 <p><strong>Opzione A: Usa Private Link (Consigliato)</strong>
 1. Configura Azure Private Link per il Log Analytics Workspace
@@ -3046,7 +2332,7 @@
 3. Aggiungi i range IP di Azure Cloud per la tua regione
    - Vedi <a href="../network-sicurezza/">Gestione Network e Sicurezza</a> per dettagli
 4. <strong>Nota</strong>: I range IP cambiano settimanalmente, richiede manutenzione periodica</p>
-<h4 id="15-configurare-permessi">1.5 Configurare Permessi<a class="headerlink" href="#15-configurare-permessi" title="Permanent link">&para;</a></h4>
+<h5 id="15-configurare-permessi"><a class="toclink" href="#15-configurare-permessi">1.5 Configurare Permessi</a><a class="headerlink" href="#15-configurare-permessi" title="Permanent link">&para;</a></h5>
 <ol>
 <li>Vai a <strong>Setup</strong> → <strong>Users</strong> → <strong>Permission Sets</strong></li>
 <li>Crea un nuovo Permission Set chiamato "Azure Sentinel Integration"</li>
@@ -3055,30 +2341,30 @@
 <li><strong>View Event Log Files</strong></li>
 <li>Assegna il Permission Set all'utente che eseguirà l'integrazione</li>
 </ol>
-<h3 id="passo-2-preparazione-azure-sentinel">Passo 2: Preparazione Azure Sentinel<a class="headerlink" href="#passo-2-preparazione-azure-sentinel" title="Permanent link">&para;</a></h3>
-<h4 id="21-verificare-log-analytics-workspace">2.1 Verificare Log Analytics Workspace<a class="headerlink" href="#21-verificare-log-analytics-workspace" title="Permanent link">&para;</a></h4>
+<h4 id="passo-2-preparazione-azure-sentinel"><a class="toclink" href="#passo-2-preparazione-azure-sentinel">Passo 2: Preparazione Azure Sentinel</a><a class="headerlink" href="#passo-2-preparazione-azure-sentinel" title="Permanent link">&para;</a></h4>
+<h5 id="21-verificare-log-analytics-workspace"><a class="toclink" href="#21-verificare-log-analytics-workspace">2.1 Verificare Log Analytics Workspace</a><a class="headerlink" href="#21-verificare-log-analytics-workspace" title="Permanent link">&para;</a></h5>
 <ol>
 <li>Accedi al <a href="https://portal.azure.com">Portale Azure</a></li>
 <li>Cerca "Log Analytics workspaces"</li>
 <li>Verifica che esista un workspace (o creane uno nuovo)</li>
 <li>Annota il <strong>Workspace ID</strong> (lo trovi in <strong>Overview</strong> → <strong>Workspace ID</strong>)</li>
 </ol>
-<h4 id="22-abilitare-azure-sentinel">2.2 Abilitare Azure Sentinel<a class="headerlink" href="#22-abilitare-azure-sentinel" title="Permanent link">&para;</a></h4>
+<h5 id="22-abilitare-azure-sentinel"><a class="toclink" href="#22-abilitare-azure-sentinel">2.2 Abilitare Azure Sentinel</a><a class="headerlink" href="#22-abilitare-azure-sentinel" title="Permanent link">&para;</a></h5>
 <ol>
 <li>Nel portale Azure, cerca "Azure Sentinel"</li>
 <li>Se non già abilitato, clicca su <strong>Create</strong></li>
 <li>Seleziona il Log Analytics Workspace</li>
 <li>Clicca su <strong>Add</strong></li>
 </ol>
-<h3 id="passo-3-configurare-il-connector-ccf">Passo 3: Configurare il Connector CCF<a class="headerlink" href="#passo-3-configurare-il-connector-ccf" title="Permanent link">&para;</a></h3>
-<h4 id="31-accedere-al-connector">3.1 Accedere al Connector<a class="headerlink" href="#31-accedere-al-connector" title="Permanent link">&para;</a></h4>
+<h4 id="passo-3-configurare-il-connector-ccf"><a class="toclink" href="#passo-3-configurare-il-connector-ccf">Passo 3: Configurare il Connector CCF</a><a class="headerlink" href="#passo-3-configurare-il-connector-ccf" title="Permanent link">&para;</a></h4>
+<h5 id="31-accedere-al-connector"><a class="toclink" href="#31-accedere-al-connector">3.1 Accedere al Connector</a><a class="headerlink" href="#31-accedere-al-connector" title="Permanent link">&para;</a></h5>
 <ol>
 <li>In Azure Sentinel, vai a <strong>Data connectors</strong></li>
 <li>Cerca "Salesforce" nella barra di ricerca</li>
 <li>Seleziona il connector Salesforce (se disponibile) oppure usa un connector CCF generico</li>
 <li>Clicca su <strong>Open connector page</strong></li>
 </ol>
-<h4 id="32-configurare-autenticazione-oauth">3.2 Configurare Autenticazione OAuth<a class="headerlink" href="#32-configurare-autenticazione-oauth" title="Permanent link">&para;</a></h4>
+<h5 id="32-configurare-autenticazione-oauth"><a class="toclink" href="#32-configurare-autenticazione-oauth">3.2 Configurare Autenticazione OAuth</a><a class="headerlink" href="#32-configurare-autenticazione-oauth" title="Permanent link">&para;</a></h5>
 <ol>
 <li>Nella pagina del connector, clicca su <strong>Configure OAuth</strong></li>
 <li>Compila i campi:
@@ -3093,7 +2379,7 @@
 <li>Accetta le autorizzazioni</li>
 <li>Verifica che la connessione sia riuscita</li>
 </ol>
-<h4 id="33-configurare-parametri-di-raccolta">3.3 Configurare Parametri di Raccolta<a class="headerlink" href="#33-configurare-parametri-di-raccolta" title="Permanent link">&para;</a></h4>
+<h5 id="33-configurare-parametri-di-raccolta"><a class="toclink" href="#33-configurare-parametri-di-raccolta">3.3 Configurare Parametri di Raccolta</a><a class="headerlink" href="#33-configurare-parametri-di-raccolta" title="Permanent link">&para;</a></h5>
 <ol>
 <li>Nella configurazione del connector, imposta:
    <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Event Types: LoginEvent, LogoutEvent, ApiEvent
@@ -3105,7 +2391,7 @@
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Exclude Events: (lascia vuoto o specifica eventi da escludere)
 </code></pre></div></li>
 </ol>
-<h4 id="34-configurare-mapping-dati">3.4 Configurare Mapping Dati<a class="headerlink" href="#34-configurare-mapping-dati" title="Permanent link">&para;</a></h4>
+<h5 id="34-configurare-mapping-dati"><a class="toclink" href="#34-configurare-mapping-dati">3.4 Configurare Mapping Dati</a><a class="headerlink" href="#34-configurare-mapping-dati" title="Permanent link">&para;</a></h5>
 <p>Il connector mapperà automaticamente i campi Salesforce ai campi Log Analytics:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Salesforce Field          → Log Analytics Field
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>─────────────────────────────────────────────────
@@ -3119,15 +2405,15 @@
 <a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>LoginType                 → LoginType_s
 <a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>Status                    → Status_s
 </code></pre></div>
-<h4 id="35-abilitare-il-connector">3.5 Abilitare il Connector<a class="headerlink" href="#35-abilitare-il-connector" title="Permanent link">&para;</a></h4>
+<h5 id="35-abilitare-il-connector"><a class="toclink" href="#35-abilitare-il-connector">3.5 Abilitare il Connector</a><a class="headerlink" href="#35-abilitare-il-connector" title="Permanent link">&para;</a></h5>
 <ol>
 <li>Verifica tutte le configurazioni</li>
 <li>Clicca su <strong>Enable</strong> o <strong>Activate</strong></li>
 <li>Attendi la conferma che il connector è attivo</li>
 <li>Il connector inizierà a raccogliere dati entro 15-30 minuti</li>
 </ol>
-<h3 id="passo-4-verificare-lintegrazione">Passo 4: Verificare l'Integrazione<a class="headerlink" href="#passo-4-verificare-lintegrazione" title="Permanent link">&para;</a></h3>
-<h4 id="41-verificare-ricezione-dati">4.1 Verificare Ricezione Dati<a class="headerlink" href="#41-verificare-ricezione-dati" title="Permanent link">&para;</a></h4>
+<h4 id="passo-4-verificare-lintegrazione"><a class="toclink" href="#passo-4-verificare-lintegrazione">Passo 4: Verificare l'Integrazione</a><a class="headerlink" href="#passo-4-verificare-lintegrazione" title="Permanent link">&para;</a></h4>
+<h5 id="41-verificare-ricezione-dati"><a class="toclink" href="#41-verificare-ricezione-dati">4.1 Verificare Ricezione Dati</a><a class="headerlink" href="#41-verificare-ricezione-dati" title="Permanent link">&para;</a></h5>
 <ol>
 <li>In Azure Sentinel, vai a <strong>Logs</strong></li>
 <li>Esegui la query:
@@ -3138,28 +2424,28 @@
 </code></pre></div></li>
 <li>Verifica che i dati siano presenti</li>
 </ol>
-<h4 id="42-verificare-schema-dati">4.2 Verificare Schema Dati<a class="headerlink" href="#42-verificare-schema-dati" title="Permanent link">&para;</a></h4>
+<h5 id="42-verificare-schema-dati"><a class="toclink" href="#42-verificare-schema-dati">4.2 Verificare Schema Dati</a><a class="headerlink" href="#42-verificare-schema-dati" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">Salesforce_CL</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">24</span><span class="n">h</span><span class="p">)</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span><span class="k">count</span><span class="p">()</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">EventType_s</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">|</span><span class="w"> </span><span class="k">render</span><span class="w"> </span><span class="n">columnchart</span>
 </code></pre></div>
-<h4 id="43-verificare-eventi-recenti">4.3 Verificare Eventi Recenti<a class="headerlink" href="#43-verificare-eventi-recenti" title="Permanent link">&para;</a></h4>
+<h5 id="43-verificare-eventi-recenti"><a class="toclink" href="#43-verificare-eventi-recenti">4.3 Verificare Eventi Recenti</a><a class="headerlink" href="#43-verificare-eventi-recenti" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">Salesforce_CL</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">1</span><span class="n">h</span><span class="p">)</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;LoginEvent&quot;</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="n">UserName_s</span><span class="p">,</span><span class="w"> </span><span class="n">SourceIP_s</span><span class="p">,</span><span class="w"> </span><span class="n">Browser_s</span><span class="p">,</span><span class="w"> </span><span class="n">Platform_s</span>
 <a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">|</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="n">desc</span>
 </code></pre></div>
-<h3 id="passo-5-configurare-query-e-alert">Passo 5: Configurare Query e Alert<a class="headerlink" href="#passo-5-configurare-query-e-alert" title="Permanent link">&para;</a></h3>
-<h4 id="51-query-per-login-falliti">5.1 Query per Login Falliti<a class="headerlink" href="#51-query-per-login-falliti" title="Permanent link">&para;</a></h4>
+<h4 id="passo-5-configurare-query-e-alert"><a class="toclink" href="#passo-5-configurare-query-e-alert">Passo 5: Configurare Query e Alert</a><a class="headerlink" href="#passo-5-configurare-query-e-alert" title="Permanent link">&para;</a></h4>
+<h5 id="51-query-per-login-falliti"><a class="toclink" href="#51-query-per-login-falliti">5.1 Query per Login Falliti</a><a class="headerlink" href="#51-query-per-login-falliti" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">Salesforce_CL</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;LoginEvent&quot;</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">Status_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;Failed&quot;</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">Status_s</span><span class="w"> </span><span class="k">contains</span><span class="w"> </span><span class="s">&quot;Failure&quot;</span>
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="n">UserName_s</span><span class="p">,</span><span class="w"> </span><span class="n">SourceIP_s</span><span class="p">,</span><span class="w"> </span><span class="n">Status_s</span>
 <a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="p">|</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="n">desc</span>
 </code></pre></div>
-<h4 id="52-alert-per-troppi-login-falliti">5.2 Alert per Troppi Login Falliti<a class="headerlink" href="#52-alert-per-troppi-login-falliti" title="Permanent link">&para;</a></h4>
+<h5 id="52-alert-per-troppi-login-falliti"><a class="toclink" href="#52-alert-per-troppi-login-falliti">5.2 Alert per Troppi Login Falliti</a><a class="headerlink" href="#52-alert-per-troppi-login-falliti" title="Permanent link">&para;</a></h5>
 <ol>
 <li>Vai a <strong>Analytics</strong> → <strong>Rules</strong></li>
 <li>Clicca su <strong>Create</strong> → <strong>Scheduled query rule</strong></li>
@@ -3178,7 +2464,7 @@
 </code></pre></div></li>
 <li>Salva e abilita la regola</li>
 </ol>
-<h4 id="53-query-per-accessi-da-ip-non-usuali">5.3 Query per Accessi da IP Non Usuali<a class="headerlink" href="#53-query-per-accessi-da-ip-non-usuali" title="Permanent link">&para;</a></h4>
+<h5 id="53-query-per-accessi-da-ip-non-usuali"><a class="toclink" href="#53-query-per-accessi-da-ip-non-usuali">5.3 Query per Accessi da IP Non Usuali</a><a class="headerlink" href="#53-query-per-accessi-da-ip-non-usuali" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">let</span><span class="w"> </span><span class="n">KnownIPs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Salesforce_CL</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="p">(</span><span class="n">ago</span><span class="p">(</span><span class="mi">30</span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="err">..</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">1</span><span class="n">h</span><span class="p">))</span>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;LoginEvent&quot;</span>
@@ -3190,15 +2476,15 @@
 <a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">SourceIP_s</span><span class="w"> </span><span class="err">!</span><span class="n">in</span><span class="w"> </span><span class="p">(</span><span class="n">KnownIPSet</span><span class="p">)</span>
 <a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="n">UserName_s</span><span class="p">,</span><span class="w"> </span><span class="n">SourceIP_s</span>
 </code></pre></div>
-<h3 id="passo-6-monitoraggio-e-manutenzione">Passo 6: Monitoraggio e Manutenzione<a class="headerlink" href="#passo-6-monitoraggio-e-manutenzione" title="Permanent link">&para;</a></h3>
-<h4 id="61-verificare-stato-connector">6.1 Verificare Stato Connector<a class="headerlink" href="#61-verificare-stato-connector" title="Permanent link">&para;</a></h4>
+<h4 id="passo-6-monitoraggio-e-manutenzione"><a class="toclink" href="#passo-6-monitoraggio-e-manutenzione">Passo 6: Monitoraggio e Manutenzione</a><a class="headerlink" href="#passo-6-monitoraggio-e-manutenzione" title="Permanent link">&para;</a></h4>
+<h5 id="61-verificare-stato-connector"><a class="toclink" href="#61-verificare-stato-connector">6.1 Verificare Stato Connector</a><a class="headerlink" href="#61-verificare-stato-connector" title="Permanent link">&para;</a></h5>
 <ol>
 <li>Vai a <strong>Data connectors</strong></li>
 <li>Verifica lo stato del connector Salesforce</li>
 <li>Controlla eventuali errori o avvisi</li>
 <li>Verifica l'ultima sincronizzazione</li>
 </ol>
-<h4 id="62-monitorare-volume-dati">6.2 Monitorare Volume Dati<a class="headerlink" href="#62-monitorare-volume-dati" title="Permanent link">&para;</a></h4>
+<h5 id="62-monitorare-volume-dati"><a class="toclink" href="#62-monitorare-volume-dati">6.2 Monitorare Volume Dati</a><a class="headerlink" href="#62-monitorare-volume-dati" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">Salesforce_CL</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">24</span><span class="n">h</span><span class="p">)</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span>
@@ -3206,7 +2492,7 @@
 <a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="n">EventsByType</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">count</span><span class="p">()</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">EventType_s</span>
 <a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="p">|</span><span class="w"> </span><span class="k">render</span><span class="w"> </span><span class="n">piechart</span>
 </code></pre></div>
-<h4 id="63-verificare-latenza">6.3 Verificare Latenza<a class="headerlink" href="#63-verificare-latenza" title="Permanent link">&para;</a></h4>
+<h5 id="63-verificare-latenza"><a class="toclink" href="#63-verificare-latenza">6.3 Verificare Latenza</a><a class="headerlink" href="#63-verificare-latenza" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">Salesforce_CL</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">1</span><span class="n">h</span><span class="p">)</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">|</span><span class="w"> </span><span class="k">extend</span><span class="w"> </span><span class="n">Latency</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">datetime_diff</span><span class="p">(</span><span class="s">&#39;minute&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="n">_IngestionTime</span><span class="p">)</span>
@@ -3215,8 +2501,8 @@
 <a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="n">MaxLatency</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">Latency</span><span class="p">),</span>
 <a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="n">MinLatency</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">Latency</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
-<h3 id="problema-nessun-dato-ricevuto">Problema: Nessun Dato Ricevuto<a class="headerlink" href="#problema-nessun-dato-ricevuto" title="Permanent link">&para;</a></h3>
+<h3 id="troubleshooting"><a class="toclink" href="#troubleshooting">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
+<h4 id="problema-nessun-dato-ricevuto"><a class="toclink" href="#problema-nessun-dato-ricevuto">Problema: Nessun Dato Ricevuto</a><a class="headerlink" href="#problema-nessun-dato-ricevuto" title="Permanent link">&para;</a></h4>
 <p><strong>Possibili Cause:</strong>
 - Event Monitoring non attivo da almeno 24-48 ore
 - Credenziali OAuth non valide
@@ -3227,7 +2513,7 @@
 2. Testa le credenziali OAuth manualmente
 3. Verifica lo stato del connector
 4. Controlla i log del connector per errori</p>
-<h3 id="problema-errori-di-autenticazione">Problema: Errori di Autenticazione<a class="headerlink" href="#problema-errori-di-autenticazione" title="Permanent link">&para;</a></h3>
+<h4 id="problema-errori-di-autenticazione"><a class="toclink" href="#problema-errori-di-autenticazione">Problema: Errori di Autenticazione</a><a class="headerlink" href="#problema-errori-di-autenticazione" title="Permanent link">&para;</a></h4>
 <p><strong>Possibili Cause:</strong>
 - Consumer Secret errato o scaduto
 - Callback URL non corrispondente
@@ -3236,7 +2522,7 @@
 1. Rigenera il Consumer Secret se necessario
 2. Verifica il Callback URL nella Connected App
 3. Aggiungi tutti gli OAuth Scopes necessari</p>
-<h3 id="problema-dati-incompleti">Problema: Dati Incompleti<a class="headerlink" href="#problema-dati-incompleti" title="Permanent link">&para;</a></h3>
+<h4 id="problema-dati-incompleti"><a class="toclink" href="#problema-dati-incompleti">Problema: Dati Incompleti</a><a class="headerlink" href="#problema-dati-incompleti" title="Permanent link">&para;</a></h4>
 <p><strong>Possibili Cause:</strong>
 - Filtri troppo restrittivi
 - Eventi non ancora disponibili
@@ -3245,10 +2531,10 @@
 1. Rivedi i filtri nella configurazione
 2. Verifica la data degli eventi richiesti
 3. Controlla i rate limits di Salesforce</p>
-<h2 id="limitazioni-e-limiti-di-polling">Limitazioni e Limiti di Polling<a class="headerlink" href="#limitazioni-e-limiti-di-polling" title="Permanent link">&para;</a></h2>
-<h3 id="limiti-di-polling-del-ccf">Limiti di Polling del CCF<a class="headerlink" href="#limiti-di-polling-del-ccf" title="Permanent link">&para;</a></h3>
+<h3 id="limitazioni-e-limiti-di-polling"><a class="toclink" href="#limitazioni-e-limiti-di-polling">Limitazioni e Limiti di Polling</a><a class="headerlink" href="#limitazioni-e-limiti-di-polling" title="Permanent link">&para;</a></h3>
+<h4 id="limiti-di-polling-del-ccf"><a class="toclink" href="#limiti-di-polling-del-ccf">Limiti di Polling del CCF</a><a class="headerlink" href="#limiti-di-polling-del-ccf" title="Permanent link">&para;</a></h4>
 <p>Il CCF ha limitazioni specifiche sul polling che è importante conoscere:</p>
-<h4 id="intervallo-di-polling">Intervallo di Polling<a class="headerlink" href="#intervallo-di-polling" title="Permanent link">&para;</a></h4>
+<h5 id="intervallo-di-polling"><a class="toclink" href="#intervallo-di-polling">Intervallo di Polling</a><a class="headerlink" href="#intervallo-di-polling" title="Permanent link">&para;</a></h5>
 <ul>
 <li><strong>Intervallo Minimo</strong>: 5 minuti</li>
 <li><strong>Intervallo Massimo</strong>: 24 ore</li>
@@ -3259,7 +2545,7 @@
 - Rate limiting da parte di Salesforce
 - Aumento dei costi Azure
 - Carico eccessivo sul sistema</p>
-<h4 id="limiti-di-volume-dati">Limiti di Volume Dati<a class="headerlink" href="#limiti-di-volume-dati" title="Permanent link">&para;</a></h4>
+<h5 id="limiti-di-volume-dati"><a class="toclink" href="#limiti-di-volume-dati">Limiti di Volume Dati</a><a class="headerlink" href="#limiti-di-volume-dati" title="Permanent link">&para;</a></h5>
 <ul>
 <li><strong>Dimensione Massima per Richiesta</strong>: 10 MB</li>
 <li><strong>Numero Massimo di Eventi per Poll</strong>: 10.000 eventi</li>
@@ -3269,7 +2555,7 @@
 - Il connector effettuerà più richieste in batch
 - Potrebbe essere necessario aumentare l'intervallo di polling
 - Considera di filtrare eventi non essenziali</p>
-<h4 id="limiti-di-rate-limiting">Limiti di Rate Limiting<a class="headerlink" href="#limiti-di-rate-limiting" title="Permanent link">&para;</a></h4>
+<h5 id="limiti-di-rate-limiting"><a class="toclink" href="#limiti-di-rate-limiting">Limiti di Rate Limiting</a><a class="headerlink" href="#limiti-di-rate-limiting" title="Permanent link">&para;</a></h5>
 <p>Il CCF rispetta i limiti API di Salesforce:</p>
 <ul>
 <li><strong>API Requests per 24h</strong>: Dipende dalla licenza Salesforce</li>
@@ -3279,7 +2565,7 @@
 <li><strong>Concurrent Requests</strong>: Massimo 25 simultanee</li>
 <li><strong>Event Log Files</strong>: Disponibili dopo 24-48 ore dalla generazione</li>
 </ul>
-<h4 id="calcolo-intervallo-ottimale">Calcolo Intervallo Ottimale<a class="headerlink" href="#calcolo-intervallo-ottimale" title="Permanent link">&para;</a></h4>
+<h5 id="calcolo-intervallo-ottimale"><a class="toclink" href="#calcolo-intervallo-ottimale">Calcolo Intervallo Ottimale</a><a class="headerlink" href="#calcolo-intervallo-ottimale" title="Permanent link">&para;</a></h5>
 <p>Per calcolare l'intervallo di polling ottimale:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Intervallo (minuti) = (Eventi Giornalieri / Eventi per Poll) × 1440 / Numero Richieste Disponibili
 </code></pre></div>
@@ -3293,20 +2579,20 @@
 - Filtrare eventi non essenziali
 - Aumentare l'intervallo a 15-30 minuti
 - Usare una soluzione alternativa (Azure Function) per maggiore controllo</p>
-<h4 id="limitazioni-temporali">Limitazioni Temporali<a class="headerlink" href="#limitazioni-temporali" title="Permanent link">&para;</a></h4>
+<h5 id="limitazioni-temporali"><a class="toclink" href="#limitazioni-temporali">Limitazioni Temporali</a><a class="headerlink" href="#limitazioni-temporali" title="Permanent link">&para;</a></h5>
 <ul>
 <li><strong>Delay Eventi</strong>: Gli eventi sono disponibili in Salesforce dopo 24-48 ore</li>
 <li><strong>Latenza Raccolta</strong>: Il CCF può avere una latenza di 15-30 minuti dall'evento alla raccolta</li>
 <li><strong>Latenza Totale</strong>: Fino a 48-72 ore per eventi molto recenti</li>
 </ul>
-<h4 id="limitazioni-di-connettivita">Limitazioni di Connettività<a class="headerlink" href="#limitazioni-di-connettivita" title="Permanent link">&para;</a></h4>
+<h5 id="limitazioni-di-connettivita"><a class="toclink" href="#limitazioni-di-connettivita">Limitazioni di Connettività</a><a class="headerlink" href="#limitazioni-di-connettivita" title="Permanent link">&para;</a></h5>
 <ul>
 <li><strong>Timeout Connessione</strong>: 5 minuti</li>
 <li><strong>Retry Automatico</strong>: 3 tentativi con backoff esponenziale</li>
 <li><strong>Intervallo Retry</strong>: 1 minuto, 5 minuti, 15 minuti</li>
 </ul>
-<h3 id="gestione-dei-limiti">Gestione dei Limiti<a class="headerlink" href="#gestione-dei-limiti" title="Permanent link">&para;</a></h3>
-<h4 id="monitoraggio-utilizzo-api">Monitoraggio Utilizzo API<a class="headerlink" href="#monitoraggio-utilizzo-api" title="Permanent link">&para;</a></h4>
+<h4 id="gestione-dei-limiti"><a class="toclink" href="#gestione-dei-limiti">Gestione dei Limiti</a><a class="headerlink" href="#gestione-dei-limiti" title="Permanent link">&para;</a></h4>
+<h5 id="monitoraggio-utilizzo-api"><a class="toclink" href="#monitoraggio-utilizzo-api">Monitoraggio Utilizzo API</a><a class="headerlink" href="#monitoraggio-utilizzo-api" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c">// Verifica numero di richieste effettuate</span>
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">Salesforce_CL</span>
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">24</span><span class="n">h</span><span class="p">)</span>
@@ -3315,20 +2601,20 @@
 <a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">    </span><span class="n">Requests</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">dcount</span><span class="p">(</span><span class="n">bin</span><span class="p">(</span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="n">h</span><span class="p">))</span>
 <a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="p">|</span><span class="w"> </span><span class="k">extend</span><span class="w"> </span><span class="n">AvgEventsPerRequest</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">TotalEvents</span><span class="w"> </span><span class="p">/</span><span class="w"> </span><span class="n">Requests</span>
 </code></pre></div>
-<h4 id="alert-per-limiti-raggiunti">Alert per Limiti Raggiunti<a class="headerlink" href="#alert-per-limiti-raggiunti" title="Permanent link">&para;</a></h4>
+<h5 id="alert-per-limiti-raggiunti"><a class="toclink" href="#alert-per-limiti-raggiunti">Alert per Limiti Raggiunti</a><a class="headerlink" href="#alert-per-limiti-raggiunti" title="Permanent link">&para;</a></h5>
 <p>Configura alert per:
 - Volume eventi superiore alla capacità
 - Errori di rate limiting
 - Timeout frequenti
 - Latenza eccessiva</p>
-<h4 id="ottimizzazione-polling">Ottimizzazione Polling<a class="headerlink" href="#ottimizzazione-polling" title="Permanent link">&para;</a></h4>
+<h5 id="ottimizzazione-polling"><a class="toclink" href="#ottimizzazione-polling">Ottimizzazione Polling</a><a class="headerlink" href="#ottimizzazione-polling" title="Permanent link">&para;</a></h5>
 <ol>
 <li><strong>Aumenta Intervallo</strong>: Se non hai bisogno di dati in tempo reale</li>
 <li><strong>Filtra Eventi</strong>: Raccogli solo eventi essenziali</li>
 <li><strong>Usa Batch</strong>: Raggruppa richieste quando possibile</li>
 <li><strong>Monitora Costi</strong>: Intervalli brevi aumentano i costi Azure</li>
 </ol>
-<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="best-practices"><a class="toclink" href="#best-practices">Best Practices</a><a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Monitoraggio Proattivo</strong>: Configura alert per errori del connector</li>
 <li><strong>Retention Dati</strong>: Configura retention appropriata in Log Analytics</li>
@@ -3338,8 +2624,8 @@
 <li><strong>Polling Ottimale</strong>: Usa intervalli di 15-30 minuti per bilanciare latenza e costi</li>
 <li><strong>Monitoraggio Limiti</strong>: Monitora regolarmente l'utilizzo API per evitare rate limiting</li>
 </ol>
-<h2 id="configurazione-avanzata">Configurazione Avanzata<a class="headerlink" href="#configurazione-avanzata" title="Permanent link">&para;</a></h2>
-<h3 id="filtri-personalizzati">Filtri Personalizzati<a class="headerlink" href="#filtri-personalizzati" title="Permanent link">&para;</a></h3>
+<h3 id="configurazione-avanzata"><a class="toclink" href="#configurazione-avanzata">Configurazione Avanzata</a><a class="headerlink" href="#configurazione-avanzata" title="Permanent link">&para;</a></h3>
+<h4 id="filtri-personalizzati"><a class="toclink" href="#filtri-personalizzati">Filtri Personalizzati</a><a class="headerlink" href="#filtri-personalizzati" title="Permanent link">&para;</a></h4>
 <p>Puoi configurare filtri avanzati per raccogliere solo eventi specifici:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Event Types: LoginEvent
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>Filters:
@@ -3347,25 +2633,25 @@
 <a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>  - SourceIP: !contains &quot;10.0.0.0/8&quot;
 <a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>  - LoginType: Web
 </code></pre></div>
-<h3 id="trasformazione-dati">Trasformazione Dati<a class="headerlink" href="#trasformazione-dati" title="Permanent link">&para;</a></h3>
+<h4 id="trasformazione-dati"><a class="toclink" href="#trasformazione-dati">Trasformazione Dati</a><a class="headerlink" href="#trasformazione-dati" title="Permanent link">&para;</a></h4>
 <p>Il CCF supporta trasformazioni base dei dati:
 - Rinomina campi
 - Aggiungi campi calcolati
 - Filtra valori</p>
-<h3 id="integrazione-con-altri-connector">Integrazione con Altri Connector<a class="headerlink" href="#integrazione-con-altri-connector" title="Permanent link">&para;</a></h3>
+<h4 id="integrazione-con-altri-connector"><a class="toclink" href="#integrazione-con-altri-connector">Integrazione con Altri Connector</a><a class="headerlink" href="#integrazione-con-altri-connector" title="Permanent link">&para;</a></h4>
 <p>Combina i dati Salesforce con altri log:
 - Azure AD Sign-in Logs
 - Office 365 Activity Logs
 - Altri log di sicurezza</p>
-<h2 id="link-utili">Link Utili<a class="headerlink" href="#link-utili" title="Permanent link">&para;</a></h2>
+<h3 id="link-utili"><a class="toclink" href="#link-utili">Link Utili</a><a class="headerlink" href="#link-utili" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://learn.microsoft.com/azure/sentinel/create-codeless-connector">Documentazione CCF Microsoft</a></li>
 <li><a href="https://developer.salesforce.com/docs/atlas.en-us.event_monitoring.meta/event_monitoring/">Salesforce Event Monitoring</a></li>
 <li><a href="https://learn.microsoft.com/azure/sentinel/">Azure Sentinel Documentation</a></li>
 <li><a href="../../troubleshooting/">Troubleshooting Guide</a></li>
 </ul>
-<h2 id="esempio-di-configurazione-completa">Esempio di Configurazione Completa<a class="headerlink" href="#esempio-di-configurazione-completa" title="Permanent link">&para;</a></h2>
-<h3 id="file-di-configurazione-json">File di Configurazione (JSON)<a class="headerlink" href="#file-di-configurazione-json" title="Permanent link">&para;</a></h3>
+<h3 id="esempio-di-configurazione-completa"><a class="toclink" href="#esempio-di-configurazione-completa">Esempio di Configurazione Completa</a><a class="headerlink" href="#esempio-di-configurazione-completa" title="Permanent link">&para;</a></h3>
+<h4 id="file-di-configurazione-json"><a class="toclink" href="#file-di-configurazione-json">File di Configurazione (JSON)</a><a class="headerlink" href="#file-di-configurazione-json" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">{</span>
 <a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span><span class="nt">&quot;connector&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Salesforce-CCF&quot;</span><span class="p">,</span>
@@ -3428,7 +2714,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 19, 2025 00:36:29 UTC">November 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 19, 2025 00:47:23 UTC"><span class="timeago" datetime="2025-11-19T00:47:23+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 19, 2025 00:47:23 UTC">2025-11-19</span>
   </span>
 
     
@@ -3438,7 +2724,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 19, 2025 00:36:29 UTC">November 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 19, 2025 00:47:23 UTC"><span class="timeago" datetime="2025-11-19T00:47:23+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 19, 2025 00:47:23 UTC">2025-11-19</span>
   </span>
 
     
@@ -3455,6 +2741,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -3524,10 +2812,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.smooth", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link", "toc.integrate", "toc.follow"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
       
     
   </body>

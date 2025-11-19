@@ -55,6 +55,8 @@
       
     
     
+      <link rel="stylesheet" href="../../css/timeago.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -421,7 +423,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Integrazione Salesforce - Azure Sentinel" class="md-nav__button md-logo" aria-label="Integrazione Salesforce - Azure Sentinel" data-md-component="logo">
       
@@ -2176,8 +2180,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -2216,20 +2218,32 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Indice
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#api-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#salesforce-apis" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2250,23 +2264,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Event Log Files API">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#metodi-principali" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Metodi Principali
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -2284,8 +2281,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#azure-log-analytics-data-collector-api" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2323,8 +2320,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#azure-service-management-api" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2351,8 +2348,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#rate-limits" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2390,8 +2387,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#error-handling" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2429,8 +2426,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#link-utili" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2438,6 +2435,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2492,244 +2494,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#salesforce-apis" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Salesforce APIs
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Salesforce APIs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#event-log-files-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Event Log Files API
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Event Log Files API">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#metodi-principali" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Metodi Principali
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#oauth-20-authentication" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OAuth 2.0 Authentication
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#azure-log-analytics-data-collector-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Azure Log Analytics Data Collector API
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Azure Log Analytics Data Collector API">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#post-apilogs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        POST /api/logs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#generazione-signature" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Generazione Signature
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#azure-service-management-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Azure Service Management API
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Azure Service Management API">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-service-tags" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Get Service Tags
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rate-limits" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rate Limits
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Rate Limits">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#salesforce" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Salesforce
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#azure-log-analytics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Azure Log Analytics
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Error Handling
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Error Handling">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#salesforce-api-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Salesforce API Errors
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#azure-log-analytics-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Azure Log Analytics Errors
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#link-utili" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Link Utili
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -2743,13 +2507,15 @@
   
 
 
-<h1 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">&para;</a></h1>
+  <h1>API</h1>
+
+<h2 id="api-reference"><a class="toclink" href="#api-reference">API Reference</a><a class="headerlink" href="#api-reference" title="Permanent link">&para;</a></h2>
 <p>Riferimento alle API utilizzate nell'integrazione Salesforce-Azure Sentinel.</p>
-<h2 id="salesforce-apis">Salesforce APIs<a class="headerlink" href="#salesforce-apis" title="Permanent link">&para;</a></h2>
-<h3 id="event-log-files-api">Event Log Files API<a class="headerlink" href="#event-log-files-api" title="Permanent link">&para;</a></h3>
+<h3 id="salesforce-apis"><a class="toclink" href="#salesforce-apis">Salesforce APIs</a><a class="headerlink" href="#salesforce-apis" title="Permanent link">&para;</a></h3>
+<h4 id="event-log-files-api"><a class="toclink" href="#event-log-files-api">Event Log Files API</a><a class="headerlink" href="#event-log-files-api" title="Permanent link">&para;</a></h4>
 <p>Endpoint per recuperare i log degli eventi Salesforce.</p>
 <p><strong>Base URL</strong>: <code>https://&lt;instance&gt;.salesforce.com/services/data/v&lt;version&gt;/sobjects/EventLogFile/</code></p>
-<h4 id="metodi-principali">Metodi Principali<a class="headerlink" href="#metodi-principali" title="Permanent link">&para;</a></h4>
+<h5 id="metodi-principali"><a class="toclink" href="#metodi-principali">Metodi Principali</a><a class="headerlink" href="#metodi-principali" title="Permanent link">&para;</a></h5>
 <p><strong>GET /EventLogFile</strong></p>
 <p>Recupera la lista dei file di log disponibili.</p>
 <p><strong>Parametri</strong>:
@@ -2764,7 +2530,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="err">GET /services/data/v58.0/sobjects/EventLogFile/{Id}/LogFile</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="err">Authorization: Bearer &lt;access_token&gt;</span>
 </code></pre></div></p>
-<h3 id="oauth-20-authentication">OAuth 2.0 Authentication<a class="headerlink" href="#oauth-20-authentication" title="Permanent link">&para;</a></h3>
+<h4 id="oauth-20-authentication"><a class="toclink" href="#oauth-20-authentication">OAuth 2.0 Authentication</a><a class="headerlink" href="#oauth-20-authentication" title="Permanent link">&para;</a></h4>
 <p><strong>Token Endpoint</strong>: <code>https://&lt;instance&gt;.salesforce.com/services/oauth2/token</code></p>
 <p><strong>Grant Type</strong>: Username-Password Flow</p>
 <p><strong>Request</strong>:
@@ -2787,10 +2553,10 @@
 <a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="nt">&quot;signature&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span>
 <a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">}</span>
 </code></pre></div></p>
-<h2 id="azure-log-analytics-data-collector-api">Azure Log Analytics Data Collector API<a class="headerlink" href="#azure-log-analytics-data-collector-api" title="Permanent link">&para;</a></h2>
+<h3 id="azure-log-analytics-data-collector-api"><a class="toclink" href="#azure-log-analytics-data-collector-api">Azure Log Analytics Data Collector API</a><a class="headerlink" href="#azure-log-analytics-data-collector-api" title="Permanent link">&para;</a></h3>
 <p>Endpoint per inviare dati a Log Analytics.</p>
 <p><strong>Base URL</strong>: <code>https://&lt;workspace-id&gt;.ods.opinsights.azure.com/api/logs?api-version=2016-04-01</code></p>
-<h3 id="post-apilogs">POST /api/logs<a class="headerlink" href="#post-apilogs" title="Permanent link">&para;</a></h3>
+<h4 id="post-apilogs"><a class="toclink" href="#post-apilogs">POST /api/logs</a><a class="headerlink" href="#post-apilogs" title="Permanent link">&para;</a></h4>
 <p>Invia dati a Log Analytics.</p>
 <p><strong>Headers</strong>:
 - <code>Log-Type</code>: Nome della tabella custom (es. <code>Salesforce_CL</code>)
@@ -2816,7 +2582,7 @@
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
 <a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="err">[{&quot;TimeGenerated&quot;:&quot;2024-01-15T10:30:00Z&quot;,&quot;EventType&quot;:&quot;LoginEvent&quot;,&quot;UserName&quot;:&quot;user@example.com&quot;,&quot;SourceIP&quot;:&quot;192.168.1.1&quot;}]</span>
 </code></pre></div></p>
-<h3 id="generazione-signature">Generazione Signature<a class="headerlink" href="#generazione-signature" title="Permanent link">&para;</a></h3>
+<h4 id="generazione-signature"><a class="toclink" href="#generazione-signature">Generazione Signature</a><a class="headerlink" href="#generazione-signature" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">signature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BuildSignature</span><span class="p">(</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">jsonContent</span><span class="p">,</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="n">workspaceKey</span><span class="p">,</span>
@@ -2839,29 +2605,29 @@
 <a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="p">}</span>
 </code></pre></div>
-<h2 id="azure-service-management-api">Azure Service Management API<a class="headerlink" href="#azure-service-management-api" title="Permanent link">&para;</a></h2>
-<h3 id="get-service-tags">Get Service Tags<a class="headerlink" href="#get-service-tags" title="Permanent link">&para;</a></h3>
+<h3 id="azure-service-management-api"><a class="toclink" href="#azure-service-management-api">Azure Service Management API</a><a class="headerlink" href="#azure-service-management-api" title="Permanent link">&para;</a></h3>
+<h4 id="get-service-tags"><a class="toclink" href="#get-service-tags">Get Service Tags</a><a class="headerlink" href="#get-service-tags" title="Permanent link">&para;</a></h4>
 <p>Recupera i range IP di Azure.</p>
 <p><strong>Endpoint</strong>: <code>https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Network/locations/{location}/serviceTagDetails?api-version=2021-05-01</code></p>
 <p><strong>Esempio</strong>:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="err">GET /subscriptions/{subscriptionId}/providers/Microsoft.Network/locations/westeurope/serviceTagDetails?api-version=2021-05-01</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="err">Authorization: Bearer &lt;access_token&gt;</span>
 </code></pre></div></p>
-<h2 id="rate-limits">Rate Limits<a class="headerlink" href="#rate-limits" title="Permanent link">&para;</a></h2>
-<h3 id="salesforce">Salesforce<a class="headerlink" href="#salesforce" title="Permanent link">&para;</a></h3>
+<h3 id="rate-limits"><a class="toclink" href="#rate-limits">Rate Limits</a><a class="headerlink" href="#rate-limits" title="Permanent link">&para;</a></h3>
+<h4 id="salesforce"><a class="toclink" href="#salesforce">Salesforce</a><a class="headerlink" href="#salesforce" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>API Requests</strong>: 15,000 per 24 ore (varia per licenza)</li>
 <li><strong>Concurrent Requests</strong>: 25 simultanee</li>
 <li><strong>Event Log Files</strong>: Disponibili dopo 24-48 ore</li>
 </ul>
-<h3 id="azure-log-analytics">Azure Log Analytics<a class="headerlink" href="#azure-log-analytics" title="Permanent link">&para;</a></h3>
+<h4 id="azure-log-analytics"><a class="toclink" href="#azure-log-analytics">Azure Log Analytics</a><a class="headerlink" href="#azure-log-analytics" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Data Ingestion</strong>: Fino a 6 GB/minuto per workspace</li>
 <li><strong>API Calls</strong>: 500 richieste/minuto</li>
 <li><strong>Payload Size</strong>: Max 30 MB per richiesta</li>
 </ul>
-<h2 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h2>
-<h3 id="salesforce-api-errors">Salesforce API Errors<a class="headerlink" href="#salesforce-api-errors" title="Permanent link">&para;</a></h3>
+<h3 id="error-handling"><a class="toclink" href="#error-handling">Error Handling</a><a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h3>
+<h4 id="salesforce-api-errors"><a class="toclink" href="#salesforce-api-errors">Salesforce API Errors</a><a class="headerlink" href="#salesforce-api-errors" title="Permanent link">&para;</a></h4>
 <p><strong>401 Unauthorized</strong>:
 - Token scaduto o non valido
 - Soluzione: Rinnova il token OAuth</p>
@@ -2871,14 +2637,14 @@
 <p><strong>429 Too Many Requests</strong>:
 - Rate limit superato
 - Soluzione: Implementa retry con backoff esponenziale</p>
-<h3 id="azure-log-analytics-errors">Azure Log Analytics Errors<a class="headerlink" href="#azure-log-analytics-errors" title="Permanent link">&para;</a></h3>
+<h4 id="azure-log-analytics-errors"><a class="toclink" href="#azure-log-analytics-errors">Azure Log Analytics Errors</a><a class="headerlink" href="#azure-log-analytics-errors" title="Permanent link">&para;</a></h4>
 <p><strong>400 Bad Request</strong>:
 - Formato dati non valido
 - Soluzione: Verifica schema JSON</p>
 <p><strong>401 Unauthorized</strong>:
 - Signature non valida
 - Soluzione: Verifica workspace key e algoritmo HMAC</p>
-<h2 id="link-utili">Link Utili<a class="headerlink" href="#link-utili" title="Permanent link">&para;</a></h2>
+<h3 id="link-utili"><a class="toclink" href="#link-utili">Link Utili</a><a class="headerlink" href="#link-utili" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/">Salesforce REST API Documentation</a></li>
 <li><a href="https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/event_log_files_api.htm">Event Log Files API</a></li>
@@ -2907,7 +2673,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 14, 2025 14:36:43 UTC">November 14, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 14, 2025 14:36:43 UTC"><span class="timeago" datetime="2025-11-14T14:36:43+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 14, 2025 14:36:43 UTC">2025-11-14</span>
   </span>
 
     
@@ -2917,7 +2683,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 14, 2025 14:36:43 UTC">November 14, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 14, 2025 14:36:43 UTC"><span class="timeago" datetime="2025-11-14T14:36:43+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 14, 2025 14:36:43 UTC">2025-11-14</span>
   </span>
 
     
@@ -2934,6 +2700,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -3003,10 +2771,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.smooth", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link", "toc.integrate", "toc.follow"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
       
     
   </body>

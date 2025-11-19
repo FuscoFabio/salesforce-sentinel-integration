@@ -25,7 +25,7 @@
     
     
       
-        <title>Platform Events (Near Real-Time) - Integrazione Salesforce - Azure Sentinel</title>
+        <title>Platform events - Integrazione Salesforce - Azure Sentinel</title>
       
     
     
@@ -50,6 +50,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../css/timeago.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Platform Events (Near Real-Time)
+              Platform events
             
           </span>
         </div>
@@ -415,7 +417,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Integrazione Salesforce - Azure Sentinel" class="md-nav__button md-logo" aria-label="Integrazione Salesforce - Azure Sentinel" data-md-component="logo">
       
@@ -2224,259 +2228,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#panoramica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Panoramica
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#differenza-chiave-event-bus-vs-event-log-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⚠️ Differenza Chiave: Event Bus vs Event Log Files
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚠️ Differenza Chiave: Event Bus vs Event Log Files">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#platform-events-event-bus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Platform Events (Event Bus)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#event-log-files-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Event Log Files API
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quando-usare-platform-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quando Usare Platform Events
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#architettura" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architettura
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#approcci-disponibili" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Approcci Disponibili
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Approcci Disponibili">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-webhook-http-piu-semplice" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Webhook HTTP (Più Semplice)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-azure-event-hub-consigliato" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Azure Event Hub (⭐ Consigliato)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-cometd-streaming-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. CometD Streaming API
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitazioni" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Limitazioni
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Limitazioni">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#copertura-eventi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Copertura Eventi
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#requisiti-tecnici" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Requisiti Tecnici
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rate-limits" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rate Limits
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementazione" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Implementazione
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#costi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Costi
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#confronto-con-event-log-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Confronto con Event Log Files
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#approccio-ibrido-consigliato" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Approccio Ibrido (Consigliato)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#link-utili" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Link Utili
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -2490,25 +2241,27 @@
   
 
 
-<h1 id="platform-events-near-real-time">Platform Events (Near Real-Time)<a class="headerlink" href="#platform-events-near-real-time" title="Permanent link">&para;</a></h1>
+  <h1>Platform events</h1>
+
+<h2 id="platform-events-near-real-time"><a class="toclink" href="#platform-events-near-real-time">Platform Events (Near Real-Time)</a><a class="headerlink" href="#platform-events-near-real-time" title="Permanent link">&para;</a></h2>
 <p>Soluzione per integrazione near real-time tra Salesforce e Azure Sentinel usando Platform Events (Event Bus).</p>
-<h2 id="panoramica">Panoramica<a class="headerlink" href="#panoramica" title="Permanent link">&para;</a></h2>
+<h3 id="panoramica"><a class="toclink" href="#panoramica">Panoramica</a><a class="headerlink" href="#panoramica" title="Permanent link">&para;</a></h3>
 <p>Questa soluzione utilizza <strong>Platform Events</strong> (Event Bus) di Salesforce per ottenere eventi in <strong>tempo reale</strong> (&lt; 1 minuto di latenza) invece dei 24-48 ore degli Event Log Files API.</p>
-<h2 id="differenza-chiave-event-bus-vs-event-log-files">⚠️ Differenza Chiave: Event Bus vs Event Log Files<a class="headerlink" href="#differenza-chiave-event-bus-vs-event-log-files" title="Permanent link">&para;</a></h2>
-<h3 id="platform-events-event-bus">Platform Events (Event Bus)<a class="headerlink" href="#platform-events-event-bus" title="Permanent link">&para;</a></h3>
+<h3 id="differenza-chiave-event-bus-vs-event-log-files"><a class="toclink" href="#differenza-chiave-event-bus-vs-event-log-files">⚠️ Differenza Chiave: Event Bus vs Event Log Files</a><a class="headerlink" href="#differenza-chiave-event-bus-vs-event-log-files" title="Permanent link">&para;</a></h3>
+<h4 id="platform-events-event-bus"><a class="toclink" href="#platform-events-event-bus">Platform Events (Event Bus)</a><a class="headerlink" href="#platform-events-event-bus" title="Permanent link">&para;</a></h4>
 <ul>
 <li>✅ <strong>Latenza</strong>: &lt; 1 minuto (near real-time)</li>
 <li>✅ <strong>Tempo Reale</strong>: Eventi disponibili immediatamente</li>
 <li>❌ <strong>Copertura Limitata</strong>: Non tutti gli eventi disponibili</li>
 <li>❌ <strong>Complessità</strong>: Richiede sviluppo custom</li>
 </ul>
-<h3 id="event-log-files-api">Event Log Files API<a class="headerlink" href="#event-log-files-api" title="Permanent link">&para;</a></h3>
+<h4 id="event-log-files-api"><a class="toclink" href="#event-log-files-api">Event Log Files API</a><a class="headerlink" href="#event-log-files-api" title="Permanent link">&para;</a></h4>
 <ul>
 <li>❌ <strong>Latenza</strong>: 24-48 ore (limite strutturale)</li>
 <li>✅ <strong>Copertura Completa</strong>: Tutti gli eventi disponibili</li>
 <li>✅ <strong>Setup Semplice</strong>: Soluzioni code-less disponibili</li>
 </ul>
-<h2 id="quando-usare-platform-events">Quando Usare Platform Events<a class="headerlink" href="#quando-usare-platform-events" title="Permanent link">&para;</a></h2>
+<h3 id="quando-usare-platform-events"><a class="toclink" href="#quando-usare-platform-events">Quando Usare Platform Events</a><a class="headerlink" href="#quando-usare-platform-events" title="Permanent link">&para;</a></h3>
 <p><strong>Scegli Platform Events se</strong>:
 - ✅ Hai bisogno di monitoraggio near real-time (&lt; 24 ore)
 - ✅ Eventi critici richiedono alerting immediato
@@ -2519,7 +2272,7 @@
 - ❌ Vuoi setup semplice senza codice
 - ❌ Budget limitato
 - ❌ Non hai competenze di sviluppo</p>
-<h2 id="architettura">Architettura<a class="headerlink" href="#architettura" title="Permanent link">&para;</a></h2>
+<h3 id="architettura"><a class="toclink" href="#architettura">Architettura</a><a class="headerlink" href="#architettura" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Salesforce Platform Events (Event Bus)
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    ↓
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Apex Trigger / Process Builder
@@ -2530,8 +2283,8 @@
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    ↓
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Log Analytics / Azure Sentinel
 </code></pre></div>
-<h2 id="approcci-disponibili">Approcci Disponibili<a class="headerlink" href="#approcci-disponibili" title="Permanent link">&para;</a></h2>
-<h3 id="1-webhook-http-piu-semplice">1. Webhook HTTP (Più Semplice)<a class="headerlink" href="#1-webhook-http-piu-semplice" title="Permanent link">&para;</a></h3>
+<h3 id="approcci-disponibili"><a class="toclink" href="#approcci-disponibili">Approcci Disponibili</a><a class="headerlink" href="#approcci-disponibili" title="Permanent link">&para;</a></h3>
+<h4 id="1-webhook-http-piu-semplice"><a class="toclink" href="#1-webhook-http-piu-semplice">1. Webhook HTTP (Più Semplice)</a><a class="headerlink" href="#1-webhook-http-piu-semplice" title="Permanent link">&para;</a></h4>
 <p><strong>Architettura</strong>:
 - Salesforce → Apex Trigger → HTTP Callout → Azure Function (HTTP Trigger) → Sentinel</p>
 <p><strong>Vantaggi</strong>:
@@ -2541,7 +2294,7 @@
 <p><strong>Svantaggi</strong>:
 - Gestione timeout e retry
 - Limitato da callout limits Salesforce</p>
-<h3 id="2-azure-event-hub-consigliato">2. Azure Event Hub (⭐ Consigliato)<a class="headerlink" href="#2-azure-event-hub-consigliato" title="Permanent link">&para;</a></h3>
+<h4 id="2-azure-event-hub-consigliato"><a class="toclink" href="#2-azure-event-hub-consigliato">2. Azure Event Hub (⭐ Consigliato)</a><a class="headerlink" href="#2-azure-event-hub-consigliato" title="Permanent link">&para;</a></h4>
 <p><strong>Architettura</strong>:
 - Salesforce → Apex Trigger → HTTP → Event Hub → Azure Function (Event Hub Trigger) → Sentinel</p>
 <p><strong>Vantaggi</strong>:
@@ -2552,7 +2305,7 @@
 <p><strong>Svantaggi</strong>:
 - Componente aggiuntivo (Event Hub)
 - Costi aggiuntivi</p>
-<h3 id="3-cometd-streaming-api">3. CometD Streaming API<a class="headerlink" href="#3-cometd-streaming-api" title="Permanent link">&para;</a></h3>
+<h4 id="3-cometd-streaming-api"><a class="toclink" href="#3-cometd-streaming-api">3. CometD Streaming API</a><a class="headerlink" href="#3-cometd-streaming-api" title="Permanent link">&para;</a></h4>
 <p><strong>Architettura</strong>:
 - Salesforce → Platform Events → CometD WebSocket → Azure Function → Sentinel</p>
 <p><strong>Vantaggi</strong>:
@@ -2561,8 +2314,8 @@
 <p><strong>Svantaggi</strong>:
 - Complessità gestione WebSocket
 - Richiede processo long-running</p>
-<h2 id="limitazioni">Limitazioni<a class="headerlink" href="#limitazioni" title="Permanent link">&para;</a></h2>
-<h3 id="copertura-eventi">Copertura Eventi<a class="headerlink" href="#copertura-eventi" title="Permanent link">&para;</a></h3>
+<h3 id="limitazioni"><a class="toclink" href="#limitazioni">Limitazioni</a><a class="headerlink" href="#limitazioni" title="Permanent link">&para;</a></h3>
+<h4 id="copertura-eventi"><a class="toclink" href="#copertura-eventi">Copertura Eventi</a><a class="headerlink" href="#copertura-eventi" title="Permanent link">&para;</a></h4>
 <p><strong>Eventi Disponibili</strong>:
 - ✅ LoginEvent (se configurato)
 - ✅ LogoutEvent (se configurato)
@@ -2572,20 +2325,20 @@
 - ❌ Audit Trail (solo su Event Log Files)
 - ❌ Field History Tracking (solo su Event Log Files)
 - ❌ Alcuni eventi di sicurezza avanzati</p>
-<h3 id="requisiti-tecnici">Requisiti Tecnici<a class="headerlink" href="#requisiti-tecnici" title="Permanent link">&para;</a></h3>
+<h4 id="requisiti-tecnici"><a class="toclink" href="#requisiti-tecnici">Requisiti Tecnici</a><a class="headerlink" href="#requisiti-tecnici" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Sviluppo Apex</strong>: Richiesto per trigger e callout</li>
 <li><strong>Sviluppo Azure Function</strong>: Richiesto per processing</li>
 <li><strong>Manutenzione</strong>: Gestione continua codice e configurazioni</li>
 <li><strong>Competenze</strong>: Sviluppatori Apex e Azure Function</li>
 </ul>
-<h3 id="rate-limits">Rate Limits<a class="headerlink" href="#rate-limits" title="Permanent link">&para;</a></h3>
+<h4 id="rate-limits"><a class="toclink" href="#rate-limits">Rate Limits</a><a class="headerlink" href="#rate-limits" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Platform Events pubblicati</strong>: 2.000.000/giorno (Enterprise)</li>
 <li><strong>API Callouts</strong>: 100.000/giorno (Enterprise)</li>
 <li><strong>Concurrent Callouts</strong>: 10 simultanee</li>
 </ul>
-<h2 id="implementazione">Implementazione<a class="headerlink" href="#implementazione" title="Permanent link">&para;</a></h2>
+<h3 id="implementazione"><a class="toclink" href="#implementazione">Implementazione</a><a class="headerlink" href="#implementazione" title="Permanent link">&para;</a></h3>
 <p>Vedi la guida completa: <a href="../../implementation/platform-events/">Implementazione Platform Events</a></p>
 <p>La guida include:
 - Configurazione Platform Events in Salesforce
@@ -2594,7 +2347,7 @@
 - Configurazione Event Hub (se usato)
 - Gestione errori e retry
 - Best practices</p>
-<h2 id="costi">Costi<a class="headerlink" href="#costi" title="Permanent link">&para;</a></h2>
+<h3 id="costi"><a class="toclink" href="#costi">Costi</a><a class="headerlink" href="#costi" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Sviluppo iniziale</strong>: 2-3 giorni di sviluppo</li>
 <li><strong>Azure Function</strong>: Costi esecuzione (Consumption o Premium Plan)</li>
@@ -2603,7 +2356,7 @@
 <li><strong>Manutenzione</strong>: Costi continui per aggiornamenti</li>
 </ul>
 <p><strong>Totale stimato</strong>: $50-200/mese + costi sviluppo iniziale</p>
-<h2 id="confronto-con-event-log-files">Confronto con Event Log Files<a class="headerlink" href="#confronto-con-event-log-files" title="Permanent link">&para;</a></h2>
+<h3 id="confronto-con-event-log-files"><a class="toclink" href="#confronto-con-event-log-files">Confronto con Event Log Files</a><a class="headerlink" href="#confronto-con-event-log-files" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -2645,13 +2398,13 @@
 </tr>
 </tbody>
 </table>
-<h2 id="approccio-ibrido-consigliato">Approccio Ibrido (Consigliato)<a class="headerlink" href="#approccio-ibrido-consigliato" title="Permanent link">&para;</a></h2>
+<h3 id="approccio-ibrido-consigliato"><a class="toclink" href="#approccio-ibrido-consigliato">Approccio Ibrido (Consigliato)</a><a class="headerlink" href="#approccio-ibrido-consigliato" title="Permanent link">&para;</a></h3>
 <p>Per massimizzare copertura e latenza, combina entrambi:</p>
 <ul>
 <li><strong>Platform Events</strong>: Eventi critici in tempo reale</li>
 <li><strong>Event Log Files (CCF)</strong>: Copertura completa e compliance</li>
 </ul>
-<h2 id="link-utili">Link Utili<a class="headerlink" href="#link-utili" title="Permanent link">&para;</a></h2>
+<h3 id="link-utili"><a class="toclink" href="#link-utili">Link Utili</a><a class="headerlink" href="#link-utili" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="../../implementation/platform-events/">Implementazione Platform Events</a></li>
 <li><a href="../../implementation/azure-function/">Implementazione Azure Function</a></li>
@@ -2680,7 +2433,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 19, 2025 00:36:31 UTC">November 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 19, 2025 00:47:25 UTC"><span class="timeago" datetime="2025-11-19T00:47:25+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 19, 2025 00:47:25 UTC">2025-11-19</span>
   </span>
 
     
@@ -2690,7 +2443,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 19, 2025 00:36:31 UTC">November 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 19, 2025 00:47:25 UTC"><span class="timeago" datetime="2025-11-19T00:47:25+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 19, 2025 00:47:25 UTC">2025-11-19</span>
   </span>
 
     
@@ -2707,6 +2460,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -2776,10 +2531,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.smooth", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link", "toc.integrate", "toc.follow"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
       
     
   </body>

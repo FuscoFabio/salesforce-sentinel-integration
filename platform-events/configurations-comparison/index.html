@@ -55,6 +55,8 @@
       
     
     
+      <link rel="stylesheet" href="../../css/timeago.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -421,7 +423,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Integrazione Salesforce - Azure Sentinel" class="md-nav__button md-logo" aria-label="Integrazione Salesforce - Azure Sentinel" data-md-component="logo">
       
@@ -1271,8 +1275,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -1311,20 +1313,32 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Indice
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#confronto-configurazioni-platform-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confronto Configurazioni Platform Events
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Confronto Configurazioni Platform Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#panoramica-configurazioni" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1334,8 +1348,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#tabella-confronto-completa" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1345,8 +1359,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#dettaglio-configurazioni" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1367,56 +1381,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Webhook HTTP ⭐ Più Semplice">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vantaggi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vantaggi
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#svantaggi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Svantaggi
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quando-usare" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quando Usare
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quando-non-usare" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quando NON Usare
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1427,56 +1391,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="2. Azure Event Hub ⭐ Consigliato">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vantaggi_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vantaggi
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#svantaggi_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Svantaggi
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quando-usare_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quando Usare
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quando-non-usare_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quando NON Usare
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1489,51 +1403,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. CometD Streaming">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vantaggi_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vantaggi
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#svantaggi_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Svantaggi
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quando-usare_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quando Usare
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quando-non-usare_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quando NON Usare
-      
-    </span>
-  </a>
-  
 </li>
         
       </ul>
@@ -1541,12 +1410,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#confronto-architetture" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1595,8 +1459,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#confronto-costi-stima-mensile" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1623,8 +1487,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#confronto-performance" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1634,8 +1498,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#decision-tree" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1645,8 +1509,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#raccomandazioni" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1695,8 +1559,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#prossimi-passi" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1704,6 +1568,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2672,415 +2541,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#panoramica-configurazioni" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Panoramica Configurazioni
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tabella-confronto-completa" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tabella Confronto Completa
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dettaglio-configurazioni" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dettaglio Configurazioni
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Dettaglio Configurazioni">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-webhook-http-piu-semplice" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Webhook HTTP ⭐ Più Semplice
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Webhook HTTP ⭐ Più Semplice">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vantaggi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vantaggi
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#svantaggi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Svantaggi
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quando-usare" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quando Usare
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quando-non-usare" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quando NON Usare
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-azure-event-hub-consigliato" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Azure Event Hub ⭐ Consigliato
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Azure Event Hub ⭐ Consigliato">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vantaggi_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vantaggi
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#svantaggi_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Svantaggi
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quando-usare_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quando Usare
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quando-non-usare_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quando NON Usare
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-cometd-streaming" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. CometD Streaming
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. CometD Streaming">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vantaggi_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vantaggi
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#svantaggi_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Svantaggi
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quando-usare_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quando Usare
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quando-non-usare_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quando NON Usare
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#confronto-architetture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Confronto Architetture
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Confronto Architetture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#webhook-http" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Webhook HTTP
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#azure-event-hub" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Azure Event Hub
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cometd-streaming" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CometD Streaming
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#confronto-costi-stima-mensile" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Confronto Costi (Stima Mensile)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Confronto Costi (Stima Mensile)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scenario-100000-eventigiorno" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scenario: 100.000 eventi/giorno
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#confronto-performance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Confronto Performance
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#decision-tree" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Decision Tree
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#raccomandazioni" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Raccomandazioni
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Raccomandazioni">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#per-proof-of-concept" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Per Proof of Concept
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#per-produzione-enterprise" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Per Produzione Enterprise
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#per-connessioni-persistenti" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Per Connessioni Persistenti
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prossimi-passi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prossimi Passi
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -3094,16 +2554,18 @@
   
 
 
-<h1 id="confronto-configurazioni-platform-events">Confronto Configurazioni Platform Events<a class="headerlink" href="#confronto-configurazioni-platform-events" title="Permanent link">&para;</a></h1>
+  <h1>Confronto Configurazioni</h1>
+
+<h2 id="confronto-configurazioni-platform-events"><a class="toclink" href="#confronto-configurazioni-platform-events">Confronto Configurazioni Platform Events</a><a class="headerlink" href="#confronto-configurazioni-platform-events" title="Permanent link">&para;</a></h2>
 <p>Confronto dettagliato di tutte le configurazioni disponibili per integrare Platform Events (Event Bus) con Azure Sentinel.</p>
-<h2 id="panoramica-configurazioni">Panoramica Configurazioni<a class="headerlink" href="#panoramica-configurazioni" title="Permanent link">&para;</a></h2>
+<h3 id="panoramica-configurazioni"><a class="toclink" href="#panoramica-configurazioni">Panoramica Configurazioni</a><a class="headerlink" href="#panoramica-configurazioni" title="Permanent link">&para;</a></h3>
 <p>Tre configurazioni principali sono disponibili per integrare Platform Events:</p>
 <ol>
 <li><strong>Webhook HTTP</strong> ⭐ Più Semplice</li>
 <li><strong>Azure Event Hub</strong> ⭐ Consigliato</li>
 <li><strong>CometD Streaming</strong></li>
 </ol>
-<h2 id="tabella-confronto-completa">Tabella Confronto Completa<a class="headerlink" href="#tabella-confronto-completa" title="Permanent link">&para;</a></h2>
+<h3 id="tabella-confronto-completa"><a class="toclink" href="#tabella-confronto-completa">Tabella Confronto Completa</a><a class="headerlink" href="#tabella-confronto-completa" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -3176,8 +2638,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="dettaglio-configurazioni">Dettaglio Configurazioni<a class="headerlink" href="#dettaglio-configurazioni" title="Permanent link">&para;</a></h2>
-<h3 id="1-webhook-http-piu-semplice">1. Webhook HTTP ⭐ Più Semplice<a class="headerlink" href="#1-webhook-http-piu-semplice" title="Permanent link">&para;</a></h3>
+<h3 id="dettaglio-configurazioni"><a class="toclink" href="#dettaglio-configurazioni">Dettaglio Configurazioni</a><a class="headerlink" href="#dettaglio-configurazioni" title="Permanent link">&para;</a></h3>
+<h4 id="1-webhook-http-piu-semplice"><a class="toclink" href="#1-webhook-http-piu-semplice">1. Webhook HTTP ⭐ Più Semplice</a><a class="headerlink" href="#1-webhook-http-piu-semplice" title="Permanent link">&para;</a></h4>
 <p><strong>Architettura</strong>:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Salesforce Platform Event
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    ↓
@@ -3193,28 +2655,28 @@
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    ↓
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Azure Sentinel
 </code></pre></div></p>
-<h4 id="vantaggi">Vantaggi<a class="headerlink" href="#vantaggi" title="Permanent link">&para;</a></h4>
+<h5 id="vantaggi"><a class="toclink" href="#vantaggi">Vantaggi</a><a class="headerlink" href="#vantaggi" title="Permanent link">&para;</a></h5>
 <ul>
 <li>✅ <strong>Setup Relativamente Semplice</strong>: Nessun componente intermedio</li>
 <li>✅ <strong>Controllo Diretto</strong>: Comunicazione diretta Salesforce → Azure</li>
 <li>✅ <strong>Costi Contenuti</strong>: Nessun componente aggiuntivo</li>
 <li>✅ <strong>Debug Semplice</strong>: Facile tracciamento richieste HTTP</li>
 </ul>
-<h4 id="svantaggi">Svantaggi<a class="headerlink" href="#svantaggi" title="Permanent link">&para;</a></h4>
+<h5 id="svantaggi"><a class="toclink" href="#svantaggi">Svantaggi</a><a class="headerlink" href="#svantaggi" title="Permanent link">&para;</a></h5>
 <ul>
 <li>❌ <strong>Gestione Timeout</strong>: Limitato da timeout callout Salesforce (120s)</li>
 <li>❌ <strong>Gestione Retry</strong>: Implementazione manuale</li>
 <li>❌ <strong>Scalabilità Limitata</strong>: Gestione picchi manuale</li>
 <li>❌ <strong>Nessuna Persistenza</strong>: Eventi persi se Function non disponibile</li>
 </ul>
-<h4 id="quando-usare">Quando Usare<a class="headerlink" href="#quando-usare" title="Permanent link">&para;</a></h4>
+<h5 id="quando-usare"><a class="toclink" href="#quando-usare">Quando Usare</a><a class="headerlink" href="#quando-usare" title="Permanent link">&para;</a></h5>
 <ul>
 <li>✅ Setup rapido per proof of concept</li>
 <li>✅ Volume eventi moderato</li>
 <li>✅ Budget limitato</li>
 <li>✅ Nessun requisito di persistenza</li>
 </ul>
-<h4 id="quando-non-usare">Quando NON Usare<a class="headerlink" href="#quando-non-usare" title="Permanent link">&para;</a></h4>
+<h5 id="quando-non-usare"><a class="toclink" href="#quando-non-usare">Quando NON Usare</a><a class="headerlink" href="#quando-non-usare" title="Permanent link">&para;</a></h5>
 <ul>
 <li>❌ Volume eventi elevato</li>
 <li>❌ Requisiti di alta affidabilità</li>
@@ -3223,7 +2685,7 @@
 </ul>
 <p><a href="../configurations/webhook-http/">Vedi Configurazione →</a> | <a href="../implementation/webhook-http/">Vedi Implementazione →</a> | <a href="../examples/webhook-example/">Vedi Esempio →</a></p>
 <hr />
-<h3 id="2-azure-event-hub-consigliato">2. Azure Event Hub ⭐ Consigliato<a class="headerlink" href="#2-azure-event-hub-consigliato" title="Permanent link">&para;</a></h3>
+<h4 id="2-azure-event-hub-consigliato"><a class="toclink" href="#2-azure-event-hub-consigliato">2. Azure Event Hub ⭐ Consigliato</a><a class="headerlink" href="#2-azure-event-hub-consigliato" title="Permanent link">&para;</a></h4>
 <p><strong>Architettura</strong>:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Salesforce Platform Event
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    ↓
@@ -3241,7 +2703,7 @@
 <a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    ↓
 <a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>Azure Sentinel
 </code></pre></div></p>
-<h4 id="vantaggi_1">Vantaggi<a class="headerlink" href="#vantaggi_1" title="Permanent link">&para;</a></h4>
+<h5 id="vantaggi_1"><a class="toclink" href="#vantaggi_1">Vantaggi</a><a class="headerlink" href="#vantaggi_1" title="Permanent link">&para;</a></h5>
 <ul>
 <li>✅ <strong>Scalabilità Automatica</strong>: Gestione automatica picchi</li>
 <li>✅ <strong>Persistenza</strong>: Eventi salvati anche se Function non disponibile</li>
@@ -3249,14 +2711,14 @@
 <li>✅ <strong>Decoupling</strong>: Salesforce disaccoppiato da Function</li>
 <li>✅ <strong>Throughput Elevato</strong>: Supporta milioni di eventi/secondo</li>
 </ul>
-<h4 id="svantaggi_1">Svantaggi<a class="headerlink" href="#svantaggi_1" title="Permanent link">&para;</a></h4>
+<h5 id="svantaggi_1"><a class="toclink" href="#svantaggi_1">Svantaggi</a><a class="headerlink" href="#svantaggi_1" title="Permanent link">&para;</a></h5>
 <ul>
 <li>❌ <strong>Componente Aggiuntivo</strong>: Event Hub richiesto</li>
 <li>❌ <strong>Costi Aggiuntivi</strong>: Costi Event Hub (~$10-20/mese base)</li>
 <li>❌ <strong>Setup Complesso</strong>: Configurazione Event Hub + Function</li>
 <li>❌ <strong>Complessità</strong>: Più componenti da gestire</li>
 </ul>
-<h4 id="quando-usare_1">Quando Usare<a class="headerlink" href="#quando-usare_1" title="Permanent link">&para;</a></h4>
+<h5 id="quando-usare_1"><a class="toclink" href="#quando-usare_1">Quando Usare</a><a class="headerlink" href="#quando-usare_1" title="Permanent link">&para;</a></h5>
 <ul>
 <li>✅ Produzione enterprise</li>
 <li>✅ Volume eventi elevato</li>
@@ -3264,7 +2726,7 @@
 <li>✅ Necessità di persistenza</li>
 <li>✅ Gestione automatica picchi</li>
 </ul>
-<h4 id="quando-non-usare_1">Quando NON Usare<a class="headerlink" href="#quando-non-usare_1" title="Permanent link">&para;</a></h4>
+<h5 id="quando-non-usare_1"><a class="toclink" href="#quando-non-usare_1">Quando NON Usare</a><a class="headerlink" href="#quando-non-usare_1" title="Permanent link">&para;</a></h5>
 <ul>
 <li>❌ Proof of concept</li>
 <li>❌ Volume eventi molto basso</li>
@@ -3273,7 +2735,7 @@
 </ul>
 <p><a href="../configurations/event-hub/">Vedi Configurazione →</a> | <a href="../implementation/event-hub/">Vedi Implementazione →</a> | <a href="../examples/event-hub-example/">Vedi Esempio →</a></p>
 <hr />
-<h3 id="3-cometd-streaming">3. CometD Streaming<a class="headerlink" href="#3-cometd-streaming" title="Permanent link">&para;</a></h3>
+<h4 id="3-cometd-streaming"><a class="toclink" href="#3-cometd-streaming">3. CometD Streaming</a><a class="headerlink" href="#3-cometd-streaming" title="Permanent link">&para;</a></h4>
 <p><strong>Architettura</strong>:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Salesforce Platform Event
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    ↓
@@ -3287,53 +2749,53 @@
 <a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    ↓
 <a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>Azure Sentinel
 </code></pre></div></p>
-<h4 id="vantaggi_2">Vantaggi<a class="headerlink" href="#vantaggi_2" title="Permanent link">&para;</a></h4>
+<h5 id="vantaggi_2"><a class="toclink" href="#vantaggi_2">Vantaggi</a><a class="headerlink" href="#vantaggi_2" title="Permanent link">&para;</a></h5>
 <ul>
 <li>✅ <strong>Connessione Persistente</strong>: WebSocket long-running</li>
 <li>✅ <strong>Push Real-Time</strong>: Eventi inviati immediatamente</li>
 <li>✅ <strong>Efficienza</strong>: Nessun overhead HTTP per ogni evento</li>
 </ul>
-<h4 id="svantaggi_2">Svantaggi<a class="headerlink" href="#svantaggi_2" title="Permanent link">&para;</a></h4>
+<h5 id="svantaggi_2"><a class="toclink" href="#svantaggi_2">Svantaggi</a><a class="headerlink" href="#svantaggi_2" title="Permanent link">&para;</a></h5>
 <ul>
 <li>❌ <strong>Complessità Alta</strong>: Gestione WebSocket complessa</li>
 <li>❌ <strong>Long-Running Process</strong>: Richiede processo sempre attivo</li>
 <li>❌ <strong>Gestione Reconnessione</strong>: Implementazione manuale</li>
 <li>❌ <strong>Scalabilità Limitata</strong>: Meno scalabile di Event Hub</li>
 </ul>
-<h4 id="quando-usare_2">Quando Usare<a class="headerlink" href="#quando-usare_2" title="Permanent link">&para;</a></h4>
+<h5 id="quando-usare_2"><a class="toclink" href="#quando-usare_2">Quando Usare</a><a class="headerlink" href="#quando-usare_2" title="Permanent link">&para;</a></h5>
 <ul>
 <li>✅ Connessioni persistenti necessarie</li>
 <li>✅ Volume eventi continuo</li>
 <li>✅ Competenze avanzate disponibili</li>
 </ul>
-<h4 id="quando-non-usare_2">Quando NON Usare<a class="headerlink" href="#quando-non-usare_2" title="Permanent link">&para;</a></h4>
+<h5 id="quando-non-usare_2"><a class="toclink" href="#quando-non-usare_2">Quando NON Usare</a><a class="headerlink" href="#quando-non-usare_2" title="Permanent link">&para;</a></h5>
 <ul>
 <li>❌ Setup semplice richiesto</li>
 <li>❌ Volume eventi sporadico</li>
 <li>❌ Team senza competenze avanzate</li>
 </ul>
 <p><a href="../configurations/cometd-streaming/">Vedi Configurazione →</a> | <a href="../implementation/cometd-streaming/">Vedi Implementazione →</a> | <a href="../examples/cometd-example/">Vedi Esempio →</a></p>
-<h2 id="confronto-architetture">Confronto Architetture<a class="headerlink" href="#confronto-architetture" title="Permanent link">&para;</a></h2>
-<h3 id="webhook-http">Webhook HTTP<a class="headerlink" href="#webhook-http" title="Permanent link">&para;</a></h3>
+<h3 id="confronto-architetture"><a class="toclink" href="#confronto-architetture">Confronto Architetture</a><a class="headerlink" href="#confronto-architetture" title="Permanent link">&para;</a></h3>
+<h4 id="webhook-http"><a class="toclink" href="#webhook-http">Webhook HTTP</a><a class="headerlink" href="#webhook-http" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>┌─────────────┐      HTTP       ┌──────────────┐
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>│ Salesforce  │ ──────────────&gt; │ Azure        │
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>│ (Apex)      │                 │ Function     │
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>└─────────────┘                 └──────────────┘
 </code></pre></div>
-<h3 id="azure-event-hub">Azure Event Hub<a class="headerlink" href="#azure-event-hub" title="Permanent link">&para;</a></h3>
+<h4 id="azure-event-hub"><a class="toclink" href="#azure-event-hub">Azure Event Hub</a><a class="headerlink" href="#azure-event-hub" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>┌─────────────┐      HTTP       ┌──────────────┐      ┌──────────────┐
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>│ Salesforce  │ ──────────────&gt; │ Event Hub    │ ───&gt; │ Azure        │
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>│ (Apex)      │                 │              │      │ Function     │
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>└─────────────┘                 └──────────────┘      └──────────────┘
 </code></pre></div>
-<h3 id="cometd-streaming">CometD Streaming<a class="headerlink" href="#cometd-streaming" title="Permanent link">&para;</a></h3>
+<h4 id="cometd-streaming"><a class="toclink" href="#cometd-streaming">CometD Streaming</a><a class="headerlink" href="#cometd-streaming" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>┌─────────────┐   WebSocket     ┌──────────────┐
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>│ Salesforce  │ &lt;=============&gt; │ Azure        │
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>│ (CometD)    │   (Persistent)  │ Function     │
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>└─────────────┘                 └──────────────┘
 </code></pre></div>
-<h2 id="confronto-costi-stima-mensile">Confronto Costi (Stima Mensile)<a class="headerlink" href="#confronto-costi-stima-mensile" title="Permanent link">&para;</a></h2>
-<h3 id="scenario-100000-eventigiorno">Scenario: 100.000 eventi/giorno<a class="headerlink" href="#scenario-100000-eventigiorno" title="Permanent link">&para;</a></h3>
+<h3 id="confronto-costi-stima-mensile"><a class="toclink" href="#confronto-costi-stima-mensile">Confronto Costi (Stima Mensile)</a><a class="headerlink" href="#confronto-costi-stima-mensile" title="Permanent link">&para;</a></h3>
+<h4 id="scenario-100000-eventigiorno"><a class="toclink" href="#scenario-100000-eventigiorno">Scenario: 100.000 eventi/giorno</a><a class="headerlink" href="#scenario-100000-eventigiorno" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -3365,7 +2827,7 @@
 </tbody>
 </table>
 <p><em>Stime indicative, costi reali dipendono da volume e configurazione</em></p>
-<h2 id="confronto-performance">Confronto Performance<a class="headerlink" href="#confronto-performance" title="Permanent link">&para;</a></h2>
+<h3 id="confronto-performance"><a class="toclink" href="#confronto-performance">Confronto Performance</a><a class="headerlink" href="#confronto-performance" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -3396,7 +2858,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="decision-tree">Decision Tree<a class="headerlink" href="#decision-tree" title="Permanent link">&para;</a></h2>
+<h3 id="decision-tree"><a class="toclink" href="#decision-tree">Decision Tree</a><a class="headerlink" href="#decision-tree" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Hai bisogno di persistenza eventi?
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>├─ SÌ → Azure Event Hub ⭐
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>└─ NO → Volume eventi elevato?
@@ -3405,14 +2867,14 @@
 <a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        ├─ SÌ → CometD Streaming
 <a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        └─ NO → Webhook HTTP ⭐
 </code></pre></div>
-<h2 id="raccomandazioni">Raccomandazioni<a class="headerlink" href="#raccomandazioni" title="Permanent link">&para;</a></h2>
-<h3 id="per-proof-of-concept">Per Proof of Concept<a class="headerlink" href="#per-proof-of-concept" title="Permanent link">&para;</a></h3>
+<h3 id="raccomandazioni"><a class="toclink" href="#raccomandazioni">Raccomandazioni</a><a class="headerlink" href="#raccomandazioni" title="Permanent link">&para;</a></h3>
+<h4 id="per-proof-of-concept"><a class="toclink" href="#per-proof-of-concept">Per Proof of Concept</a><a class="headerlink" href="#per-proof-of-concept" title="Permanent link">&para;</a></h4>
 <p><strong>Usa Webhook HTTP</strong> - Setup rapido, costi contenuti.</p>
-<h3 id="per-produzione-enterprise">Per Produzione Enterprise<a class="headerlink" href="#per-produzione-enterprise" title="Permanent link">&para;</a></h3>
+<h4 id="per-produzione-enterprise"><a class="toclink" href="#per-produzione-enterprise">Per Produzione Enterprise</a><a class="headerlink" href="#per-produzione-enterprise" title="Permanent link">&para;</a></h4>
 <p><strong>Usa Azure Event Hub</strong> - Scalabilità, affidabilità, persistenza.</p>
-<h3 id="per-connessioni-persistenti">Per Connessioni Persistenti<a class="headerlink" href="#per-connessioni-persistenti" title="Permanent link">&para;</a></h3>
+<h4 id="per-connessioni-persistenti"><a class="toclink" href="#per-connessioni-persistenti">Per Connessioni Persistenti</a><a class="headerlink" href="#per-connessioni-persistenti" title="Permanent link">&para;</a></h4>
 <p><strong>Usa CometD Streaming</strong> - WebSocket long-running.</p>
-<h2 id="prossimi-passi">Prossimi Passi<a class="headerlink" href="#prossimi-passi" title="Permanent link">&para;</a></h2>
+<h3 id="prossimi-passi"><a class="toclink" href="#prossimi-passi">Prossimi Passi</a><a class="headerlink" href="#prossimi-passi" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Scegli una configurazione</strong> basata sul confronto</li>
 <li><strong>Consulta la configurazione</strong> specifica: <a href="configurations/">Configurazioni</a></li>
@@ -3441,7 +2903,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 19, 2025 00:36:30 UTC">November 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 19, 2025 00:47:24 UTC"><span class="timeago" datetime="2025-11-19T00:47:24+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 19, 2025 00:47:24 UTC">2025-11-19</span>
   </span>
 
     
@@ -3451,7 +2913,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 19, 2025 00:36:30 UTC">November 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 19, 2025 00:47:24 UTC"><span class="timeago" datetime="2025-11-19T00:47:24+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 19, 2025 00:47:24 UTC">2025-11-19</span>
   </span>
 
     
@@ -3468,6 +2930,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -3537,10 +3001,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.smooth", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link", "toc.integrate", "toc.follow"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
       
     
   </body>

@@ -55,6 +55,8 @@
       
     
     
+      <link rel="stylesheet" href="../../css/timeago.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -421,7 +423,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Integrazione Salesforce - Azure Sentinel" class="md-nav__button md-logo" aria-label="Integrazione Salesforce - Azure Sentinel" data-md-component="logo">
       
@@ -1943,8 +1947,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -1983,20 +1985,32 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Indice
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#gestione-network-e-sicurezza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestione Network e Sicurezza
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestione Network e Sicurezza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#panoramica" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2006,8 +2020,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#approccio-consigliato-azure-private-endpoints" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2061,45 +2075,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configurazione Private Endpoints per Soluzione">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#per-azure-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Per Azure Function
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#per-azure-logic-app" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Per Azure Logic App
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#per-ccf-codeless-connector-framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Per CCF (CodeLess Connector Framework)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -2122,67 +2097,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Dettagli Tecnici Private Endpoints">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#architettura-private-endpoint" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architettura Private Endpoint
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#componenti-necessari" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Componenti Necessari
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configurazione-dettagliata-private-endpoint" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configurazione Dettagliata Private Endpoint
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monitoraggio-private-endpoints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Monitoraggio Private Endpoints
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#troubleshooting-private-endpoints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting Private Endpoints
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -2200,8 +2114,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#approccio-alternativo-range-ip-pubblici-azure" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2239,8 +2153,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#range-ip-azure" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2267,8 +2181,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#configurazione-in-salesforce" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2306,8 +2220,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#automatizzazione" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2345,8 +2259,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2356,8 +2270,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#differenze-per-soluzione" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2406,8 +2320,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2445,8 +2359,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#link-utili" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2454,6 +2368,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2741,493 +2660,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#panoramica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Panoramica
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#approccio-consigliato-azure-private-endpoints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⭐ Approccio Consigliato: Azure Private Endpoints
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⭐ Approccio Consigliato: Azure Private Endpoints">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#perche-usare-private-endpoints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Perché Usare Private Endpoints
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#come-funzionano-i-private-endpoints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Come Funzionano i Private Endpoints
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quando-usare-private-endpoints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quando Usare Private Endpoints
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configurazione-private-endpoints-per-soluzione" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configurazione Private Endpoints per Soluzione
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configurazione Private Endpoints per Soluzione">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#per-azure-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Per Azure Function
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#per-azure-logic-app" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Per Azure Logic App
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#per-ccf-codeless-connector-framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Per CCF (CodeLess Connector Framework)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#costi-private-endpoints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Costi Private Endpoints
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dettagli-tecnici-private-endpoints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dettagli Tecnici Private Endpoints
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Dettagli Tecnici Private Endpoints">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#architettura-private-endpoint" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architettura Private Endpoint
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#componenti-necessari" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Componenti Necessari
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configurazione-dettagliata-private-endpoint" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configurazione Dettagliata Private Endpoint
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monitoraggio-private-endpoints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Monitoraggio Private Endpoints
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#troubleshooting-private-endpoints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting Private Endpoints
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#best-practices-private-endpoints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Best Practices Private Endpoints
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#approccio-alternativo-range-ip-pubblici-azure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Approccio Alternativo: Range IP Pubblici Azure
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Approccio Alternativo: Range IP Pubblici Azure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#quando-usare-range-ip-pubblici" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quando Usare Range IP Pubblici
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#perche-gestire-i-range-ip" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Perché Gestire i Range IP
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#range-ip-azure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Range IP Azure
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Range IP Azure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ottenere-i-range-ip" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ottenere i Range IP
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurazione-in-salesforce" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configurazione in Salesforce
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configurazione in Salesforce">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#trusted-ip-ranges" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Trusted IP Ranges
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#esempio-range-ip-per-regioni-comuni" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Esempio Range IP per Regioni Comuni
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#automatizzazione" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Automatizzazione
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Automatizzazione">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#script-powershell-per-aggiornare-range-ip" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Script PowerShell per Aggiornare Range IP
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#script-python" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Script Python
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Best Practices
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#differenze-per-soluzione" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Differenze per Soluzione
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Differenze per Soluzione">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ccf-codeless-connector-framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CCF (CodeLess Connector Framework)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#azure-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Azure Function
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#azure-logic-app" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Azure Logic App
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Troubleshooting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#problema-connessioni-bloccate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Problema: Connessioni Bloccate
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#problema-range-ip-troppo-ampi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Problema: Range IP Troppo Ampi
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#link-utili" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Link Utili
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -3241,16 +2673,18 @@
   
 
 
-<h1 id="gestione-network-e-sicurezza">Gestione Network e Sicurezza<a class="headerlink" href="#gestione-network-e-sicurezza" title="Permanent link">&para;</a></h1>
+  <h1>Network e Sicurezza</h1>
+
+<h2 id="gestione-network-e-sicurezza"><a class="toclink" href="#gestione-network-e-sicurezza">Gestione Network e Sicurezza</a><a class="headerlink" href="#gestione-network-e-sicurezza" title="Permanent link">&para;</a></h2>
 <p>Guida per gestire la connettività di rete e la sicurezza quando si configura l'integrazione Salesforce-Azure Sentinel.</p>
-<h2 id="panoramica">Panoramica<a class="headerlink" href="#panoramica" title="Permanent link">&para;</a></h2>
+<h3 id="panoramica"><a class="toclink" href="#panoramica">Panoramica</a><a class="headerlink" href="#panoramica" title="Permanent link">&para;</a></h3>
 <p>Quando si configura Salesforce per integrare con Azure, è necessario gestire la connettività di rete. Esistono due approcci principali:</p>
 <ol>
 <li><strong>Azure Private Endpoints</strong> (⭐ <strong>Consigliato</strong>) - Soluzione più sicura e gestita</li>
 <li><strong>Range IP Pubblici Azure</strong> - Soluzione tradizionale che richiede manutenzione</li>
 </ol>
-<h2 id="approccio-consigliato-azure-private-endpoints">⭐ Approccio Consigliato: Azure Private Endpoints<a class="headerlink" href="#approccio-consigliato-azure-private-endpoints" title="Permanent link">&para;</a></h2>
-<h3 id="perche-usare-private-endpoints">Perché Usare Private Endpoints<a class="headerlink" href="#perche-usare-private-endpoints" title="Permanent link">&para;</a></h3>
+<h3 id="approccio-consigliato-azure-private-endpoints"><a class="toclink" href="#approccio-consigliato-azure-private-endpoints">⭐ Approccio Consigliato: Azure Private Endpoints</a><a class="headerlink" href="#approccio-consigliato-azure-private-endpoints" title="Permanent link">&para;</a></h3>
+<h4 id="perche-usare-private-endpoints"><a class="toclink" href="#perche-usare-private-endpoints">Perché Usare Private Endpoints</a><a class="headerlink" href="#perche-usare-private-endpoints" title="Permanent link">&para;</a></h4>
 <p>Azure Private Endpoints è l'approccio <strong>consigliato</strong> per le seguenti ragioni:</p>
 <ul>
 <li>✅ <strong>Sicurezza Superiore</strong>: Comunicazione privata sulla rete Azure, non esposta a Internet</li>
@@ -3260,12 +2694,12 @@
 <li>✅ <strong>Isolamento</strong>: Traffico isolato dalla rete pubblica</li>
 <li>✅ <strong>Audit</strong>: Tracciamento completo del traffico di rete</li>
 </ul>
-<h3 id="come-funzionano-i-private-endpoints">Come Funzionano i Private Endpoints<a class="headerlink" href="#come-funzionano-i-private-endpoints" title="Permanent link">&para;</a></h3>
+<h4 id="come-funzionano-i-private-endpoints"><a class="toclink" href="#come-funzionano-i-private-endpoints">Come Funzionano i Private Endpoints</a><a class="headerlink" href="#come-funzionano-i-private-endpoints" title="Permanent link">&para;</a></h4>
 <p>I Private Endpoints creano una connessione privata tra:
 - La tua risorsa Azure (Function App, Logic App, etc.)
 - Salesforce (tramite Azure Private Link)</p>
 <p>Il traffico rimane completamente all'interno della rete Azure e non passa attraverso Internet pubblico.</p>
-<h3 id="quando-usare-private-endpoints">Quando Usare Private Endpoints<a class="headerlink" href="#quando-usare-private-endpoints" title="Permanent link">&para;</a></h3>
+<h4 id="quando-usare-private-endpoints"><a class="toclink" href="#quando-usare-private-endpoints">Quando Usare Private Endpoints</a><a class="headerlink" href="#quando-usare-private-endpoints" title="Permanent link">&para;</a></h4>
 <p><strong>Usa Private Endpoints se:</strong>
 - Hai requisiti di sicurezza elevati
 - Vuoi evitare manutenzione periodica
@@ -3277,8 +2711,8 @@
 - Hai bisogno di una soluzione rapida e semplice
 - Non hai accesso a configurare Private Endpoints
 - Il costo è un fattore critico</p>
-<h3 id="configurazione-private-endpoints-per-soluzione">Configurazione Private Endpoints per Soluzione<a class="headerlink" href="#configurazione-private-endpoints-per-soluzione" title="Permanent link">&para;</a></h3>
-<h4 id="per-azure-function">Per Azure Function<a class="headerlink" href="#per-azure-function" title="Permanent link">&para;</a></h4>
+<h4 id="configurazione-private-endpoints-per-soluzione"><a class="toclink" href="#configurazione-private-endpoints-per-soluzione">Configurazione Private Endpoints per Soluzione</a><a class="headerlink" href="#configurazione-private-endpoints-per-soluzione" title="Permanent link">&para;</a></h4>
+<h5 id="per-azure-function"><a class="toclink" href="#per-azure-function">Per Azure Function</a><a class="headerlink" href="#per-azure-function" title="Permanent link">&para;</a></h5>
 <ol>
 <li>
 <p><strong>Crea Virtual Network</strong>:
@@ -3311,7 +2745,7 @@
 <li>In Salesforce, configura la Connected App per accettare connessioni dal Private Endpoint</li>
 <li>Usa l'IP privato del Private Endpoint invece di range IP pubblici</li>
 </ol>
-<h4 id="per-azure-logic-app">Per Azure Logic App<a class="headerlink" href="#per-azure-logic-app" title="Permanent link">&para;</a></h4>
+<h5 id="per-azure-logic-app"><a class="toclink" href="#per-azure-logic-app">Per Azure Logic App</a><a class="headerlink" href="#per-azure-logic-app" title="Permanent link">&para;</a></h5>
 <ol>
 <li>
 <p><strong>Crea Integration Service Environment (ISE)</strong>:
@@ -3334,7 +2768,7 @@
 <li>I connettori nell'ISE hanno automaticamente IP privati</li>
 <li>Configura Salesforce per accettare connessioni dall'ISE</li>
 </ol>
-<h4 id="per-ccf-codeless-connector-framework">Per CCF (CodeLess Connector Framework)<a class="headerlink" href="#per-ccf-codeless-connector-framework" title="Permanent link">&para;</a></h4>
+<h5 id="per-ccf-codeless-connector-framework"><a class="toclink" href="#per-ccf-codeless-connector-framework">Per CCF (CodeLess Connector Framework)</a><a class="headerlink" href="#per-ccf-codeless-connector-framework" title="Permanent link">&para;</a></h5>
 <p>⚠️ <strong>Nota</strong>: Il CCF è un servizio gestito da Microsoft. La configurazione di Private Endpoints dipende dall'infrastruttura Azure Sentinel.</p>
 <ol>
 <li><strong>Verifica Supporto Private Endpoints</strong>:</li>
@@ -3348,15 +2782,15 @@
 <li>Configura Private Link per Log Analytics Workspace</li>
 <li>Il CCF invierà dati tramite Private Link invece di Internet pubblico</li>
 </ol>
-<h3 id="costi-private-endpoints">Costi Private Endpoints<a class="headerlink" href="#costi-private-endpoints" title="Permanent link">&para;</a></h3>
+<h4 id="costi-private-endpoints"><a class="toclink" href="#costi-private-endpoints">Costi Private Endpoints</a><a class="headerlink" href="#costi-private-endpoints" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Private Endpoint</strong>: ~$0.01/ora (~$7.30/mese)</li>
 <li><strong>Private DNS Zone</strong>: ~$0.50/mese</li>
 <li><strong>Data Processing</strong>: Costi standard per il traffico</li>
 </ul>
 <p><strong>Totale stimato</strong>: ~$8-10/mese per Private Endpoint</p>
-<h3 id="dettagli-tecnici-private-endpoints">Dettagli Tecnici Private Endpoints<a class="headerlink" href="#dettagli-tecnici-private-endpoints" title="Permanent link">&para;</a></h3>
-<h4 id="architettura-private-endpoint">Architettura Private Endpoint<a class="headerlink" href="#architettura-private-endpoint" title="Permanent link">&para;</a></h4>
+<h4 id="dettagli-tecnici-private-endpoints"><a class="toclink" href="#dettagli-tecnici-private-endpoints">Dettagli Tecnici Private Endpoints</a><a class="headerlink" href="#dettagli-tecnici-private-endpoints" title="Permanent link">&para;</a></h4>
+<h5 id="architettura-private-endpoint"><a class="toclink" href="#architettura-private-endpoint">Architettura Private Endpoint</a><a class="headerlink" href="#architettura-private-endpoint" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Salesforce API
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    ↓
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Internet (HTTPS)
@@ -3367,7 +2801,7 @@
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    ↓
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>Log Analytics (tramite Private Link)
 </code></pre></div>
-<h4 id="componenti-necessari">Componenti Necessari<a class="headerlink" href="#componenti-necessari" title="Permanent link">&para;</a></h4>
+<h5 id="componenti-necessari"><a class="toclink" href="#componenti-necessari">Componenti Necessari</a><a class="headerlink" href="#componenti-necessari" title="Permanent link">&para;</a></h5>
 <ol>
 <li><strong>Virtual Network (VNet)</strong></li>
 <li>Spazio indirizzi privato (es. 10.0.0.0/16)</li>
@@ -3398,7 +2832,7 @@
 <li>Filtraggio basato su IP, porta, protocollo</li>
 <li>Logging e audit</li>
 </ol>
-<h4 id="configurazione-dettagliata-private-endpoint">Configurazione Dettagliata Private Endpoint<a class="headerlink" href="#configurazione-dettagliata-private-endpoint" title="Permanent link">&para;</a></h4>
+<h5 id="configurazione-dettagliata-private-endpoint"><a class="toclink" href="#configurazione-dettagliata-private-endpoint">Configurazione Dettagliata Private Endpoint</a><a class="headerlink" href="#configurazione-dettagliata-private-endpoint" title="Permanent link">&para;</a></h5>
 <p><strong>Passo 1: Creare VNet e Subnet</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Azure CLI</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>az<span class="w"> </span>network<span class="w"> </span>vnet<span class="w"> </span>create<span class="w"> </span><span class="se">\</span>
@@ -3434,7 +2868,7 @@
 <a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">  </span>--group-id<span class="w"> </span>sites<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">  </span>--connection-name<span class="w"> </span>connection-to-function
 </code></pre></div>
-<h4 id="monitoraggio-private-endpoints">Monitoraggio Private Endpoints<a class="headerlink" href="#monitoraggio-private-endpoints" title="Permanent link">&para;</a></h4>
+<h5 id="monitoraggio-private-endpoints"><a class="toclink" href="#monitoraggio-private-endpoints">Monitoraggio Private Endpoints</a><a class="headerlink" href="#monitoraggio-private-endpoints" title="Permanent link">&para;</a></h5>
 <p><strong>Query KQL per Monitorare Connettività:</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c">// Verifica connessioni Private Endpoint</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">AzureDiagnostics</span>
@@ -3447,7 +2881,7 @@
 - Latenza delle richieste
 - Volume traffico
 - Errori di connessione</p>
-<h4 id="troubleshooting-private-endpoints">Troubleshooting Private Endpoints<a class="headerlink" href="#troubleshooting-private-endpoints" title="Permanent link">&para;</a></h4>
+<h5 id="troubleshooting-private-endpoints"><a class="toclink" href="#troubleshooting-private-endpoints">Troubleshooting Private Endpoints</a><a class="headerlink" href="#troubleshooting-private-endpoints" title="Permanent link">&para;</a></h5>
 <p><strong>Problema: Connessione Fallita</strong>
 1. Verifica che il Private Endpoint sia in stato "Approved"
 2. Controlla le regole NSG
@@ -3461,7 +2895,7 @@
 1. Verifica che il NSG permetta il traffico necessario
 2. Controlla che la subnet abbia spazio IP sufficiente
 3. Verifica la latenza di rete</p>
-<h3 id="best-practices-private-endpoints">Best Practices Private Endpoints<a class="headerlink" href="#best-practices-private-endpoints" title="Permanent link">&para;</a></h3>
+<h4 id="best-practices-private-endpoints"><a class="toclink" href="#best-practices-private-endpoints">Best Practices Private Endpoints</a><a class="headerlink" href="#best-practices-private-endpoints" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>DNS Privato</strong>: Usa sempre Azure Private DNS Zones per risoluzione automatica</li>
 <li><strong>Network Security Groups</strong>: Configura NSG per limitare il traffico solo a quello necessario</li>
@@ -3474,26 +2908,26 @@
 <li><strong>Cost Optimization</strong>: Monitora i costi dei Private Endpoints</li>
 <li><strong>Testing</strong>: Testa sempre la connettività dopo la configurazione</li>
 </ol>
-<h2 id="approccio-alternativo-range-ip-pubblici-azure">Approccio Alternativo: Range IP Pubblici Azure<a class="headerlink" href="#approccio-alternativo-range-ip-pubblici-azure" title="Permanent link">&para;</a></h2>
-<h3 id="quando-usare-range-ip-pubblici">Quando Usare Range IP Pubblici<a class="headerlink" href="#quando-usare-range-ip-pubblici" title="Permanent link">&para;</a></h3>
+<h3 id="approccio-alternativo-range-ip-pubblici-azure"><a class="toclink" href="#approccio-alternativo-range-ip-pubblici-azure">Approccio Alternativo: Range IP Pubblici Azure</a><a class="headerlink" href="#approccio-alternativo-range-ip-pubblici-azure" title="Permanent link">&para;</a></h3>
+<h4 id="quando-usare-range-ip-pubblici"><a class="toclink" href="#quando-usare-range-ip-pubblici">Quando Usare Range IP Pubblici</a><a class="headerlink" href="#quando-usare-range-ip-pubblici" title="Permanent link">&para;</a></h4>
 <p>Usa range IP pubblici se:
 - Non puoi configurare Private Endpoints
 - Hai bisogno di una soluzione rapida
 - I requisiti di sicurezza permettono traffico pubblico
 - Il budget è limitato</p>
-<h3 id="perche-gestire-i-range-ip">Perché Gestire i Range IP<a class="headerlink" href="#perche-gestire-i-range-ip" title="Permanent link">&para;</a></h3>
+<h4 id="perche-gestire-i-range-ip"><a class="toclink" href="#perche-gestire-i-range-ip">Perché Gestire i Range IP</a><a class="headerlink" href="#perche-gestire-i-range-ip" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Sicurezza</strong>: Restringere l'accesso solo da IP Azure autorizzati</li>
 <li><strong>Compliance</strong>: Soddisfare requisiti di sicurezza aziendali</li>
 <li><strong>Controllo Accesso</strong>: Prevenire accessi non autorizzati</li>
 </ul>
-<h2 id="range-ip-azure">Range IP Azure<a class="headerlink" href="#range-ip-azure" title="Permanent link">&para;</a></h2>
+<h3 id="range-ip-azure"><a class="toclink" href="#range-ip-azure">Range IP Azure</a><a class="headerlink" href="#range-ip-azure" title="Permanent link">&para;</a></h3>
 <p>Azure pubblica i range IP per:
 - Azure Functions
 - Azure Logic Apps
 - Azure Service Bus
 - Altri servizi Azure</p>
-<h3 id="ottenere-i-range-ip">Ottenere i Range IP<a class="headerlink" href="#ottenere-i-range-ip" title="Permanent link">&para;</a></h3>
+<h4 id="ottenere-i-range-ip"><a class="toclink" href="#ottenere-i-range-ip">Ottenere i Range IP</a><a class="headerlink" href="#ottenere-i-range-ip" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>Download JSON ufficiale</strong>:</li>
 <li>URL: <code>https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13F5F5FE99/ServiceTags_Public_20240115.json</code></li>
@@ -3513,15 +2947,15 @@
 </code></pre></div></p>
 </li>
 </ol>
-<h2 id="configurazione-in-salesforce">Configurazione in Salesforce<a class="headerlink" href="#configurazione-in-salesforce" title="Permanent link">&para;</a></h2>
-<h3 id="trusted-ip-ranges">Trusted IP Ranges<a class="headerlink" href="#trusted-ip-ranges" title="Permanent link">&para;</a></h3>
+<h3 id="configurazione-in-salesforce"><a class="toclink" href="#configurazione-in-salesforce">Configurazione in Salesforce</a><a class="headerlink" href="#configurazione-in-salesforce" title="Permanent link">&para;</a></h3>
+<h4 id="trusted-ip-ranges"><a class="toclink" href="#trusted-ip-ranges">Trusted IP Ranges</a><a class="headerlink" href="#trusted-ip-ranges" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Vai a <strong>Setup</strong> → <strong>Network Access</strong></li>
 <li>Clicca su <strong>New</strong> per aggiungere range IP</li>
 <li>Aggiungi i range IP di Azure per la tua regione</li>
 <li>Salva le modifiche</li>
 </ol>
-<h3 id="esempio-range-ip-per-regioni-comuni">Esempio Range IP per Regioni Comuni<a class="headerlink" href="#esempio-range-ip-per-regioni-comuni" title="Permanent link">&para;</a></h3>
+<h4 id="esempio-range-ip-per-regioni-comuni"><a class="toclink" href="#esempio-range-ip-per-regioni-comuni">Esempio Range IP per Regioni Comuni</a><a class="headerlink" href="#esempio-range-ip-per-regioni-comuni" title="Permanent link">&para;</a></h4>
 <p><strong>West Europe</strong>:
 - 20.50.0.0/16
 - 20.51.0.0/16
@@ -3531,8 +2965,8 @@
 - 20.43.0.0/16
 - (verifica sempre i range aggiornati)</p>
 <p><strong>Nota</strong>: I range IP cambiano regolarmente. Usa sempre i range più recenti.</p>
-<h2 id="automatizzazione">Automatizzazione<a class="headerlink" href="#automatizzazione" title="Permanent link">&para;</a></h2>
-<h3 id="script-powershell-per-aggiornare-range-ip">Script PowerShell per Aggiornare Range IP<a class="headerlink" href="#script-powershell-per-aggiornare-range-ip" title="Permanent link">&para;</a></h3>
+<h3 id="automatizzazione"><a class="toclink" href="#automatizzazione">Automatizzazione</a><a class="headerlink" href="#automatizzazione" title="Permanent link">&para;</a></h3>
+<h4 id="script-powershell-per-aggiornare-range-ip"><a class="toclink" href="#script-powershell-per-aggiornare-range-ip">Script PowerShell per Aggiornare Range IP</a><a class="headerlink" href="#script-powershell-per-aggiornare-range-ip" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c"># Scarica i Service Tags</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nv">$serviceTags</span> <span class="p">=</span> <span class="nb">Invoke-RestMethod</span> <span class="n">-Uri</span> <span class="s2">&quot;https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13F5F5FE99/ServiceTags_Public_20240115.json&quot;</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
@@ -3545,7 +2979,7 @@
 <a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="c"># Output per configurazione Salesforce</span>
 <a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="nv">$westEuropeIPs</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span> <span class="nb">Write-Host</span> <span class="nv">$_</span> <span class="p">}</span>
 </code></pre></div>
-<h3 id="script-python">Script Python<a class="headerlink" href="#script-python" title="Permanent link">&para;</a></h3>
+<h4 id="script-python"><a class="toclink" href="#script-python">Script Python</a><a class="headerlink" href="#script-python" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
@@ -3564,15 +2998,15 @@
 <a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="k">for</span> <span class="n">ip</span> <span class="ow">in</span> <span class="n">ip_ranges</span><span class="p">:</span>
 <a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">ip</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="best-practices"><a class="toclink" href="#best-practices">Best Practices</a><a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Aggiornamento Regolare</strong>: I range IP cambiano settimanalmente</li>
 <li><strong>Monitoraggio</strong>: Configura alert per cambiamenti nei range IP</li>
 <li><strong>Documentazione</strong>: Mantieni traccia dei range IP configurati</li>
 <li><strong>Test</strong>: Verifica sempre che la configurazione funzioni dopo aggiornamenti</li>
 </ol>
-<h2 id="differenze-per-soluzione">Differenze per Soluzione<a class="headerlink" href="#differenze-per-soluzione" title="Permanent link">&para;</a></h2>
-<h3 id="ccf-codeless-connector-framework">CCF (CodeLess Connector Framework)<a class="headerlink" href="#ccf-codeless-connector-framework" title="Permanent link">&para;</a></h3>
+<h3 id="differenze-per-soluzione"><a class="toclink" href="#differenze-per-soluzione">Differenze per Soluzione</a><a class="headerlink" href="#differenze-per-soluzione" title="Permanent link">&para;</a></h3>
+<h4 id="ccf-codeless-connector-framework"><a class="toclink" href="#ccf-codeless-connector-framework">CCF (CodeLess Connector Framework)</a><a class="headerlink" href="#ccf-codeless-connector-framework" title="Permanent link">&para;</a></h4>
 <p><strong>Caratteristiche</strong>:
 - Connector gestito da Microsoft
 - IP dinamici dell'infrastruttura Azure Sentinel
@@ -3583,7 +3017,7 @@
 <p><strong>Raccomandazione</strong>: 
 - Per sicurezza: Usa Private Link per Log Analytics se disponibile
 - Alternativa: Configura range IP Azure Cloud per la regione specifica</p>
-<h3 id="azure-function">Azure Function<a class="headerlink" href="#azure-function" title="Permanent link">&para;</a></h3>
+<h4 id="azure-function"><a class="toclink" href="#azure-function">Azure Function</a><a class="headerlink" href="#azure-function" title="Permanent link">&para;</a></h4>
 <p><strong>Caratteristiche</strong>:
 - IP dinamici della Function App
 - Range IP specifici per regione Azure
@@ -3594,7 +3028,7 @@
 <p><strong>Raccomandazione</strong>: 
 - ⭐ <strong>Usa Private Endpoints</strong> per massima sicurezza
 - Alternativa: Configura range IP Azure Functions per la regione</p>
-<h3 id="azure-logic-app">Azure Logic App<a class="headerlink" href="#azure-logic-app" title="Permanent link">&para;</a></h3>
+<h4 id="azure-logic-app"><a class="toclink" href="#azure-logic-app">Azure Logic App</a><a class="headerlink" href="#azure-logic-app" title="Permanent link">&para;</a></h4>
 <p><strong>Caratteristiche</strong>:
 - IP dinamici del servizio Logic Apps
 - Range IP specifici per regione
@@ -3605,19 +3039,19 @@
 <p><strong>Raccomandazione</strong>: 
 - ⭐ <strong>Usa ISE</strong> per connettività privata nativa
 - Alternativa: Configura range IP Azure Logic Apps per la regione</p>
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
-<h3 id="problema-connessioni-bloccate">Problema: Connessioni Bloccate<a class="headerlink" href="#problema-connessioni-bloccate" title="Permanent link">&para;</a></h3>
+<h3 id="troubleshooting"><a class="toclink" href="#troubleshooting">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
+<h4 id="problema-connessioni-bloccate"><a class="toclink" href="#problema-connessioni-bloccate">Problema: Connessioni Bloccate</a><a class="headerlink" href="#problema-connessioni-bloccate" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Verifica che i range IP siano aggiornati</li>
 <li>Controlla i log di Salesforce per IP bloccati</li>
 <li>Verifica la regione Azure corretta</li>
 </ol>
-<h3 id="problema-range-ip-troppo-ampi">Problema: Range IP Troppo Ampi<a class="headerlink" href="#problema-range-ip-troppo-ampi" title="Permanent link">&para;</a></h3>
+<h4 id="problema-range-ip-troppo-ampi"><a class="toclink" href="#problema-range-ip-troppo-ampi">Problema: Range IP Troppo Ampi</a><a class="headerlink" href="#problema-range-ip-troppo-ampi" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Usa range IP specifici per regione invece di tutti i range Azure</li>
 <li>Considera l'uso di Private Endpoints</li>
 </ul>
-<h2 id="link-utili">Link Utili<a class="headerlink" href="#link-utili" title="Permanent link">&para;</a></h2>
+<h3 id="link-utili"><a class="toclink" href="#link-utili">Link Utili</a><a class="headerlink" href="#link-utili" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://www.microsoft.com/download/details.aspx?id=56519">Azure IP Ranges and Service Tags</a></li>
 <li><a href="https://learn.microsoft.com/azure/virtual-network/service-tags-overview">Service Tags Documentation</a></li>
@@ -3645,7 +3079,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 19, 2025 00:36:29 UTC">November 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 19, 2025 00:47:23 UTC"><span class="timeago" datetime="2025-11-19T00:47:23+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 19, 2025 00:47:23 UTC">2025-11-19</span>
   </span>
 
     
@@ -3655,7 +3089,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 19, 2025 00:36:29 UTC">November 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 19, 2025 00:47:23 UTC"><span class="timeago" datetime="2025-11-19T00:47:23+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 19, 2025 00:47:23 UTC">2025-11-19</span>
   </span>
 
     
@@ -3672,6 +3106,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -3741,10 +3177,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.smooth", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link", "toc.integrate", "toc.follow"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
       
     
   </body>

@@ -25,7 +25,7 @@
     
     
       
-        <title>Panoramica Soluzioni - Integrazione Salesforce - Azure Sentinel</title>
+        <title>Overview - Integrazione Salesforce - Azure Sentinel</title>
       
     
     
@@ -50,6 +50,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../css/timeago.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Panoramica Soluzioni
+              Overview
             
           </span>
         </div>
@@ -415,7 +417,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Integrazione Salesforce - Azure Sentinel" class="md-nav__button md-logo" aria-label="Integrazione Salesforce - Azure Sentinel" data-md-component="logo">
       
@@ -2224,221 +2228,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#differenza-fondamentale-event-log-files-vs-platform-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⚠️ Differenza Fondamentale: Event Log Files vs Platform Events
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚠️ Differenza Fondamentale: Event Log Files vs Platform Events">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#event-log-files-api-latenza-24-48-ore" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Event Log Files API (Latenza 24-48 ore)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#platform-events-event-bus-near-real-time" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Platform Events / Event Bus (Near Real-Time)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#soluzioni-per-event-log-files-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Soluzioni per Event Log Files API
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Soluzioni per Event Log Files API">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-codeless-connector-framework-ccf-consigliato" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. CodeLess Connector Framework (CCF) ⭐ Consigliato
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-azure-function-event-log-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Azure Function (Event Log Files)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-azure-logic-app-event-log-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Azure Logic App (Event Log Files)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#soluzioni-per-platform-events-near-real-time" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Soluzioni per Platform Events (Near Real-Time)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Soluzioni per Platform Events (Near Real-Time)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#4-azure-function-platform-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Azure Function + Platform Events
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#confronto-completo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Confronto Completo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#come-scegliere" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Come Scegliere
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Come Scegliere">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scegli-event-log-files-api-se" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scegli Event Log Files API se:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scegli-platform-events-se" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scegli Platform Events se:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#approccio-ibrido-consigliato-per-copertura-completa" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Approccio Ibrido (Consigliato per Copertura Completa)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prossimi-passi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prossimi Passi
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -2452,11 +2241,13 @@
   
 
 
-<h1 id="panoramica-soluzioni">Panoramica Soluzioni<a class="headerlink" href="#panoramica-soluzioni" title="Permanent link">&para;</a></h1>
+  <h1>Overview</h1>
+
+<h2 id="panoramica-soluzioni"><a class="toclink" href="#panoramica-soluzioni">Panoramica Soluzioni</a><a class="headerlink" href="#panoramica-soluzioni" title="Permanent link">&para;</a></h2>
 <p>Questa pagina fornisce un confronto completo di tutte le soluzioni disponibili per integrare Salesforce con Azure Sentinel.</p>
-<h2 id="differenza-fondamentale-event-log-files-vs-platform-events">⚠️ Differenza Fondamentale: Event Log Files vs Platform Events<a class="headerlink" href="#differenza-fondamentale-event-log-files-vs-platform-events" title="Permanent link">&para;</a></h2>
+<h3 id="differenza-fondamentale-event-log-files-vs-platform-events"><a class="toclink" href="#differenza-fondamentale-event-log-files-vs-platform-events">⚠️ Differenza Fondamentale: Event Log Files vs Platform Events</a><a class="headerlink" href="#differenza-fondamentale-event-log-files-vs-platform-events" title="Permanent link">&para;</a></h3>
 <p>Prima di scegliere una soluzione, è fondamentale comprendere la differenza tra i due approcci di integrazione:</p>
-<h3 id="event-log-files-api-latenza-24-48-ore">Event Log Files API (Latenza 24-48 ore)<a class="headerlink" href="#event-log-files-api-latenza-24-48-ore" title="Permanent link">&para;</a></h3>
+<h4 id="event-log-files-api-latenza-24-48-ore"><a class="toclink" href="#event-log-files-api-latenza-24-48-ore">Event Log Files API (Latenza 24-48 ore)</a><a class="headerlink" href="#event-log-files-api-latenza-24-48-ore" title="Permanent link">&para;</a></h4>
 <p><strong>Caratteristiche</strong>:
 - ✅ <strong>Copertura Completa</strong>: Tutti gli eventi disponibili (LoginEvent, LogoutEvent, ApiEvent, Audit Trail, etc.)
 - ✅ <strong>Formato Strutturato</strong>: Dati ottimizzati e validati
@@ -2465,7 +2256,7 @@
 - ❌ <strong>Latenza</strong>: 24-48 ore end-to-end per Log Analytics, anche usando connettori ufficiali come il CCF
 - ✅ <strong>Setup Semplice</strong>: Soluzioni code-less disponibili</p>
 <p><strong>Quando Usare</strong>: Per analisi di sicurezza, compliance, audit trail, quando la latenza di 24-72 ore è accettabile.</p>
-<h3 id="platform-events-event-bus-near-real-time">Platform Events / Event Bus (Near Real-Time)<a class="headerlink" href="#platform-events-event-bus-near-real-time" title="Permanent link">&para;</a></h3>
+<h4 id="platform-events-event-bus-near-real-time"><a class="toclink" href="#platform-events-event-bus-near-real-time">Platform Events / Event Bus (Near Real-Time)</a><a class="headerlink" href="#platform-events-event-bus-near-real-time" title="Permanent link">&para;</a></h4>
 <p><strong>Caratteristiche</strong>:
 - ✅ <strong>Latenza</strong>: &lt; 1 minuto (near real-time)
 - ✅ <strong>Tempo Reale</strong>: Eventi disponibili immediatamente
@@ -2473,8 +2264,8 @@
 - ❌ <strong>Complessità</strong>: Richiede sviluppo custom (Apex + Azure Function)
 - ❌ <strong>Manutenzione</strong>: Gestione codice e configurazioni</p>
 <p><strong>Quando Usare</strong>: Quando è necessario monitoraggio in tempo reale (&lt; 24 ore) per eventi critici.</p>
-<h2 id="soluzioni-per-event-log-files-api">Soluzioni per Event Log Files API<a class="headerlink" href="#soluzioni-per-event-log-files-api" title="Permanent link">&para;</a></h2>
-<h3 id="1-codeless-connector-framework-ccf-consigliato">1. CodeLess Connector Framework (CCF) ⭐ Consigliato<a class="headerlink" href="#1-codeless-connector-framework-ccf-consigliato" title="Permanent link">&para;</a></h3>
+<h3 id="soluzioni-per-event-log-files-api"><a class="toclink" href="#soluzioni-per-event-log-files-api">Soluzioni per Event Log Files API</a><a class="headerlink" href="#soluzioni-per-event-log-files-api" title="Permanent link">&para;</a></h3>
+<h4 id="1-codeless-connector-framework-ccf-consigliato"><a class="toclink" href="#1-codeless-connector-framework-ccf-consigliato">1. CodeLess Connector Framework (CCF) ⭐ Consigliato</a><a class="headerlink" href="#1-codeless-connector-framework-ccf-consigliato" title="Permanent link">&para;</a></h4>
 <p><strong>Caratteristiche</strong>:
 - Setup: 30-60 minuti (configurazione grafica)
 - Manutenzione: Zero (gestito da Microsoft)
@@ -2485,7 +2276,7 @@
 - Gestione automatica errori e retry
 - Polling ottimizzato (15-30 minuti)</p>
 <p><a href="../ccf/">Vedi dettagli →</a></p>
-<h3 id="2-azure-function-event-log-files">2. Azure Function (Event Log Files)<a class="headerlink" href="#2-azure-function-event-log-files" title="Permanent link">&para;</a></h3>
+<h4 id="2-azure-function-event-log-files"><a class="toclink" href="#2-azure-function-event-log-files">2. Azure Function (Event Log Files)</a><a class="headerlink" href="#2-azure-function-event-log-files" title="Permanent link">&para;</a></h4>
 <p><strong>Caratteristiche</strong>:
 - Setup: 1-2 giorni (sviluppo custom)
 - Manutenzione: Media-Alta (gestione codice)
@@ -2497,7 +2288,7 @@
 - Integrazione con altri sistemi</p>
 <p><strong>Quando Usare</strong>: Quando hai bisogno di personalizzazioni che il CCF non supporta.</p>
 <p><a href="../azure-function/">Vedi dettagli →</a></p>
-<h3 id="3-azure-logic-app-event-log-files">3. Azure Logic App (Event Log Files)<a class="headerlink" href="#3-azure-logic-app-event-log-files" title="Permanent link">&para;</a></h3>
+<h4 id="3-azure-logic-app-event-log-files"><a class="toclink" href="#3-azure-logic-app-event-log-files">3. Azure Logic App (Event Log Files)</a><a class="headerlink" href="#3-azure-logic-app-event-log-files" title="Permanent link">&para;</a></h4>
 <p><strong>Caratteristiche</strong>:
 - Setup: 30-60 minuti (low-code visuale)
 - Manutenzione: Bassa
@@ -2508,8 +2299,8 @@
 - Template predefiniti
 - Connettori integrati</p>
 <p><a href="../logic-app/">Vedi dettagli →</a></p>
-<h2 id="soluzioni-per-platform-events-near-real-time">Soluzioni per Platform Events (Near Real-Time)<a class="headerlink" href="#soluzioni-per-platform-events-near-real-time" title="Permanent link">&para;</a></h2>
-<h3 id="4-azure-function-platform-events">4. Azure Function + Platform Events<a class="headerlink" href="#4-azure-function-platform-events" title="Permanent link">&para;</a></h3>
+<h3 id="soluzioni-per-platform-events-near-real-time"><a class="toclink" href="#soluzioni-per-platform-events-near-real-time">Soluzioni per Platform Events (Near Real-Time)</a><a class="headerlink" href="#soluzioni-per-platform-events-near-real-time" title="Permanent link">&para;</a></h3>
+<h4 id="4-azure-function-platform-events"><a class="toclink" href="#4-azure-function-platform-events">4. Azure Function + Platform Events</a><a class="headerlink" href="#4-azure-function-platform-events" title="Permanent link">&para;</a></h4>
 <p><strong>Caratteristiche</strong>:
 - Setup: 2-3 giorni (sviluppo Apex + Azure Function)
 - Manutenzione: Alta (gestione codice)
@@ -2528,7 +2319,7 @@
 - Richiede sviluppo Apex
 - Manutenzione continua</p>
 <p><a href="../../implementation/platform-events/">Vedi dettagli →</a></p>
-<h2 id="confronto-completo">Confronto Completo<a class="headerlink" href="#confronto-completo" title="Permanent link">&para;</a></h2>
+<h3 id="confronto-completo"><a class="toclink" href="#confronto-completo">Confronto Completo</a><a class="headerlink" href="#confronto-completo" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -2580,8 +2371,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="come-scegliere">Come Scegliere<a class="headerlink" href="#come-scegliere" title="Permanent link">&para;</a></h2>
-<h3 id="scegli-event-log-files-api-se">Scegli Event Log Files API se:<a class="headerlink" href="#scegli-event-log-files-api-se" title="Permanent link">&para;</a></h3>
+<h3 id="come-scegliere"><a class="toclink" href="#come-scegliere">Come Scegliere</a><a class="headerlink" href="#come-scegliere" title="Permanent link">&para;</a></h3>
+<h4 id="scegli-event-log-files-api-se"><a class="toclink" href="#scegli-event-log-files-api-se">Scegli Event Log Files API se:</a><a class="headerlink" href="#scegli-event-log-files-api-se" title="Permanent link">&para;</a></h4>
 <ul>
 <li>✅ La latenza di 24-72 ore è accettabile</li>
 <li>✅ Hai bisogno di copertura completa (incluso Audit Trail)</li>
@@ -2589,7 +2380,7 @@
 <li>✅ Budget limitato</li>
 </ul>
 <p><strong>Raccomandazione</strong>: <strong>CCF</strong> per il 90% dei casi d'uso.</p>
-<h3 id="scegli-platform-events-se">Scegli Platform Events se:<a class="headerlink" href="#scegli-platform-events-se" title="Permanent link">&para;</a></h3>
+<h4 id="scegli-platform-events-se"><a class="toclink" href="#scegli-platform-events-se">Scegli Platform Events se:</a><a class="headerlink" href="#scegli-platform-events-se" title="Permanent link">&para;</a></h4>
 <ul>
 <li>✅ Hai bisogno di monitoraggio near real-time (&lt; 24 ore)</li>
 <li>✅ Eventi critici richiedono alerting immediato</li>
@@ -2597,11 +2388,11 @@
 <li>✅ Budget per sviluppo e manutenzione</li>
 </ul>
 <p><strong>Raccomandazione</strong>: <strong>Azure Function + Event Hub</strong> per scalabilità e affidabilità.</p>
-<h3 id="approccio-ibrido-consigliato-per-copertura-completa">Approccio Ibrido (Consigliato per Copertura Completa)<a class="headerlink" href="#approccio-ibrido-consigliato-per-copertura-completa" title="Permanent link">&para;</a></h3>
+<h4 id="approccio-ibrido-consigliato-per-copertura-completa"><a class="toclink" href="#approccio-ibrido-consigliato-per-copertura-completa">Approccio Ibrido (Consigliato per Copertura Completa)</a><a class="headerlink" href="#approccio-ibrido-consigliato-per-copertura-completa" title="Permanent link">&para;</a></h4>
 <p>Combina entrambi gli approcci:
 - <strong>Platform Events</strong> per eventi critici in tempo reale
 - <strong>Event Log Files (CCF)</strong> per copertura completa e compliance</p>
-<h2 id="prossimi-passi">Prossimi Passi<a class="headerlink" href="#prossimi-passi" title="Permanent link">&para;</a></h2>
+<h3 id="prossimi-passi"><a class="toclink" href="#prossimi-passi">Prossimi Passi</a><a class="headerlink" href="#prossimi-passi" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Valuta i requisiti</strong>: Latenza accettabile? Copertura completa necessaria?</li>
 <li><strong>Scegli l'approccio</strong>: Event Log Files o Platform Events</li>
@@ -2631,7 +2422,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 14, 2025 14:36:26 UTC">November 14, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 14, 2025 14:36:26 UTC"><span class="timeago" datetime="2025-11-14T14:36:26+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 14, 2025 14:36:26 UTC">2025-11-14</span>
   </span>
 
     
@@ -2641,7 +2432,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 14, 2025 14:36:26 UTC">November 14, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 14, 2025 14:36:26 UTC"><span class="timeago" datetime="2025-11-14T14:36:26+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 14, 2025 14:36:26 UTC">2025-11-14</span>
   </span>
 
     
@@ -2658,6 +2449,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -2727,10 +2520,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.smooth", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link", "toc.integrate", "toc.follow"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
       
     
   </body>

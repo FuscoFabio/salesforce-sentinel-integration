@@ -25,7 +25,7 @@
     
     
       
-        <title>Implementazione Azure Function - Integrazione Salesforce - Azure Sentinel</title>
+        <title>Azure function - Integrazione Salesforce - Azure Sentinel</title>
       
     
     
@@ -50,6 +50,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../css/timeago.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Implementazione Azure Function
+              Azure function
             
           </span>
         </div>
@@ -415,7 +417,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Integrazione Salesforce - Azure Sentinel" class="md-nav__button md-logo" aria-label="Integrazione Salesforce - Azure Sentinel" data-md-component="logo">
       
@@ -2224,292 +2228,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#panoramica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Panoramica
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#architettura" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architettura
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisiti" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisiti
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#passo-1-creare-azure-function-app" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 1: Creare Azure Function App
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Passo 1: Creare Azure Function App">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configurazione-network-consigliato" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⭐ Configurazione Network (Consigliato)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#passo-2-configurare-application-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 2: Configurare Application Settings
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#passo-3-implementare-la-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 3: Implementare la Function
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Passo 3: Implementare la Function">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#timer-trigger-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Timer Trigger Function
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#logica-di-recupero-eventi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Logica di Recupero Eventi
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#invio-a-log-analytics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Invio a Log Analytics
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#passo-4-gestione-errori-e-retry" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 4: Gestione Errori e Retry
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#passo-5-monitoraggio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 5: Monitoraggio
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#esempio-di-schema-dati" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Esempio di Schema Dati
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ottimizzazioni" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ottimizzazioni
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitazioni-e-polling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Limitazioni e Polling
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Limitazioni e Polling">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#timer-trigger-azure-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Timer Trigger (Azure Function)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strategia-di-polling-per-salesforce" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Strategia di Polling per Salesforce
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#calcolo-dellintervallo-ottimale" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Calcolo dell'Intervallo Ottimale
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limiti-salesforce-da-considerare" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Limiti Salesforce da Considerare
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#suggerimenti-operativi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Suggerimenti Operativi
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#link-utili" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Link Utili
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -2523,11 +2241,13 @@
   
 
 
-<h1 id="implementazione-azure-function">Implementazione Azure Function<a class="headerlink" href="#implementazione-azure-function" title="Permanent link">&para;</a></h1>
+  <h1>Azure function</h1>
+
+<h2 id="implementazione-azure-function"><a class="toclink" href="#implementazione-azure-function">Implementazione Azure Function</a><a class="headerlink" href="#implementazione-azure-function" title="Permanent link">&para;</a></h2>
 <p>Guida completa per implementare l'integrazione Salesforce-Azure Sentinel usando Azure Function.</p>
-<h2 id="panoramica">Panoramica<a class="headerlink" href="#panoramica" title="Permanent link">&para;</a></h2>
+<h3 id="panoramica"><a class="toclink" href="#panoramica">Panoramica</a><a class="headerlink" href="#panoramica" title="Permanent link">&para;</a></h3>
 <p>Azure Function permette di creare una soluzione serverless personalizzata per recuperare eventi da Salesforce e inviarli a Azure Sentinel tramite Log Analytics.</p>
-<h2 id="architettura">Architettura<a class="headerlink" href="#architettura" title="Permanent link">&para;</a></h2>
+<h3 id="architettura"><a class="toclink" href="#architettura">Architettura</a><a class="headerlink" href="#architettura" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Salesforce Event Log Files API
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    ↓
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Azure Function (Timer Trigger)
@@ -2538,7 +2258,7 @@
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    ↓
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Azure Sentinel
 </code></pre></div>
-<h2 id="prerequisiti">Prerequisiti<a class="headerlink" href="#prerequisiti" title="Permanent link">&para;</a></h2>
+<h3 id="prerequisiti"><a class="toclink" href="#prerequisiti">Prerequisiti</a><a class="headerlink" href="#prerequisiti" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Azure Subscription</li>
 <li>Azure Function App (Consumption o Premium Plan)</li>
@@ -2547,7 +2267,7 @@
 <li>Workspace ID e Primary Key di Log Analytics</li>
 <li>⭐ <strong>Raccomandato</strong>: Virtual Network per Private Endpoints (vedi <a href="../network-sicurezza/">Gestione Network e Sicurezza</a>)</li>
 </ul>
-<h2 id="passo-1-creare-azure-function-app">Passo 1: Creare Azure Function App<a class="headerlink" href="#passo-1-creare-azure-function-app" title="Permanent link">&para;</a></h2>
+<h3 id="passo-1-creare-azure-function-app"><a class="toclink" href="#passo-1-creare-azure-function-app">Passo 1: Creare Azure Function App</a><a class="headerlink" href="#passo-1-creare-azure-function-app" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Nel portale Azure, cerca "Function App"</li>
 <li>Clicca su <strong>Create</strong></li>
@@ -2566,7 +2286,7 @@
 </li>
 <li>Clicca su <strong>Review + Create</strong> → <strong>Create</strong></li>
 </ol>
-<h3 id="configurazione-network-consigliato">⭐ Configurazione Network (Consigliato)<a class="headerlink" href="#configurazione-network-consigliato" title="Permanent link">&para;</a></h3>
+<h4 id="configurazione-network-consigliato"><a class="toclink" href="#configurazione-network-consigliato">⭐ Configurazione Network (Consigliato)</a><a class="headerlink" href="#configurazione-network-consigliato" title="Permanent link">&para;</a></h4>
 <p><strong>Per massima sicurezza, configura Private Endpoints:</strong></p>
 <ol>
 <li><strong>Crea Virtual Network</strong> (se non esiste):</li>
@@ -2601,7 +2321,7 @@
 <p><strong>Alternativa - Range IP Pubblici:</strong>
 - Vedi <a href="../network-sicurezza/">Gestione Network e Sicurezza</a> per configurare range IP pubblici
 - Richiede manutenzione periodica (range IP cambiano settimanalmente)</p>
-<h2 id="passo-2-configurare-application-settings">Passo 2: Configurare Application Settings<a class="headerlink" href="#passo-2-configurare-application-settings" title="Permanent link">&para;</a></h2>
+<h3 id="passo-2-configurare-application-settings"><a class="toclink" href="#passo-2-configurare-application-settings">Passo 2: Configurare Application Settings</a><a class="headerlink" href="#passo-2-configurare-application-settings" title="Permanent link">&para;</a></h3>
 <p>Nella Function App, vai a <strong>Configuration</strong> → <strong>Application settings</strong> e aggiungi:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Salesforce__ConsumerKey=&lt;your-consumer-key&gt;
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Salesforce__ConsumerSecret=&lt;your-consumer-secret&gt;
@@ -2612,8 +2332,8 @@
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>LogAnalytics__WorkspaceKey=&lt;workspace-key&gt;
 </code></pre></div>
 <p><strong>Nota</strong>: Per sicurezza, usa <strong>Key Vault References</strong> invece di valori in chiaro.</p>
-<h2 id="passo-3-implementare-la-function">Passo 3: Implementare la Function<a class="headerlink" href="#passo-3-implementare-la-function" title="Permanent link">&para;</a></h2>
-<h3 id="timer-trigger-function">Timer Trigger Function<a class="headerlink" href="#timer-trigger-function" title="Permanent link">&para;</a></h3>
+<h3 id="passo-3-implementare-la-function"><a class="toclink" href="#passo-3-implementare-la-function">Passo 3: Implementare la Function</a><a class="headerlink" href="#passo-3-implementare-la-function" title="Permanent link">&para;</a></h3>
+<h4 id="timer-trigger-function"><a class="toclink" href="#timer-trigger-function">Timer Trigger Function</a><a class="headerlink" href="#timer-trigger-function" title="Permanent link">&para;</a></h4>
 <p>Crea una Function con Timer Trigger che esegue periodicamente (es. ogni 15 minuti):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="na">[FunctionName(&quot;SalesforceToSentinel&quot;)]</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="w"> </span><span class="nf">Run</span><span class="p">(</span>
@@ -2625,14 +2345,14 @@
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="c1">// Invia a Log Analytics</span>
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="logica-di-recupero-eventi">Logica di Recupero Eventi<a class="headerlink" href="#logica-di-recupero-eventi" title="Permanent link">&para;</a></h3>
+<h4 id="logica-di-recupero-eventi"><a class="toclink" href="#logica-di-recupero-eventi">Logica di Recupero Eventi</a><a class="headerlink" href="#logica-di-recupero-eventi" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Autenticazione OAuth con Salesforce</li>
 <li>Recupero Event Log Files tramite API</li>
 <li>Filtraggio eventi già processati (usando timestamp)</li>
 <li>Trasformazione dati in formato Log Analytics</li>
 </ol>
-<h3 id="invio-a-log-analytics">Invio a Log Analytics<a class="headerlink" href="#invio-a-log-analytics" title="Permanent link">&para;</a></h3>
+<h4 id="invio-a-log-analytics"><a class="toclink" href="#invio-a-log-analytics">Invio a Log Analytics</a><a class="headerlink" href="#invio-a-log-analytics" title="Permanent link">&para;</a></h4>
 <p>Usa l'API Data Collector di Log Analytics per inviare i dati:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">logEntries</span><span class="p">);</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kt">var</span><span class="w"> </span><span class="n">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringContent</span><span class="p">(</span><span class="n">json</span><span class="p">,</span><span class="w"> </span><span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/json&quot;</span><span class="p">);</span>
@@ -2642,18 +2362,18 @@
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">client</span><span class="p">.</span><span class="n">DefaultRequestHeaders</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">signature</span><span class="p">);</span>
 <a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">await</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">PostAsync</span><span class="p">(</span><span class="n">workspaceUrl</span><span class="p">,</span><span class="w"> </span><span class="n">content</span><span class="p">);</span>
 </code></pre></div>
-<h2 id="passo-4-gestione-errori-e-retry">Passo 4: Gestione Errori e Retry<a class="headerlink" href="#passo-4-gestione-errori-e-retry" title="Permanent link">&para;</a></h2>
+<h3 id="passo-4-gestione-errori-e-retry"><a class="toclink" href="#passo-4-gestione-errori-e-retry">Passo 4: Gestione Errori e Retry</a><a class="headerlink" href="#passo-4-gestione-errori-e-retry" title="Permanent link">&para;</a></h3>
 <p>Implementa:
 - <strong>Retry Logic</strong>: Per errori temporanei
 - <strong>Dead Letter Queue</strong>: Per eventi non processabili
 - <strong>Logging</strong>: Per monitoraggio e troubleshooting
 - <strong>Checkpointing</strong>: Per tracciare eventi già processati</p>
-<h2 id="passo-5-monitoraggio">Passo 5: Monitoraggio<a class="headerlink" href="#passo-5-monitoraggio" title="Permanent link">&para;</a></h2>
+<h3 id="passo-5-monitoraggio"><a class="toclink" href="#passo-5-monitoraggio">Passo 5: Monitoraggio</a><a class="headerlink" href="#passo-5-monitoraggio" title="Permanent link">&para;</a></h3>
 <p>Configura:
 - <strong>Application Insights</strong>: Per metriche e log
 - <strong>Alert</strong>: Per errori e problemi
 - <strong>Dashboard</strong>: Per visualizzare lo stato dell'integrazione</p>
-<h2 id="esempio-di-schema-dati">Esempio di Schema Dati<a class="headerlink" href="#esempio-di-schema-dati" title="Permanent link">&para;</a></h2>
+<h3 id="esempio-di-schema-dati"><a class="toclink" href="#esempio-di-schema-dati">Esempio di Schema Dati</a><a class="headerlink" href="#esempio-di-schema-dati" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&quot;TimeGenerated&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-15T10:30:00Z&quot;</span><span class="p">,</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">&quot;EventType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LoginEvent&quot;</span><span class="p">,</span>
@@ -2665,28 +2385,28 @@
 <a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span><span class="nt">&quot;Success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="p">}</span>
 </code></pre></div>
-<h2 id="ottimizzazioni">Ottimizzazioni<a class="headerlink" href="#ottimizzazioni" title="Permanent link">&para;</a></h2>
+<h3 id="ottimizzazioni"><a class="toclink" href="#ottimizzazioni">Ottimizzazioni</a><a class="headerlink" href="#ottimizzazioni" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Batch Processing</strong>: Raggruppa più eventi in una singola chiamata</li>
 <li><strong>Parallel Processing</strong>: Processa più eventi in parallelo</li>
 <li><strong>Caching</strong>: Cache token OAuth per ridurre chiamate</li>
 <li><strong>Cost Optimization</strong>: Usa Consumption Plan per costi ottimali</li>
 </ul>
-<h2 id="limitazioni-e-polling">Limitazioni e Polling<a class="headerlink" href="#limitazioni-e-polling" title="Permanent link">&para;</a></h2>
-<h3 id="timer-trigger-azure-function">Timer Trigger (Azure Function)<a class="headerlink" href="#timer-trigger-azure-function" title="Permanent link">&para;</a></h3>
+<h3 id="limitazioni-e-polling"><a class="toclink" href="#limitazioni-e-polling">Limitazioni e Polling</a><a class="headerlink" href="#limitazioni-e-polling" title="Permanent link">&para;</a></h3>
+<h4 id="timer-trigger-azure-function"><a class="toclink" href="#timer-trigger-azure-function">Timer Trigger (Azure Function)</a><a class="headerlink" href="#timer-trigger-azure-function" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Intervallo minimo supportato</strong>: 1 minuto (<code>0 */1 * * * *</code>) su Consumption e Premium Plan  </li>
 <li><strong>Intervalli inferiori al minuto</strong>: Richiedono App Service Plan dedicato con <code>TimerTrigger</code> in modalità Continuous (sconsigliato per Salesforce)  </li>
 <li><strong>Intervallo massimo consigliato</strong>: 60 minuti (per evitare ingestione massiva di backlog)  </li>
 <li><strong>Accuratezza</strong>: Il timer non garantisce esecuzione al millisecondo; può avere ritardi di 1-2 minuti</li>
 </ul>
-<h3 id="strategia-di-polling-per-salesforce">Strategia di Polling per Salesforce<a class="headerlink" href="#strategia-di-polling-per-salesforce" title="Permanent link">&para;</a></h3>
+<h4 id="strategia-di-polling-per-salesforce"><a class="toclink" href="#strategia-di-polling-per-salesforce">Strategia di Polling per Salesforce</a><a class="headerlink" href="#strategia-di-polling-per-salesforce" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Intervallo consigliato</strong>: 5-15 minuti (allinea latenza e consumo API)  </li>
 <li><strong>Intervallo minimo raccomandato</strong>: 5 minuti per evitare rate limiting  </li>
 <li><strong>Intervallo massimo raccomandato</strong>: 30 minuti se il volume di eventi è moderato</li>
 </ul>
-<h3 id="calcolo-dellintervallo-ottimale">Calcolo dell'Intervallo Ottimale<a class="headerlink" href="#calcolo-dellintervallo-ottimale" title="Permanent link">&para;</a></h3>
+<h4 id="calcolo-dellintervallo-ottimale"><a class="toclink" href="#calcolo-dellintervallo-ottimale">Calcolo dell'Intervallo Ottimale</a><a class="headerlink" href="#calcolo-dellintervallo-ottimale" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Intervallo (min) = (Eventi_giornalieri / Eventi_per_poll) × (1440 / Richieste_API_disponibili)
 </code></pre></div>
 <p><strong>Esempio</strong>:
@@ -2699,7 +2419,7 @@
 - Usa l'intervallo minimo di <strong>5 minuti</strong> (limite pratico consigliato)<br />
 - Abilita filtri sugli eventi non necessari<br />
 - Valuta l'uso di una Function dedicata in Premium Plan</p>
-<h3 id="limiti-salesforce-da-considerare">Limiti Salesforce da Considerare<a class="headerlink" href="#limiti-salesforce-da-considerare" title="Permanent link">&para;</a></h3>
+<h4 id="limiti-salesforce-da-considerare"><a class="toclink" href="#limiti-salesforce-da-considerare">Limiti Salesforce da Considerare</a><a class="headerlink" href="#limiti-salesforce-da-considerare" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>API Requests</strong> (24h rolling):  </li>
 <li>Enterprise: ~15.000  </li>
@@ -2708,21 +2428,21 @@
 <li><strong>Request simultanee</strong>: 25  </li>
 <li><strong>Disponibilità Event Log Files</strong>: 24-48 ore dopo l'evento</li>
 </ul>
-<h3 id="suggerimenti-operativi">Suggerimenti Operativi<a class="headerlink" href="#suggerimenti-operativi" title="Permanent link">&para;</a></h3>
+<h4 id="suggerimenti-operativi"><a class="toclink" href="#suggerimenti-operativi">Suggerimenti Operativi</a><a class="headerlink" href="#suggerimenti-operativi" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>Logica di checkpoint</strong>: salva l'ultimo <code>LogDate</code> processato per evitare duplicati  </li>
 <li><strong>Backoff esponenziale</strong>: in caso di <code>HTTP 429</code> o <code>REQUEST_LIMIT_EXCEEDED</code> aumenta temporaneamente l'intervallo  </li>
 <li><strong>Monitoraggio</strong>: usa Application Insights per verificare la durata effettiva del timer  </li>
 <li><strong>Alert</strong>: crea alert se la Function non gira entro l'intervallo previsto (heart-beat)</li>
 </ol>
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="troubleshooting"><a class="toclink" href="#troubleshooting">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Errori di autenticazione</strong>: Verifica credenziali e token</li>
 <li><strong>Nessun dato</strong>: Controlla timer trigger e log</li>
 <li><strong>Errori API</strong>: Verifica rate limits e retry logic</li>
 <li><strong>Costi elevati</strong>: Ottimizza frequenza esecuzione e batch size</li>
 </ul>
-<h2 id="link-utili">Link Utili<a class="headerlink" href="#link-utili" title="Permanent link">&para;</a></h2>
+<h3 id="link-utili"><a class="toclink" href="#link-utili">Link Utili</a><a class="headerlink" href="#link-utili" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://learn.microsoft.com/azure/azure-functions/">Azure Functions Documentation</a></li>
 <li><a href="https://learn.microsoft.com/azure/azure-monitor/logs/data-collector-api">Log Analytics Data Collector API</a></li>
@@ -2750,7 +2470,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 14, 2025 14:36:43 UTC">November 14, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 14, 2025 14:36:43 UTC"><span class="timeago" datetime="2025-11-14T14:36:43+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 14, 2025 14:36:43 UTC">2025-11-14</span>
   </span>
 
     
@@ -2760,7 +2480,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 14, 2025 14:36:43 UTC">November 14, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 14, 2025 14:36:43 UTC"><span class="timeago" datetime="2025-11-14T14:36:43+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 14, 2025 14:36:43 UTC">2025-11-14</span>
   </span>
 
     
@@ -2777,6 +2497,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -2846,10 +2568,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.smooth", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link", "toc.integrate", "toc.follow"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
       
     
   </body>

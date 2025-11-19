@@ -55,6 +55,8 @@
       
     
     
+      <link rel="stylesheet" href="../../css/timeago.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -421,7 +423,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Integrazione Salesforce - Azure Sentinel" class="md-nav__button md-logo" aria-label="Integrazione Salesforce - Azure Sentinel" data-md-component="logo">
       
@@ -543,8 +547,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -583,20 +585,32 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Indice
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#panoramica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panoramica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Panoramica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#cose-questa-integrazione" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -606,8 +620,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#perche-integrare-salesforce-con-azure-sentinel" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -634,8 +648,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#cosa-viene-monitorato" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -673,8 +687,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#soluzioni-disponibili" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -684,8 +698,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#prerequisiti" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -723,8 +737,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#prossimi-passi" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -732,6 +746,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2419,171 +2438,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#cose-questa-integrazione" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cos'è questa integrazione?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#perche-integrare-salesforce-con-azure-sentinel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Perché integrare Salesforce con Azure Sentinel?
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Perché integrare Salesforce con Azure Sentinel?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vantaggi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vantaggi
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cosa-viene-monitorato" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cosa viene monitorato?
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Cosa viene monitorato?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#eventi-salesforce-supportati" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Eventi Salesforce Supportati
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dati-inclusi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dati Inclusi
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#soluzioni-disponibili" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Soluzioni Disponibili
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisiti" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisiti
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prerequisiti">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#salesforce" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Salesforce
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#azure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Azure
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prossimi-passi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prossimi Passi
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -2597,11 +2451,13 @@
   
 
 
-<h1 id="panoramica">Panoramica<a class="headerlink" href="#panoramica" title="Permanent link">&para;</a></h1>
-<h2 id="cose-questa-integrazione">Cos'è questa integrazione?<a class="headerlink" href="#cose-questa-integrazione" title="Permanent link">&para;</a></h2>
+  <h1>Panoramica</h1>
+
+<h2 id="panoramica"><a class="toclink" href="#panoramica">Panoramica</a><a class="headerlink" href="#panoramica" title="Permanent link">&para;</a></h2>
+<h3 id="cose-questa-integrazione"><a class="toclink" href="#cose-questa-integrazione">Cos'è questa integrazione?</a><a class="headerlink" href="#cose-questa-integrazione" title="Permanent link">&para;</a></h3>
 <p>Questa integrazione permette di trasferire automaticamente i log di accesso generati da Salesforce verso Azure Sentinel, creando un'unica piattaforma centralizzata per il monitoraggio della sicurezza.</p>
-<h2 id="perche-integrare-salesforce-con-azure-sentinel">Perché integrare Salesforce con Azure Sentinel?<a class="headerlink" href="#perche-integrare-salesforce-con-azure-sentinel" title="Permanent link">&para;</a></h2>
-<h3 id="vantaggi">Vantaggi<a class="headerlink" href="#vantaggi" title="Permanent link">&para;</a></h3>
+<h3 id="perche-integrare-salesforce-con-azure-sentinel"><a class="toclink" href="#perche-integrare-salesforce-con-azure-sentinel">Perché integrare Salesforce con Azure Sentinel?</a><a class="headerlink" href="#perche-integrare-salesforce-con-azure-sentinel" title="Permanent link">&para;</a></h3>
+<h4 id="vantaggi"><a class="toclink" href="#vantaggi">Vantaggi</a><a class="headerlink" href="#vantaggi" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Visibilità Centralizzata</strong>: Tutti i log di accesso in un'unico posto</li>
 <li><strong>Analisi Avanzata</strong>: Query KQL per identificare pattern sospetti</li>
@@ -2609,15 +2465,15 @@
 <li><strong>Compliance</strong>: Tracciamento completo degli accessi per audit</li>
 <li><strong>Correlazione Eventi</strong>: Integrare con altri log di sicurezza</li>
 </ul>
-<h2 id="cosa-viene-monitorato">Cosa viene monitorato?<a class="headerlink" href="#cosa-viene-monitorato" title="Permanent link">&para;</a></h2>
-<h3 id="eventi-salesforce-supportati">Eventi Salesforce Supportati<a class="headerlink" href="#eventi-salesforce-supportati" title="Permanent link">&para;</a></h3>
+<h3 id="cosa-viene-monitorato"><a class="toclink" href="#cosa-viene-monitorato">Cosa viene monitorato?</a><a class="headerlink" href="#cosa-viene-monitorato" title="Permanent link">&para;</a></h3>
+<h4 id="eventi-salesforce-supportati"><a class="toclink" href="#eventi-salesforce-supportati">Eventi Salesforce Supportati</a><a class="headerlink" href="#eventi-salesforce-supportati" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>LoginEvent</strong>: Accessi utente a Salesforce</li>
 <li><strong>LogoutEvent</strong>: Disconnessioni</li>
 <li><strong>ApiEvent</strong>: Chiamate API (estendibile)</li>
 <li>Altri eventi configurabili</li>
 </ul>
-<h3 id="dati-inclusi">Dati Inclusi<a class="headerlink" href="#dati-inclusi" title="Permanent link">&para;</a></h3>
+<h4 id="dati-inclusi"><a class="toclink" href="#dati-inclusi">Dati Inclusi</a><a class="headerlink" href="#dati-inclusi" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Timestamp accesso</li>
 <li>Username e User ID</li>
@@ -2626,7 +2482,7 @@
 <li>Tipo di login</li>
 <li>Geolocalizzazione (se disponibile)</li>
 </ul>
-<h2 id="soluzioni-disponibili">Soluzioni Disponibili<a class="headerlink" href="#soluzioni-disponibili" title="Permanent link">&para;</a></h2>
+<h3 id="soluzioni-disponibili"><a class="toclink" href="#soluzioni-disponibili">Soluzioni Disponibili</a><a class="headerlink" href="#soluzioni-disponibili" title="Permanent link">&para;</a></h3>
 <p>Il progetto offre <strong>5 soluzioni</strong> diverse per soddisfare ogni esigenza:</p>
 <ol>
 <li><strong>CodeLess Connector Framework (CCF)</strong> - Setup rapido, zero manutenzione</li>
@@ -2636,20 +2492,20 @@
 <li><strong>Third-party SIEM Connector</strong> - Per soluzioni enterprise</li>
 </ol>
 <p><a href="../../solutions/overview/">Vedi confronto completo →</a></p>
-<h2 id="prerequisiti">Prerequisiti<a class="headerlink" href="#prerequisiti" title="Permanent link">&para;</a></h2>
-<h3 id="salesforce">Salesforce<a class="headerlink" href="#salesforce" title="Permanent link">&para;</a></h3>
+<h3 id="prerequisiti"><a class="toclink" href="#prerequisiti">Prerequisiti</a><a class="headerlink" href="#prerequisiti" title="Permanent link">&para;</a></h3>
+<h4 id="salesforce"><a class="toclink" href="#salesforce">Salesforce</a><a class="headerlink" href="#salesforce" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Licenza Enterprise, Unlimited o Performance Edition</li>
 <li>Event Monitoring abilitato</li>
 <li>Permessi per creare Connected App</li>
 </ul>
-<h3 id="azure">Azure<a class="headerlink" href="#azure" title="Permanent link">&para;</a></h3>
+<h4 id="azure"><a class="toclink" href="#azure">Azure</a><a class="headerlink" href="#azure" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Sottoscrizione Azure attiva</li>
 <li>Azure Sentinel Workspace</li>
 <li>Permessi per creare risorse Azure</li>
 </ul>
-<h2 id="prossimi-passi">Prossimi Passi<a class="headerlink" href="#prossimi-passi" title="Permanent link">&para;</a></h2>
+<h3 id="prossimi-passi"><a class="toclink" href="#prossimi-passi">Prossimi Passi</a><a class="headerlink" href="#prossimi-passi" title="Permanent link">&para;</a></h3>
 <ol>
 <li><a href="../../solutions/overview/">Scegli una soluzione</a></li>
 <li><a href="../../setup/salesforce/">Configura Salesforce</a></li>
@@ -2678,7 +2534,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 14, 2025 14:36:26 UTC">November 14, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 14, 2025 14:36:26 UTC"><span class="timeago" datetime="2025-11-14T14:36:26+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 14, 2025 14:36:26 UTC">2025-11-14</span>
   </span>
 
     
@@ -2688,7 +2544,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 14, 2025 14:36:26 UTC">November 14, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 14, 2025 14:36:26 UTC"><span class="timeago" datetime="2025-11-14T14:36:26+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 14, 2025 14:36:26 UTC">2025-11-14</span>
   </span>
 
     
@@ -2705,6 +2561,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -2774,10 +2632,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.smooth", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link", "toc.integrate", "toc.follow"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
       
     
   </body>

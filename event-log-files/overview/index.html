@@ -55,6 +55,8 @@
       
     
     
+      <link rel="stylesheet" href="../../css/timeago.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -421,7 +423,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Integrazione Salesforce - Azure Sentinel" class="md-nav__button md-logo" aria-label="Integrazione Salesforce - Azure Sentinel" data-md-component="logo">
       
@@ -688,8 +692,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -728,20 +730,32 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Indice
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#event-log-files-api-panoramica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Event Log Files API - Panoramica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Event Log Files API - Panoramica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#cose-event-log-files-api" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -751,8 +765,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#caratteristiche-principali" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -790,8 +804,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#come-funziona" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -829,8 +843,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#eventi-disponibili" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -901,8 +915,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#soluzioni-disponibili" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -951,8 +965,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#limitazioni-strutturali" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -990,8 +1004,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#quando-usare-event-log-files-api" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1029,8 +1043,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#confronto-con-platform-events" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1040,8 +1054,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#prossimi-passi" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1049,6 +1063,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2600,343 +2619,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#cose-event-log-files-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cos'è Event Log Files API?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#caratteristiche-principali" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Caratteristiche Principali
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Caratteristiche Principali">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vantaggi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ Vantaggi
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limitazioni" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ❌ Limitazioni
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#come-funziona" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Come Funziona
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Come Funziona">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#processo-di-generazione-eventi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Processo di Generazione Eventi
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#architettura-generale" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architettura Generale
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#eventi-disponibili" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Eventi Disponibili
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Eventi Disponibili">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#eventi-di-accesso" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Eventi di Accesso
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#eventi-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Eventi API
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#eventi-di-utilizzo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Eventi di Utilizzo
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#eventi-di-sicurezza" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Eventi di Sicurezza
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#altri-eventi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Altri Eventi
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#soluzioni-disponibili" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Soluzioni Disponibili
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Soluzioni Disponibili">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-ccf-codeless-connector-framework-consigliato" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. CCF (CodeLess Connector Framework) ⭐ Consigliato
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-azure-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Azure Function
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-azure-logic-app" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Azure Logic App
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitazioni-strutturali" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Limitazioni Strutturali
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Limitazioni Strutturali">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#latenza-24-48-ore" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Latenza 24-48 Ore
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rate-limiting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rate Limiting
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quando-usare-event-log-files-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quando Usare Event Log Files API
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Quando Usare Event Log Files API">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ideale-per" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ Ideale per:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#non-ideale-per" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ❌ Non Ideale per:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#confronto-con-platform-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Confronto con Platform Events
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prossimi-passi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prossimi Passi
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -2950,12 +2632,14 @@
   
 
 
-<h1 id="event-log-files-api-panoramica">Event Log Files API - Panoramica<a class="headerlink" href="#event-log-files-api-panoramica" title="Permanent link">&para;</a></h1>
+  <h1>Panoramica</h1>
+
+<h2 id="event-log-files-api-panoramica"><a class="toclink" href="#event-log-files-api-panoramica">Event Log Files API - Panoramica</a><a class="headerlink" href="#event-log-files-api-panoramica" title="Permanent link">&para;</a></h2>
 <p>Panoramica completa dell'approccio Event Log Files API per l'integrazione Salesforce-Azure Sentinel.</p>
-<h2 id="cose-event-log-files-api">Cos'è Event Log Files API?<a class="headerlink" href="#cose-event-log-files-api" title="Permanent link">&para;</a></h2>
+<h3 id="cose-event-log-files-api"><a class="toclink" href="#cose-event-log-files-api">Cos'è Event Log Files API?</a><a class="headerlink" href="#cose-event-log-files-api" title="Permanent link">&para;</a></h3>
 <p>Event Log Files API è l'API ufficiale di Salesforce per recuperare eventi di monitoraggio in formato aggregato e strutturato. Gli eventi vengono processati e consolidati da Salesforce e resi disponibili tramite API REST.</p>
-<h2 id="caratteristiche-principali">Caratteristiche Principali<a class="headerlink" href="#caratteristiche-principali" title="Permanent link">&para;</a></h2>
-<h3 id="vantaggi">✅ Vantaggi<a class="headerlink" href="#vantaggi" title="Permanent link">&para;</a></h3>
+<h3 id="caratteristiche-principali"><a class="toclink" href="#caratteristiche-principali">Caratteristiche Principali</a><a class="headerlink" href="#caratteristiche-principali" title="Permanent link">&para;</a></h3>
+<h4 id="vantaggi"><a class="toclink" href="#vantaggi">✅ Vantaggi</a><a class="headerlink" href="#vantaggi" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Copertura Completa</strong>: Tutti gli eventi disponibili in Salesforce</li>
 <li><strong>Formato Strutturato</strong>: Dati ottimizzati e validati</li>
@@ -2964,15 +2648,15 @@
 <li><strong>Zero Sviluppo</strong>: Non richiede codice Apex</li>
 <li><strong>Manutenzione Bassa</strong>: Gestione automatica da parte delle soluzioni</li>
 </ul>
-<h3 id="limitazioni">❌ Limitazioni<a class="headerlink" href="#limitazioni" title="Permanent link">&para;</a></h3>
+<h4 id="limitazioni"><a class="toclink" href="#limitazioni">❌ Limitazioni</a><a class="headerlink" href="#limitazioni" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Incrementi orari</strong>: I log vengono generati e resi disponibili solo per blocchi orari, come descritto nella <a href="https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/event_log_file_hourly_overview.htm">documentazione ufficiale Salesforce Event Log File Hourly</a></li>
 <li><strong>Latenza</strong>: 24-48 ore (limite strutturale Salesforce dovuto all'elaborazione e pubblicazione dei file orari)</li>
 <li><strong>Personalizzazione Limitata</strong>: Formato dati predefinito</li>
 <li><strong>Polling Necessario</strong>: Richiede polling periodico</li>
 </ul>
-<h2 id="come-funziona">Come Funziona<a class="headerlink" href="#come-funziona" title="Permanent link">&para;</a></h2>
-<h3 id="processo-di-generazione-eventi">Processo di Generazione Eventi<a class="headerlink" href="#processo-di-generazione-eventi" title="Permanent link">&para;</a></h3>
+<h3 id="come-funziona"><a class="toclink" href="#come-funziona">Come Funziona</a><a class="headerlink" href="#come-funziona" title="Permanent link">&para;</a></h3>
+<h4 id="processo-di-generazione-eventi"><a class="toclink" href="#processo-di-generazione-eventi">Processo di Generazione Eventi</a><a class="headerlink" href="#processo-di-generazione-eventi" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>1. Evento Generato in Salesforce
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   ↓
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2. Salesforce Processa e Consolida (24-48 ore)
@@ -2985,7 +2669,7 @@
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>   ↓
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>6. Trasformazione e Invio a Azure Sentinel
 </code></pre></div>
-<h3 id="architettura-generale">Architettura Generale<a class="headerlink" href="#architettura-generale" title="Permanent link">&para;</a></h3>
+<h4 id="architettura-generale"><a class="toclink" href="#architettura-generale">Architettura Generale</a><a class="headerlink" href="#architettura-generale" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Salesforce Event Monitoring
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    ↓
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Event Log Files API
@@ -2998,20 +2682,20 @@
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    ↓
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>Azure Sentinel
 </code></pre></div>
-<h2 id="eventi-disponibili">Eventi Disponibili<a class="headerlink" href="#eventi-disponibili" title="Permanent link">&para;</a></h2>
-<h3 id="eventi-di-accesso">Eventi di Accesso<a class="headerlink" href="#eventi-di-accesso" title="Permanent link">&para;</a></h3>
+<h3 id="eventi-disponibili"><a class="toclink" href="#eventi-disponibili">Eventi Disponibili</a><a class="headerlink" href="#eventi-disponibili" title="Permanent link">&para;</a></h3>
+<h4 id="eventi-di-accesso"><a class="toclink" href="#eventi-di-accesso">Eventi di Accesso</a><a class="headerlink" href="#eventi-di-accesso" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>LoginEvent</strong>: Accessi utente a Salesforce</li>
 <li><strong>LogoutEvent</strong>: Disconnessioni utente</li>
 <li><strong>SessionHijackingEvent</strong>: Tentativi di hijacking sessione</li>
 </ul>
-<h3 id="eventi-api">Eventi API<a class="headerlink" href="#eventi-api" title="Permanent link">&para;</a></h3>
+<h4 id="eventi-api"><a class="toclink" href="#eventi-api">Eventi API</a><a class="headerlink" href="#eventi-api" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>ApiEvent</strong>: Chiamate API a Salesforce</li>
 <li><strong>RestApiEvent</strong>: Chiamate REST API</li>
 <li><strong>SoapApiEvent</strong>: Chiamate SOAP API</li>
 </ul>
-<h3 id="eventi-di-utilizzo">Eventi di Utilizzo<a class="headerlink" href="#eventi-di-utilizzo" title="Permanent link">&para;</a></h3>
+<h4 id="eventi-di-utilizzo"><a class="toclink" href="#eventi-di-utilizzo">Eventi di Utilizzo</a><a class="headerlink" href="#eventi-di-utilizzo" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>ReportEvent</strong>: Visualizzazioni report</li>
 <li><strong>DashboardEvent</strong>: Visualizzazioni dashboard</li>
@@ -3019,14 +2703,14 @@
 <li><strong>SearchEvent</strong>: Ricerche eseguite</li>
 <li><strong>UriEvent</strong>: Navigazione tra pagine</li>
 </ul>
-<h3 id="eventi-di-sicurezza">Eventi di Sicurezza<a class="headerlink" href="#eventi-di-sicurezza" title="Permanent link">&para;</a></h3>
+<h4 id="eventi-di-sicurezza"><a class="toclink" href="#eventi-di-sicurezza">Eventi di Sicurezza</a><a class="headerlink" href="#eventi-di-sicurezza" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>SetupAuditTrail</strong>: Audit trail completo (modifiche configurazione)</li>
 <li><strong>FieldHistoryTracking</strong>: Storia modifiche campi</li>
 <li><strong>DataExportEvent</strong>: Esportazioni dati</li>
 <li><strong>BulkApiResultEvent</strong>: Risultati Bulk API</li>
 </ul>
-<h3 id="altri-eventi">Altri Eventi<a class="headerlink" href="#altri-eventi" title="Permanent link">&para;</a></h3>
+<h4 id="altri-eventi"><a class="toclink" href="#altri-eventi">Altri Eventi</a><a class="headerlink" href="#altri-eventi" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>ApexExecutionEvent</strong>: Esecuzione codice Apex</li>
 <li><strong>ApexUnexpectedExceptionEvent</strong>: Eccezioni Apex</li>
@@ -3034,8 +2718,8 @@
 <li>E molti altri...</li>
 </ul>
 <p><strong>Totale</strong>: Oltre 50 tipi di eventi disponibili</p>
-<h2 id="soluzioni-disponibili">Soluzioni Disponibili<a class="headerlink" href="#soluzioni-disponibili" title="Permanent link">&para;</a></h2>
-<h3 id="1-ccf-codeless-connector-framework-consigliato">1. CCF (CodeLess Connector Framework) ⭐ Consigliato<a class="headerlink" href="#1-ccf-codeless-connector-framework-consigliato" title="Permanent link">&para;</a></h3>
+<h3 id="soluzioni-disponibili"><a class="toclink" href="#soluzioni-disponibili">Soluzioni Disponibili</a><a class="headerlink" href="#soluzioni-disponibili" title="Permanent link">&para;</a></h3>
+<h4 id="1-ccf-codeless-connector-framework-consigliato"><a class="toclink" href="#1-ccf-codeless-connector-framework-consigliato">1. CCF (CodeLess Connector Framework) ⭐ Consigliato</a><a class="headerlink" href="#1-ccf-codeless-connector-framework-consigliato" title="Permanent link">&para;</a></h4>
 <p><strong>Caratteristiche</strong>:
 - Setup: 30-60 minuti (configurazione grafica)
 - Manutenzione: Zero (gestito da Microsoft)
@@ -3043,7 +2727,7 @@
 - Personalizzazione: Limitata</p>
 <p><strong>Quando Usare</strong>: Per il 90% dei casi d'uso standard.</p>
 <p><a href="../solutions-comparison/#1-ccf-codeless-connector-framework-">Vedi dettagli →</a></p>
-<h3 id="2-azure-function">2. Azure Function<a class="headerlink" href="#2-azure-function" title="Permanent link">&para;</a></h3>
+<h4 id="2-azure-function"><a class="toclink" href="#2-azure-function">2. Azure Function</a><a class="headerlink" href="#2-azure-function" title="Permanent link">&para;</a></h4>
 <p><strong>Caratteristiche</strong>:
 - Setup: 1-2 giorni (sviluppo custom)
 - Manutenzione: Media-Alta (gestione codice)
@@ -3051,7 +2735,7 @@
 - Personalizzazione: Alta</p>
 <p><strong>Quando Usare</strong>: Quando hai bisogno di personalizzazioni avanzate.</p>
 <p><a href="../solutions-comparison/#2-azure-function">Vedi dettagli →</a></p>
-<h3 id="3-azure-logic-app">3. Azure Logic App<a class="headerlink" href="#3-azure-logic-app" title="Permanent link">&para;</a></h3>
+<h4 id="3-azure-logic-app"><a class="toclink" href="#3-azure-logic-app">3. Azure Logic App</a><a class="headerlink" href="#3-azure-logic-app" title="Permanent link">&para;</a></h4>
 <p><strong>Caratteristiche</strong>:
 - Setup: 30-60 minuti (low-code visuale)
 - Manutenzione: Bassa
@@ -3059,8 +2743,8 @@
 - Personalizzazione: Media</p>
 <p><strong>Quando Usare</strong>: Quando preferisci un approccio visuale low-code.</p>
 <p><a href="../solutions-comparison/#3-azure-logic-app">Vedi dettagli →</a></p>
-<h2 id="limitazioni-strutturali">Limitazioni Strutturali<a class="headerlink" href="#limitazioni-strutturali" title="Permanent link">&para;</a></h2>
-<h3 id="latenza-24-48-ore">Latenza 24-48 Ore<a class="headerlink" href="#latenza-24-48-ore" title="Permanent link">&para;</a></h3>
+<h3 id="limitazioni-strutturali"><a class="toclink" href="#limitazioni-strutturali">Limitazioni Strutturali</a><a class="headerlink" href="#limitazioni-strutturali" title="Permanent link">&para;</a></h3>
+<h4 id="latenza-24-48-ore"><a class="toclink" href="#latenza-24-48-ore">Latenza 24-48 Ore</a><a class="headerlink" href="#latenza-24-48-ore" title="Permanent link">&para;</a></h4>
 <p><strong>Incrementi orari obbligatori</strong></p>
 <ul>
 <li>Il connettore (CCF, Function o Logic App) scarica esclusivamente gli <strong>Event Log Files</strong> che Salesforce pubblica una volta completata l'elaborazione del blocco orario</li>
@@ -3078,13 +2762,13 @@
 - Adatto per analisi storica e compliance
 - Polling più frequente non riduce la latenza
 - Tutti i connettori basati su Event Log Files (incluso il CCF ufficiale Microsoft Sentinel) ereditano automaticamente questo ritardo strutturale</p>
-<h3 id="rate-limiting">Rate Limiting<a class="headerlink" href="#rate-limiting" title="Permanent link">&para;</a></h3>
+<h4 id="rate-limiting"><a class="toclink" href="#rate-limiting">Rate Limiting</a><a class="headerlink" href="#rate-limiting" title="Permanent link">&para;</a></h4>
 <p>Salesforce impone limiti sulle chiamate API:
 - <strong>API Calls per giorno</strong>: Dipende dalla licenza
 - <strong>Concurrent Requests</strong>: Limitato
 - <strong>Polling Ottimale</strong>: 15-30 minuti (CCF), 5-15 minuti (Function)</p>
-<h2 id="quando-usare-event-log-files-api">Quando Usare Event Log Files API<a class="headerlink" href="#quando-usare-event-log-files-api" title="Permanent link">&para;</a></h2>
-<h3 id="ideale-per">✅ Ideale per:<a class="headerlink" href="#ideale-per" title="Permanent link">&para;</a></h3>
+<h3 id="quando-usare-event-log-files-api"><a class="toclink" href="#quando-usare-event-log-files-api">Quando Usare Event Log Files API</a><a class="headerlink" href="#quando-usare-event-log-files-api" title="Permanent link">&para;</a></h3>
+<h4 id="ideale-per"><a class="toclink" href="#ideale-per">✅ Ideale per:</a><a class="headerlink" href="#ideale-per" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Analisi di sicurezza e compliance</li>
 <li>Audit trail completo</li>
@@ -3093,13 +2777,13 @@
 <li>Quando la latenza di 24-72 ore è accettabile</li>
 <li>Setup rapido senza sviluppo</li>
 </ul>
-<h3 id="non-ideale-per">❌ Non Ideale per:<a class="headerlink" href="#non-ideale-per" title="Permanent link">&para;</a></h3>
+<h4 id="non-ideale-per"><a class="toclink" href="#non-ideale-per">❌ Non Ideale per:</a><a class="headerlink" href="#non-ideale-per" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Alerting real-time (&lt; 24 ore)</li>
 <li>Monitoraggio critico immediato</li>
 <li>Eventi che richiedono risposta immediata</li>
 </ul>
-<h2 id="confronto-con-platform-events">Confronto con Platform Events<a class="headerlink" href="#confronto-con-platform-events" title="Permanent link">&para;</a></h2>
+<h3 id="confronto-con-platform-events"><a class="toclink" href="#confronto-con-platform-events">Confronto con Platform Events</a><a class="headerlink" href="#confronto-con-platform-events" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -3137,7 +2821,7 @@
 </tbody>
 </table>
 <p><a href="../../introduction/approaches-comparison/">Vedi confronto completo →</a></p>
-<h2 id="prossimi-passi">Prossimi Passi<a class="headerlink" href="#prossimi-passi" title="Permanent link">&para;</a></h2>
+<h3 id="prossimi-passi"><a class="toclink" href="#prossimi-passi">Prossimi Passi</a><a class="headerlink" href="#prossimi-passi" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Confronta le soluzioni</strong>: <a href="../solutions-comparison/">Confronto Soluzioni Event Log Files</a></li>
 <li><strong>Scegli una configurazione</strong>: <a href="configurations/">Configurazioni Disponibili</a></li>
@@ -3166,7 +2850,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 19, 2025 00:36:28 UTC">November 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 19, 2025 00:47:22 UTC"><span class="timeago" datetime="2025-11-19T00:47:22+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 19, 2025 00:47:22 UTC">2025-11-19</span>
   </span>
 
     
@@ -3176,7 +2860,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 19, 2025 00:36:28 UTC">November 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 19, 2025 00:47:22 UTC"><span class="timeago" datetime="2025-11-19T00:47:22+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 19, 2025 00:47:22 UTC">2025-11-19</span>
   </span>
 
     
@@ -3193,6 +2877,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -3262,10 +2948,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.smooth", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link", "toc.integrate", "toc.follow"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
       
     
   </body>

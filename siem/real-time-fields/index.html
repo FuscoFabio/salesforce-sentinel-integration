@@ -55,6 +55,8 @@
       
     
     
+      <link rel="stylesheet" href="../../css/timeago.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -421,7 +423,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Integrazione Salesforce - Azure Sentinel" class="md-nav__button md-logo" aria-label="Integrazione Salesforce - Azure Sentinel" data-md-component="logo">
       
@@ -2060,8 +2064,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -2100,20 +2102,32 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Indice
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#campi-real-time-per-siem-azure-sentinel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campi Real-Time per SIEM - Azure Sentinel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Campi Real-Time per SIEM - Azure Sentinel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#panoramica" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2123,8 +2137,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#approccio-real-time" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2134,8 +2148,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#eventi-di-autenticazione-e-accesso" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2173,8 +2187,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#eventi-api-e-accesso-esterno" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2201,8 +2215,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#modifiche-a-dati-sensibili-change-data-capture" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2273,8 +2287,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#modifiche-a-utenti-e-permessi" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2301,8 +2315,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#eventi-di-navigazione-e-utilizzo" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2351,8 +2365,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#eventi-custom-per-sicurezza" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2379,8 +2393,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#riepilogo-priorita" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2429,8 +2443,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#query-kql-per-azure-sentinel" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2501,8 +2515,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#limitazioni-real-time" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2529,8 +2543,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#configurazione-real-time-event-monitoring" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2540,8 +2554,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#best-practices-siem" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2601,8 +2615,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#prossimi-passi" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2610,6 +2624,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2780,532 +2799,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#panoramica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Panoramica
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#approccio-real-time" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⚠️ Approccio Real-Time
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#eventi-di-autenticazione-e-accesso" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Eventi di Autenticazione e Accesso
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Eventi di Autenticazione e Accesso">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#loginevent-priorita-critica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LoginEvent (Priorità: Critica)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#logoutevent-priorita-critica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LogoutEvent (Priorità: Critica)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#eventi-api-e-accesso-esterno" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Eventi API e Accesso Esterno
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Eventi API e Accesso Esterno">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#apievent-priorita-critica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ApiEvent (Priorità: Critica)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modifiche-a-dati-sensibili-change-data-capture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Modifiche a Dati Sensibili (Change Data Capture)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Modifiche a Dati Sensibili (Change Data Capture)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#account-priorita-alta" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Account (Priorità: Alta)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#contact-priorita-alta" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Contact (Priorità: Alta)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lead-priorita-alta" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lead (Priorità: Alta)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#opportunity-priorita-alta" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Opportunity (Priorità: Alta)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#case-priorita-alta" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Case (Priorità: Alta)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modifiche-a-utenti-e-permessi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Modifiche a Utenti e Permessi
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Modifiche a Utenti e Permessi">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#user-priorita-critica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        User (Priorità: Critica)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#eventi-di-navigazione-e-utilizzo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Eventi di Navigazione e Utilizzo
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Eventi di Navigazione e Utilizzo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#urievent-priorita-media" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        UriEvent (Priorità: Media)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reportevent-priorita-media" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ReportEvent (Priorità: Media)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dashboardevent-priorita-media" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DashboardEvent (Priorità: Media)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#eventi-custom-per-sicurezza" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Eventi Custom per Sicurezza
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Eventi Custom per Sicurezza">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#platform-event-custom-security-event" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Platform Event Custom - Security Event
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#riepilogo-priorita" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Riepilogo Priorità
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Riepilogo Priorità">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#priorita-critica-estrarre-sempre" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Priorità Critica (Estrarre Sempre)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#priorita-alta-estrarre-se-rilevanti" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Priorità Alta (Estrarre se Rilevanti)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#priorita-media-estrarre-se-necessario" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Priorità Media (Estrarre se Necessario)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#query-kql-per-azure-sentinel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Query KQL per Azure Sentinel
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Query KQL per Azure Sentinel">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#alert-accessi-sospetti" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alert: Accessi Sospetti
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alert-modifiche-a-permessi-utente" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alert: Modifiche a Permessi Utente
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alert-chiamate-api-anomale" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alert: Chiamate API Anomale
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alert-modifiche-a-dati-finanziari" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alert: Modifiche a Dati Finanziari
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alert-disattivazione-utente" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alert: Disattivazione Utente
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitazioni-real-time" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Limitazioni Real-Time
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Limitazioni Real-Time">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#non-disponibile-in-real-time" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Non Disponibile in Real-Time
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurazione-real-time-event-monitoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configurazione Real-Time Event Monitoring
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices-siem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Best Practices SIEM
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Best Practices SIEM">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-campi-chiave-da-includere-sempre" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Campi Chiave da Includere Sempre
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-normalizzazione-dati" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Normalizzazione Dati
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-enrichment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Enrichment
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-alerting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Alerting
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prossimi-passi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prossimi Passi
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -3319,16 +2812,18 @@
   
 
 
-<h1 id="campi-real-time-per-siem-azure-sentinel">Campi Real-Time per SIEM - Azure Sentinel<a class="headerlink" href="#campi-real-time-per-siem-azure-sentinel" title="Permanent link">&para;</a></h1>
+  <h1>Campi Real-Time</h1>
+
+<h2 id="campi-real-time-per-siem-azure-sentinel"><a class="toclink" href="#campi-real-time-per-siem-azure-sentinel">Campi Real-Time per SIEM - Azure Sentinel</a><a class="headerlink" href="#campi-real-time-per-siem-azure-sentinel" title="Permanent link">&para;</a></h2>
 <p>Guida completa ai campi Salesforce estraibili in real-time per sistemi SIEM, con focus su Azure Sentinel.</p>
-<h2 id="panoramica">Panoramica<a class="headerlink" href="#panoramica" title="Permanent link">&para;</a></h2>
+<h3 id="panoramica"><a class="toclink" href="#panoramica">Panoramica</a><a class="headerlink" href="#panoramica" title="Permanent link">&para;</a></h3>
 <p>Questa guida descrive tutti i campi e gli eventi che possono essere estratti da Salesforce in <strong>real-time</strong> (&lt; 1 minuto) per l'integrazione con sistemi SIEM come Azure Sentinel.</p>
-<h2 id="approccio-real-time">⚠️ Approccio Real-Time<a class="headerlink" href="#approccio-real-time" title="Permanent link">&para;</a></h2>
+<h3 id="approccio-real-time"><a class="toclink" href="#approccio-real-time">⚠️ Approccio Real-Time</a><a class="headerlink" href="#approccio-real-time" title="Permanent link">&para;</a></h3>
 <p><strong>Meccanismo</strong>: Platform Events / Change Data Capture (CDC) / Real-Time Event Monitoring</p>
 <p><strong>Latenza</strong>: &lt; 1 minuto (tipicamente 5-30 secondi)</p>
 <p><strong>Non disponibile in real-time</strong>: Audit Trail, Field History Tracking, molti eventi di sistema (vedi <a href="#limitazioni-real-time">Limitazioni Real-Time</a>)</p>
-<h2 id="eventi-di-autenticazione-e-accesso">Eventi di Autenticazione e Accesso<a class="headerlink" href="#eventi-di-autenticazione-e-accesso" title="Permanent link">&para;</a></h2>
-<h3 id="loginevent-priorita-critica">LoginEvent (Priorità: Critica)<a class="headerlink" href="#loginevent-priorita-critica" title="Permanent link">&para;</a></h3>
+<h3 id="eventi-di-autenticazione-e-accesso"><a class="toclink" href="#eventi-di-autenticazione-e-accesso">Eventi di Autenticazione e Accesso</a><a class="headerlink" href="#eventi-di-autenticazione-e-accesso" title="Permanent link">&para;</a></h3>
+<h4 id="loginevent-priorita-critica"><a class="toclink" href="#loginevent-priorita-critica">LoginEvent (Priorità: Critica)</a><a class="headerlink" href="#loginevent-priorita-critica" title="Permanent link">&para;</a></h4>
 <p><strong>Disponibilità</strong>: Real-Time Event Monitoring (richiede configurazione)</p>
 <p><strong>Campi essenziali per SIEM</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
@@ -3366,7 +2861,7 @@
 - Monitorare tentativi di login falliti
 - Correlare con altri eventi di sicurezza</p>
 <hr />
-<h3 id="logoutevent-priorita-critica">LogoutEvent (Priorità: Critica)<a class="headerlink" href="#logoutevent-priorita-critica" title="Permanent link">&para;</a></h3>
+<h4 id="logoutevent-priorita-critica"><a class="toclink" href="#logoutevent-priorita-critica">LogoutEvent (Priorità: Critica)</a><a class="headerlink" href="#logoutevent-priorita-critica" title="Permanent link">&para;</a></h4>
 <p><strong>Disponibilità</strong>: Real-Time Event Monitoring (richiede configurazione)</p>
 <p><strong>Campi essenziali per SIEM</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
@@ -3391,8 +2886,8 @@
 - Correlare con eventi di sicurezza
 - Analisi pattern di utilizzo</p>
 <hr />
-<h2 id="eventi-api-e-accesso-esterno">Eventi API e Accesso Esterno<a class="headerlink" href="#eventi-api-e-accesso-esterno" title="Permanent link">&para;</a></h2>
-<h3 id="apievent-priorita-critica">ApiEvent (Priorità: Critica)<a class="headerlink" href="#apievent-priorita-critica" title="Permanent link">&para;</a></h3>
+<h3 id="eventi-api-e-accesso-esterno"><a class="toclink" href="#eventi-api-e-accesso-esterno">Eventi API e Accesso Esterno</a><a class="headerlink" href="#eventi-api-e-accesso-esterno" title="Permanent link">&para;</a></h3>
+<h4 id="apievent-priorita-critica"><a class="toclink" href="#apievent-priorita-critica">ApiEvent (Priorità: Critica)</a><a class="headerlink" href="#apievent-priorita-critica" title="Permanent link">&para;</a></h4>
 <p><strong>Disponibilità</strong>: Real-Time Event Monitoring (richiede configurazione)</p>
 <p><strong>Campi essenziali per SIEM</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
@@ -3431,8 +2926,8 @@
 - Rilevare pattern di attacco
 - Correlare con eventi di sicurezza</p>
 <hr />
-<h2 id="modifiche-a-dati-sensibili-change-data-capture">Modifiche a Dati Sensibili (Change Data Capture)<a class="headerlink" href="#modifiche-a-dati-sensibili-change-data-capture" title="Permanent link">&para;</a></h2>
-<h3 id="account-priorita-alta">Account (Priorità: Alta)<a class="headerlink" href="#account-priorita-alta" title="Permanent link">&para;</a></h3>
+<h3 id="modifiche-a-dati-sensibili-change-data-capture"><a class="toclink" href="#modifiche-a-dati-sensibili-change-data-capture">Modifiche a Dati Sensibili (Change Data Capture)</a><a class="headerlink" href="#modifiche-a-dati-sensibili-change-data-capture" title="Permanent link">&para;</a></h3>
+<h4 id="account-priorita-alta"><a class="toclink" href="#account-priorita-alta">Account (Priorità: Alta)</a><a class="headerlink" href="#account-priorita-alta" title="Permanent link">&para;</a></h4>
 <p><strong>Disponibilità</strong>: Change Data Capture (CDC) - configurabile per qualsiasi oggetto</p>
 <p><strong>Campi essenziali per SIEM</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
@@ -3482,7 +2977,7 @@
 - Identificare accessi privilegiati
 - Compliance e audit</p>
 <hr />
-<h3 id="contact-priorita-alta">Contact (Priorità: Alta)<a class="headerlink" href="#contact-priorita-alta" title="Permanent link">&para;</a></h3>
+<h4 id="contact-priorita-alta"><a class="toclink" href="#contact-priorita-alta">Contact (Priorità: Alta)</a><a class="headerlink" href="#contact-priorita-alta" title="Permanent link">&para;</a></h4>
 <p><strong>Disponibilità</strong>: Change Data Capture (CDC)</p>
 <p><strong>Campi essenziali per SIEM</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
@@ -3525,7 +3020,7 @@
 - Monitorare accessi a dati sensibili
 - Compliance privacy</p>
 <hr />
-<h3 id="lead-priorita-alta">Lead (Priorità: Alta)<a class="headerlink" href="#lead-priorita-alta" title="Permanent link">&para;</a></h3>
+<h4 id="lead-priorita-alta"><a class="toclink" href="#lead-priorita-alta">Lead (Priorità: Alta)</a><a class="headerlink" href="#lead-priorita-alta" title="Permanent link">&para;</a></h4>
 <p><strong>Disponibilità</strong>: Change Data Capture (CDC)</p>
 <p><strong>Campi essenziali per SIEM</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">{</span>
@@ -3556,7 +3051,7 @@
 - Rilevare pattern di spam/frode
 - Analisi conversioni</p>
 <hr />
-<h3 id="opportunity-priorita-alta">Opportunity (Priorità: Alta)<a class="headerlink" href="#opportunity-priorita-alta" title="Permanent link">&para;</a></h3>
+<h4 id="opportunity-priorita-alta"><a class="toclink" href="#opportunity-priorita-alta">Opportunity (Priorità: Alta)</a><a class="headerlink" href="#opportunity-priorita-alta" title="Permanent link">&para;</a></h4>
 <p><strong>Disponibilità</strong>: Change Data Capture (CDC)</p>
 <p><strong>Campi essenziali per SIEM</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>
@@ -3605,7 +3100,7 @@
 - Identificare frodi
 - Analisi performance vendite</p>
 <hr />
-<h3 id="case-priorita-alta">Case (Priorità: Alta)<a class="headerlink" href="#case-priorita-alta" title="Permanent link">&para;</a></h3>
+<h4 id="case-priorita-alta"><a class="toclink" href="#case-priorita-alta">Case (Priorità: Alta)</a><a class="headerlink" href="#case-priorita-alta" title="Permanent link">&para;</a></h4>
 <p><strong>Disponibilità</strong>: Change Data Capture (CDC)</p>
 <p><strong>Campi essenziali per SIEM</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span>
@@ -3648,8 +3143,8 @@
 - Rilevare pattern di accesso anomalo
 - Analisi performance supporto</p>
 <hr />
-<h2 id="modifiche-a-utenti-e-permessi">Modifiche a Utenti e Permessi<a class="headerlink" href="#modifiche-a-utenti-e-permessi" title="Permanent link">&para;</a></h2>
-<h3 id="user-priorita-critica">User (Priorità: Critica)<a class="headerlink" href="#user-priorita-critica" title="Permanent link">&para;</a></h3>
+<h3 id="modifiche-a-utenti-e-permessi"><a class="toclink" href="#modifiche-a-utenti-e-permessi">Modifiche a Utenti e Permessi</a><a class="headerlink" href="#modifiche-a-utenti-e-permessi" title="Permanent link">&para;</a></h3>
+<h4 id="user-priorita-critica"><a class="toclink" href="#user-priorita-critica">User (Priorità: Critica)</a><a class="headerlink" href="#user-priorita-critica" title="Permanent link">&para;</a></h4>
 <p><strong>Disponibilità</strong>: Change Data Capture (CDC)</p>
 <p><strong>Campi essenziali per SIEM</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">{</span>
@@ -3698,8 +3193,8 @@
 - Identificare escalation privilegi
 - Alerting critico per sicurezza</p>
 <hr />
-<h2 id="eventi-di-navigazione-e-utilizzo">Eventi di Navigazione e Utilizzo<a class="headerlink" href="#eventi-di-navigazione-e-utilizzo" title="Permanent link">&para;</a></h2>
-<h3 id="urievent-priorita-media">UriEvent (Priorità: Media)<a class="headerlink" href="#urievent-priorita-media" title="Permanent link">&para;</a></h3>
+<h3 id="eventi-di-navigazione-e-utilizzo"><a class="toclink" href="#eventi-di-navigazione-e-utilizzo">Eventi di Navigazione e Utilizzo</a><a class="headerlink" href="#eventi-di-navigazione-e-utilizzo" title="Permanent link">&para;</a></h3>
+<h4 id="urievent-priorita-media"><a class="toclink" href="#urievent-priorita-media">UriEvent (Priorità: Media)</a><a class="headerlink" href="#urievent-priorita-media" title="Permanent link">&para;</a></h4>
 <p><strong>Disponibilità</strong>: Real-Time Event Monitoring (richiede configurazione)</p>
 <p><strong>Campi essenziali per SIEM</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">{</span>
@@ -3728,7 +3223,7 @@
 - Rilevare comportamenti anomali
 - Analisi user behavior</p>
 <hr />
-<h3 id="reportevent-priorita-media">ReportEvent (Priorità: Media)<a class="headerlink" href="#reportevent-priorita-media" title="Permanent link">&para;</a></h3>
+<h4 id="reportevent-priorita-media"><a class="toclink" href="#reportevent-priorita-media">ReportEvent (Priorità: Media)</a><a class="headerlink" href="#reportevent-priorita-media" title="Permanent link">&para;</a></h4>
 <p><strong>Disponibilità</strong>: Real-Time Event Monitoring (richiede configurazione)</p>
 <p><strong>Campi essenziali per SIEM</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">{</span>
@@ -3747,7 +3242,7 @@
 - Monitorare esportazioni dati
 - Rilevare accessi non autorizzati</p>
 <hr />
-<h3 id="dashboardevent-priorita-media">DashboardEvent (Priorità: Media)<a class="headerlink" href="#dashboardevent-priorita-media" title="Permanent link">&para;</a></h3>
+<h4 id="dashboardevent-priorita-media"><a class="toclink" href="#dashboardevent-priorita-media">DashboardEvent (Priorità: Media)</a><a class="headerlink" href="#dashboardevent-priorita-media" title="Permanent link">&para;</a></h4>
 <p><strong>Disponibilità</strong>: Real-Time Event Monitoring (richiede configurazione)</p>
 <p><strong>Campi essenziali per SIEM</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">{</span>
@@ -3765,8 +3260,8 @@
 - Monitorare utilizzo dashboard
 - Analisi pattern di utilizzo</p>
 <hr />
-<h2 id="eventi-custom-per-sicurezza">Eventi Custom per Sicurezza<a class="headerlink" href="#eventi-custom-per-sicurezza" title="Permanent link">&para;</a></h2>
-<h3 id="platform-event-custom-security-event">Platform Event Custom - Security Event<a class="headerlink" href="#platform-event-custom-security-event" title="Permanent link">&para;</a></h3>
+<h3 id="eventi-custom-per-sicurezza"><a class="toclink" href="#eventi-custom-per-sicurezza">Eventi Custom per Sicurezza</a><a class="headerlink" href="#eventi-custom-per-sicurezza" title="Permanent link">&para;</a></h3>
+<h4 id="platform-event-custom-security-event"><a class="toclink" href="#platform-event-custom-security-event">Platform Event Custom - Security Event</a><a class="headerlink" href="#platform-event-custom-security-event" title="Permanent link">&para;</a></h4>
 <p><strong>Disponibilità</strong>: Platform Events custom (da creare)</p>
 <p><strong>Esempio struttura</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">{</span>
@@ -3788,15 +3283,15 @@
 - Eventi business-specific
 - Integrazione con logica custom</p>
 <hr />
-<h2 id="riepilogo-priorita">Riepilogo Priorità<a class="headerlink" href="#riepilogo-priorita" title="Permanent link">&para;</a></h2>
-<h3 id="priorita-critica-estrarre-sempre">Priorità Critica (Estrarre Sempre)<a class="headerlink" href="#priorita-critica-estrarre-sempre" title="Permanent link">&para;</a></h3>
+<h3 id="riepilogo-priorita"><a class="toclink" href="#riepilogo-priorita">Riepilogo Priorità</a><a class="headerlink" href="#riepilogo-priorita" title="Permanent link">&para;</a></h3>
+<h4 id="priorita-critica-estrarre-sempre"><a class="toclink" href="#priorita-critica-estrarre-sempre">Priorità Critica (Estrarre Sempre)</a><a class="headerlink" href="#priorita-critica-estrarre-sempre" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>LoginEvent</strong> - Accessi utente</li>
 <li><strong>LogoutEvent</strong> - Disconnessioni</li>
 <li><strong>ApiEvent</strong> - Chiamate API</li>
 <li><strong>User (CDC)</strong> - Modifiche permessi utente</li>
 </ol>
-<h3 id="priorita-alta-estrarre-se-rilevanti">Priorità Alta (Estrarre se Rilevanti)<a class="headerlink" href="#priorita-alta-estrarre-se-rilevanti" title="Permanent link">&para;</a></h3>
+<h4 id="priorita-alta-estrarre-se-rilevanti"><a class="toclink" href="#priorita-alta-estrarre-se-rilevanti">Priorità Alta (Estrarre se Rilevanti)</a><a class="headerlink" href="#priorita-alta-estrarre-se-rilevanti" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>Account (CDC)</strong> - Modifiche account</li>
 <li><strong>Contact (CDC)</strong> - Modifiche contatti</li>
@@ -3804,22 +3299,22 @@
 <li><strong>Case (CDC)</strong> - Modifiche case</li>
 <li><strong>Lead (CDC)</strong> - Modifiche lead</li>
 </ol>
-<h3 id="priorita-media-estrarre-se-necessario">Priorità Media (Estrarre se Necessario)<a class="headerlink" href="#priorita-media-estrarre-se-necessario" title="Permanent link">&para;</a></h3>
+<h4 id="priorita-media-estrarre-se-necessario"><a class="toclink" href="#priorita-media-estrarre-se-necessario">Priorità Media (Estrarre se Necessario)</a><a class="headerlink" href="#priorita-media-estrarre-se-necessario" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>UriEvent</strong> - Navigazione</li>
 <li><strong>ReportEvent</strong> - Accessi report</li>
 <li><strong>DashboardEvent</strong> - Accessi dashboard</li>
 </ol>
 <hr />
-<h2 id="query-kql-per-azure-sentinel">Query KQL per Azure Sentinel<a class="headerlink" href="#query-kql-per-azure-sentinel" title="Permanent link">&para;</a></h2>
-<h3 id="alert-accessi-sospetti">Alert: Accessi Sospetti<a class="headerlink" href="#alert-accessi-sospetti" title="Permanent link">&para;</a></h3>
+<h3 id="query-kql-per-azure-sentinel"><a class="toclink" href="#query-kql-per-azure-sentinel">Query KQL per Azure Sentinel</a><a class="headerlink" href="#query-kql-per-azure-sentinel" title="Permanent link">&para;</a></h3>
+<h4 id="alert-accessi-sospetti"><a class="toclink" href="#alert-accessi-sospetti">Alert: Accessi Sospetti</a><a class="headerlink" href="#alert-accessi-sospetti" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">SalesforcePlatformEvents_CL</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;Login&quot;</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">SourceIp_s</span><span class="w"> </span><span class="err">!</span><span class="n">in</span><span class="w"> </span><span class="p">(</span><span class="n">allowedIPs</span><span class="p">)</span>
 <a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">5</span><span class="n">m</span><span class="p">)</span>
 <a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="n">Username_s</span><span class="p">,</span><span class="w"> </span><span class="n">SourceIp_s</span><span class="p">,</span><span class="w"> </span><span class="n">Status_s</span><span class="p">,</span><span class="w"> </span><span class="n">LoginGeoId_s</span>
 </code></pre></div>
-<h3 id="alert-modifiche-a-permessi-utente">Alert: Modifiche a Permessi Utente<a class="headerlink" href="#alert-modifiche-a-permessi-utente" title="Permanent link">&para;</a></h3>
+<h4 id="alert-modifiche-a-permessi-utente"><a class="toclink" href="#alert-modifiche-a-permessi-utente">Alert: Modifiche a Permessi Utente</a><a class="headerlink" href="#alert-modifiche-a-permessi-utente" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">SalesforceCDC_CL</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EntityName_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;User&quot;</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">ChangeType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;UPDATE&quot;</span>
@@ -3827,14 +3322,14 @@
 <a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">5</span><span class="n">m</span><span class="p">)</span>
 <a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="n">Username_s</span><span class="p">,</span><span class="w"> </span><span class="n">RecordId_s</span><span class="p">,</span><span class="w"> </span><span class="n">ChangeFields_s</span>
 </code></pre></div>
-<h3 id="alert-chiamate-api-anomale">Alert: Chiamate API Anomale<a class="headerlink" href="#alert-chiamate-api-anomale" title="Permanent link">&para;</a></h3>
+<h4 id="alert-chiamate-api-anomale"><a class="toclink" href="#alert-chiamate-api-anomale">Alert: Chiamate API Anomale</a><a class="headerlink" href="#alert-chiamate-api-anomale" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">SalesforcePlatformEvents_CL</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EventType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;API&quot;</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">Status_s</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="s">&quot;200&quot;</span>
 <a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">5</span><span class="n">m</span><span class="p">)</span>
 <a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="n">Username_s</span><span class="p">,</span><span class="w"> </span><span class="n">Method_s</span><span class="p">,</span><span class="w"> </span><span class="n">Url_s</span><span class="p">,</span><span class="w"> </span><span class="n">Status_s</span><span class="p">,</span><span class="w"> </span><span class="n">SourceIp_s</span>
 </code></pre></div>
-<h3 id="alert-modifiche-a-dati-finanziari">Alert: Modifiche a Dati Finanziari<a class="headerlink" href="#alert-modifiche-a-dati-finanziari" title="Permanent link">&para;</a></h3>
+<h4 id="alert-modifiche-a-dati-finanziari"><a class="toclink" href="#alert-modifiche-a-dati-finanziari">Alert: Modifiche a Dati Finanziari</a><a class="headerlink" href="#alert-modifiche-a-dati-finanziari" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">SalesforceCDC_CL</span>
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EntityName_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;Account&quot;</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">EntityName_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;Opportunity&quot;</span>
 <a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">ChangeType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;UPDATE&quot;</span>
@@ -3842,7 +3337,7 @@
 <a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">5</span><span class="n">m</span><span class="p">)</span>
 <a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="n">Username_s</span><span class="p">,</span><span class="w"> </span><span class="n">EntityName_s</span><span class="p">,</span><span class="w"> </span><span class="n">RecordId_s</span><span class="p">,</span><span class="w"> </span><span class="n">ChangeFields_s</span>
 </code></pre></div>
-<h3 id="alert-disattivazione-utente">Alert: Disattivazione Utente<a class="headerlink" href="#alert-disattivazione-utente" title="Permanent link">&para;</a></h3>
+<h4 id="alert-disattivazione-utente"><a class="toclink" href="#alert-disattivazione-utente">Alert: Disattivazione Utente</a><a class="headerlink" href="#alert-disattivazione-utente" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">SalesforceCDC_CL</span>
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">EntityName_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;User&quot;</span>
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">ChangeType_s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;UPDATE&quot;</span>
@@ -3851,8 +3346,8 @@
 <a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="n">Username_s</span><span class="p">,</span><span class="w"> </span><span class="n">RecordId_s</span><span class="p">,</span><span class="w"> </span><span class="n">ChangeFields_s</span>
 </code></pre></div>
 <hr />
-<h2 id="limitazioni-real-time">Limitazioni Real-Time<a class="headerlink" href="#limitazioni-real-time" title="Permanent link">&para;</a></h2>
-<h3 id="non-disponibile-in-real-time">Non Disponibile in Real-Time<a class="headerlink" href="#non-disponibile-in-real-time" title="Permanent link">&para;</a></h3>
+<h3 id="limitazioni-real-time"><a class="toclink" href="#limitazioni-real-time">Limitazioni Real-Time</a><a class="headerlink" href="#limitazioni-real-time" title="Permanent link">&para;</a></h3>
+<h4 id="non-disponibile-in-real-time"><a class="toclink" href="#non-disponibile-in-real-time">Non Disponibile in Real-Time</a><a class="headerlink" href="#non-disponibile-in-real-time" title="Permanent link">&para;</a></h4>
 <p>I seguenti eventi <strong>non sono disponibili</strong> in real-time e richiedono Event Log Files API (latenza 24-48 ore):</p>
 <ul>
 <li><strong>SetupAuditTrail</strong> - Modifiche configurazione Salesforce</li>
@@ -3868,7 +3363,7 @@
 <p><strong>Soluzione</strong>: Usa approccio ibrido - real-time per eventi critici, Event Log Files per audit/compliance completa.</p>
 <p>Vedi <a href="../../introduction/approaches-comparison/">Confronto Approcci</a> per dettagli.</p>
 <hr />
-<h2 id="configurazione-real-time-event-monitoring">Configurazione Real-Time Event Monitoring<a class="headerlink" href="#configurazione-real-time-event-monitoring" title="Permanent link">&para;</a></h2>
+<h3 id="configurazione-real-time-event-monitoring"><a class="toclink" href="#configurazione-real-time-event-monitoring">Configurazione Real-Time Event Monitoring</a><a class="headerlink" href="#configurazione-real-time-event-monitoring" title="Permanent link">&para;</a></h3>
 <p>Per abilitare eventi di monitoraggio in real-time:</p>
 <ol>
 <li><strong>Abilita Real-Time Event Monitoring</strong> in Salesforce Setup</li>
@@ -3878,8 +3373,8 @@
 </ol>
 <p>Vedi <a href="../../platform-events/implementation/event-hub/">Implementazione Platform Events</a> per dettagli.</p>
 <hr />
-<h2 id="best-practices-siem">Best Practices SIEM<a class="headerlink" href="#best-practices-siem" title="Permanent link">&para;</a></h2>
-<h3 id="1-campi-chiave-da-includere-sempre">1. Campi Chiave da Includere Sempre<a class="headerlink" href="#1-campi-chiave-da-includere-sempre" title="Permanent link">&para;</a></h3>
+<h3 id="best-practices-siem"><a class="toclink" href="#best-practices-siem">Best Practices SIEM</a><a class="headerlink" href="#best-practices-siem" title="Permanent link">&para;</a></h3>
+<h4 id="1-campi-chiave-da-includere-sempre"><a class="toclink" href="#1-campi-chiave-da-includere-sempre">1. Campi Chiave da Includere Sempre</a><a class="headerlink" href="#1-campi-chiave-da-includere-sempre" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>UserId</code> - Identificazione utente</li>
 <li><code>Username</code> - Username utente</li>
@@ -3888,25 +3383,25 @@
 <li><code>Status</code> / <code>ChangeType</code> - Tipo evento</li>
 <li><code>changeFields</code> - Dettagli modifiche (per CDC)</li>
 </ul>
-<h3 id="2-normalizzazione-dati">2. Normalizzazione Dati<a class="headerlink" href="#2-normalizzazione-dati" title="Permanent link">&para;</a></h3>
+<h4 id="2-normalizzazione-dati"><a class="toclink" href="#2-normalizzazione-dati">2. Normalizzazione Dati</a><a class="headerlink" href="#2-normalizzazione-dati" title="Permanent link">&para;</a></h4>
 <p>Normalizza i dati prima di inviare a Sentinel:
 - Formato timestamp consistente
 - Naming convention campi
 - Valori standardizzati</p>
-<h3 id="3-enrichment">3. Enrichment<a class="headerlink" href="#3-enrichment" title="Permanent link">&para;</a></h3>
+<h4 id="3-enrichment"><a class="toclink" href="#3-enrichment">3. Enrichment</a><a class="headerlink" href="#3-enrichment" title="Permanent link">&para;</a></h4>
 <p>Arricchisci eventi con:
 - Informazioni utente (profilo, ruolo)
 - Geolocalizzazione IP
 - Contesto business
 - Correlazioni con altri eventi</p>
-<h3 id="4-alerting">4. Alerting<a class="headerlink" href="#4-alerting" title="Permanent link">&para;</a></h3>
+<h4 id="4-alerting"><a class="toclink" href="#4-alerting">4. Alerting</a><a class="headerlink" href="#4-alerting" title="Permanent link">&para;</a></h4>
 <p>Configura alert per:
 - Accessi sospetti
 - Modifiche a permessi
 - Chiamate API anomale
 - Modifiche a dati critici</p>
 <hr />
-<h2 id="prossimi-passi">Prossimi Passi<a class="headerlink" href="#prossimi-passi" title="Permanent link">&para;</a></h2>
+<h3 id="prossimi-passi"><a class="toclink" href="#prossimi-passi">Prossimi Passi</a><a class="headerlink" href="#prossimi-passi" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Configura Real-Time Event Monitoring</strong> in Salesforce</li>
 <li><strong>Abilita Change Data Capture</strong> per oggetti critici</li>
@@ -3940,7 +3435,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 19, 2025 00:36:31 UTC">November 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 19, 2025 00:47:25 UTC"><span class="timeago" datetime="2025-11-19T00:47:25+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 19, 2025 00:47:25 UTC">2025-11-19</span>
   </span>
 
     
@@ -3950,7 +3445,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 19, 2025 00:36:31 UTC">November 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 19, 2025 00:47:25 UTC"><span class="timeago" datetime="2025-11-19T00:47:25+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 19, 2025 00:47:25 UTC">2025-11-19</span>
   </span>
 
     
@@ -3967,6 +3462,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -4036,10 +3533,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.smooth", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link", "toc.integrate", "toc.follow"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
       
     
   </body>
