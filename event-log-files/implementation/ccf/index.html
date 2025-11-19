@@ -347,6 +347,26 @@
   
   
   
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../siem/real-time-fields/" class="md-tabs__link">
+          
+  
+  
+  SIEM - Azure Sentinel
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
     <li class="md-tabs__item">
       <a href="../../../troubleshooting/" class="md-tabs__link">
         
@@ -2729,6 +2749,95 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SIEM - Azure Sentinel
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SIEM - Azure Sentinel
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../siem/real-time-fields/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Campi Real-Time
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../troubleshooting/" class="md-nav__link">
         
@@ -2772,10 +2881,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
   
   
@@ -2793,8 +2902,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3694,7 +3803,7 @@
 1. Vai a <strong>Setup</strong> → <strong>Network Access</strong>
 2. Clicca su <strong>New</strong> per aggiungere range IP
 3. Aggiungi i range IP di Azure Cloud per la tua regione
-   - Vedi <a href="network-sicurezza.md">Gestione Network e Sicurezza</a> per dettagli
+   - Vedi <a href="../../../implementation/network-sicurezza/">Gestione Network e Sicurezza</a> per dettagli
 4. <strong>Nota</strong>: I range IP cambiano settimanalmente, richiede manutenzione periodica</p>
 <h4 id="15-configurare-permessi">1.5 Configurare Permessi<a class="headerlink" href="#15-configurare-permessi" title="Permanent link">&para;</a></h4>
 <ol>
@@ -3776,6 +3885,10 @@
 <li>Attendi la conferma che il connector è attivo</li>
 <li>Il connector inizierà a raccogliere dati entro 15-30 minuti</li>
 </ol>
+<blockquote>
+<p>ℹ️ <strong>Tempistiche realistiche</strong><br />
+Anche se la connessione è attiva subito, Salesforce rende disponibili gli Event Log Files solo dopo l'elaborazione dei blocchi orari descritta nella <a href="https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/event_log_file_hourly_overview.htm">documentazione ufficiale</a>. In produzione gli eventi arrivano tipicamente in Sentinel con 24-48 ore di ritardo rispetto al verificarsi effettivo.</p>
+</blockquote>
 <h3 id="passo-4-verificare-lintegrazione">Passo 4: Verificare l'Integrazione<a class="headerlink" href="#passo-4-verificare-lintegrazione" title="Permanent link">&para;</a></h3>
 <h4 id="41-verificare-ricezione-dati">4.1 Verificare Ricezione Dati<a class="headerlink" href="#41-verificare-ricezione-dati" title="Permanent link">&para;</a></h4>
 <ol>
@@ -4012,7 +4125,7 @@
 <li><a href="https://learn.microsoft.com/azure/sentinel/create-codeless-connector">Documentazione CCF Microsoft</a></li>
 <li><a href="https://developer.salesforce.com/docs/atlas.en-us.event_monitoring.meta/event_monitoring/">Salesforce Event Monitoring</a></li>
 <li><a href="https://learn.microsoft.com/azure/sentinel/">Azure Sentinel Documentation</a></li>
-<li><a href="../troubleshooting.md">Troubleshooting Guide</a></li>
+<li><a href="../../../troubleshooting/">Troubleshooting Guide</a></li>
 </ul>
 <h2 id="esempio-di-configurazione-completa">Esempio di Configurazione Completa<a class="headerlink" href="#esempio-di-configurazione-completa" title="Permanent link">&para;</a></h2>
 <h3 id="file-di-configurazione-json">File di Configurazione (JSON)<a class="headerlink" href="#file-di-configurazione-json" title="Permanent link">&para;</a></h3>
@@ -4053,9 +4166,9 @@
 </code></pre></div>
 <hr />
 <p><strong>Prossimi Passi:</strong>
-- <a href="kql-queries.md">Configurare Query KQL avanzate</a>
-- <a href="network-sicurezza.md">Gestire Network e Sicurezza</a>
-- <a href="../troubleshooting.md">Risolvere problemi comuni</a></p>
+- <a href="../../../implementation/kql-queries/">Configurare Query KQL avanzate</a>
+- <a href="../../../implementation/network-sicurezza/">Gestire Network e Sicurezza</a>
+- <a href="../../../troubleshooting/">Risolvere problemi comuni</a></p>
 
 
 
@@ -4078,7 +4191,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 18, 2025 00:49:02 UTC">November 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 19, 2025 00:36:29 UTC">November 19, 2025</span>
   </span>
 
     
@@ -4088,7 +4201,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 18, 2025 00:49:02 UTC">November 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 19, 2025 00:36:29 UTC">November 19, 2025</span>
   </span>
 
     

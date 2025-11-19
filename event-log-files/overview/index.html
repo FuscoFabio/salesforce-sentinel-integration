@@ -347,6 +347,26 @@
   
   
   
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../siem/real-time-fields/" class="md-tabs__link">
+          
+  
+  
+  SIEM - Azure Sentinel
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
     <li class="md-tabs__item">
       <a href="../../troubleshooting/" class="md-tabs__link">
         
@@ -2346,6 +2366,95 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SIEM - Azure Sentinel
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SIEM - Azure Sentinel
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../siem/real-time-fields/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Campi Real-Time
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../troubleshooting/" class="md-nav__link">
         
@@ -2389,10 +2498,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
   
   
@@ -2410,8 +2519,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2857,7 +2966,8 @@
 </ul>
 <h3 id="limitazioni">❌ Limitazioni<a class="headerlink" href="#limitazioni" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Latenza</strong>: 24-48 ore (limite strutturale Salesforce)</li>
+<li><strong>Incrementi orari</strong>: I log vengono generati e resi disponibili solo per blocchi orari, come descritto nella <a href="https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/event_log_file_hourly_overview.htm">documentazione ufficiale Salesforce Event Log File Hourly</a></li>
+<li><strong>Latenza</strong>: 24-48 ore (limite strutturale Salesforce dovuto all'elaborazione e pubblicazione dei file orari)</li>
 <li><strong>Personalizzazione Limitata</strong>: Formato dati predefinito</li>
 <li><strong>Polling Necessario</strong>: Richiede polling periodico</li>
 </ul>
@@ -2932,7 +3042,7 @@
 - Costo: Basso (solo ingestione dati)
 - Personalizzazione: Limitata</p>
 <p><strong>Quando Usare</strong>: Per il 90% dei casi d'uso standard.</p>
-<p><a href="../solutions-comparison/#ccf">Vedi dettagli →</a></p>
+<p><a href="../solutions-comparison/#1-ccf-codeless-connector-framework-">Vedi dettagli →</a></p>
 <h3 id="2-azure-function">2. Azure Function<a class="headerlink" href="#2-azure-function" title="Permanent link">&para;</a></h3>
 <p><strong>Caratteristiche</strong>:
 - Setup: 1-2 giorni (sviluppo custom)
@@ -2940,7 +3050,7 @@
 - Costo: Medio (sviluppo + Azure)
 - Personalizzazione: Alta</p>
 <p><strong>Quando Usare</strong>: Quando hai bisogno di personalizzazioni avanzate.</p>
-<p><a href="../solutions-comparison/#azure-function">Vedi dettagli →</a></p>
+<p><a href="../solutions-comparison/#2-azure-function">Vedi dettagli →</a></p>
 <h3 id="3-azure-logic-app">3. Azure Logic App<a class="headerlink" href="#3-azure-logic-app" title="Permanent link">&para;</a></h3>
 <p><strong>Caratteristiche</strong>:
 - Setup: 30-60 minuti (low-code visuale)
@@ -2948,9 +3058,15 @@
 - Costo: Medio
 - Personalizzazione: Media</p>
 <p><strong>Quando Usare</strong>: Quando preferisci un approccio visuale low-code.</p>
-<p><a href="../solutions-comparison/#logic-app">Vedi dettagli →</a></p>
+<p><a href="../solutions-comparison/#3-azure-logic-app">Vedi dettagli →</a></p>
 <h2 id="limitazioni-strutturali">Limitazioni Strutturali<a class="headerlink" href="#limitazioni-strutturali" title="Permanent link">&para;</a></h2>
 <h3 id="latenza-24-48-ore">Latenza 24-48 Ore<a class="headerlink" href="#latenza-24-48-ore" title="Permanent link">&para;</a></h3>
+<p><strong>Incrementi orari obbligatori</strong></p>
+<ul>
+<li>Il connettore (CCF, Function o Logic App) scarica esclusivamente gli <strong>Event Log Files</strong> che Salesforce pubblica una volta completata l'elaborazione del blocco orario</li>
+<li>Anche se i file vengono suddivisi per ore, Salesforce può impiegare fino a 24-48 ore per renderli disponibili tramite API</li>
+<li>L'intervallo orario è quindi la cadenza minima di generazione, <strong>non</strong> la reale latenza end-to-end</li>
+</ul>
 <p><strong>Perché esiste questa latenza?</strong></p>
 <p>Salesforce processa e consolida gli eventi prima di renderli disponibili tramite Event Log Files API. Questo processo include:
 - Validazione eventi
@@ -2960,7 +3076,8 @@
 <p><strong>Implicazioni</strong>:
 - Non adatto per alerting real-time
 - Adatto per analisi storica e compliance
-- Polling più frequente non riduce la latenza</p>
+- Polling più frequente non riduce la latenza
+- Tutti i connettori basati su Event Log Files (incluso il CCF ufficiale Microsoft Sentinel) ereditano automaticamente questo ritardo strutturale</p>
 <h3 id="rate-limiting">Rate Limiting<a class="headerlink" href="#rate-limiting" title="Permanent link">&para;</a></h3>
 <p>Salesforce impone limiti sulle chiamate API:
 - <strong>API Calls per giorno</strong>: Dipende dalla licenza
@@ -3049,7 +3166,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 18, 2025 00:49:01 UTC">November 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 19, 2025 00:36:28 UTC">November 19, 2025</span>
   </span>
 
     
@@ -3059,7 +3176,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 18, 2025 00:49:01 UTC">November 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 19, 2025 00:36:28 UTC">November 19, 2025</span>
   </span>
 
     
