@@ -1,0 +1,34 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "AzureWebJobsFeatureFlags": "EnableWorkerIndexing",
+    
+    "Salesforce__ConsumerKey": "your-consumer-key",
+    "Salesforce__ConsumerSecret": "your-consumer-secret",
+    "Salesforce__Username": "your-username@example.com",
+    "Salesforce__Password": "your-password",
+    "Salesforce__SecurityToken": "your-security-token",
+    "Salesforce__AuthMode": "password",
+    "Salesforce__LoginUrl": "https://login.salesforce.com",
+    "Salesforce__JwtPrivateKey": "-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----",
+    "Salesforce__JwtPrivateKeyPath": "/path/to/key.pem",
+    "Salesforce__JwtAudience": "https://login.salesforce.com",
+    "Salesforce__JwtSubject": "integration-user@example.com",
+    "Salesforce__JwtLifetimeSeconds": "300",
+    
+    "LogAnalytics__WorkspaceId": "your-workspace-id",
+    "LogAnalytics__WorkspaceKey": "your-workspace-key",
+    "LogAnalytics__LogType": "Salesforce_CL",
+    "Environment__Name": "dev",
+    
+    "Checkpoint__StorageConnectionString": "DefaultEndpointsProtocol=https;AccountName=...",
+    "Checkpoint__TableName": "SalesforceCheckpoints",
+    "Checkpoint__PartitionKey": "Salesforce",
+    "Checkpoint__RowKey": "EventLogPolling",
+    "Checkpoint__OverlapMinutes": "5",
+    "Checkpoint__FallbackHours": "24"
+  }
+}
+

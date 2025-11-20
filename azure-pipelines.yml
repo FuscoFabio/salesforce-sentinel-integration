@@ -1,0 +1,91 @@
+# Azure DevOps pipeline per Salesforce → Sentinel Function
+trigger:
+  branches:
+    include:
+      - main
+
+variables:
+  pythonVersion: '3.11'
+  functionProjectPath: 'azure-function/salesforce-sentinel-polling'
+  azureServiceConnection: 'NAME-OF-AZURE-SC' # aggiorna con il service connection reale
+  devFunctionApp: 'salesforce-sentinel-dev'
+  testFunctionApp: 'salesforce-sentinel-test'
+  prodFunctionApp: 'salesforce-sentinel-prod'
+
+stages:
+- stage: Build
+  displayName: Validazione
+  jobs:
+  - job: Validate
+    displayName: Restore dipendenze
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '$(pythonVersion)'
+    - script: |
+        python -m pip install --upgrade pip
+        pip install -r $(functionProjectPath)/requirements.txt
+      displayName: Installazione dipendenze
+
+- stage: Deploy_Dev
+  displayName: Deploy Dev
+  dependsOn: Build
+  jobs:
+  - deployment: DeployDev
+    displayName: Pubblicazione Function App Dev
+    environment: 'dev'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureFunctionApp@1
+            displayName: Deploy Dev
+            inputs:
+              azureSubscription: '$(azureServiceConnection)'
+              appType: functionAppLinux
+              appName: '$(devFunctionApp)'
+              package: '$(System.DefaultWorkingDirectory)/$(functionProjectPath)'
+              runtimeStack: 'PYTHON|3.11'
+
+- stage: Deploy_Test
+  displayName: Deploy Collaudo
+  dependsOn: Deploy_Dev
+  jobs:
+  - deployment: DeployTest
+    displayName: Pubblicazione Function App Collaudo
+    environment: 'test'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureFunctionApp@1
+            displayName: Deploy Test
+            inputs:
+              azureSubscription: '$(azureServiceConnection)'
+              appType: functionAppLinux
+              appName: '$(testFunctionApp)'
+              package: '$(System.DefaultWorkingDirectory)/$(functionProjectPath)'
+              runtimeStack: 'PYTHON|3.11'
+
+- stage: Deploy_Prod
+  displayName: Deploy Produzione
+  dependsOn: Deploy_Test
+  jobs:
+  - deployment: DeployProd
+    displayName: Pubblicazione Function App Produzione
+    environment: 'prod'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureFunctionApp@1
+            displayName: Deploy Prod
+            inputs:
+              azureSubscription: '$(azureServiceConnection)'
+              appType: functionAppLinux
+              appName: '$(prodFunctionApp)'
+              package: '$(System.DefaultWorkingDirectory)/$(functionProjectPath)'
+              runtimeStack: 'PYTHON|3.11'
+
