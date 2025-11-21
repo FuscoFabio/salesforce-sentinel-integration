@@ -45,10 +45,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt --target=".python_packages/lib/site-packages"
       
-      - name: Setup Azure Functions Core Tools
-        uses: Azure/setup-azure-functions-core-tools@v1
-        with:
-          version: '4'
+      - name: Install Azure Functions Core Tools
+        run: |
+          npm install -g azure-functions-core-tools@4 --unsafe-perm true
       
       - name: Verify function app structure
         working-directory: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
