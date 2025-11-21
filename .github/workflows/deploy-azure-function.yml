@@ -46,22 +46,83 @@ jobs:
             exit 1
           fi
           
-          # Verifica che il JSON contenga i campi necessari
+          # Verifica che il JSON sia valido
           CREDS="${{ secrets.AZURE_CREDENTIALS }}"
-          if ! echo "$CREDS" | grep -q '"clientId"'; then
-            echo "❌ Error: AZURE_CREDENTIALS JSON is missing 'clientId' field"
+          
+          # Prova a validare il JSON
+          if ! echo "$CREDS" | python3 -m json.tool > /dev/null 2>&1; then
+            echo "❌ Error: AZURE_CREDENTIALS is not valid JSON"
+            echo ""
+            echo "Please ensure the secret contains valid JSON format"
+            echo "Example format:"
+            echo '{'
+            echo '  "clientId": "...",'
+            echo '  "clientSecret": "...",'
+            echo '  "tenantId": "...",'
+            echo '  "subscriptionId": "..."'
+            echo '}'
             exit 1
           fi
-          if ! echo "$CREDS" | grep -q '"clientSecret"'; then
-            echo "❌ Error: AZURE_CREDENTIALS JSON is missing 'clientSecret' field"
-            exit 1
+          
+          # Mostra i campi presenti nel JSON (senza valori) per debug
+          echo "Checking JSON structure..."
+          echo "Fields found in JSON:"
+          echo "$CREDS" | grep -o '"[^"]*"' | head -10 || echo "Could not parse JSON structure"
+          echo ""
+          
+          # Verifica campi necessari (accetta sia camelCase che snake_case)
+          HAS_CLIENT_ID=false
+          HAS_CLIENT_SECRET=false
+          HAS_TENANT_ID=false
+          HAS_SUBSCRIPTION_ID=false
+          
+          if echo "$CREDS" | grep -qiE '"(clientId|client_id)"'; then
+            HAS_CLIENT_ID=true
           fi
-          if ! echo "$CREDS" | grep -q '"tenantId"'; then
-            echo "❌ Error: AZURE_CREDENTIALS JSON is missing 'tenantId' field"
-            exit 1
+          if echo "$CREDS" | grep -qiE '"(clientSecret|client_secret)"'; then
+            HAS_CLIENT_SECRET=true
           fi
-          if ! echo "$CREDS" | grep -q '"subscriptionId"'; then
-            echo "❌ Error: AZURE_CREDENTIALS JSON is missing 'subscriptionId' field"
+          if echo "$CREDS" | grep -qiE '"(tenantId|tenant_id)"'; then
+            HAS_TENANT_ID=true
+          fi
+          if echo "$CREDS" | grep -qiE '"(subscriptionId|subscription_id)"'; then
+            HAS_SUBSCRIPTION_ID=true
+          fi
+          
+          # Report errori
+          ERRORS=0
+          if [ "$HAS_CLIENT_ID" = false ]; then
+            echo "❌ Error: JSON is missing 'clientId' or 'client_id' field"
+            ERRORS=$((ERRORS + 1))
+          fi
+          if [ "$HAS_CLIENT_SECRET" = false ]; then
+            echo "❌ Error: JSON is missing 'clientSecret' or 'client_secret' field"
+            ERRORS=$((ERRORS + 1))
+          fi
+          if [ "$HAS_TENANT_ID" = false ]; then
+            echo "❌ Error: JSON is missing 'tenantId' or 'tenant_id' field"
+            ERRORS=$((ERRORS + 1))
+          fi
+          if [ "$HAS_SUBSCRIPTION_ID" = false ]; then
+            echo "❌ Error: JSON is missing 'subscriptionId' or 'subscription_id' field"
+            ERRORS=$((ERRORS + 1))
+          fi
+          
+          if [ $ERRORS -gt 0 ]; then
+            echo ""
+            echo "The JSON should have this structure:"
+            echo '{'
+            echo '  "clientId": "...",'
+            echo '  "clientSecret": "...",'
+            echo '  "tenantId": "...",'
+            echo '  "subscriptionId": "..."'
+            echo '}'
+            echo ""
+            echo "To generate the correct JSON, run:"
+            echo "az ad sp create-for-rbac --name 'github-actions-salesforce-sentinel' \\"
+            echo "  --role contributor \\"
+            echo "  --scopes /subscriptions/{subscription-id}/resourceGroups/{resource-group} \\"
+            echo "  --sdk-auth"
             exit 1
           fi
           
