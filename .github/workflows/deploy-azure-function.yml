@@ -42,27 +42,54 @@ jobs:
             echo "3. Name: AZURE_CREDENTIALS"
             echo "4. Value: JSON output from 'az ad sp create-for-rbac --sdk-auth'"
             echo ""
-            echo "See DEPLOYMENT_CENTER_SETUP.md for detailed instructions"
+            echo "See DEPLOYMENT_CENTER_SETUP.md and .github/TROUBLESHOOTING.md for detailed instructions"
             exit 1
           fi
           
           # Verifica che il JSON sia valido
           CREDS="${{ secrets.AZURE_CREDENTIALS }}"
           
-          # Prova a validare il JSON
-          if ! echo "$CREDS" | python3 -m json.tool > /dev/null 2>&1; then
+          # Rimuovi spazi iniziali/finali e newline extra
+          CREDS=$(echo "$CREDS" | tr -d '\r' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+          
+          # Prova a validare il JSON e mostra l'errore specifico
+          JSON_ERROR=$(echo "$CREDS" | python3 -m json.tool 2>&1)
+          if [ $? -ne 0 ]; then
             echo "❌ Error: AZURE_CREDENTIALS is not valid JSON"
             echo ""
-            echo "Please ensure the secret contains valid JSON format"
-            echo "Example format:"
+            echo "JSON validation error:"
+            echo "$JSON_ERROR" | head -5
+            echo ""
+            echo "First 200 characters of the secret (for debugging):"
+            echo "$CREDS" | head -c 200
+            echo ""
+            echo ""
+            echo "Please ensure the secret contains valid JSON format:"
+            echo "1. Copy the ENTIRE output from: az ad sp create-for-rbac --sdk-auth"
+            echo "2. Make sure to include the opening { and closing }"
+            echo "3. Do not add extra quotes or formatting"
+            echo ""
+            echo "Expected format:"
             echo '{'
-            echo '  "clientId": "...",'
-            echo '  "clientSecret": "...",'
-            echo '  "tenantId": "...",'
-            echo '  "subscriptionId": "..."'
+            echo '  "clientId": "xxxx-xxxx-xxxx-xxxx",'
+            echo '  "clientSecret": "yyyy-yyyy-yyyy-yyyy",'
+            echo '  "tenantId": "zzzz-zzzz-zzzz-zzzz",'
+            echo '  "subscriptionId": "aaaa-aaaa-aaaa-aaaa"'
             echo '}'
+            echo ""
+            echo "To generate the correct JSON, run:"
+            echo "az login"
+            echo "az ad sp create-for-rbac --name 'github-actions-salesforce-sentinel' \\"
+            echo "  --role contributor \\"
+            echo "  --scopes /subscriptions/{subscription-id}/resourceGroups/{resource-group} \\"
+            echo "  --sdk-auth"
+            echo ""
+            echo "For detailed troubleshooting, see: .github/TROUBLESHOOTING.md"
             exit 1
           fi
+          
+          # Salva il JSON pulito per uso successivo
+          CREDS=$(echo "$CREDS" | python3 -m json.tool)
           
           # Mostra i campi presenti nel JSON (senza valori) per debug
           echo "Checking JSON structure..."
