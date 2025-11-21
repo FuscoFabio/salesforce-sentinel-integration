@@ -40,29 +40,27 @@ jobs:
           cache: 'pip'
       
       - name: Install dependencies
-        working-directory: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt --target=".python_packages/lib/site-packages"
+          pip install -r ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/requirements.txt --target="${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/.python_packages/lib/site-packages"
       
       - name: Install Azure Functions Core Tools
         run: |
           npm install -g azure-functions-core-tools@4 --unsafe-perm true
       
       - name: Verify function app structure
-        working-directory: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
         run: |
           echo "Verifying function app structure..."
-          ls -la
-          if [ ! -f "function_app.py" ]; then
+          ls -la ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+          if [ ! -f "${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/function_app.py" ]; then
             echo "Error: function_app.py not found"
             exit 1
           fi
-          if [ ! -f "requirements.txt" ]; then
+          if [ ! -f "${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/requirements.txt" ]; then
             echo "Error: requirements.txt not found"
             exit 1
           fi
-          if [ ! -f "host.json" ]; then
+          if [ ! -f "${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/host.json" ]; then
             echo "Error: host.json not found"
             exit 1
           fi
