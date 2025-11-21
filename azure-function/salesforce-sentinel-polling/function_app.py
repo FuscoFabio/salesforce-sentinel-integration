@@ -181,11 +181,11 @@ class SalesforceClient:
             start_date_str = start_date.strftime("%Y-%m-%d")
             end_date_str = end_date.strftime("%Y-%m-%d")
             
-            # Query SOQL per recuperare Event Log Files
-            # Filtriamo per eventi critici per SIEM
+            # Query SOQL per recuperare Event Log Files (solo Login/Logout/AuditTrail)
             event_types = [
-                "LoginEvent", "LogoutEvent", "ApiEvent", "UriEvent",
-                "ReportEvent", "DashboardEvent", "DataExportEvent"
+                "LoginEvent",
+                "LogoutEvent",
+                "SetupAuditTrailEvent"
             ]
             event_types_str = "', '".join(event_types)
             
@@ -437,6 +437,18 @@ class DataTransformer:
                     "PageUrl": row.get("PAGE_URL", ""),
                     "Duration": DataTransformer._parse_int(row.get("DURATION", "")),
                     "SourceIp": row.get("SOURCE_IP", ""),
+                })
+            elif event_type == "SetupAuditTrailEvent":
+                event.update({
+                    "ActorUserId": row.get("ACTOR_USER_ID", ""),
+                    "ResponsibleUserId": row.get("RESPONSIBLE_USER_ID", ""),
+                    "ResponsibleUsername": row.get("RESPONSIBLE_USERNAME", ""),
+                    "DelegateUser": row.get("DELEGATE_USER", ""),
+                    "Action": row.get("ACTION", ""),
+                    "Section": row.get("SECTION", ""),
+                    "EntityName": row.get("ENTITY_NAME", ""),
+                    "Display": row.get("DISPLAY", ""),
+                    "ClientIp": row.get("CLIENT_IP", ""),
                 })
             else:
                 # Per altri tipi di evento, aggiungi tutti i campi disponibili

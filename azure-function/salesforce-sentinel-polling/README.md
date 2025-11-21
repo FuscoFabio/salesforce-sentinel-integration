@@ -13,7 +13,7 @@ Questa Azure Function esegue polling ogni **5 minuti** per:
 
 - ✅ **Serverless e Scalabile**: Esegue su Azure Functions Consumption Plan
 - ✅ **Polling Schedulato**: Timer Trigger ogni 5 minuti
-- ✅ **Eventi SIEM**: Estrae eventi critici (Login, Logout, API, URI, Report, Dashboard)
+- ✅ **Eventi SIEM**: Estrae eventi critici (Login, Logout, Audit Trail)
 - ✅ **Trasformazione Dati**: Converte eventi Salesforce in formato standard SIEM
 - ✅ **Invio Batch**: Ottimizzato per inviare eventi in batch a Log Analytics
 - ✅ **Gestione Errori**: Retry automatico e logging completo
@@ -153,16 +153,9 @@ func azure functionapp publish <function-app-name>
 
 La function estrae i seguenti tipi di eventi da Salesforce:
 
-### Priorità Critica
 - **LoginEvent**: Accessi utente
 - **LogoutEvent**: Disconnessioni
-- **ApiEvent**: Chiamate API
-
-### Priorità Alta
-- **UriEvent**: Navigazione e accessi a record
-- **ReportEvent**: Accessi a report
-- **DashboardEvent**: Accessi a dashboard
-- **DataExportEvent**: Esportazioni dati
+- **SetupAuditTrailEvent**: Modifiche di configurazione (audit trail)
 
 ## Schema Dati
 
@@ -170,7 +163,7 @@ Gli eventi vengono trasformati in formato standard SIEM con i seguenti campi:
 
 ### Campi Comuni
 - `TimeGenerated`: Timestamp evento (ISO 8601 UTC)
-- `EventType`: Tipo di evento (LoginEvent, ApiEvent, ecc.)
+- `EventType`: Tipo di evento (LoginEvent, LogoutEvent, SetupAuditTrailEvent)
 - `SourceSystem`: "Salesforce"
 - `Environment`: Ambiente applicativo (dev/collaudo/prod) se configurato
 - `UserId`: ID utente Salesforce
@@ -185,14 +178,18 @@ Gli eventi vengono trasformati in formato standard SIEM con i seguenti campi:
 - `LoginGeoId`: Geolocalizzazione
 - `SessionKey`: Chiave sessione
 
-### Campi Specifici per ApiEvent
-- `ApiType`: Tipo API (REST, SOAP, Bulk)
-- `ApiVersion`: Versione API
-- `Method`: Metodo HTTP (GET, POST, PUT, DELETE)
-- `Url`: Endpoint chiamato
-- `Status`: Codice risposta HTTP
-- `ResponseTime`: Tempo di risposta (ms)
-- `Client`: Client utilizzato
+### Campi Specifici per LogoutEvent
+- `SessionKey`: Chiave sessione
+
+### Campi Specifici per SetupAuditTrailEvent
+- `Action`: Operazione effettuata (es. Update, Insert)
+- `Section`: Area della configurazione interessata
+- `EntityName`: Oggetto o componente coinvolto
+- `ActorUserId`: Utente che ha effettuato la modifica
+- `ResponsibleUsername`: Utente responsabile se diverso dall’attore
+- `DelegateUser`: Utente delegato (se presente)
+- `ClientIp`: IP sorgente
+- `Display`: Descrizione testuale dell’azione
 
 ## Monitoraggio
 
