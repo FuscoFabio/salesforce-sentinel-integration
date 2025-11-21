@@ -22,7 +22,7 @@ on:
 env:
   AZURE_FUNCTIONAPP_NAME: ${{ secrets.AZURE_FUNCTIONAPP_NAME }}
   AZURE_FUNCTIONAPP_PACKAGE_PATH: 'azure-function/salesforce-sentinel-polling'
-  PYTHON_VERSION: '3.11'
+  PYTHON_VERSION: '3.13'
 
 jobs:
   build-and-deploy:

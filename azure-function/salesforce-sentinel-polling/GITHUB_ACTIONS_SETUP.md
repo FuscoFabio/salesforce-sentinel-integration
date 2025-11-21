@@ -31,7 +31,7 @@ az functionapp create \
   --resource-group rg-salesforce-sentinel \
   --consumption-plan-location westeurope \
   --runtime python \
-  --runtime-version 3.11 \
+  --runtime-version 3.13 \
   --functions-version 4 \
   --name salesforce-sentinel-001 \
   --storage-account stsalesforcesentinel \

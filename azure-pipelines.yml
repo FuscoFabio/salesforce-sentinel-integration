@@ -5,7 +5,7 @@ trigger:
       - main
 
 variables:
-  pythonVersion: '3.11'
+  pythonVersion: '3.13'
   functionProjectPath: 'azure-function/salesforce-sentinel-polling'
   azureServiceConnection: 'NAME-OF-AZURE-SC' # aggiorna con il service connection reale
   devFunctionApp: 'salesforce-sentinel-dev'
@@ -47,7 +47,7 @@ stages:
               appType: functionAppLinux
               appName: '$(devFunctionApp)'
               package: '$(System.DefaultWorkingDirectory)/$(functionProjectPath)'
-              runtimeStack: 'PYTHON|3.11'
+              runtimeStack: 'PYTHON|3.13'
 
 - stage: Deploy_Test
   displayName: Deploy Collaudo
@@ -67,7 +67,7 @@ stages:
               appType: functionAppLinux
               appName: '$(testFunctionApp)'
               package: '$(System.DefaultWorkingDirectory)/$(functionProjectPath)'
-              runtimeStack: 'PYTHON|3.11'
+              runtimeStack: 'PYTHON|3.13'
 
 - stage: Deploy_Prod
   displayName: Deploy Produzione
@@ -87,6 +87,6 @@ stages:
               appType: functionAppLinux
               appName: '$(prodFunctionApp)'
               package: '$(System.DefaultWorkingDirectory)/$(functionProjectPath)'
-              runtimeStack: 'PYTHON|3.11'
+              runtimeStack: 'PYTHON|3.13'
 
 

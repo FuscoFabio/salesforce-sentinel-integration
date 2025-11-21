@@ -30,7 +30,7 @@ Tutte le Function App puntano allo stesso Log Analytics workspace, differenziand
 
 ### 3.1 Function App (Python)
 - **Trigger**: `TimerTrigger` (`0 */5 * * * *`, configurabile).
-- **Runtime**: Python 3.11, Functions v4.
+- **Runtime**: Python 3.13, Functions v4.
 - **Plan**: Consumption (default) o Premium per cold-start ridotti.
 - **Settings principali**:
   - Salesforce (`Salesforce__*`), inclusi `Salesforce__AuthMode` (`password` / `jwt`), `Salesforce__JwtPrivateKey` o `Salesforce__JwtPrivateKeyPath`, `Salesforce__LoginUrl`, `Salesforce__JwtSubject`.
@@ -76,7 +76,7 @@ Tutte le Function App puntano allo stesso Log Analytics workspace, differenziand
   - `azureServiceConnection` (service connection ARM);
   - `devFunctionApp`, `testFunctionApp`, `prodFunctionApp`;
   - `functionProjectPath`.
-- Ogni stage di deploy usa il task `AzureFunctionApp@1` (Linux, Python 3.11) e si appoggia agli ambienti Azure DevOps per approvazioni manuali.
+- Ogni stage di deploy usa il task `AzureFunctionApp@1` (Linux, Python 3.13) e si appoggia agli ambienti Azure DevOps per approvazioni manuali.
 - La pipeline installa i requirements per validazione e poi pubblica direttamente la cartella della Function App (il runtime installa le dipendenze al primo avvio).
 
 ## 4. Flussi Dettagliati

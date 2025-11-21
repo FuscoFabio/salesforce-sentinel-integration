@@ -14,3 +14,7 @@ PyJWT>=2.8.0
 # Azure Storage (Table) per checkpoint persistente
 azure-data-tables>=12.5.0
 
+# gRPC (pin a versioni con wheel precompilate per evitare build in CI)
+grpcio==1.62.2
+grpcio-tools==1.62.2
+

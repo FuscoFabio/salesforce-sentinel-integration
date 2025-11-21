@@ -6,7 +6,7 @@ Guida passo-passo per il deployment dell'Azure Function su Azure.
 
 - Azure CLI installato e configurato
 - Azure Functions Core Tools v4
-- Python 3.9 o superiore
+- Python 3.13 installato in locale (o in CI)
 - Accesso ad Azure Subscription con permessi per creare risorse
 
 ## Opzione 1: Deployment tramite Azure Portal
@@ -21,7 +21,7 @@ Guida passo-passo per il deployment dell'Azure Function su Azure.
    - **Function App name**: Nome univoco (es. `salesforce-sentinel-001`)
    - **Publish**: Code
    - **Runtime stack**: Python
-   - **Version**: 3.9, 3.10 o 3.11
+   - **Version**: 3.13
    - **Region**: Seleziona una regione
    - **Plan Type**: Consumption (serverless) o Premium
 4. Clicca su **Review + Create** → **Create**
@@ -111,7 +111,7 @@ az functionapp create \
   --resource-group rg-salesforce-sentinel \
   --consumption-plan-location westeurope \
   --runtime python \
-  --runtime-version 3.11 \
+  --runtime-version 3.13 \
   --functions-version 4 \
   --name salesforce-sentinel-001 \
   --storage-account stsalesforcesentinel \
@@ -266,7 +266,7 @@ Salesforce__ConsumerKey=@Microsoft.KeyVault(SecretUri=https://kv-name.vault.azur
 
 **Soluzione**: 
 - Verifica che `requirements.txt` sia presente
-- Verifica versione Python nella Function App (3.9+)
+- Verifica che la Function App sia configurata su Python 3.13
 
 ### Errore: "Module not found"
 
