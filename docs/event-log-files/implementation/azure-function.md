@@ -27,7 +27,7 @@ Azure Sentinel
 - Log Analytics Workspace con Azure Sentinel
 - Credenziali Salesforce (Consumer Key/Secret)
 - Workspace ID e Primary Key di Log Analytics
-- ⭐ **Raccomandato**: Virtual Network per Private Endpoints (vedi [Gestione Network e Sicurezza](network-sicurezza.md))
+- ⭐ **Raccomandato**: Virtual Network per Private Endpoints (vedi [Gestione Network e Sicurezza](../../implementation/network-sicurezza.md))
 
 ## Passo 1: Creare Azure Function App
 
@@ -71,7 +71,7 @@ Azure Sentinel
    - In Salesforce, imposta **IP Relaxation**: "Relax IP restrictions" (non necessario con Private Endpoint)
 
 **Alternativa - Range IP Pubblici:**
-- Vedi [Gestione Network e Sicurezza](network-sicurezza.md) per configurare range IP pubblici
+- Vedi [Gestione Network e Sicurezza](../../implementation/network-sicurezza.md) per configurare range IP pubblici
 - Richiede manutenzione periodica (range IP cambiano settimanalmente)
 
 ## Passo 2: Configurare Application Settings

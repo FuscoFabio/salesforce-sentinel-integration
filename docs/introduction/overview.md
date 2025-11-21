@@ -62,3 +62,11 @@ Il progetto offre **5 soluzioni** diverse per soddisfare ogni esigenza:
 2. [Configura Salesforce](../setup/salesforce.md)
 3. [Configura Azure Sentinel](../setup/azure-sentinel.md)
 4. [Segui il Quick Start](../setup/quick-start.md)
+
+## Fonti
+
+- [Salesforce Event Monitoring Overview](https://developer.salesforce.com/docs/atlas.en-us.event_monitoring.meta/event_monitoring/)
+- [Salesforce Platform Events Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/)
+- [Microsoft Sentinel Documentation](https://learn.microsoft.com/azure/sentinel/)
+- [Azure Event Hubs Documentation](https://learn.microsoft.com/azure/event-hubs/)
+

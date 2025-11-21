@@ -12,11 +12,11 @@ Il CodeLess Connector Framework (CCF) è la soluzione raccomandata per setup rap
 
 - ✅ **Copertura Completa**: Tutti gli eventi disponibili (LoginEvent, LogoutEvent, ApiEvent, Audit Trail)
 - ✅ **Formato Strutturato**: Dati ottimizzati e validati
-- ❌ **Incrementi orari**: Salesforce rilascia i log in blocchi orari (vedi [Event Log File Hourly Overview](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/event_log_file_hourly_overview.htm))
-- ❌ **Latenza reale**: 24-48 ore prima dell'arrivo in Sentinel perché i connettori (incluso CCF) possono solo scaricare i file dopo che Salesforce li ha pubblicati
+- ❌ **Incrementi orari**: Salesforce genera i log una volta per ogni ora e li rende disponibili solo dopo l'elaborazione del blocco (vedi [Event Log File Hourly Overview](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/event_log_file_hourly_overview.htm))
+- ❌ **Latenza effettiva**: 24-48 ore prima che i dati arrivino su Sentinel, anche se il polling viene eseguito più spesso
 - ✅ **Setup Semplice**: Configurazione grafica, zero codice
 
-**Se hai bisogno di near real-time (< 24 ore)**, considera [Platform Events](platform-events.md) invece.
+**Se hai bisogno di near real-time (< 24 ore)**, considera [Platform Events](../../platform-events/overview.md) invece.
 
 ## Caratteristiche
 
@@ -43,11 +43,15 @@ Il CodeLess Connector Framework (CCF) è la soluzione raccomandata per setup rap
 
 Vedi la guida completa: [Implementazione CCF](../implementation/ccf.md)
 
+## Casi d'Esempio
+
+Vedi esempi pratici: [Esempio CCF](../examples/ccf-example.md)
+
 ## Link Utili
 
 - [Implementazione CCF](../implementation/ccf.md)
 - [Documentazione Microsoft CCF](https://learn.microsoft.com/azure/sentinel/create-codeless-connector)
-- [Platform Events (Near Real-Time)](platform-events.md) - Alternativa per real-time
+- [Platform Events (Near Real-Time)](../../platform-events/overview.md) - Alternativa per real-time
 
 ## Fonti
 

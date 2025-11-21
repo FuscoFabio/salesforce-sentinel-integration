@@ -34,12 +34,21 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.top
+    - navigation.instant
+    - navigation.tracking
+    - navigation.smooth
     - search.suggest
     - search.highlight
     - content.code.annotate
     - content.code.copy
+    - content.tabs.link
+    - toc.integrate
+    - toc.follow
   icon:
     repo: fontawesome/brands/github
+  font:
+    text: Roboto
+    code: Roboto Mono
 
 # Extensions
 markdown_extensions:
@@ -61,12 +70,19 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
+      baselevel: 2
+      toc_depth: 4
+      title: "Indice"
+      anchorlink: true
 
 # Plugins
 plugins:
-  - search
+  - search:
+      lang: it
   - git-revision-date-localized:
       enable_creation_date: true
+      type: timeago
+      fallback_to_build_date: true
 
 # Navigation
 nav:
@@ -74,24 +90,50 @@ nav:
   - Introduzione:
     - Panoramica: introduction/overview.md
     - Architettura: introduction/architecture.md
-  - Soluzioni:
-    - Panoramica Soluzioni: solutions/overview.md
-    - CodeLess Connector Framework (CCF): solutions/ccf.md
-    - Azure Function: solutions/azure-function.md
-    - Azure Logic App: solutions/logic-app.md
-    - Altre Soluzioni: solutions/other.md
+    - Confronto Approcci: introduction/approaches-comparison.md
+  - Event Log Files API (24-48h):
+    - Panoramica: event-log-files/overview.md
+    - Confronto Soluzioni: event-log-files/solutions-comparison.md
+    - Configurazioni:
+      - CCF: event-log-files/configurations/ccf.md
+      - Azure Function: event-log-files/configurations/azure-function.md
+      - Logic App: event-log-files/configurations/logic-app.md
+    - Implementazione:
+      - CCF: event-log-files/implementation/ccf.md
+      - Azure Function: event-log-files/implementation/azure-function.md
+      - Logic App: event-log-files/implementation/logic-app.md
+    - Casi d'Esempio:
+      - CCF: event-log-files/examples/ccf-example.md
+      - Azure Function: event-log-files/examples/azure-function-example.md
+      - Logic App: event-log-files/examples/logic-app-example.md
+  - Platform Events / Event Bus (Near Real-Time):
+    - Panoramica: platform-events/overview.md
+    - Confronto Configurazioni: platform-events/configurations-comparison.md
+    - Configurazioni:
+      - Webhook HTTP: platform-events/configurations/webhook-http.md
+      - Azure Event Hub: platform-events/configurations/event-hub.md
+      - CometD Streaming: platform-events/configurations/cometd-streaming.md
+    - Implementazione:
+      - Webhook HTTP: platform-events/implementation/webhook-http.md
+      - Azure Event Hub: platform-events/implementation/event-hub.md
+      - CometD Streaming: platform-events/implementation/cometd-streaming.md
+    - Casi d'Esempio:
+      - Webhook HTTP: platform-events/examples/webhook-example.md
+      - Event Hub: platform-events/examples/event-hub-example.md
+      - CometD: platform-events/examples/cometd-example.md
   - Setup:
-    - Configurazione Salesforce: setup/salesforce.md
-    - Configurazione Azure Sentinel: setup/azure-sentinel.md
     - Quick Start: setup/quick-start.md
-  - Implementazione:
-    - Azure Function: implementation/azure-function.md
-    - Gestione Range IP Azure: implementation/azure-ip-ranges.md
+    - Salesforce: setup/salesforce.md
+    - Azure Sentinel: setup/azure-sentinel.md
+  - Configurazione Avanzata:
+    - Network e Sicurezza: implementation/network-sicurezza.md
     - Query KQL: implementation/kql-queries.md
+  - SIEM - Azure Sentinel:
+    - Campi Real-Time: siem/real-time-fields.md
   - Troubleshooting: troubleshooting.md
   - Riferimenti:
-    - API Reference: references/api.md
-    - Link Utili: references/links.md
+    - API: references/api.md
+    - Link: references/links.md
 
 # Extra
 extra:
@@ -100,4 +142,8 @@ extra:
       link: https://github.com/FuscoFabio
     - icon: fontawesome/brands/microsoft
       link: https://azure.microsoft.com
+  css:
+    - assets/css/custom.css
+  javascript:
+    - assets/js/custom.js
 

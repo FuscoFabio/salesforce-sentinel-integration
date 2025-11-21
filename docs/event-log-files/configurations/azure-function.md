@@ -12,11 +12,11 @@ Azure Function è la soluzione consigliata quando hai bisogno di controllo compl
 
 - ✅ **Copertura Completa**: Tutti gli eventi disponibili (LoginEvent, LogoutEvent, ApiEvent, Audit Trail)
 - ✅ **Formato Strutturato**: Dati ottimizzati e validati
-- ❌ **Incrementi orari**: I log sono pubblicati in blocchi orari come da [Event Log File Hourly Overview](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/event_log_file_hourly_overview.htm)
-- ❌ **Latenza**: 24-48 ore (limite strutturale Salesforce dovuto alla pubblicazione dei file orari)
+- ❌ **Incrementi orari**: I file vengono generati da Salesforce ogni ora e sono accessibili solo dopo la pubblicazione del blocco (vedi [Event Log File Hourly Overview](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/event_log_file_hourly_overview.htm))
+- ❌ **Latenza**: 24-48 ore (limite strutturale Salesforce: il connettore può leggere i file solo quando Salesforce li rende disponibili)
 - ✅ **Personalizzazione**: Controllo completo sulla logica
 
-**Se hai bisogno di near real-time (< 24 ore)**, considera [Platform Events](platform-events.md) invece.
+**Se hai bisogno di near real-time (< 24 ore)**, considera [Platform Events](../../platform-events/overview.md) invece.
 
 ## Caratteristiche
 
@@ -35,7 +35,7 @@ Azure Function è la soluzione consigliata quando hai bisogno di controllo compl
 - ✅ La latenza di 24-72 ore è accettabile
 
 **Non scegliere questa soluzione se**:
-- ❌ Hai bisogno di near real-time (< 24 ore) → Usa [Platform Events](platform-events.md)
+- ❌ Hai bisogno di near real-time (< 24 ore) → Usa [Platform Events](../../platform-events/overview.md)
 - ❌ Vuoi setup semplice senza codice → Usa [CCF](ccf.md)
 
 ## Differenza con Platform Events
@@ -52,10 +52,14 @@ Azure Function è la soluzione consigliata quando hai bisogno di controllo compl
 
 Vedi la guida completa: [Implementazione Azure Function](../implementation/azure-function.md)
 
+## Casi d'Esempio
+
+Vedi esempi pratici: [Esempio Azure Function](../examples/azure-function-example.md)
+
 ## Link Utili
 
 - [Implementazione Azure Function](../implementation/azure-function.md)
-- [Platform Events (Near Real-Time)](platform-events.md)
+- [Platform Events (Near Real-Time)](../../platform-events/overview.md)
 - [Documentazione Azure Functions](https://learn.microsoft.com/azure/azure-functions/)
 - [Azure Function Pricing](https://azure.microsoft.com/pricing/details/functions/)
 

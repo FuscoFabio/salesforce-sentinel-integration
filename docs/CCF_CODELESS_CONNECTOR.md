@@ -13,4 +13,4 @@ Vedi la documentazione completa nel repository per i dettagli di configurazione.
 ## Link Utili
 
 - [Documentazione Microsoft](https://learn.microsoft.com/azure/sentinel/create-codeless-connector)
-- [Guida Setup](../solutions/ccf.md)
+- [Guida Setup](solutions/ccf.md)

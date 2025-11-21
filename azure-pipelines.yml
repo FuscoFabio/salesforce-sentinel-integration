@@ -89,3 +89,4 @@ stages:
               package: '$(System.DefaultWorkingDirectory)/$(functionProjectPath)'
               runtimeStack: 'PYTHON|3.11'
 
+

@@ -12,11 +12,11 @@ Azure Logic App offre un approccio visuale e low-code per integrare Salesforce c
 
 - ✅ **Copertura Completa**: Tutti gli eventi disponibili (LoginEvent, LogoutEvent, ApiEvent, Audit Trail)
 - ✅ **Formato Strutturato**: Dati ottimizzati e validati
-- ❌ **Incrementi orari**: Salesforce pubblica i log in blocchi orari come descritto in [Event Log File Hourly Overview](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/event_log_file_hourly_overview.htm)
-- ❌ **Latenza**: 24-48 ore (limite strutturale Salesforce dovuto alla pubblicazione differita dei file)
+- ❌ **Incrementi orari**: I log vengono generati ogni ora e messi a disposizione solo dopo la pubblicazione del blocco (vedi [Event Log File Hourly Overview](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/event_log_file_hourly_overview.htm))
+- ❌ **Latenza**: 24-48 ore (limite strutturale Salesforce: nessun connettore può anticipare la disponibilità dei file)
 - ✅ **Setup Semplice**: Approccio low-code visuale
 
-**Se hai bisogno di near real-time (< 24 ore)**, considera [Platform Events](platform-events.md) invece.
+**Se hai bisogno di near real-time (< 24 ore)**, considera [Platform Events](../../platform-events/overview.md) invece.
 
 ## Caratteristiche
 
@@ -56,7 +56,7 @@ Per massima sicurezza e connettività privata:
    - In Salesforce, imposta **IP Relaxation**: "Relax IP restrictions" (non necessario con ISE)
 
 **Alternativa - Range IP Pubblici:**
-- Vedi [Gestione Network e Sicurezza](../implementation/network-sicurezza.md) per configurare range IP pubblici
+- Vedi [Gestione Network e Sicurezza](../../implementation/network-sicurezza.md) per configurare range IP pubblici
 - Richiede manutenzione periodica
 
 ## Deployment

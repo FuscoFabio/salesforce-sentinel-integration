@@ -1,0 +1,120 @@
+name: Deploy Azure Function - Salesforce Sentinel Polling
+
+on:
+  push:
+    branches:
+      - main
+      - feature/salesforce-polling-python-function
+    paths:
+      - 'azure-function/salesforce-sentinel-polling/**'
+      - '.github/workflows/deploy-azure-function.yml'
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - production
+          - staging
+
+env:
+  AZURE_FUNCTIONAPP_NAME: ${{ secrets.AZURE_FUNCTIONAPP_NAME }}
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: 'azure-function/salesforce-sentinel-polling'
+  PYTHON_VERSION: '3.11'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment || 'production' }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+      
+      - name: Install dependencies
+        working-directory: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt --target=".python_packages/lib/site-packages"
+      
+      - name: Setup Azure Functions Core Tools
+        uses: Azure/setup-azure-functions-core-tools@v1
+        with:
+          version: '4'
+      
+      - name: Verify function app structure
+        working-directory: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+        run: |
+          echo "Verifying function app structure..."
+          ls -la
+          if [ ! -f "function_app.py" ]; then
+            echo "Error: function_app.py not found"
+            exit 1
+          fi
+          if [ ! -f "requirements.txt" ]; then
+            echo "Error: requirements.txt not found"
+            exit 1
+          fi
+          if [ ! -f "host.json" ]; then
+            echo "Error: host.json not found"
+            exit 1
+          fi
+          echo "Function app structure verified ✓"
+      
+      - name: Login to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      
+      - name: Configure Application Settings
+        env:
+          LOG_TYPE: ${{ secrets.LOG_ANALYTICS_LOG_TYPE || 'Salesforce_CL' }}
+        run: |
+          az functionapp config appsettings set \
+            --name ${{ env.AZURE_FUNCTIONAPP_NAME }} \
+            --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
+            --settings \
+              "Salesforce__ConsumerKey=${{ secrets.SALESFORCE_CONSUMER_KEY }}" \
+              "Salesforce__ConsumerSecret=${{ secrets.SALESFORCE_CONSUMER_SECRET }}" \
+              "Salesforce__Username=${{ secrets.SALESFORCE_USERNAME }}" \
+              "Salesforce__Password=${{ secrets.SALESFORCE_PASSWORD }}" \
+              "Salesforce__SecurityToken=${{ secrets.SALESFORCE_SECURITY_TOKEN }}" \
+              "LogAnalytics__WorkspaceId=${{ secrets.LOG_ANALYTICS_WORKSPACE_ID }}" \
+              "LogAnalytics__WorkspaceKey=${{ secrets.LOG_ANALYTICS_WORKSPACE_KEY }}" \
+              "LogAnalytics__LogType=${{ env.LOG_TYPE }}"
+      
+      - name: Deploy to Azure Functions
+        uses: Azure/functions-action@v1
+        id: fa
+        with:
+          app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
+          package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
+          scm-do-build-during-deployment: true
+          enable-oryx-build: true
+      
+      - name: Verify deployment
+        if: steps.fa.outcome == 'success'
+        run: |
+          echo "Deployment completed successfully!"
+          echo "Function App: ${{ env.AZURE_FUNCTIONAPP_NAME }}"
+          echo "Package Path: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}"
+      
+      - name: Deployment summary
+        if: always()
+        run: |
+          if [ "${{ steps.fa.outcome }}" == "success" ]; then
+            echo "✅ Deployment successful"
+          else
+            echo "❌ Deployment failed"
+            exit 1
+          fi
+
