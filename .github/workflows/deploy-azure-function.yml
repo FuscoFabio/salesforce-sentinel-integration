@@ -1,4 +1,4 @@
-name: Deploy Azure Function - Salesforce Sentinel Polling
+name: Configure Azure Function App Settings
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: 'Environment to deploy to'
+        description: 'Environment to configure'
         required: true
         default: 'production'
         type: choice
@@ -21,11 +21,9 @@ on:
 
 env:
   AZURE_FUNCTIONAPP_NAME: ${{ secrets.AZURE_FUNCTIONAPP_NAME }}
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: 'azure-function/salesforce-sentinel-polling'
-  PYTHON_VERSION: '3.13'
 
 jobs:
-  build-and-deploy:
+  configure-settings:
     runs-on: ubuntu-latest
     environment: ${{ github.event.inputs.environment || 'production' }}
     
@@ -33,33 +31,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       
-      - name: Verify function app structure
-        run: |
-          echo "Verifying function app structure..."
-          ls -la ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-          if [ ! -f "${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/function_app.py" ]; then
-            echo "Error: function_app.py not found"
-            exit 1
-          fi
-          if [ ! -f "${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/requirements.txt" ]; then
-            echo "Error: requirements.txt not found"
-            exit 1
-          fi
-          if [ ! -f "${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/host.json" ]; then
-            echo "Error: host.json not found"
-            exit 1
-          fi
-          echo "Function app structure verified ✓"
-      
       - name: Login to Azure
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       
       - name: Configure Application Settings
+        id: configure
         env:
           LOG_TYPE: ${{ secrets.LOG_ANALYTICS_LOG_TYPE || 'Salesforce_CL' }}
         run: |
+          echo "Configuring Application Settings for: ${{ env.AZURE_FUNCTIONAPP_NAME }}"
           az functionapp config appsettings set \
             --name ${{ env.AZURE_FUNCTIONAPP_NAME }} \
             --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
@@ -72,39 +54,16 @@ jobs:
               "LogAnalytics__WorkspaceId=${{ secrets.LOG_ANALYTICS_WORKSPACE_ID }}" \
               "LogAnalytics__WorkspaceKey=${{ secrets.LOG_ANALYTICS_WORKSPACE_KEY }}" \
               "LogAnalytics__LogType=${{ env.LOG_TYPE }}"
+          echo "settings_configured=true" >> $GITHUB_OUTPUT
       
-      - name: Create deployment package
-        run: |
-          echo "Creating deployment package..."
-          cd ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-          zip -r ../function-app.zip . -x "*.git*" -x "*__pycache__*" -x "*.pyc"
-          cd ..
-          ls -lh function-app.zip
-      
-      - name: Deploy to Azure Functions
-        id: deploy
-        run: |
-          echo "Deploying to Azure Function App: ${{ env.AZURE_FUNCTIONAPP_NAME }}"
-          az functionapp deployment source config-zip \
-            --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
-            --name ${{ env.AZURE_FUNCTIONAPP_NAME }} \
-            --src function-app.zip
-          echo "deployment_status=success" >> $GITHUB_OUTPUT
-      
-      - name: Verify deployment
-        if: steps.deploy.outcome == 'success'
-        run: |
-          echo "Deployment completed successfully!"
-          echo "Function App: ${{ env.AZURE_FUNCTIONAPP_NAME }}"
-          echo "Package Path: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}"
-      
-      - name: Deployment summary
+      - name: Configuration summary
         if: always()
         run: |
-          if [ "${{ steps.deploy.outcome }}" == "success" ]; then
-            echo "✅ Deployment successful"
+          if [ "${{ steps.configure.outcome }}" == "success" ]; then
+            echo "✅ Application Settings configured successfully"
+            echo "Note: Code deployment is handled by Azure Deployment Center"
           else
-            echo "❌ Deployment failed"
+            echo "❌ Failed to configure Application Settings"
             exit 1
           fi
 
