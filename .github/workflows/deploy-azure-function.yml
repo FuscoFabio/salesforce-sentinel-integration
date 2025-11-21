@@ -31,6 +31,42 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       
+      - name: Verify Azure credentials
+        run: |
+          if [ -z "${{ secrets.AZURE_CREDENTIALS }}" ]; then
+            echo "❌ Error: AZURE_CREDENTIALS secret is not configured"
+            echo ""
+            echo "Please configure the AZURE_CREDENTIALS secret in GitHub repository settings:"
+            echo "1. Go to: https://github.com/${{ github.repository }}/settings/secrets/actions"
+            echo "2. Click 'New repository secret'"
+            echo "3. Name: AZURE_CREDENTIALS"
+            echo "4. Value: JSON output from 'az ad sp create-for-rbac --sdk-auth'"
+            echo ""
+            echo "See DEPLOYMENT_CENTER_SETUP.md for detailed instructions"
+            exit 1
+          fi
+          
+          # Verifica che il JSON contenga i campi necessari
+          CREDS="${{ secrets.AZURE_CREDENTIALS }}"
+          if ! echo "$CREDS" | grep -q '"clientId"'; then
+            echo "❌ Error: AZURE_CREDENTIALS JSON is missing 'clientId' field"
+            exit 1
+          fi
+          if ! echo "$CREDS" | grep -q '"clientSecret"'; then
+            echo "❌ Error: AZURE_CREDENTIALS JSON is missing 'clientSecret' field"
+            exit 1
+          fi
+          if ! echo "$CREDS" | grep -q '"tenantId"'; then
+            echo "❌ Error: AZURE_CREDENTIALS JSON is missing 'tenantId' field"
+            exit 1
+          fi
+          if ! echo "$CREDS" | grep -q '"subscriptionId"'; then
+            echo "❌ Error: AZURE_CREDENTIALS JSON is missing 'subscriptionId' field"
+            exit 1
+          fi
+          
+          echo "✅ AZURE_CREDENTIALS secret is configured and valid"
+      
       - name: Login to Azure
         uses: azure/login@v1
         with:
