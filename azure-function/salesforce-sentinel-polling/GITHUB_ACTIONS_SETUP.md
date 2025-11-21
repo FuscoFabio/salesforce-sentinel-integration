@@ -61,13 +61,16 @@ Aggiungi i seguenti secrets:
 |------------|--------|----------------|
 | `AZURE_FUNCTIONAPP_NAME` | Nome della Function App | Es. `salesforce-sentinel-001` |
 | `AZURE_RESOURCE_GROUP` | Nome del Resource Group | Es. `rg-salesforce-sentinel` |
-| `AZURE_CLIENT_ID` | Client ID del Service Principal | Vedi istruzioni sotto |
-| `AZURE_CLIENT_SECRET` | Client Secret del Service Principal | Vedi istruzioni sotto |
-| `AZURE_TENANT_ID` | Tenant ID di Azure AD | Vedi istruzioni sotto |
-| `AZURE_SUBSCRIPTION_ID` | Subscription ID di Azure | Vedi istruzioni sotto |
+| `AZURE_CREDENTIALS` **oppure** | JSON completo del Service Principal | Vedi Opzione 1 sotto |
+| `AZURE_CLIENT_ID` | Client ID del Service Principal | Vedi Opzione 2 sotto |
+| `AZURE_CLIENT_SECRET` | Client Secret del Service Principal | Vedi Opzione 2 sotto |
+| `AZURE_TENANT_ID` | Tenant ID di Azure AD | Vedi Opzione 2 sotto |
+| `AZURE_SUBSCRIPTION_ID` | Subscription ID di Azure | Vedi Opzione 2 sotto |
 | `AZURE_FUNCTIONAPP_PUBLISH_PROFILE` | Contenuto del file XML | Portale Azure → Function App → Get publish profile |
 
-**Come creare i secrets Azure:**
+**Nota**: Puoi usare **Opzione 1** (JSON completo) **oppure** **Opzione 2** (parametri separati). Il workflow supporta entrambi gli approcci.
+
+**Opzione 1: Usare JSON completo (più semplice)**
 
 1. Login ad Azure:
    ```bash
@@ -86,19 +89,27 @@ Aggiungi i seguenti secrets:
    - `{subscription-id}`: ID della tua sottoscrizione Azure
    - `{resource-group-name}`: Nome del resource group (es. `rg-salesforce-sentinel`)
 
-4. Dall'output JSON, copia i valori nei seguenti secrets:
+4. Copia l'**intero output JSON** e incollalo come valore del secret `AZURE_CREDENTIALS`
+
+**Opzione 2: Usare parametri separati**
+
+1. Segui i passi 1-3 dell'Opzione 1 per creare il Service Principal
+
+2. Dall'output JSON, copia i valori nei seguenti secrets separati:
    - `AZURE_CLIENT_ID`: valore di `clientId`
    - `AZURE_CLIENT_SECRET`: valore di `clientSecret`
    - `AZURE_TENANT_ID`: valore di `tenantId`
    - `AZURE_SUBSCRIPTION_ID`: valore di `subscriptionId`
 
-**Esempio output:**
+**Esempio output del comando:**
 ```json
 {
   "clientId": "xxxx-xxxx-xxxx-xxxx",
   "clientSecret": "yyyy-yyyy-yyyy-yyyy",
   "subscriptionId": "zzzz-zzzz-zzzz-zzzz",
   "tenantId": "aaaa-aaaa-aaaa-aaaa",
+  "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
+  "resourceManagerEndpointUrl": "https://management.azure.com/",
   ...
 }
 ```
