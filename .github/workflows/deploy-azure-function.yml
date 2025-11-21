@@ -41,8 +41,12 @@ jobs:
       
       - name: Install dependencies
         run: |
+          echo "Current directory: $(pwd)"
+          echo "Package path: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}"
+          ls -la ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }} || echo "Directory not found"
           python -m pip install --upgrade pip
-          pip install -r ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/requirements.txt --target="${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/.python_packages/lib/site-packages"
+          cd ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+          pip install -r requirements.txt --target=".python_packages/lib/site-packages"
       
       - name: Install Azure Functions Core Tools
         run: |
