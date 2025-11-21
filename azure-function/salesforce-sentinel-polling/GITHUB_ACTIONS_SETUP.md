@@ -61,16 +61,10 @@ Aggiungi i seguenti secrets:
 |------------|--------|----------------|
 | `AZURE_FUNCTIONAPP_NAME` | Nome della Function App | Es. `salesforce-sentinel-001` |
 | `AZURE_RESOURCE_GROUP` | Nome del Resource Group | Es. `rg-salesforce-sentinel` |
-| `AZURE_CREDENTIALS` **oppure** | JSON completo del Service Principal | Vedi Opzione 1 sotto |
-| `AZURE_CLIENT_ID` | Client ID del Service Principal | Vedi Opzione 2 sotto |
-| `AZURE_CLIENT_SECRET` | Client Secret del Service Principal | Vedi Opzione 2 sotto |
-| `AZURE_TENANT_ID` | Tenant ID di Azure AD | Vedi Opzione 2 sotto |
-| `AZURE_SUBSCRIPTION_ID` | Subscription ID di Azure | Vedi Opzione 2 sotto |
+| `AZURE_CREDENTIALS` | JSON completo del Service Principal | Vedi istruzioni sotto |
 | `AZURE_FUNCTIONAPP_PUBLISH_PROFILE` | Contenuto del file XML | Portale Azure → Function App → Get publish profile |
 
-**Nota**: Puoi usare **Opzione 1** (JSON completo) **oppure** **Opzione 2** (parametri separati). Il workflow supporta entrambi gli approcci.
-
-**Opzione 1: Usare JSON completo (più semplice)**
+**Come creare AZURE_CREDENTIALS:**
 
 1. Login ad Azure:
    ```bash
@@ -91,15 +85,15 @@ Aggiungi i seguenti secrets:
 
 4. Copia l'**intero output JSON** e incollalo come valore del secret `AZURE_CREDENTIALS`
 
-**Opzione 2: Usare parametri separati**
-
-1. Segui i passi 1-3 dell'Opzione 1 per creare il Service Principal
-
-2. Dall'output JSON, copia i valori nei seguenti secrets separati:
-   - `AZURE_CLIENT_ID`: valore di `clientId`
-   - `AZURE_CLIENT_SECRET`: valore di `clientSecret`
-   - `AZURE_TENANT_ID`: valore di `tenantId`
-   - `AZURE_SUBSCRIPTION_ID`: valore di `subscriptionId`
+**Nota**: Se preferisci usare parametri separati invece del JSON completo, puoi costruire manualmente il JSON nel seguente formato:
+```json
+{
+  "clientId": "your-client-id",
+  "clientSecret": "your-client-secret",
+  "tenantId": "your-tenant-id",
+  "subscriptionId": "your-subscription-id"
+}
+```
 
 **Esempio output del comando:**
 ```json
