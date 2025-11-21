@@ -33,29 +33,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-          cache: 'pip'
-      
-      - name: Install dependencies
-        run: |
-          FUNCTION_PATH="azure-function/salesforce-sentinel-polling"
-          echo "Current directory: $(pwd)"
-          echo "Function path: $FUNCTION_PATH"
-          echo "Checking if directory exists..."
-          ls -la $FUNCTION_PATH || (echo "Directory $FUNCTION_PATH not found!" && exit 1)
-          echo "Checking if requirements.txt exists..."
-          test -f "$FUNCTION_PATH/requirements.txt" || (echo "requirements.txt not found in $FUNCTION_PATH!" && exit 1)
-          python -m pip install --upgrade pip
-          cd $FUNCTION_PATH
-          pip install -r requirements.txt --target=".python_packages/lib/site-packages"
-      
-      - name: Install Azure Functions Core Tools
-        run: |
-          npm install -g azure-functions-core-tools@4 --unsafe-perm true
-      
       - name: Verify function app structure
         run: |
           echo "Verifying function app structure..."
