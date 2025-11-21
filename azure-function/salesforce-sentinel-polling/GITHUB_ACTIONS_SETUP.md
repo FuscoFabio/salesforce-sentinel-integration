@@ -61,10 +61,13 @@ Aggiungi i seguenti secrets:
 |------------|--------|----------------|
 | `AZURE_FUNCTIONAPP_NAME` | Nome della Function App | Es. `salesforce-sentinel-001` |
 | `AZURE_RESOURCE_GROUP` | Nome del Resource Group | Es. `rg-salesforce-sentinel` |
-| `AZURE_CREDENTIALS` | JSON Service Principal | Vedi istruzioni sotto |
+| `AZURE_CLIENT_ID` | Client ID del Service Principal | Vedi istruzioni sotto |
+| `AZURE_CLIENT_SECRET` | Client Secret del Service Principal | Vedi istruzioni sotto |
+| `AZURE_TENANT_ID` | Tenant ID di Azure AD | Vedi istruzioni sotto |
+| `AZURE_SUBSCRIPTION_ID` | Subscription ID di Azure | Vedi istruzioni sotto |
 | `AZURE_FUNCTIONAPP_PUBLISH_PROFILE` | Contenuto del file XML | Portale Azure → Function App → Get publish profile |
 
-**Come creare AZURE_CREDENTIALS:**
+**Come creare i secrets Azure:**
 
 1. Login ad Azure:
    ```bash
@@ -83,21 +86,20 @@ Aggiungi i seguenti secrets:
    - `{subscription-id}`: ID della tua sottoscrizione Azure
    - `{resource-group-name}`: Nome del resource group (es. `rg-salesforce-sentinel`)
 
-4. Copia l'output JSON completo e incollalo come valore del secret `AZURE_CREDENTIALS`
+4. Dall'output JSON, copia i valori nei seguenti secrets:
+   - `AZURE_CLIENT_ID`: valore di `clientId`
+   - `AZURE_CLIENT_SECRET`: valore di `clientSecret`
+   - `AZURE_TENANT_ID`: valore di `tenantId`
+   - `AZURE_SUBSCRIPTION_ID`: valore di `subscriptionId`
 
 **Esempio output:**
 ```json
 {
-  "clientId": "...",
-  "clientSecret": "...",
-  "subscriptionId": "...",
-  "tenantId": "...",
-  "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
-  "resourceManagerEndpointUrl": "https://management.azure.com/",
-  "activeDirectoryGraphResourceId": "https://graph.windows.net/",
-  "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
-  "galleryEndpointUrl": "https://gallery.azure.com/",
-  "managementEndpointUrl": "https://management.core.windows.net/"
+  "clientId": "xxxx-xxxx-xxxx-xxxx",
+  "clientSecret": "yyyy-yyyy-yyyy-yyyy",
+  "subscriptionId": "zzzz-zzzz-zzzz-zzzz",
+  "tenantId": "aaaa-aaaa-aaaa-aaaa",
+  ...
 }
 ```
 
