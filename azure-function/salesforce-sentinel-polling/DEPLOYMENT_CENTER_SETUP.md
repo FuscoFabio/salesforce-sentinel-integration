@@ -8,11 +8,29 @@ Se il Deployment Center cerca `requirements.txt` nella root del repository invec
 
 ### Opzione 1: Tramite Azure Portal (Consigliato)
 
+**Metodo A: Configurazione nel Deployment Center**
+
 1. Vai al **Portale Azure** → Function App
 2. Vai a **Deployment Center**
-3. Nella sezione **Settings**, cerca **Application Settings** o **Build Settings**
-4. Imposta **Working Directory** o **Project Path** a: `azure-function/salesforce-sentinel-polling`
-5. Salva le modifiche
+3. Se hai già configurato GitHub come source:
+   - Clicca su **Settings** (icona ingranaggio) o **Edit**
+   - Cerca il campo **Working Directory**, **Project Path**, o **Root Directory**
+   - Imposta il valore a: `azure-function/salesforce-sentinel-polling`
+   - Salva le modifiche
+4. Se non trovi questa opzione, vai al **Metodo B**
+
+**Metodo B: Configurazione tramite Application Settings**
+
+1. Vai al **Portale Azure** → Function App
+2. Vai a **Configuration** → **Application settings**
+3. Clicca su **+ New application setting**
+4. Aggiungi:
+   - **Name**: `SCM_REPOSITORY_PATH`
+   - **Value**: `azure-function/salesforce-sentinel-polling`
+5. Clicca su **OK** e poi su **Save**
+6. Riavvia la Function App se necessario
+
+**Nota**: Il workflow GitHub Actions configura automaticamente questa setting, ma puoi verificarla o configurarla manualmente se necessario.
 
 ### Opzione 2: Tramite Azure CLI
 

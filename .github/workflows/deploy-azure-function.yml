@@ -72,6 +72,19 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       
+      - name: Configure Deployment Center path
+        run: |
+          echo "Configuring Deployment Center to use correct directory..."
+          # Configura la directory di lavoro per il Deployment Center
+          az functionapp config appsettings set \
+            --name ${{ env.AZURE_FUNCTIONAPP_NAME }} \
+            --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
+            --settings \
+              "SCM_REPOSITORY_PATH=azure-function/salesforce-sentinel-polling" \
+              "SCM_DO_BUILD_DURING_DEPLOYMENT=true" \
+              "ENABLE_ORYX_BUILD=true" || echo "Warning: Could not set deployment path settings"
+          echo "✅ Deployment Center path configured"
+      
       - name: Configure Application Settings
         id: configure
         env:
@@ -89,8 +102,7 @@ jobs:
               "Salesforce__SecurityToken=${{ secrets.SALESFORCE_SECURITY_TOKEN }}" \
               "LogAnalytics__WorkspaceId=${{ secrets.LOG_ANALYTICS_WORKSPACE_ID }}" \
               "LogAnalytics__WorkspaceKey=${{ secrets.LOG_ANALYTICS_WORKSPACE_KEY }}" \
-              "LogAnalytics__LogType=${{ env.LOG_TYPE }}" \
-              "SCM_REPOSITORY_PATH=azure-function/salesforce-sentinel-polling"
+              "LogAnalytics__LogType=${{ env.LOG_TYPE }}"
           echo "settings_configured=true" >> $GITHUB_OUTPUT
       
       - name: Configuration summary
