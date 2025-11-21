@@ -83,19 +83,20 @@ jobs:
               "LogAnalytics__WorkspaceKey=${{ secrets.LOG_ANALYTICS_WORKSPACE_KEY }}" \
               "LogAnalytics__LogType=${{ env.LOG_TYPE }}"
       
+      - name: Install Azure Functions Core Tools
+        run: |
+          npm install -g azure-functions-core-tools@4 --unsafe-perm true
+      
       - name: Deploy to Azure Functions
+        id: deploy
         working-directory: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-        uses: Azure/functions-action@v1
-        id: fa
-        with:
-          app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
-          package: .
-          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
-          scm-do-build-during-deployment: true
-          enable-oryx-build: true
+        run: |
+          echo "Deploying to Azure Function App: ${{ env.AZURE_FUNCTIONAPP_NAME }}"
+          func azure functionapp publish ${{ env.AZURE_FUNCTIONAPP_NAME }} --python
+          echo "deployment_status=success" >> $GITHUB_OUTPUT
       
       - name: Verify deployment
-        if: steps.fa.outcome == 'success'
+        if: steps.deploy.outcome == 'success'
         run: |
           echo "Deployment completed successfully!"
           echo "Function App: ${{ env.AZURE_FUNCTIONAPP_NAME }}"
@@ -104,7 +105,7 @@ jobs:
       - name: Deployment summary
         if: always()
         run: |
-          if [ "${{ steps.fa.outcome }}" == "success" ]; then
+          if [ "${{ steps.deploy.outcome }}" == "success" ]; then
             echo "✅ Deployment successful"
           else
             echo "❌ Deployment failed"
