@@ -53,7 +53,8 @@ jobs:
               "Salesforce__SecurityToken=${{ secrets.SALESFORCE_SECURITY_TOKEN }}" \
               "LogAnalytics__WorkspaceId=${{ secrets.LOG_ANALYTICS_WORKSPACE_ID }}" \
               "LogAnalytics__WorkspaceKey=${{ secrets.LOG_ANALYTICS_WORKSPACE_KEY }}" \
-              "LogAnalytics__LogType=${{ env.LOG_TYPE }}"
+              "LogAnalytics__LogType=${{ env.LOG_TYPE }}" \
+              "SCM_REPOSITORY_PATH=azure-function/salesforce-sentinel-polling"
           echo "settings_configured=true" >> $GITHUB_OUTPUT
       
       - name: Configuration summary
