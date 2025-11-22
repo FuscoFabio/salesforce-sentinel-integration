@@ -285,6 +285,37 @@ Salesforce__ConsumerKey=@Microsoft.KeyVault(SecretUri=https://kv-name.vault.azur
 - Verifica la cron expression nel codice
 - Controlla i logs per errori
 
+### Errore: "Failed building wheel for grpcio" o "g++ failed with exit code 1"
+
+**Causa**: Python 3.13 è molto recente e `grpcio` potrebbe non avere wheel pre-compilati per la piattaforma Linux usata da Azure Functions. Oryx tenta di compilare da sorgente, ma il compilatore g++ potrebbe non supportare tutte le opzioni necessarie.
+
+**Soluzioni**:
+
+1. **Usa Python 3.12 (Consigliato per stabilità)**:
+   - Python 3.12 ha supporto completo per `grpcio` con wheel pre-compilati
+   - Aggiorna la Function App a Python 3.12:
+     ```bash
+     az functionapp config set \
+       --name <function-app-name> \
+       --resource-group <resource-group> \
+       --linux-fx-version "PYTHON|3.12"
+     ```
+   - Aggiorna anche `azure-pipelines.yml` e i workflow GitHub Actions per usare Python 3.12
+
+2. **Forza l'uso di wheel pre-compilati (se disponibili)**:
+   - Aggiungi Application Setting nella Function App:
+     ```
+     SCM_DO_BUILD_DURING_DEPLOYMENT=true
+     ENABLE_ORYX_BUILD=true
+     ```
+   - Il pinning di `grpcio>=1.62.2` in `requirements.txt` dovrebbe aiutare
+
+3. **Workaround temporaneo - Usa Python 3.11**:
+   - Se Python 3.12 non è disponibile, usa Python 3.11 che ha supporto completo
+   - Aggiorna tutte le configurazioni di conseguenza
+
+**Nota**: Python 3.13 è stato rilasciato a ottobre 2024 e molte librerie potrebbero non avere ancora wheel pre-compilati per tutte le piattaforme. Per produzione, si consiglia Python 3.12 (LTS) o Python 3.11 fino a quando il supporto per 3.13 non sarà completo.
+
 ## Prossimi Passi
 
 Dopo il deployment:

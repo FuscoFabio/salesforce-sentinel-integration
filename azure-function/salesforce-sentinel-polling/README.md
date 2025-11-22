@@ -237,6 +237,12 @@ L’architettura completa (componenti Azure, flussi, sicurezza, CI/CD) è descri
 
 ## Limitazioni e Considerazioni
 
+### Python 3.13 e grpcio
+
+**Nota importante**: Se riscontri errori di compilazione di `grpcio` durante il deployment su Azure Functions (`g++ failed with exit code 1`), questo è dovuto al fatto che Python 3.13 è molto recente e potrebbero non esserci wheel pre-compilati per tutte le piattaforme.
+
+**Soluzione consigliata**: Usa Python 3.12 per produzione, che ha supporto completo per `grpcio` con wheel pre-compilati. Vedi la sezione "Troubleshooting" in `DEPLOYMENT.md` per dettagli.
+
 ### Limitazioni Salesforce
 
 - **Disponibilità Event Log Files**: 24-48 ore dopo l'evento

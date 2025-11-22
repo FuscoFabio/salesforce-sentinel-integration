@@ -14,5 +14,8 @@ PyJWT>=2.8.0
 # Azure Storage (Table) per checkpoint persistente
 azure-data-tables>=12.5.0
 
-# Nota: grpcio è gestito automaticamente da azure-functions-worker come dipendenza
-# Non è necessario pinarlo manualmente per evitare conflitti di versione
+# grpcio: pinning versioni con wheel pre-compilati per Python 3.13
+# Usa --only-binary per forzare wheel pre-compilati e evitare compilazione
+# Se questa versione non funziona, considera di downgrade a Python 3.12
+grpcio>=1.62.2,<2.0.0
+grpcio-tools>=1.62.2,<2.0.0
