@@ -31,21 +31,31 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       
-      - name: Verify Azure credentials
+      - name: Check if Azure credentials are configured
+        id: check_creds
         run: |
           if [ -z "${{ secrets.AZURE_CREDENTIALS }}" ]; then
-            echo "❌ Error: AZURE_CREDENTIALS secret is not configured"
+            echo "⚠️  Warning: AZURE_CREDENTIALS secret is not configured"
             echo ""
-            echo "Please configure the AZURE_CREDENTIALS secret in GitHub repository settings:"
+            echo "This workflow will be skipped. If you want to use this workflow to configure"
+            echo "Application Settings automatically, please configure the AZURE_CREDENTIALS secret:"
             echo "1. Go to: https://github.com/${{ github.repository }}/settings/secrets/actions"
             echo "2. Click 'New repository secret'"
             echo "3. Name: AZURE_CREDENTIALS"
             echo "4. Value: JSON output from 'az ad sp create-for-rbac --sdk-auth'"
             echo ""
             echo "See DEPLOYMENT_CENTER_SETUP.md and .github/TROUBLESHOOTING.md for detailed instructions"
-            exit 1
+            echo ""
+            echo "Note: If you're using Azure Deployment Center, this workflow is optional."
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "✅ AZURE_CREDENTIALS secret is configured"
+            echo "skip=false" >> $GITHUB_OUTPUT
           fi
-          
+      
+      - name: Verify Azure credentials
+        if: steps.check_creds.outputs.skip != 'true'
+        run: |
           # Verifica che il JSON sia valido
           CREDS="${{ secrets.AZURE_CREDENTIALS }}"
           
@@ -156,11 +166,13 @@ jobs:
           echo "✅ AZURE_CREDENTIALS secret is configured and valid"
       
       - name: Login to Azure
+        if: steps.check_creds.outputs.skip != 'true'
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       
       - name: Configure Deployment Center path
+        if: steps.check_creds.outputs.skip != 'true'
         run: |
           echo "Configuring Deployment Center to use correct directory..."
           # Configura la directory di lavoro per il Deployment Center
@@ -174,6 +186,7 @@ jobs:
           echo "✅ Deployment Center path configured"
       
       - name: Configure Application Settings
+        if: steps.check_creds.outputs.skip != 'true'
         id: configure
         env:
           LOG_TYPE: ${{ secrets.LOG_ANALYTICS_LOG_TYPE || 'Salesforce_CL' }}
@@ -193,8 +206,15 @@ jobs:
               "LogAnalytics__LogType=${{ env.LOG_TYPE }}"
           echo "settings_configured=true" >> $GITHUB_OUTPUT
       
+      - name: Workflow skipped notice
+        if: steps.check_creds.outputs.skip == 'true'
+        run: |
+          echo "ℹ️  This workflow was skipped because AZURE_CREDENTIALS is not configured."
+          echo "   If you're using Azure Deployment Center, this is expected and you can ignore this message."
+          echo "   The deployment will proceed via Azure Deployment Center."
+      
       - name: Configuration summary
-        if: always()
+        if: always() && steps.check_creds.outputs.skip != 'true'
         run: |
           if [ "${{ steps.configure.outcome }}" == "success" ]; then
             echo "✅ Application Settings configured successfully"
